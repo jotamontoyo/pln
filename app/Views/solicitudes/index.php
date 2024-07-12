@@ -3,18 +3,23 @@
 <?php echo $this->section('contenido'); ?>
 
 
-<div class="container">
+<div class="">
 
     <table id="table" class="display">
         <thead>
             <tr>
                 <th>id</th>
-                <th>username</th>
-                <th>status</th>
-                <th>status_message</th>
-                <th>active</th>
-                <th>locale</th>
-                <th>last_active</th>
+                <th>afiliado_id</th>
+                <th>nombre</th>
+                <th>apellidos</th>
+                <th>cedula</th>
+                <th>ciudad</th>
+                <th>pais</th>
+                <th>whatsapp</th>
+                <th>email</th>
+                <th>afiliado</th>
+                <th>cargo</th>
+                <th>posicion</th>
                 <th>created_at</th>
                 <th>updated_at</th>
                 <th>deleted_at</th>
@@ -31,26 +36,28 @@
 <script>
 
 
-
-
-
     $(document).ready(function() 
     {
         var table = $('#table').DataTable({
             processing: true,
             serverSide: true,
             ajax: {
-                url: 'users/listar_usuarios',
+                url: 'solicitudes/listar_solicitudes',
                 type: 'get'
             },
             columns :[
                 {data: 'id'},
-                {data: 'username'},
-                {data: 'status'},
-                {data: 'status_message'},
-                {data: 'active'},
-                {data: 'locale'},
-                {data: 'last_active'},
+                {data: 'afiliado_id'},
+                {data: 'nombre'},
+                {data: 'apellidos'},
+                {data: 'cedula'},
+                {data: 'ciudad'},
+                {data: 'pais'},
+                {data: 'whatsapp'},
+                {data: 'email'},
+                {data: 'afiliado'},
+                {data: 'cargo'},
+                {data: 'posicion'},
                 {data: 'created_at'},
                 {data: 'updated_at'},
                 {data: 'deleted_at'},

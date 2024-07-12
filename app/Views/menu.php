@@ -54,6 +54,7 @@
         <li class="nav-item active"> <a class="nav-link" href=<?= base_url()?>>Inicio </a> </li>
         
         <li class="nav-item"><a class="nav-link" href=<?= base_url('users')?>> Usuarios </a></li>
+        <li class="nav-item"><a class="nav-link" href=<?= base_url('solicitudes')?>> Solicitudes </a></li>
         
         <li class="nav-item dropdown" id="myDropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Compras  </a>

@@ -59,9 +59,6 @@ class Users extends BaseController
             users.deleted_at
         ');
         return DataTable::of($builder)->toJson(true);
-
-
-
     }
 
 

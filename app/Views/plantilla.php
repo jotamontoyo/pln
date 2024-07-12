@@ -19,6 +19,8 @@
     <link href="https://cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
 
 
@@ -35,10 +37,10 @@
 
 </head>
 
-<body class="d-flex flex-column h-100" data-bs-theme="">
+<body class="d-flex flex-column h-100">
 
     <!-- Begin page content -->
-    <main class="flex-shrink-0">
+    <main class="">
     
         <?php
             $session = session();
@@ -82,7 +84,7 @@
 
         <?php echo $this->include('menu'); ?>
 
-        <div class="container">
+        <div class="">
             <?php $this->renderSection('contenido') ?>
         </div> 
 

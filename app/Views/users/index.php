@@ -20,12 +20,27 @@
                 <th>deleted_at</th>
                 <th>Options</th>
             </tr>
+            <tr>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+            </tr>
         </thead>
 
         
     </table>
 
 </div>
+
+
 
 
 <script>

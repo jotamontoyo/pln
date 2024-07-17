@@ -2,14 +2,30 @@
 
 namespace App\Controllers;
 
+
+
 class Home extends BaseController
 {
-    public function index(): string
-    {
 
+    private $db;
+
+    public function __construct()
+    {
+        $this->db = \Config\Database::connect(); 
+         
+    }
+
+
+
+
+
+
+
+    public function index()
+    {
         $data = [
-            'titulo'        => 'Inicio',
+            'titulo'        => 'Inicio'
         ];
-        return view('welcome_message', $data);
+        return view('index', $data);
     }
 }

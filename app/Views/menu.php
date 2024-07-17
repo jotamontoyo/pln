@@ -37,8 +37,133 @@
 <?php } ?>
 
 
-<nav class="navbar navbar-expand-lg bg-secondary">
+
+
+
+
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container-fluid">
+    <a class="navbar-brand" href="#">Fixed navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+      <li class="nav-item active"> <a class="nav-link" href=<?= base_url() ?>>Inicio </a> </li>
+      <li class="nav-item active"> <a class="nav-link" href=<?= base_url('login') ?>>Acceso </a> </li>
+      
+        <?php if(auth()->user()) { ?>
+          
+          <li class="nav-item"><a class="nav-link" href=<?= base_url('users')?>> Usuarios </a></li>
+          <li class="nav-item"><a class="nav-link" href=<?= base_url('solicitudes')?>> Solicitudes </a></li>
+        
+          <li class="nav-item dropdown" id="myDropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Compras  </a>
+            <ul class="dropdown-menu">
+
+              <li> <a class="dropdown-item" href=<?= base_url()?>> Almacenenes &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">SubAlmacenenes</a></li>
+                  <!-- <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                    <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li> -->
+                </ul>
+              </li>
+                
+
+              <li> <a class="dropdown-item" href=<?= base_url()?>> Productos &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href=<?= base_url()?>>Grupos</a></li>
+                  <li><a class="dropdown-item" href=<?= base_url()?>>Categorías</a></li>
+                  <li><a class="dropdown-item" href=<?= base_url()?>>SubCategorías</a>
+                    <!-- <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul> -->
+                  </li>
+                  <!-- <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li> -->
+                </ul>
+              </li>
+              <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
+              <!-- <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> -->
+      
+            </ul>
+
+          </li>
+
+          <li class="nav-item dropdown" id="myDropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  RR.HH </a>
+            <ul class="dropdown-menu">
+              <li> <a class="dropdown-item" href=""> Departamentos </a></li>
+              <li> <a class="dropdown-item" href=""> Empleados </a></li>
+              <!-- <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                    <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> -->
+            </ul>
+          </li>
+
+          <div class="container">
+
+            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPerfil" aria-controls="offcanvasPerfil">
+              <i class="bi bi-person-fill"></i>
+            </button>
+
+        <?php } ?>
+
+
+            <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#info" style="float: right;"><i class="bi bi-info-circle-fill"></i></button> -->
+
+            
+
+          </div> 
+        
+
+          
+          
+            <img src="<?= base_url(); ?>img/logos/logoPLN.jpg" style="max-width: 45px; float: right;" alt="">
+            
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<br><br>
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg bg-secondary">
+  <div class="container-fluid">
+
     <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasArbol" aria-controls="offcanvasArbol" style="float: left;">
     <i class="bi bi-three-dots"></i>
     </button>
@@ -47,107 +172,122 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="main_nav">
       <ul class="navbar-nav">
 
-        <!-- <li class="nav-item active"> <a class="nav-link" href=<?= base_url()?>>Inicio </a> </li> -->
-        <li class="nav-item active"> <a class="nav-link" href=<?= base_url()?>>Inicio </a> </li>
-        
-        <li class="nav-item"><a class="nav-link" href=<?= base_url('users')?>> Usuarios </a></li>
-        <li class="nav-item"><a class="nav-link" href=<?= base_url('solicitudes')?>> Solicitudes </a></li>
-        
-        <li class="nav-item dropdown" id="myDropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Compras  </a>
-          <ul class="dropdown-menu">
 
-            <li> <a class="dropdown-item" href=<?= base_url()?>> Almacenenes &raquo; </a>
-              <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="#">SubAlmacenenes</a></li>
-                <!-- <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                  <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                    <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                  </ul>
-                </li>
-                <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                <li><a class="dropdown-item" href="#">Submenu item 5</a></li> -->
-              </ul>
-            </li>
-              
+        <li class="nav-item active"> <a class="nav-link" href=<?= base_url() ?>>Inicio </a> </li>
+        <li class="nav-item active"> <a class="nav-link" href=<?= base_url('login') ?>>Acceso </a> </li>
+        
+        <?php if(auth()->user()) { ?>
+          
+          <li class="nav-item"><a class="nav-link" href=<?= base_url('users')?>> Usuarios </a></li>
+          <li class="nav-item"><a class="nav-link" href=<?= base_url('solicitudes')?>> Solicitudes </a></li>
+        
+          <li class="nav-item dropdown" id="myDropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Compras  </a>
+            <ul class="dropdown-menu">
 
-            <li> <a class="dropdown-item" href=<?= base_url()?>> Productos &raquo; </a>
-              <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href=<?= base_url()?>>Grupos</a></li>
-                <li><a class="dropdown-item" href=<?= base_url()?>>Categorías</a></li>
-                <li><a class="dropdown-item" href=<?= base_url()?>>SubCategorías</a>
-                  <!-- <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                    <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                  </ul> -->
-                </li>
-                <!-- <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                <li><a class="dropdown-item" href="#">Submenu item 5</a></li> -->
-              </ul>
-            </li>
-            <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
-            <!-- <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-            <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> -->
+              <li> <a class="dropdown-item" href=<?= base_url()?>> Almacenenes &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">SubAlmacenenes</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                    <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                </ul>
+              </li>
+                
+
+              <li> <a class="dropdown-item" href=<?= base_url()?>> Productos &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href=<?= base_url()?>>Grupos</a></li>
+                  <li><a class="dropdown-item" href=<?= base_url()?>>Categorías</a></li>
+                  <li><a class="dropdown-item" href=<?= base_url()?>>SubCategorías</a>
+                     <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul> 
+                  </li>
+                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                </ul>
+              </li>
+              <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
       
-          </ul>
+            </ul>
 
-        </li>
+          </li>
 
 
 
-        <li class="nav-item dropdown" id="myDropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  RR.HH </a>
-          <ul class="dropdown-menu">
-            <li> <a class="dropdown-item" href=""> Departamentos </a></li>
-            <li> <a class="dropdown-item" href=""> Empleados </a></li>
-            <!-- <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
-              <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                  <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                    <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                  </ul>
-                </li>
-                <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-              </ul>
-            </li>
-            <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-            <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> -->
-          </ul>
-        </li>
+          <li class="nav-item dropdown" id="myDropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  RR.HH </a>
+            <ul class="dropdown-menu">
+              <li> <a class="dropdown-item" href=""> Departamentos </a></li>
+              <li> <a class="dropdown-item" href=""> Empleados </a></li>
+               <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                    <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
+            </ul>
+          </li>
 
       </ul>
 
 
-      <div class="container">
         
-        <?php if(auth()->user()) { ?>
-          <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPerfil" aria-controls="offcanvasPerfil" style="float: right;">
-            <i class="bi bi-person-fill"></i>
-          </button>
+      <div class="container">
+
+        <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPerfil" aria-controls="offcanvasPerfil" style="float: right;">
+          <i class="bi bi-person-fill"></i>
+        </button>
+
         <?php } ?>
+
 
         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#info" style="float: right;"><i class="bi bi-info-circle-fill"></i></button>
 
-      </div>
+        
 
+      </div> 
+        
+
+        <div class="container">
+        
+          <img src="<?= base_url(); ?>img/logos/logoPLN.jpg" style="max-width: 30px; float: right;" alt="">
+          
+        </div>
 
 
     </div>
   
-    <!-- navbar-collapse.// -->
+
   </div>
 
-  <!-- container-fluid.// -->
-</nav>
+
+</nav> -->
+
 
 
           
@@ -163,7 +303,7 @@
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasPerfilLabel">Perfil del usuario</h5>
               <div   style="justify-content: flex-end;">
-                <a href="<?= base_url() ?>/user/<?= auth()->id(); ?>/edit" class="btn btn-dark" style="justify-content: flex-end;">
+                <a href="<?= base_url() ?>/users/<?= auth()->id(); ?>/edit" class="btn btn-dark" style="justify-content: flex-end;">
                   <i class="bi bi-pencil-fill"></i>
                 </a>
                 <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
@@ -191,6 +331,8 @@
 
 
                 <!-- formulario para cambio de perPage -->
+
+
                 
 
 

@@ -4,6 +4,7 @@ namespace Config;
 
 use App\Filters\CheckEditPermission;
 use App\Filters\CheckReadPermission;
+use App\Filters\CheckUpdatePermission;
 use CodeIgniter\Config\Filters as BaseFilters;
 use CodeIgniter\Filters\Cors;
 use CodeIgniter\Filters\CSRF;
@@ -37,7 +38,8 @@ class Filters extends BaseFilters
         'pagecache'             => PageCache::class,
         'performance'           => PerformanceMetrics::class,
         'CheckReadPermission'   => CheckReadPermission::class,
-        'CheckEditPermission'   => CheckEditPermission::class
+        'CheckEditPermission'   => CheckEditPermission::class,
+        'CheckUpdatePermission' => CheckUpdatePermission::class
     ];
 
     /**

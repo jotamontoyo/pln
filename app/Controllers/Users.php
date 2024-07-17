@@ -4,6 +4,10 @@ namespace App\Controllers;
 
 use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
+use CodeIgniter\Shield\Models\UserModel;
+use App\Models\AuthPermissionsUsersModel;
+use App\Models\AuthGroupsUsersModel;
+
 
 
 
@@ -12,11 +16,17 @@ class Users extends BaseController
 
 
     private $db;
-
+    private $userModel;
+    private $authPermissionsUsersModel;
+    private $authGroupsUsersModel;
 
     public function __construct()
     {
-        $this->db = \Config\Database::connect();                        
+        $this->db = \Config\Database::connect();  
+        $this->userModel = new UserModel();                      
+        $this->authPermissionsUsersModel = new AuthPermissionsUsersModel();                      
+        $this->authGroupsUsersModel = new AuthGroupsUsersModel();                      
+                    
     }
 
 
@@ -30,7 +40,7 @@ class Users extends BaseController
     public function index()
     {
         $data = [
-            'titulo' => 'Usuarios'
+            'titulo' => 'Usuarios',
         ];
         return view('users/index', $data);
     }
@@ -133,7 +143,17 @@ class Users extends BaseController
      */
     public function edit($id = null)
     {
-        echo('edit user');
+        $user = $this->userModel->find($id);
+        $permissions = $this->authPermissionsUsersModel->getPermissionsUser($id);
+        $groups = $this->authGroupsUsersModel->getGroupsUser($id);
+        $data = [
+            'titulo'            => 'Editar usuario',
+            'id'                => $id,
+            'user'              => $user,
+            'permissions'       => $permissions,
+            'groups'            => $groups
+        ];
+        return view('users/edit', $data);
     }
 
 
@@ -157,7 +177,7 @@ class Users extends BaseController
      */
     public function update($id = null)
     {
-        //
+        echo('update user');
     }
 
 

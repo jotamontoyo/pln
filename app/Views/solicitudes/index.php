@@ -3,7 +3,11 @@
 <?php echo $this->section('contenido'); ?>
 
 
-<div class="">
+<div class="container">
+
+    <br>
+
+    <h4 class="centrado">Solicitudes</h4>
 
     <table id="table" class="display">
         <thead>
@@ -15,8 +19,6 @@
                 <th>cedula</th>
                 <th>ciudad</th>
                 <th>pais</th>
-                <th>whatsapp</th>
-                <th>email</th>
                 <th>afiliado</th>
                 <th>cargo</th>
                 <th>posicion</th>
@@ -25,12 +27,32 @@
                 <th>deleted_at</th>
                 <th>Options</th>
             </tr>
+            <tr>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
+            </tr>
         </thead>
 
         
     </table>
 
+    <br>
+
 </div>
+
+
 
 
 <script>
@@ -53,15 +75,13 @@
                 {data: 'cedula'},
                 {data: 'ciudad'},
                 {data: 'pais'},
-                {data: 'whatsapp'},
-                {data: 'email'},
                 {data: 'afiliado'},
                 {data: 'cargo'},
                 {data: 'posicion'},
                 {data: 'created_at'},
                 {data: 'updated_at'},
                 {data: 'deleted_at'},
-                {"defaultContent": "<button type='button' name='button' id='button' class='editar btn btn-primary'><i class='bi bi-pencil'></i></button>"},
+                {"defaultContent": "<button type='button' name='button' id='button' class='editar btn btn-primary'><i class='bi bi-pencil'></i></button>"}
             ],
             initComplete: function( settings, json ) 
             {
@@ -94,7 +114,7 @@
             var data = table.row($(this).parents("tr")).data();
             
             //console.log(data['id']);
-            window.location.href = "<?= base_url() ?>/users/"+data['id']+"/edit";
+            window.location.href = "<?= base_url() ?>/solicitudes/"+data['id']+"/edit";
 
             //$("#editarUser").modal("show");
             

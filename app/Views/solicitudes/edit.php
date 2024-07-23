@@ -9,7 +9,7 @@
 <div class="container">
 
     <br><br>
-    <h4 class="mb-4 centrado">Editar solicitud</h4>
+    <h4 class="mb-4 centrado">Editar solicitud #<?= $solicitud['id'];  ?></h4>
 
 
     <form action="<?= base_url('/solicitudes/' . $id); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
@@ -75,16 +75,42 @@
               </p>
             </div>
 
+            <!-- estilos para la img tipo thumbnail de la cedula -->
+            <style>
+              #cedula_img_form {
+                border: 1px solid #ddd; /* Gray border */
+                border-radius: 4px;  /* Rounded border */
+                /* padding: 5px; /* Some padding */
+                width: 120px; /* Set a small width */
+                height: 100px;
+                background-image: url('/pln/public/img/logos/subir_img.png');
+                background-repeat: no-repeat;
+              }
+
+              #bCambiarImg {
+                padding: 0;
+              }
+
+              /* Add a hover effect (blue shadow) */
+              img:hover {
+                box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+              }
+            </style>
+            
+
             <div class="col-sm-4">
-              <label for="cedula_img" class="form-label">Cédula imagen:</label>
-              <input type="file" class="form-control" accept="image/jpeg, image/jpg, image/png" id="cedula_img" name="cedula_img" value="<?= $solicitud['cedula_img']; ?>">
+              <label for="cedula_img" class="form-label">Cédula imagen:</label><br>
+
+              <div class="col">
+                
+                  <button type="button" class="btn" id="bCambiarImg" data-bs-toggle="modal" data-bs-target="#cambiarImg">
+                    <div class="card shadow-sm">
+                      <img src="<?= $solicitud['cedula_img']; ?>" id="cedula_img_form" name="cedula_img_form" alt="">
+                    </div>
+                  </button>
+                <p style="display: inline-block; font-size: 10px"><?= $solicitud['cedula_img']; ?></p> 
+              </div>
               
-              <img src="<?= $solicitud['cedula_img']; ?>" id="cedula_img" name="cedula_img" style="max-width: 100px;" alt="">
-              <p class="small" style="display: inline-block;"><?= $solicitud['cedula_img']; ?></p>
-              
-              <p class="small" style="color:red">
-                <?= validation_show_error('cedula_img'); ?>
-              </p>
             </div>
 
             <div class="col-sm-2">
@@ -174,6 +200,7 @@
 
         <div style="text-align: center">
             <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
+            
             <a href="<?= base_url(); ?>solicitudes"><button type="button" class="btn btn-sm btn-outline-danger"><i class="bi bi-x-lg"></i> <?= lang('App.boton.cancelar') ?></button></a>
         </div>
 
@@ -184,6 +211,60 @@
 </div>
 
 <br>
+
+
+
+
+<!-- Modal formulario para cambio de cedula_img -->
+<div class="modal fade" id="cambiarImg" tabindex="-1" aria-labelledby="cambiarImglLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="cambiarImglLabel">Cédula</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form action="<?= base_url('/solicitudes/' . $id . '/img'); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
+
+          <input type="hidden" name="_method" value="PUT">
+          <?= csrf_field(); ?>
+
+          <div class="row g-3">
+
+
+            <label for="cedula_img" class="form-label">Seleccionar imagen:</label>
+            <input type="file" class="form-control" accept="image/jpeg, image/jpg, image/png" id="cedula_img" name="cedula_img" value="<?= $solicitud['cedula_img']; ?>">
+            <!-- <h6>Actual:</h6>
+            <img src="<?= $solicitud['cedula_img']; ?>" id="cedula_img" name="cedula_img" alt="" style="max-width: 120px;">
+            <p class="small" style="display: inline-block;"><?= $solicitud['cedula_img']; ?></p> -->
+            <p class="small" style="color:red">
+              <?= validation_show_error('cedula_img'); ?>
+            </p>
+
+
+
+          </div>
+
+          <div style="text-align: center">
+            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal">Close</button>
+
+          </div>
+
+
+        </form>
+
+
+
+       
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
 
 

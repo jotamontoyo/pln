@@ -16,7 +16,7 @@ class Solicitudes extends Migration
             ],
             'afiliado_id' => [
                 'type' => 'VARCHAR',
-                'constraint' => 10,
+                'Estado' => 10,
                 'unique' => true,
                 'null' => false
             ],

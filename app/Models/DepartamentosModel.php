@@ -4,35 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class SolicitudesModel extends Model
+class DepartamentosModel extends Model
 {
-    protected $table            = 'solicitudes';
+    protected $table            = 'departamentos';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'afiliado_id', 
-        'nombre', 
-        'apellidos', 
-        'cedula', 
-        'cedula_img', 
-        'pasaporte', 
-        'licencia', 
-        'residencia', 
-        'otra_identificacion', 
-        'otra_identificacion_tipo', 
-        'estado_id', 
-        'departamento_id', 
-        'municipio_id', 
-        'ciudad', 
-        'pais',
-        'whatsapp',
-        'email',
-        'afiliado',
-        'cargo',
-        'posicion'
+        'codigo', 
+        'nombre'
     ];
 
     protected bool $updateOnlyChanged = true;

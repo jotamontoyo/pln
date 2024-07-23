@@ -143,7 +143,7 @@
 
           
           
-            <img src="<?= base_url(); ?>img/logos/logoPLN.jpg" style="max-width: 45px; float: right;" alt="">
+            <img src="<?= base_url(); ?>public/img/logos/logoPLN.jpg" style="max-width: 45px; float: right;" alt="">
             
 
       </ul>
@@ -275,7 +275,7 @@
 
         <div class="container">
         
-          <img src="<?= base_url(); ?>img/logos/logoPLN.jpg" style="max-width: 30px; float: right;" alt="">
+          <img src="<?= base_url(); ?>public/img/logos/logoPLN.jpg" style="max-width: 30px; float: right;" alt="">
           
         </div>
 

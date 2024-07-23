@@ -27,8 +27,8 @@
 
 
 
-    <link href="<?= base_url() ?>css/estilo.css" rel="stylesheet">
-    <link href="<?= base_url() ?>css/navbar.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/estilo.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/navbar.css" rel="stylesheet">
 
 
 

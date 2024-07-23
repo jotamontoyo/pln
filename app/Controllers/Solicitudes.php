@@ -6,6 +6,9 @@ use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
 
 use App\Models\SolicitudesModel;
+use App\Models\EstadosModel;
+use App\Models\DepartamentosModel;
+use App\Models\MunicipiosModel;
 
 class Solicitudes extends BaseController
 {
@@ -13,12 +16,18 @@ class Solicitudes extends BaseController
 
     private $db;
     private $solicitudesModel;
+    private $estadosModel;
+    private $departamentosModel;
+    private $municipiosModel;
 
 
     public function __construct()
     {
         $this->db = \Config\Database::connect(); 
         $this->solicitudesModel = new SolicitudesModel();
+        $this->estadosModel = new EstadosModel();
+        $this->departamentosModel = new DepartamentosModel();
+        $this->municipiosModel = new MunicipiosModel();
         
     }
 
@@ -126,6 +135,9 @@ class Solicitudes extends BaseController
             'pasaporte'             => 'required|is_unique[solicitudes.pasaporte]', 
             'licencia'              => 'required|is_unique[solicitudes.licencia]', 
             'residencia'            => 'required|is_unique[solicitudes.residencia]', 
+            'estado_id'             => 'required',
+            'departamento_id'       => 'required',
+            'municipio_id'          => 'required',
             'ciudad'                => 'required', 
             'pais'                  => 'required', 
             'whatsapp'              => 'required', 
@@ -138,16 +150,36 @@ class Solicitudes extends BaseController
             $session->setFlashdata('mensaje', 'Error(s) en formulario'); //se imprimirá en el index
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors()); //muestra lista de errores
         } else {
-            $post = $this->request->getPost(['afiliado_id', 'nombre', 'apellidos', 'cedula', 'cedula_img', 'pasaporte', 'licencia', 'residencia', 'ciudad', 'pais', 'whatsapp', 'email', 'afiliado', 'cargo', 'posicion']);
+            $post = $this->request->getPost([
+                'afiliado_id', 
+                'nombre', 
+                'apellidos', 
+                'cedula', 
+                'cedula_img', 
+                'pasaporte', 
+                'licencia', 
+                'residencia', 
+                'estado_id', 
+                'departamento_id', 
+                'municipio_id', 
+                'ciudad', 
+                'pais', 
+                'whatsapp', 
+                'email', 
+                'afiliado', 
+                'cargo', 
+                'posicion'
+            ]);
             $file = $this->request->getFile('cedula_img');
             if(!$file->isValid()) {
-                echo $file->getErrorString();
-                exit;
+                //echo $file->getErrorString();
+                $session->setFlashdata('mensaje', 'No se ha cargado ninguna imagen');
+                return redirect()->back()->withInput();
             };
             if(!$file->hasMoved()) { // si el archivo todavia no se ha movido, se fuerza a moverse a su ubicacion temporal writeable/uploads
                 $ruta = ROOTPATH . 'public\img\cedulas' . DIRECTORY_SEPARATOR; // fija la ruta para guardar/mover en disco a su ubicacion definitiva (public)
                 $file->move($ruta, $post['cedula_img'], true); // mueve el fichero de la carpeta temporal a su ubicacion definitiva
-                $url = base_url() . 'img/cedulas/' . $file->getName(); // consigue la url para guardarla en el registro y verla en html
+                $url = base_url() . 'public/img/cedulas/' . $file->getName(); // consigue la url para guardarla en el registro y verla en html
             };
             if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
             if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
@@ -160,6 +192,9 @@ class Solicitudes extends BaseController
                 'pasaporte'             => $post['pasaporte'],
                 'licencia'              => $post['licencia'],
                 'residencia'            => $post['residencia'],
+                'estado_id'             => $post['estado_id'],
+                'departamento_id'       => $post['departamento_id'],
+                'municipio_id'          => $post['municipio_id'],
                 'ciudad'                => $post['ciudad'],
                 'pais'                  => $post['pais'],
                 'whatsapp'              => $post['whatsapp'],
@@ -228,37 +263,27 @@ class Solicitudes extends BaseController
     public function update($id = null)
     {
         $session = session();
-        $reglas = [                     // de validacion
-            'afiliado_id'           => 'required',
+        $reglas = [                     
+            'afiliado_id'           => 'required', 
             'nombre'                => 'required', 
             'apellidos'             => 'required', 
             'cedula'                => 'required', 
             'pasaporte'             => 'required', 
             'licencia'              => 'required', 
-            'residencia'            => 'required', 
+            'residencia'            => 'required',
             'ciudad'                => 'required', 
             'pais'                  => 'required', 
             'whatsapp'              => 'required', 
             'email'                 => 'required', 
-            //'afiliado'              => 'required', 
-            //'cargo'                 => 'required', 
+            'afiliado'              => 'required', 
             'posicion'              => 'required'
         ];
+
         if(!$this->validate($reglas)){
             $session->setFlashdata('mensaje', 'Error(s) en formulario');
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
         } else {
-            $post = $this->request->getPost(['afiliado_id', 'nombre', 'apellidos', 'cedula', 'cedula_img', 'pasaporte', 'licencia', 'residencia', 'ciudad', 'pais', 'whatsapp', 'email', 'afiliado', 'cargo', 'posicion']);
-            $file = $this->request->getFile('cedula_img');
-            if(!$file->isValid()) {
-                echo $file->getErrorString();
-                exit;
-            };
-            if(!$file->hasMoved()) { // si el archivo todavia no se ha movido, se fuerza a moverse a su ubicacion temporal writeable/uploads
-                $ruta = ROOTPATH . 'public\img\cedulas' . DIRECTORY_SEPARATOR; // fija la ruta para guardar/mover en disco a su ubicacion definitiva (public)
-                $file->move($ruta, $post['cedula_img'], true); // mueve el fichero de la carpeta temporal a su ubicacion definitiva
-                $url = base_url() . 'img/cedulas/' . $file->getName(); // consigue la url para guardarla en el registro y verla en html
-            };
+            $post = $this->request->getPost(['afiliado_id', 'nombre', 'apellidos', 'cedula', 'pasaporte', 'licencia', 'residencia', 'ciudad', 'pais', 'whatsapp', 'email', 'afiliado', 'cargo', 'posicion']);
             if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
             if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
             $data = [
@@ -266,7 +291,6 @@ class Solicitudes extends BaseController
                 'nombre'                => $post['nombre'],
                 'apellidos'             => $post['apellidos'],
                 'cedula'                => $post['cedula'],
-                'cedula_img'            => $url,
                 'pasaporte'             => $post['pasaporte'],
                 'licencia'              => $post['licencia'],
                 'residencia'            => $post['residencia'],
@@ -278,11 +302,35 @@ class Solicitudes extends BaseController
                 'cargo'                 => $cargo,
                 'posicion'              => $post['posicion']
             ];
-            
+                
             $this->solicitudesModel->update($id, $data, false);
             $session->setFlashdata('mensaje', 'Solicitud actualizada');
             return redirect('solicitudes');
         }
+    }
+
+
+    public function update_img($id)
+    {
+        $session = session();
+        $post = $this->request->getPost(['cedula_img']);
+        $file = $this->request->getFile('cedula_img');
+        if(!$file->isValid()) {
+            // echo $file->getErrorString();
+            $session->setFlashdata('mensaje', 'No se ha cargado ninguna imagen');
+            return redirect()->back()->withInput();
+        };
+        if(!$file->hasMoved()) { // si el archivo todavia no se ha movido, se fuerza a moverse a su ubicacion temporal writeable/uploads
+            $ruta = ROOTPATH . 'public\img\cedulas' . DIRECTORY_SEPARATOR; // fija la ruta para guardar/mover en disco a su ubicacion definitiva (public)
+            $file->move($ruta, $post['cedula_img'], true); // mueve el fichero de la carpeta temporal a su ubicacion definitiva
+            $url = base_url() . 'public/img/cedulas/' . $file->getName(); // consigue la url para guardarla en el registro y verla en html
+        };
+        $data = ['cedula_img' => $url];
+        $this->solicitudesModel->update($id, $data, false);
+        return redirect()->back()->withInput();
+        $session->setFlashdata('mensaje', 'Imagen actualizada');
+
+
     }
 
 

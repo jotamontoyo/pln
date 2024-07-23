@@ -5,6 +5,10 @@
 
 <div class="container">
 
+    <br>
+
+    <h4 class="centrado">Usuarios</h4>
+
     <table id="table" class="display">
         <thead>
             <tr>

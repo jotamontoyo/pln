@@ -83,7 +83,7 @@
                 /* padding: 5px; /* Some padding */
                 width: 120px; /* Set a small width */
                 height: 100px;
-                background-image: url('/pln/public/img/logos/subir_img.png');
+                background-image: url('public/img/logos/subir_img.png');
                 background-repeat: no-repeat;
               }
 

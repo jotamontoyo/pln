@@ -1,6 +1,8 @@
-<?php echo $this->extend('plantilla'); ?>
+<?= $this->extend('plantilla'); ?>
 
-<?php echo $this->section('contenido'); ?>
+
+
+<?= $this->section('contenido'); ?>
 
 
   <!-- <section class="py-5 text-center container">
@@ -592,7 +594,7 @@
                         <?php endforeach; ?>
                     </select>
                     <p class="small" style="color:red">
-                        <?= validation_show_error('grupo_productos'); ?>
+                        <?= validation_show_error('estado_id'); ?>
                     </p>
                 </div>
             </div>
@@ -610,12 +612,12 @@
                         <?php endforeach; ?>
                     </select>
                     <p class="small" style="color:red">
-                        <?= validation_show_error('grupo_productos'); ?>
+                        <?= validation_show_error('departamento_id'); ?>
                     </p>
                 </div>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-sm-2">
                 <label for="municipio_id" class="col-sm-2 col-form-label" style="text-align: right">
                     <!-- <?= lang('App.productos.grupo_productos') ?> -->
                      Municipio
@@ -628,10 +630,15 @@
                         <?php endforeach; ?>
                     </select>
                     <p class="small" style="color:red">
-                        <?= validation_show_error('grupo_productos'); ?>
+                        <?= validation_show_error('municipio_id'); ?>
                     </p>
                 </div>
             </div>
+
+
+
+
+
 
 
 
@@ -820,8 +827,8 @@
 
 
 
-<?php echo $this->endSection(); ?>
+<?= $this->endSection(); ?>
 
-<?php $this->section('scripts') ?>
+<?= $this->section('scripts') ?>
    
-<?php echo $this->endSection(); ?>
+<?= $this->endSection(); ?>

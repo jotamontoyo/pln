@@ -58,14 +58,69 @@
           
           <li class="nav-item"><a class="nav-link" href=<?= base_url('users')?>> Usuarios </a></li>
           <li class="nav-item"><a class="nav-link" href=<?= base_url('solicitudes')?>> Solicitudes </a></li>
+
+
+
+
         
-          <li class="nav-item dropdown" id="myDropdown">
+          <!-- <li class="nav-item dropdown" id="myDropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Compras  </a>
             <ul class="dropdown-menu">
 
               <li> <a class="dropdown-item" href=<?= base_url()?>> Almacenenes &raquo; </a>
                 <ul class="submenu dropdown-menu">
                   <li><a class="dropdown-item" href="#">SubAlmacenenes</a></li>
+                   <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                    <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li> 
+                </ul>
+              </li>
+                
+
+              <li> <a class="dropdown-item" href=<?= base_url()?>> Productos &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href=<?= base_url()?>>Grupos</a></li>
+                  <li><a class="dropdown-item" href=<?= base_url()?>>Categorías</a></li>
+                  <li><a class="dropdown-item" href=<?= base_url()?>>SubCategorías</a>
+                     <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                </ul>
+              </li>
+              <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
+      
+            </ul>
+
+          </li> -->
+
+
+
+
+
+
+
+
+          <li class="nav-item dropdown" id="myDropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Localizaciones  </a>
+            <ul class="dropdown-menu">
+
+              <li> <a class="dropdown-item" href=<?= base_url()?>> Nicaragua &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="<?= base_url()?>estados">Estados</a></li>
+                  <li><a class="dropdown-item" href="<?= base_url()?>departamentos">Departamentos</a></li>
+                  <li><a class="dropdown-item" href="<?= base_url()?>municipios">Municipios</a></li>
                   <!-- <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
                   <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
                     <ul class="submenu dropdown-menu">
@@ -79,7 +134,7 @@
               </li>
                 
 
-              <li> <a class="dropdown-item" href=<?= base_url()?>> Productos &raquo; </a>
+              <li> <a class="dropdown-item" href=<?= base_url()?>> EE.UU &raquo; </a>
                 <ul class="submenu dropdown-menu">
                   <li><a class="dropdown-item" href=<?= base_url()?>>Grupos</a></li>
                   <li><a class="dropdown-item" href=<?= base_url()?>>Categorías</a></li>
@@ -93,20 +148,30 @@
                   <li><a class="dropdown-item" href="#">Submenu item 5</a></li> -->
                 </ul>
               </li>
-              <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
-              <!-- <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+              <!-- <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
+              <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
               <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> -->
       
             </ul>
 
           </li>
 
-          <li class="nav-item dropdown" id="myDropdown">
+
+
+
+
+
+
+
+
+
+
+          <!-- <li class="nav-item dropdown" id="myDropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  RR.HH </a>
             <ul class="dropdown-menu">
               <li> <a class="dropdown-item" href=""> Departamentos </a></li>
               <li> <a class="dropdown-item" href=""> Empleados </a></li>
-              <!-- <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+               <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
                 <ul class="submenu dropdown-menu">
                   <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
                   <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
@@ -121,9 +186,11 @@
                 </ul>
               </li>
               <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> -->
+              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> 
             </ul>
-          </li>
+          </li> -->
+
+          
 
           <div class="container">
 

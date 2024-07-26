@@ -128,18 +128,18 @@ class Solicitudes extends BaseController
     {
         $session = session();
         $reglas = [                     // de validacion
-            'afiliado_id'           => 'required|is_unique[solicitudes.afiliado_id]',
+            //'afiliado_id'           => 'required|is_unique[solicitudes.afiliado_id]',
             'nombre'                => 'required', 
             'apellidos'             => 'required', 
-            'cedula'                => 'required|is_unique[solicitudes.cedula]', 
+            /*'cedula'                => 'is_unique[solicitudes.cedula]', 
             'pasaporte'             => 'required|is_unique[solicitudes.pasaporte]', 
             'licencia'              => 'required|is_unique[solicitudes.licencia]', 
-            'residencia'            => 'required|is_unique[solicitudes.residencia]', 
+            'residencia'            => 'required|is_unique[solicitudes.residencia]', */
             'estado_id'             => 'required',
-            'departamento_id'       => 'required',
-            'municipio_id'          => 'required',
+            /* 'departamento_id'       => 'required',
+            'municipio_id'          => 'required', */
             'ciudad'                => 'required', 
-            'pais'                  => 'required', 
+             /* 'pais'                  => 'required', */
             'whatsapp'              => 'required', 
             'email'                 => 'required', 
             'afiliado'              => 'required', 
@@ -151,7 +151,6 @@ class Solicitudes extends BaseController
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors()); //muestra lista de errores
         } else {
             $post = $this->request->getPost([
-                'afiliado_id', 
                 'nombre', 
                 'apellidos', 
                 'cedula', 
@@ -184,7 +183,6 @@ class Solicitudes extends BaseController
             if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
             if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
             $data = [
-                'afiliado_id'           => $post['afiliado_id'],
                 'nombre'                => $post['nombre'],
                 'apellidos'             => $post['apellidos'],
                 'cedula'                => $post['cedula'],
@@ -232,11 +230,13 @@ class Solicitudes extends BaseController
     public function edit($id = null)
     {
 
+        $estados = $this->estadosModel->findAll();
         $solicitud = $this->solicitudesModel->find($id);
         $data = [
             'titulo' => 'Solicitud',
             'id' => $id,
-            'solicitud' => $solicitud
+            'solicitud' => $solicitud,
+            'estados' => $estados
         ];
         return view('solicitudes/edit', $data);
 
@@ -262,28 +262,30 @@ class Solicitudes extends BaseController
      */
     public function update($id = null)
     {
+        
         $session = session();
         $reglas = [                     
             'afiliado_id'           => 'required', 
             'nombre'                => 'required', 
             'apellidos'             => 'required', 
-            'cedula'                => 'required', 
+            /*'cedula'                => 'required', 
             'pasaporte'             => 'required', 
             'licencia'              => 'required', 
             'residencia'            => 'required',
             'ciudad'                => 'required', 
-            'pais'                  => 'required', 
+            'pais'                  => 'required', */
             'whatsapp'              => 'required', 
             'email'                 => 'required', 
             'afiliado'              => 'required', 
-            'posicion'              => 'required'
+            'posicion'              => 'required',
+            'estado_id'             => 'required'
         ];
 
         if(!$this->validate($reglas)){
             $session->setFlashdata('mensaje', 'Error(s) en formulario');
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
         } else {
-            $post = $this->request->getPost(['afiliado_id', 'nombre', 'apellidos', 'cedula', 'pasaporte', 'licencia', 'residencia', 'ciudad', 'pais', 'whatsapp', 'email', 'afiliado', 'cargo', 'posicion']);
+            $post = $this->request->getPost(['afiliado_id', 'nombre', 'apellidos', 'cedula', 'pasaporte', 'licencia', 'residencia', 'estado_id', 'ciudad', 'pais', 'whatsapp', 'email', 'afiliado', 'cargo', 'posicion']);
             if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
             if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
             $data = [
@@ -300,7 +302,8 @@ class Solicitudes extends BaseController
                 'email'                 => $post['email'],
                 'afiliado'              => $afiliado,
                 'cargo'                 => $cargo,
-                'posicion'              => $post['posicion']
+                'posicion'              => $post['posicion'],
+                'estado_id'             => $post['estado_id']
             ];
                 
             $this->solicitudesModel->update($id, $data, false);

@@ -48,6 +48,36 @@
               </p>
             </div>
 
+
+
+
+            <div class="col-sm-2">
+                <label for="estado_id" class="col-sm-2 col-form-label">
+                    <!-- <?= lang('App.productos.grupo_productos') ?> -->
+                     País de residencia:
+                </label>
+
+                    <select class="form-select" id="estado_id" name="estado_id">
+                        <option value="">Seleccionar</option>
+                        <?php foreach($estados as $estado): ?>
+                          <option value="<?= $estado['id'] ?>" 
+                              <?= ($estado['id'] == $solicitud['estado_id']) ? 'selected' : '';?>>
+                              <?= $estado['nombre'] ?>
+                          </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <p class="small" style="color:red">
+                        <?= validation_show_error('estado_id'); ?>
+                    </p>
+            </div>
+            
+            
+        
+
+
+
+
+
             <div class="col-sm-6">
               <label for="ciudad" class="form-label">Ciudad:</label>
               <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $solicitud['ciudad']; ?>">
@@ -285,6 +315,7 @@
   });
 
 
+  // para cuando se carga la pagina activar el check si procede
   $(document).ready(function () {
     var afiliado = document.getElementById("afiliado").value;
     if(afiliado == 1) {
@@ -296,6 +327,7 @@
     };
   });
 
+  // para cuando se carga la pagina activar el check si procede
   $(document).ready(function () {
     var cargo = document.getElementById("cargo").value;
     if(cargo == 1) {
@@ -307,6 +339,9 @@
     };
   });
 
+
+
+  
 
 
 </script>

@@ -116,11 +116,14 @@
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Localizaciones  </a>
             <ul class="dropdown-menu">
 
-              <li> <a class="dropdown-item" href=<?= base_url()?>> Nicaragua &raquo; </a>
+
+              <li> <a class="dropdown-item" href="<?= base_url()?>estados"> Paises de residencia &raquo; </a>
+
+              <li> <a class="dropdown-item" href=<?= base_url()?>> . &raquo; </a>
                 <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href="<?= base_url()?>estados">Estados</a></li>
-                  <li><a class="dropdown-item" href="<?= base_url()?>departamentos">Departamentos</a></li>
-                  <li><a class="dropdown-item" href="<?= base_url()?>municipios">Municipios</a></li>
+                  <li><a class="dropdown-item" href="<?= base_url()?>">.</a></li>
+                  <li><a class="dropdown-item" href="<?= base_url()?>">.</a></li>
+                  <li><a class="dropdown-item" href="<?= base_url()?>">.</a></li>
                   <!-- <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
                   <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
                     <ul class="submenu dropdown-menu">

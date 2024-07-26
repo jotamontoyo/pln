@@ -134,7 +134,7 @@ class Estados extends BaseController
     {
         $session = session();
         $reglas = [                     // de validacion
-            'codigo'                => 'required|is_unique[estados.codigo]',
+            'codigo'                => 'required',
             'nombre'                => 'required', 
         ];
         if(!$this->validate($reglas)){ //si no se cumplen las reglas

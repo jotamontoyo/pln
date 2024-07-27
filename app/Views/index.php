@@ -92,7 +92,7 @@
 
   <!-- direccion mision y vision modal -->
   <div class="modal fade" id="reglamentoModal" tabindex="-1" aria-labelledby="reglamentoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="reglamentoModalLabel">Reglamento</h1>
@@ -219,218 +219,16 @@
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="declaracionModalLabel">Declaracion de principios</h1>
+          <h1 class="modal-title fs-5" id="declaracionModalLabel">Reglamento</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="container px-4 py-5">
-            <h2 class="pb-2 border-bottom centrado"><img src="public/img/logos/logoPLN.jpg" style="max-width: 40px;" alt=""> REGLAMENTO DEL PARTIDO LIBERAL DE NICARAGUA</h2>
-
-            <br>
-            <h4 class="centrado"></h4>
-            
-            <p>CAPITULO I (Naturaleza y Objetivos Fundamentales)</p>
-
-            <br>
-
-            <section>
-              <p>Arto.1.-El Partido Liberal de Nicaragua es una institución política nicaragüense, de inspiración republicana, democrática y nacionalista, que renueva su pensamiento en la filosofía de un liberalismo progresista y de justicia social.</p>
-              <p>Arto.2.-Sus antecesores históricos son los movimientos libertadores y precursores de la Independencia Nacional y los que consolidaron la soberanía de la República en la Guerra Nacional. Igualmente es sucesor de quienes concretaron los principios revolucionarios en la Constitución Política de 1893, llamada "La Libérrima", sentando las bases de las transformaciones sociales y del Estado moderno.</p>
-              <p>Arto.3.-La Declaración de Principios, junto con los Estatutos del partido como organización de oposición y posteriormente los estatutos definitivos del partido como del Programa de Gobierno, constituyen los Documentos Fundamentales, que orientan y norman la vida institucional, operativa y administrativa.</p>
-              <p>Arto.4.-Organización de oposición que desarrollara iniciativas y procesos organizativos desde el exterior principalmente desde los países con mayor número de residentes Nicaragüenses donde se representan los objetivos o fines específicos que el Partido pretende implementar hasta la caída de la dictadura.</p>
-              <p>Arto.5.-Integran la organización: hombres, mujeres y jóvenes, sin diferencia o privilegio alguno donde el único requisito para ser miembro es no aceptar ni total ni parcial nada que tenga relación con el sandinismo ni tampoco pertenecer a grupo u organización compartida con grupos con orígenes sandinistas.</p>
-              <p>Arto.6.-Principios Programáticos del partido según según etapas: Estructurados para cubrir tres etapas, la primera como organización de oposición previo a la existencias de condiciones para participar en elecciones justas, libres, transparentes y observadas, la segunda destinada a la organización del tendido electoral, selección de candidatos y participación en los comicios, la tercera como autoridades después de haber ganado las elecciones.</p>
-            </section>
-
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 6
-            Arto.6.1.- Organización de oposición previa a las existencias de condiciones para participar en elecciones justas, libres, transparentes y observadas.
-            Condiciones indispensables:
-            a) Cumplimiento irrestricto de la resolución OEA de octubre 2020, iniciando por la liberación de todos los presos políticos como del re establecimiento de las nacionalidades vía ley como la restitución de sus bienes a los afectados tanto a los 222, como a los restantes.
-            b) Permitir la libre y re estricta movilidad de todos aquellos que de forma directa han sido vetados a salir o entrar al país.
-            c) Abolición de todas las leyes que causaron la explosión de abril como todas las promulgadas desde septiembre 2020 a la fecha relacionada con la participación como condenatorias a libre y justa participación de la oposición.
-            d) Modificación de las reformas electorales de marzo del 2020 eliminando cualquier tipo de veto en la participación como en una re estructuración del CSE de los cargos de dirección como del cuerpo de magistrados.
-            e) Instalación de comisiones de observación OEA, Unión Europea, ONU y otros organismos internacionales desde un año antes de la fecha prevista para la celebración de las elecciones.
-            f) Acreditación de grupos nacionales compuestos por designados de los partidos opositores a participar como observadores desde un año antes, que trabajaran conjuntamente con designados internacionales para asegurar la inclusión en el padrón de los registros irregulares detectados en la depuración como de la vigilancia de la inclusión de nuevos registros durante el proceso desde la instalación del equipo de observadores hasta la emisión del padrón definitivo de las elecciones.
-            g) Trabajar para lograr la representación clandestinamente en todos los municipios y departamentos de Nicaragua con la formación de juntas directivas, como en los países y estados donde existen residentes nicaragüenses nacionalizados y en trámite tanto de los éxodos previos al 2018 como posterior.
-            h) Promover el proyecto de empadronamiento, dirigido a todos los nicaragüenses residentes en el exterior como una propuesta real que genere la confianza para
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 7
-            lograr su involucramiento en la lucha para que formen parte de los afiliados a nuestra organización, con la premisa que por primera vez puedan ejercer su voto en las primeras elecciones con condiciones a celebrarse en Nicaragua según lo dicta el Arto. 122 de la ley electoral 331.
-            i) Acercamientos con todas las organizaciones y gobiernos no de izquierda a los que les demostraremos la fuerza de nuestra organización en cuanto a estructuras y afiliación con datos que lo sustenten, realizar los contactos utilizando todos los medios posibles como con misiones presenciales por representantes de nuestra organización, solicitar el reconocimiento de nuestra organización como de solicitar apoyos para llevar el financiamiento del proyecto del empadronamiento.
-            j) Exigir a todas las organizaciones que forman grupos opositores como los que los financian la inclusión en la representación internacional de nuestra organización así como en cualquier tipo de diálogos o encuentros donde se aborden temas relacionados con la instauración de un orden constitucional en nuestro país.
-            Arto.6.2.- Inscripción del partido, conformación de Juntas Directivas, Organización del tendido electoral, depuración del padrón, selección de candidatos y participación en los comicios.
-            a) Nombramiento de miembros de la junta directiva nacional según propuestas y trayectorias según méritos alcanzados en la etapa de organización en el exterior como por el grado de popularidad en cada uno de las áreas geográficas que pretendan representar tanto dentro del territorio nacional como fuera de este.
-            b) Validación, confirmación y acreditación de Juntas Directivas pre inscritos durante el periodo de organización del partido desde la oposición en el exterior.
-            c) Sistema de inscripción de candidatos a presidente, vicepresidente, convencionales y otros cargos de elección vía elecciones primarias con mecanismo de votación presencial y electrónico con tabulación electrónica.
-            d) Postulación de candidato a Magistrado del CSE como en otros puestos de dirección o a modo de supervisión ad hoc en los cargos de relevancia que se otorguen a otros partidos.
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 8
-            e) Designación de equipo de analistas y de enlace con los organismos internacionales como nacionales de supervisión.
-            f) Inscripción del partido ante el CSE y sus juntas directiva municipal, departamental y central.
-            g) Nombramiento de responsables por centro de votación y juntas receptoras quienes serán los encargados de la depuración del padrón y fiscales el día de la elección.
-            h) Nombramiento del resto de fiscales y encargados en el resto posiciones propias de una elección según el reglamento del CSE o de cobertura a disposiciones transitorias acordadas entre los partidos participantes.
-            i) Instalación de sistema de seguimiento y de registro paralelo de resultados el día de la elección.
-            j) Instalación de red de comunicación remota vía aplicación en teléfonos celulares para recibir reportes de acontecimientos en cada Centro de Votación como en Juntas Receptoras con replicación inmediata a las misiones de observación como a las autoridades del CSE.
-            k) Instalación de un centro de control para garantizar la cobertura de cualquiera de las posiciones con personal suplente en las distintas fases del proceso en caso de falta de los titulares que inicia con la llegada de las misiones de observación.
-            Arto.6.3.- Como autoridades después que hayamos ganado las elecciones.
-            a) Como premisa principal defenderemos a nuestros ciudadanos, y su familia como tal con la firme convicción que tienen que ser el pilar central del edificio de la libertad social y política.
-            b) Nos comprometemos a formar una república democrática consagrada a la vida digna de toda la población, y aprovechar el culto del respeto de los derechos humanos, como el contrato social más ético y más eficiente en la consecución del desarrollo social político y económico para la eliminación de la pobreza, y el desarrollo del bienestar de cada ciudadano. Estamos conscientes que una
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 9
-            república democrática es un Estado en el cual se debe de practicar el principio de ciudadanía universal, sin discriminación de ningún tipo, en el cual cada ciudadano tiene un voto nada más, y no menos que un voto.
-            c) Teniendo en consideración el ámbito de acción del estado como la cosa pública; que es indispensable para la libertad de todos, que la libertad de cada persona, en su ámbito privado está fuera del ámbito del alcance del poder político.
-            d) Haremos respetar la vida privada del individuo y de la familia, sujeta al respeto de los derechos humanos de todos sus miembros, no sea incumbencia del Estado, esto implica que el Estado no podría espiar, reclutar forzosamente, vigilar, o forzar conductas personales, o de tipo religioso, sexual, de conciencia, profesional o vocacional.
-            e) Con la convicción que para ser ciudadano no se requiere pertenecer ni a un partido, ni a una iglesia, por tanto el estado tiene que ser apartidista y laico.
-            f) Creemos en la descentralización del poder o dispersión del poder político ya que la concentración del poder es mortal para la democracia.
-            g) Debemos de promover el respeto irrestricto a la institucionalidad asegurándonos pesos y contra pesos entre la diferentes instituciones del estado (judicial, legislativo, ejecutivo, electoral) quienes deben de tener competencias específicas delineadas claramente en la constitución, sin que ninguno tenga hegemonía sobre los otros.
-            h) Garantizando el derecho de los habitantes a la salud y la educación, asignando los recursos prioritariamente según el presupuesto nacional.
-            i) Impulsando en la promoción de la educación tanto formal como la educación vocacional, como uno de los métodos de cerrar la brecha social.
-            j) Promoveremos el sistema de salud y fomentando el sistema de salud de los trabajadores ingresando la mayor cantidad de personas con trabajo formal.
-            k) Respeto e instauración de una economía libre de mercado adoptando conductas innovadoras para para el crecimiento de la empresa privada, como de diferentes expresiones de pequeñas y medianas empresas, agroiduntrializacion de nuestros
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 10
-            productos a través de asociaciones, cooperativas, Etc. Bajo un modelo empresarial.
-            l) Gobernaremos en la austeridad que debe de tener el gobierno y por un mecanismo bien estipulado, se debe de exigir a todo nivel la transparencia del manejo de los fondos del estado ya sea con mecanismos nacionales o internacionales.
-            m) Impulsaremos la formación de organizaciones que fomenten la ayuda para los grupos poblacionales más necesitados como los niños abandonados, o con capacidades diferentes, con grupos juveniles en peligro, con madres solteras y ancianos desprotegidos.
-            n) Proveeremos de todas las condiciones para general un gran número de puestos de trabajos para hacer realidad la formación de una clase media con ingresos dignos, lo cual será posible vía la habilitación de condiciones atractivas para empresas internacionales y en consecuencia convertirnos en un país con inmensa oferta de puestos en call centers.
-            o) Apoyaremos al desarrollo de una reforma agraria llevada a cabo con una buena planificación en tierras baldías o mal utilizadas obtenidas con fondos y programas de gobierno adquiridas legalmente, y nunca bajo la figura de confiscación para campesinos sin tierras y con vocación agropecuaria.
-            p) Recuperación patriótica de todos los bienes que hayan tenido que haber sido indemnizados a sus antiguos dueños previo a las confiscaciones que se vieron afectados, exigiendo a todos los beneficiados de la piñata a devolver o pagar los referidos bienes u otros activos, no existiendo la posibilidad de que el estado los financie sino que tendrán que ser pagados por los que basados en leyes expropiatorias fueron beneficiados y de no pagar deberán ser devueltas al estado quien procederá a un proceso de subasta para resarcir el daño por el pago con las arcas del estado ya realizado a los legítimos propietarios.
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 11
-            CAPITULO II (Denominación, Duración)
-            Arto.7.-La Institución se denomina en esta primera etapa: Partido Liberal.org de Nicaragua, siendo su sigla oficial PL. Posee personalidad jurídica como organización de conformidad con las leyes del estado de La Florida, siendo de duración indefinida hasta la inscripción como partido ante el CSE con el nombre de Partido Liberal de Nicaragua con domicilio oficial en la ciudad capital Managua.
-            CAPITULO III (Los representantes en la etapa como organización de oposición)
-            Arto.8.- Además del comité ejecutivo, se procederá a conformar la estructura organizativa en el territorio nacional en los 153 municipios con 5 miembros, 15 departamentos con 7 miembros, 2 regiones autónomas con 7 miembros acción que debido a la represión se realizara de forma clandestina, la representación en el exterior se conformaran estructuras territoriales con 5 miembros por país, y 3 miembros por estado o ciudades por país donde residen tanto nacionalizados como en proceso o en tránsito.
-            Arto.8.1- Estructura territorial por país con cinco miembros:
-            1. Coordinador: Encargado de la ejecución de las tareas designadas y de la relación con el Coordinador del país.
-            2. Relaciones públicas e institucionales: Encargado de establecer relaciones con todos los sectores políticos y organizaciones que puedan aportar a nuestra organización.
-            3. Afiliación: Encargado de coordinar las tareas de afiliación de los distintos estados del país y reporte al comité ejecutivo.
-            4. Secretario: Encargado de la redacción de actas como de comunicaciones y respuestas de los estados del país.
-            5. Contralor: Encargado de evaluar el grado de cumplimiento del país según acciones y orientaciones recibidas del comité ejecutivo como del desempeño de los miembros del equipo de coordinación del país.
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 12
-            Arto.8.2- Estructura territorial por estados por país los tres cargos corresponderán a:
-            1. Coordinador: Encargado de la ejecución de las tareas designadas y de la relación con el Coordinador del país.
-            2. Relaciones públicas e institucionales: Encargado de establecer relaciones con todos los sectores políticos y organizaciones que puedan aportar a nuestra organización.
-            3. Afiliación: Encargado de coordinar las tareas de afiliación como de registro y reporte a su coordinador.
-            Arto.8.3.- Países y estados con representación como parte de la organización.
-            Los miembros en los distintos países y estados serán los encargados de recoger firmas de los afiliados para adjuntarlas a documentos de solicitud generados por el comité ejecutivo con el objetivo de conseguir apoyo de las autoridades del país o estado / lugar donde se desempeña cada representación.
-            Países de: Centro América y México
-            Costa Rica
-            Panamá
-            Guatemala
-            El Salvador
-            Honduras México
-            País: Estados Unidos
-            Estados: Florida Luisiana California Carolina del Norte Texas Georgia Nueva York Arizona Nueva Jersey Nuevo México Maryland Nevada Virginia Utah Washington
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 13
-            País: Canadá País: España
-            Lugares: Lugares:
-            Montreal Comunidad de Madrid
-            Toronto Zaragoza
-            Winnipeg Vizcaya
-            Calgary Sevilla
-            Vancouver Guipúzcoa Ottawa Comunidad Valenciana
-            Murcia
-            Otros: Alemania y Resto de países de la Unión Europea
-            CAPITULO IV (Los Afiliados, Derechos y Deberes)
-            Arto.09.- Podrá afiliarse al Partido Liberal Nicaragüense en esta etapa como organización, cualquier nicaragüense que libremente así lo desee siempre y cuando no pertenezca a organizaciones lideradas por sandinistas y en el caso de optar por posiciones en juntas directivas o representaciones territoriales quedan vetados los que participen en grupos en alianzas donde participen organizaciones sandinistas.
-            Arto.10.- Clasificación de miembros según categorías:
-            a) Afiliados: quienes cumplan con los requisitos y procedimientos de solicitud, aprobación, registro e identificación presentando.
-            a.1.) nicaragüenses con cedula:
-            - Envío de numero de WhatsApp, Numero de Cedula, foto de la cedula y lugar de residencia actual cuando se encuentren viviendo en el exterior.
-            a.2.) nicaragüenses sin cedula:
-            - Envío de numero de WhatsApp, Numero de una identificación licencia de conducir u otra de carácter oficial, foto de la identificación y lugar de residencia actual
-            b) Miembros de las estructuras: quienes son parte de las estructuras territoriales en el exterior tanto a nivel de un país o de los estados o ciudades que los conforman.
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 14
-            b) Patrocinadores y colaboradores: quienes apoyen y colaboren en el exterior mediante diversas formas de patrocinio económico, material e intelectual.
-            c) Simpatizantes: quienes manifiesten espontáneamente su simpatía a favor de la organización con la opción de solicitar su inscripción como Afiliados tanto a lo interno como en las estructuras existentes en el exterior.
-            La solicitud de afiliación implica:
-            1) La aceptación de la Declaración de Principios, objetivos.
-            2) El Compromiso de cumplir con el presente reglamento.
-            3) La lealtad a la organización y sus delegados tanto territoriales como al comité ejecutivo.
-            4) Cumplir las directrices acordadas por los Órganos Superiores inmediatos.
-            5) El Compromiso de profesar una honestidad de comportamiento en la vida pública y ningún tipo de afinidad con el sandinismo que pueda causar acciones de infiltra miento.
-            Arto.11.- Los procedimientos y demás aspectos pertinentes a la afiliación serán acordados por el Comité Ejecutivo en el Reglamento o disposiciones que emita al respecto.
-            Arto.12.- Corresponde a Comité Ejecutivo y a las Juntas Directivas Departamentales y Municipales como de representaciones en el exterior pronunciarse sobre la admisión y/o separación de los Afiliados.
-            Arto.13.- Los Carnets de Afiliación serán emitidos de modo electrónico para el envío a cada afiliado una vez incluido, las juntas directivas departamentales y municipales, quienes llevarán su registro y control. Los carnets llevarán la firma del Presidente del secretario del comité ejecutivo.
-            Arto.14.- El comité ejecutivo será la responsable de llevar actualizado el registro central de todos los afiliados, sin demérito de que cada junta directiva departamental y municipal como territoriales en el exterior quienes llevará el registro y control general de afiliados correspondientes a su demarcación geográfica.
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 15
-            Arto.15.- Derechos de los Afiliados:
-            a) Participar activamente en la elaboración y adopción de las resoluciones y programas mediante la libre expresión y defensa de sus opiniones en el ejercicio del debate interno a través de las formas establecidas en el presente reglamentos consultados de forma electrónica a sus números de WhatsApp o desde consultas a través del sitio Web de la organización según el tipo de consulta, general o por áreas geográficas.
-            b) Desempeñar posiciones dentro de la estructura orgánica según territorios o general.
-            c) Ser propuestos para cargos de elección para cargos del comité ejecutivo o de estructuras territoriales a nivel de país o estados i/o ciudades correspondientes a los lugares de residencia.
-            d) Recibir formación política doctrinaria para el desarrollo de las tareas partidarias de la organización que se le encomienden.
-            e) Ser informados sobre las actividades de la organización por medio de comunicados a definir tanto sobre los tipos de contenido como de la periodicidad de envío por medios electrónicos o por su publicación en el sitio web para lo que se enviará mensaje por WhatsApp al momento de la inclusión de una nueva comunicación el día de su publicación.
-            f) Participar, ser escuchados y atendidos por las diferentes instancias de la organización, pudiendo presentar propuestas, críticas e iniciativas.
-            g) A la crítica y disidencia, que no atenten en contra de la Unidad, los Principios y al reglamento.
-            h) A la defensa por sí o por apoderado, cuando se le formulen llamados de atención de orden disciplinario por las autoridades competentes, de conformidad con el reglamento.
-            i) Ser defendidos cuando por ejercitar actividades relacionadas con la organización en el caso de verse violentados o amenazados en su persona, familia, trabajo o bienes.
-            j) Ser atendidos por las autoridades, funcionarios y personal de la organización.
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 16
-            Arto.16.- Deberes de los Afiliados:
-            a) Respetar el honor y la imagen de la organización, de sus Órganos de Dirección y de todos sus afiliados.
-            b) Cumplir los Reglamentos y demás normas de ordenamiento interno emanadas de los órganos competentes.
-            c) Ajustar su actividad política a los Documentos Fundamentales.
-            d) Aportación económica de una cantidad de forma mensual según la capacidad y voluntad de cada afiliado a realizarse de forma directa por medios electrónicos a cuentas autorizadas de la organización la que generara de forma automática del recibo correspondiente enviado de forma electrónica al WhatsApp de cada afiliado.
-            e) Asistir a las convocatorias ya sea presenciales o por Zoom que se efectúen con carácter personal o general.
-            f) Asumir y cumplir con diligencia y responsabilidad las funciones y trabajos de la organización que se les encomienden.
-            g) Desempeñar con lealtad, responsabilidad y honestidad los cargos que le sean confiados o para los que resultasen seleccionados.
-            h) Mantener actualizados los datos de identificación personal y aquellos otros requeridos.
-            i) Acatar las resoluciones y fallos que tomen las autoridades competentes sobre discrepancias o disputas de cualquier índole de acuerdo a lo que dicta el presente reglamento.
-            CAPITULO IV (Estructura Orgánica)
-            Arto.17.- Para fines de organización y participación además de los afiliados y las estructuras organizativas se definen los sectores siguientes:
-            1. Empresarios nicaragüenses y de otros países
-            2. Ciudadanos de la diáspora que emigraron anterior al 2018
-            3. Ciudadanos emigrantes después 2018
-            4. Organizaciones o instituciones ONG´s y otros
-            5. Personalidades
-            6. Otros Sectores
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 17
-            Arto.18.- Código de Ética
-            ARTICULO 1. El presente Código Disciplinario le permite al Partido Liberal Nicaragüense en esta primera etapa como organización, dirigir y actuar sujeto a normas disciplinarias, con el fin de velar por la consolidación de la moral pública y la ética política de sus autoridades como de sus afiliados.
-            ARTICULO 2. TITULARIDAD DE LA ACCION DISCIPLINARIA.
-            La organización del Partido Liberal de Nicaragua es el titular de la potestad disciplinaria y la ejercerá a través del Comité ejecutivo con la participación de las estructuras organizativas.
-            ARTICULO 3. DESTINATARIOS DEL CÓDIGO DE ETICA. El presente Código Disciplinario, se aplicará a las personas que tengan la condición de miembros afiliados a la organización Partido Liberal de Nicaragua, de acuerdo con lo previsto en su reglamento.
-            ARTICULO 4. LEGALIDAD. El afiliado sólo podrá ser investigado y sancionado disciplinariamente por aquellas conductas previstas como faltas disciplinarias en el presente Código y en las disposiciones legales.
-            ARTICULO 5. DEBIDO PROCESO. La garantía constitucional y del respeto del debido proceso se aplica en todas las actuaciones previstas en este Código.
-            ARTICULO 6. RESOLUCION DE LA DUDA. En las investigaciones que se adelanten a los afiliados, toda duda ha de resolverse a su favor cuando no haya modo de eliminarla.
-            ARTICULO 7. PRESUNCION DE INOCENCIA. El afiliado a quien se adelante investigación disciplinaria, se presume inocente mientras no se declare su responsabilidad mediante fallo ejecutoriado debidamente sustentado.
-            ARTICULO 8. COSA JUZGADA. El afiliado no podrá ser juzgado más de una vez por un mismo comportamiento resuelto con anterioridad, aun cuando a éste se le dé una denominación distinta.
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 18
-            ARTICULO 9. CULPABILIDAD. En el proceso disciplinario queda proscrita toda forma de responsabilidad objetiva y las faltas sólo serán sancionables a título de dolo o culpa.
-            ARTICULO 10. FAVORABILIDAD. En las investigaciones disciplinarias que se adelanten contra los afiliados, la ley permisiva o favorable se aplicará de preferencia a la restrictiva o desfavorable.
-            ARTICULO 11. IGUALDAD. Las garantías y el trato de las autoridades disciplinarias serán iguales para todos los destinatarios de presente Código de ética, sin discriminación alguna.
-            ARTICULO 12. RECONOCIMIENTO DE LA DIGNIDAD HUMANA. Todo miembro afiliado a la organización Partido Liberal de Nicaragua, en desarrollo del proceso disciplinario, será tratado con el respeto debido a la dignidad humana.
-            ARTICULO 13. PRINCIPIO DE INTERPRETACION. En la interpretación y aplicación del Código de ética de la organización Partido Liberal de Nicaragua, debe tenerse presente que su propósito es el logro de los fines contenidos en sus principios en el reglamento basados en los derechos y obligaciones como en la protección de los derechos y garantías consagrados a favor de sus destinatarios.
-            ARTICULO 14. CAUSALES DE EXCLUSION DE RESPONSABILIDAD. El afiliado quedará exento de responsabilidad disciplinaria, cuando actúe amparado por alguna de las causales de exclusión de responsabilidad o cuando esté en situación de inimputabilidad.
-            ARTICULO 15. CAUSALES DE EXTINCION. Son causales de extinción de la actuación disciplinaria, las siguientes: 1. La muerte del afiliado investigado. 2. La prescripción de la actuación disciplinaria.
-            ARTICULO 16. PRESCRIPCION. La actuación disciplinaria prescribe en el término de cinco (5) años contado a partir de la consumación de la falta, o desde la realización del último acto en las faltas de carácter permanente o continuado, o a partir del conocimiento que se tenga por parte de la autoridad competente. Cuando fueren varias las conductas investigadas en un solo proceso, la prescripción opera independientemente para cada una de ellas.
-            Reglamento del Partido Liberal de Nicaragua
-            Pagina 19
-            ARTICULO 17. PARAGRAFO. La prescripción de la actuación disciplinaria se interrumpe cuando se profiera decisión de suspensión temporal provisional o se inicia investigación disciplinaria.
-            ARTICULO 18. RENUNCIA A LA PRESCRIPCION. El afiliado podrá renunciar a la prescripción de la actuación disciplinaria, para que se inicie o continúe adelantando la investigación.
-            ARTICULO 19. REHABILITACION. Transcurrido el término previsto en la sanción de suspensión, el afiliado quedará rehabilitado automáticamente.
+          <div class="container px-4">
+            <?= $this->include('docs/reglamento'); ?>
           </div>
-
-
-
-
-          
-
-
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -451,9 +249,7 @@
         </div>
         <div class="modal-body">
 
-
-
-        <div class="container px-4 py-5">
+        <div class="container px-4">
           <h2 class="pb-2 border-bottom centrado"><img src="public/img/logos/logoPLN.jpg" style="max-width: 40px;" alt=""> Reglamento del Partido Liberal de Nicaragua como organización de oposición</h2>
           <p class="centrado text-emphasis fw-semibold">APROBADOS POR EL COMITÉ EJECUTIVO REUNIDA EN SESIONES 
             EXTRAORDINARIAS EN LA CIUDAD DE MIAMI, FLORIDA DURANTE LOS DIAS 4 Y 5
@@ -479,8 +275,6 @@
           <br>
           <h4 class="centrado">Nuestros valores:</h4>
           <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-
-            
 
             <div class="feature col">
               <h3 class="fs-2 text-body-emphasis">Misión</h3>
@@ -551,9 +345,6 @@
             </div>
           </div>
 
-
-
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -567,109 +358,16 @@
 
   <!-- metodologia modal -->
   <div class="modal fade" id="metodologiaModal" tabindex="-1" aria-labelledby="metodologiaModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" >Metodología</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-
-
-        <p>
-        Metodología a seguir para la afiliación, mecanismos, selección, desempeño y controles de la organización
-Pagina 1
-Metodología PICAR
-Destinada a establecer los lineamientos, acciones y productos para la lograr una real y efectiva estructuración, posicionamiento y reconocimiento local como del exterior y contar con el apoyo internacional del nuevo Partido Liberal de Nicaragua como la principal fuerza de oposición no Sandinista que será la base para ganar las elecciones cuando existan condiciones.
-[P] procedimiento
-Estructura de lineamientos, acciones y participación de la dirección como de la afiliación en todos sus niveles.
-a) Creación de documentos sobre los lineamientos generales según competencias.
-b) Criterios y procedimientos para la elección de miembros del comité ejecutivo.
-c) Criterios de selección para la elección de representantes territoriales.
-d) Requerimientos base para la afiliación.
-e) Métodos para la afiliación territorial y general.
-f) Selección de integrantes a comisiones. f.1) Planificación: Acciones/ Monitoreo, seguimiento del plan de acción. f.2) Relaciones Exteriores: Enlace con organismos y personalidades. f.3) Comunicación: divulgación y relación con los medios. f.4) Afiliación y coordinación: Registro de estructuras y comunicación. f.5) Seguimiento y Control: de tareas según estructura funcional. f.6) Auditoria: Supervisión de ingresos y ejecución del gasto.
-g) Modelo de enunciados, opciones y evaluación de encuestas según niveles de participación, afiliados, representantes territoriales y abiertas a la población.
-Metodología a seguir para la afiliación, mecanismos, selección, desempeño y controles de la organización
-Pagina 2
-h) Proceso de inclusión de temas a tratar en comisiones y modalidad de reporte de avances.
-i) Normas, contenidos, cronogramas de reuniones en los distintos niveles, de dirección como para las representaciones territoriales.
-j) Modelos de actas, comunicados y notas de prensa
-k) Guías para la redacción y presentación de documentos a lo interno como hacía el exterior.
-l) Composición del modelo de informes internos a nivel de comité ejecutivo como de representaciones territoriales.
-m) Procedimiento, valoración y toma de decisiones para lograr alianzas con sectores, organizaciones y otros.
-[ I ] instrumentos
-Estrategias secuenciales y paralelas apoyadas por herramientas tecnológicas de acuerdo a un plan lógico de implementación con la participación de los representantes territoriales y afiliados en general.
-a) Hoja de afiliación digital.
-b) Afiliación vía WhatsApp al teléfono del partido con registro en base de datos por asignar.
-c) Utilización del padrón para verificación y complementación de información de afiliados para registro en Base de Datos central.
-d) Base de Datos central de registro de afiliados.
-e) Base de datos de representantes territoriales y miembros de comisiones.
-f) Base de datos con registros de organismos, autoridades, medios de comunicación y personalidades.
-g) Página Web divulgativa, con registro de afiliados y encuestas.
-h) Página en Facebook informativa con link directo a la página Web.
-Metodología a seguir para la afiliación, mecanismos, selección, desempeño y controles de la organización
-Pagina 3
-i) Cuenta en Zoom multi usuarios para uso de la dirección como de las representaciones territoriales.
-j) Cuentas es Instagram y en X.
-k) Metodología de identificación de nicaragüenses en Lidkelin y en Facebook para envío de información, seguimiento para afiliar a los identificados.
-l) Mecanismo de encuestas por WhatsApp y a incluir en página Web y Facebook.
-m) Mecanismo de tabulación de resultados de encuestas para toma de decisiones.
-n) Generación de grupos WhatsApp, emails para comunicación a grupos específicos según acciones a realizar.
-o) Solicitud y registro de firma digital a afiliados para apoyar un documento para respaldar iniciativas o para enviar a autoridades que los representan.
-p) Empadronamiento (ver información del proyecto).
-[C] Control
-Asignación de actores a las distintas acciones y seguimiento del cumplimiento previsto.
-a) Control de Representaciones territoriales según el avance de inclusión de miembros; En Nicaragua serán los 153 municipios con 5 miembros por cada municipio, 15 departamentos con 7 miembros y 2 regiones autónomas con 7 miembros. En el exterior 5 miembros por país y 3 por cada ciudad o estado.
-b) Control de afiliación registrada desde las distintas representaciones tanto en Nicaragua como en el exterior.
-c) Validación de la información de registros de afiliados; datos generales Cédula o Identificación y foto del documento tanto de las representaciones como de afiliados.
-d) Control de divulgación a las representaciones territoriales de los temas abordados en el comité ejecutivo.
-e) Control de divulgación a la afiliación en general, ya sea desde casa representación territorial o desde nivel central comité ejecutivo.
-Metodología a seguir para la afiliación, mecanismos, selección, desempeño y controles de la organización
-Pagina 4
-f) Control y registro de sesiones según agenda del comité ejecutivo.
-g) Recibo de agendas y actas de sesiones de las representaciones territoriales.
-h) Control y programación de asignaciones de sesiones de zoom.
-i) Revisión de actas de las representaciones para ser abordadas por el comité ejecutivo y respuestas de los resuelto.
-j) Control de contenidos a divulgar a medios y redes sociales.
-k) Recepción, análisis y ejecución de solicitudes de baja de representantes territoriales o afiliados.
-l) Seguimiento de publicaciones donde hacen referencia al partido.
-[A] auditoría
-De certificación por organismos externos sobre la veracidad de la existencia de la organización como de nuestra presencia con representación territorial.
-a) Preparación de listas de representaciones territoriales para la comprobación aleatoria de la veracidad de existencia.
-b) Evaluación continúa de las tareas de validación por entidades y organismos externos que realizaron verificación.
-c) Reemplazo o inclusión de registros fallidos producto de la validación externa.
-d) Auditoría sobre el cumplimiento del seguimiento de lo abordado en sesión de las distintas representaciones.
-e) Auditoría sobre el cumplimiento en medios según áreas geográficas de las representaciones.
-f) Recuento y detalle de aportaciones periódicas o extraordinarias de los afiliados por representaciones o general.
-Metodología a seguir para la afiliación, mecanismos, selección, desempeño y controles de la organización
-Pagina 5
-[R] resultados
-Lograr tener representantes territoriales en esta etapa de forma clandestina en todos los municipios en Nicaragua, en los países y ciudades donde residen nicaragüenses como; Estados Unidos, Costa Rica, Canadá, España y resto de países de CA, Latinoamérica como en Europa.
-a) Contar con procesos de consulta con nuestras bases totalmente transparentes, utilizando herramientas tecnológicas para la elección de miembros de la junta directiva del partido, comisiones y resto de posiciones relevantes.
-b) Con el proyecto del EMPADRONAMIENTO lograr la participación de esos más de 1.5 millones de la diáspora como de los recientes exilios.
-c) Ser reconocidos internacionalmente, logrando apoyos económicos para proyectos específicos como para el funcionamiento del partido en sí.
-d) Aportes de la afiliación vía aportes periódicos.
-e) Ganarnos el puesto para que obligatoriamente debido al volumen de afiliación a alcanzar como por el reconocimiento internacional para ser incluidos en cualquier tipo de negociación con los actores principales (países) como en diálogos con el régimen a sucederse en el futuro.
-f) Estar preparados para cuando sea el momento tener la capacidad de cubrir todas las posiciones de un partido ya en Nicaragua, depuración del padrón, tendido electoral y resto de acciones necesarias.
-g) Organización y celebración de primarias para elegir a las autoridades de
-Cargos de elección.
-En conclusión:
-Lograr nuestros objetivos en base al trabajo arduo que conlleva la creación de una alternativa de poder, empezando en esta etapa desde la oposición para en el futuro constituirnos en una opción de nación, basados en que el pueblo ha demostrado ser de la ideología que defendemos y respetamos como lo es la liberal
-        </p>
-
-
-
-        
-
-
-
-
-          
-
-
-
-
+          <div class="container px-4">
+            <?= $this->include('docs/metodologia'); ?>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -682,7 +380,7 @@ Lograr nuestros objetivos en base al trabajo arduo que conlleva la creación de 
 
   <!-- empadronamiento modal -->
   <div class="modal fade" id="empadronamientoModal" tabindex="-1" aria-labelledby="empadronamientoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="empadronamientoLabel">Empadronamiento</h1>
@@ -1030,7 +728,7 @@ A exponerse en una reunión a concertar con el financiador interesado
 
 
       
-      <div class="col-md-7 col-lg-8">
+      <div class="col-md-12">
         <br>
         <h4 class="mb-3 text-center">Solicitud de afiliación</h4>
 
@@ -1049,7 +747,7 @@ A exponerse en una reunión a concertar con el financiador interesado
 
             <div class="col-sm-5 form-floating">
               <input type="text" class="form-control" id="nombre" name="nombre" value="<?= set_value('nombre'); ?>" placeholder="Nombre">
-              <label for="nombre" class="form-label">Nombre*</label>
+              <label for="nombre">Nombre*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('nombre'); ?>
               </p>
@@ -1098,7 +796,7 @@ A exponerse en una reunión a concertar con el financiador interesado
 
             
             
-            <div class="col-sm-4" id="tiene_cedula" hidden>
+            <div class="col-sm-2" id="tiene_cedula" hidden>
                 <label for="estado_id" class="col-form-label">
                   ¿Tiene cédula?
                 </label>
@@ -1149,18 +847,18 @@ A exponerse en una reunión a concertar con el financiador interesado
 
 
 
-            <div class="col-sm-2 form-floating">
+            <div class="col-sm-3 form-floating">
               <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= set_value('ciudad'); ?>" placeholder="Ciudad*" hidden>
-              <label for="ciudad" class="form-label" id="ciudad_label" hidden>Ciudad*</label>
+              <label for="ciudad" class="form-label" id="ciudad_label" hidden>Ciudad/Municipio*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('ciudad'); ?>
               </p>
             </div>
 
 
-            <div class="col-sm-2 form-floating">
+            <div class="col-sm-3 form-floating">
               <input type="text" class="form-control" id="pais" name="pais" value="<?= set_value('pais'); ?>" placeholder="Pais*" hidden>
-              <label for="pais" class="form-label" id="pais_label" hidden>Pais*</label>
+              <label for="pais" class="form-label" id="pais_label" hidden>Estado, Región, Comunidad, Dpto*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('pais'); ?>
               </p>

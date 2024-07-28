@@ -2,18 +2,49 @@
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-main>.container {
-    padding: 20px 30px 0;
+
+/* Cuando la pantalla es mayor a 900px */
+@media only screen and (min-width : 901px) {
+
+    main>.container {
+        padding: 20px 30px 0;
+    }
+
+    .centrado {
+        text-align:center;
+        padding:8px;
+    }
+
+    .centrar_div {
+        width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img_titulos_metodologia {
+        width: 10%;
+    }
+
 }
 
-.centrado {
-    text-align:center;
-    padding:8px;
-}
 
-.centrar_div {
-    width: 420px;
-    margin-left: auto;
-    margin-right: auto;
+
+/* Cuando la pantalla es menor a 900px  (tablets y teléfonos inteligentes)*/
+@media only screen and (max-width : 900px) {
+
+    .centrado {
+        text-align:center;
+        padding:8px;
+    }
+
+    .centrar_div {
+        width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .img_titulos_metodologia {
+        width: 20%;
+    }
 }
 

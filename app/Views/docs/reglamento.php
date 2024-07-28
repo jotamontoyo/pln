@@ -9,7 +9,7 @@
   <li><b>Arto.3.-</b> La Declaración de Principios, junto con los Estatutos del partido como organización de oposición y posteriormente los estatutos definitivos del partido como del Programa de Gobierno, constituyen los Documentos Fundamentales, que orientan y norman la vida institucional, operativa y administrativa.</li>
   <li><b>Arto.4.-</b> Organización de oposición que desarrollara iniciativas y procesos organizativos desde el exterior principalmente desde los países con mayor número de residentes Nicaragüenses donde se representan los objetivos o fines específicos que el Partido pretende implementar hasta la caída de la dictadura.</li>
   <li><b>Arto.5.-</b> Integran la organización: hombres, mujeres y jóvenes, sin diferencia o privilegio alguno donde el único requisito para ser miembro es no aceptar ni total ni parcial nada que tenga relación con el sandinismo ni tampoco pertenecer a grupo u organización compartida con grupos con orígenes sandinistas.</li>
-  <li><b>Arto.6.-</b> Principios Programáticos del partido según según etapas: Estructurados para cubrir tres etapas, la primera como organización de oposición previo a la existencias de condiciones para participar en elecciones justas, libres, transparentes y observadas, la segunda destinada a la organización del tendido electoral, selección de candidatos y participación en los comicios, la tercera como autoridades después de haber ganado las elecciones.</li>
+  <li><b>Arto.6.-</b> Principios Programáticos del partido según según etapas: Estructurados para cubrir tres etapas, la primera como organización de oposición previo a la existencias de condiciones para participar en elecciones justas, libres, transparentes y observadas, la segunda destinada a la organización del tendido electoral, selección de candidatos y participación en los comicios, la tercera como autoridades después de haber ganado las elecciones.
     <ul><b>Arto.6.1.</b>- Organización de oposición previa a las existencias de condiciones para participar en elecciones justas, libres, transparentes y observadas. Condiciones indispensables:
       <li><b>a)</b> Cumplimiento irrestricto de la resolución OEA de octubre 2020, iniciando por la liberación de todos los presos políticos como del re establecimiento de las nacionalidades vía ley como la restitución de sus bienes a los afectados tanto a los 222, como a los restantes.</li>
       <li><b>b)</b> Permitir la libre y re estricta movilidad de todos aquellos que de forma directa han sido vetados a salir o entrar al país.</li>
@@ -67,7 +67,7 @@
 
 <br>
 <ul><h4 class="centrado">CAPITULO III (Los representantes en la etapa como organización de oposición)</h4>
-  <li><b>Arto.8.-</b> Además del comité ejecutivo, se procederá a conformar la estructura organizativa en el territorio nacional en los 153 municipios con 5 miembros, 15 departamentos con 7 miembros, 2 regiones autónomas con 7 miembros acción que debido a la represión se realizara de forma clandestina, la representación en el exterior se conformaran estructuras territoriales con 5 miembros por país, y 3 miembros por estado o ciudades por país donde residen tanto nacionalizados como en proceso o en tránsito.</li>
+  <li><b>Arto.8.-</b> Además del comité ejecutivo, se procederá a conformar la estructura organizativa en el territorio nacional en los 153 municipios con 5 miembros, 15 departamentos con 7 miembros, 2 regiones autónomas con 7 miembros acción que debido a la represión se realizara de forma clandestina, la representación en el exterior se conformaran estructuras territoriales con 5 miembros por país, y 3 miembros por estado o ciudades por país donde residen tanto nacionalizados como en proceso o en tránsito.
     <ul><b>Arto.8.1-</b> Estructura territorial por país con cinco miembros:
       <li><b>1.</b> Coordinador: Encargado de la ejecución de las tareas designadas y de la relación con el Coordinador del país.</li>
       <li><b>2.</b> Relaciones públicas e institucionales: Encargado de establecer relaciones con todos los sectores políticos y organizaciones que puedan aportar a nuestra organización.</li>
@@ -144,7 +144,7 @@
 <br>
 <ul><h4 class="centrado">CAPITULO IV (Los Afiliados, Derechos y Deberes)</h4>
   <li><b>Arto.09.-</b> Podrá afiliarse al Partido Liberal Nicaragüense en esta etapa como organización, cualquier nicaragüense que libremente así lo desee siempre y cuando no pertenezca a organizaciones lideradas por sandinistas y en el caso de optar por posiciones en juntas directivas o representaciones territoriales quedan vetados los que participen en grupos en alianzas donde participen organizaciones sandinistas.</li>
-  <li><b>Arto.10.-</b> Clasificación de miembros según categorías:</li>
+  <li><b>Arto.10.-</b> Clasificación de miembros según categorías:
     <ul><b>a)</b> Afiliados: quienes cumplan con los requisitos y procedimientos de solicitud, aprobación, registro e identificación presentando.
       <li><b>a.1.)</b> nicaragüenses con cedula:
       - Envío de numero de WhatsApp, Numero de Cedula, foto de la cedula y lugar de residencia actual cuando se encuentren viviendo en el exterior.</li>
@@ -161,6 +161,7 @@
       <li><b>4)</b> Cumplir las directrices acordadas por los Órganos Superiores inmediatos.</li>
       <li><b>5)</b> El Compromiso de profesar una honestidad de comportamiento en la vida pública y ningún tipo de afinidad con el sandinismo que pueda causar acciones de infiltramiento.</li>
     </ul>
+  </li>
 
   
     

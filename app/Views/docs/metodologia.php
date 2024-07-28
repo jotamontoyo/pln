@@ -1,16 +1,37 @@
+<style>
+
+
+    @media only screen and (min-width : 901px) {
+
+        .img_titulos_metodologia {
+            width: 10%;
+        }
+
+    }
+
+    @media only screen and (max-width : 900px) {
+        .img_titulos_metodologia {
+            width: 20%;
+        }
+
+    }
+
+</style>
+
+
 
 <h2 class="pb-2 centrado"><img src="public/img/logos/logoPLN.jpg" style="max-width: 40px;" alt="">Metodología a seguir para la afiliación, mecanismos, selección, desempeño y controles de la organización</h2>
 <hr>
 <br>
 
 
-<ul><h4 class="centrado"><img src="public/img/logos/metodologiaPicar.png" width="10%" alt="">[M] Metodología PICAR</h4>
-    <h6><b>Destinada a establecer los lineamientos, acciones y productos para la lograr una real y efectiva estructuración, posicionamiento y reconocimiento local como del exterior y contar con el apoyo internacional del nuevo Partido Liberal de Nicaragua como la principal fuerza de oposición no Sandinista que será la base para ganar las elecciones cuando existan condiciones.</b></h6>
+<ul><h4 class="centrado"><img src="public/img/logos/metodologiaPicar.png" class="img_titulos_metodologia" alt="">[M] Metodología PICAR</h4>
+    <h6><b>Destinada a establecer los alineamientos, acciones y productos para la lograr una real y efectiva estructuración, posicionamiento y reconocimiento local como del exterior y contar con el apoyo internacional del nuevo Partido Liberal de Nicaragua como la principal fuerza de oposición no Sandinista que será la base para ganar las elecciones cuando existan condiciones.</b></h6>
 </ul>
 <br>
 
 
-<ul><h4 class="centrado"><img src="public/img/logos/procedimientoPicar.png" width="10%" alt="">[P] Procedimiento</h4>
+<ul><h4 class="centrado"><img src="public/img/logos/procedimientoPicar.png" class="img_titulos_metodologia" alt="">[P] Procedimiento</h4>
     <h6><b>Estructura de alineamientos, acciones y participación de la dirección como de la afiliación en todos sus niveles.</b></h6>
     <li><b>a)</b> Creación de documentos sobre los lineamientos generales según competencias.</li>
     <li><b>b)</b> Criterios y procedimientos para la elección de miembros del comité ejecutivo.</li>
@@ -39,7 +60,7 @@
 
 
 
-<ul><h4 class="centrado"><img src="public/img/logos/instrumentosPicar.png" width="10%" alt="">[I] Instrumentos</h4>
+<ul><h4 class="centrado"><img src="public/img/logos/instrumentosPicar.png" class="img_titulos_metodologia" alt="">[I] Instrumentos</h4>
     <h6><b>Estrategias secuenciales y paralelas apoyadas por herramientas tecnológicas de acuerdo a un plan lógico de implementación con la participación de los representantes territoriales y afiliados en general.</b></h6>
     <li><b>a)</b> Hoja de afiliación digital.</li>
     <li><b>b)</b> Afiliación vía WhatsApp al teléfono del partido con registro en base de datos por asignar.</li>
@@ -62,7 +83,7 @@
 
 
 
-<ul><h4 class="centrado"><img src="public/img/logos/controlPicar.png" width="10%" alt="">[C] Control</h4>
+<ul><h4 class="centrado"><img src="public/img/logos/controlPicar.png" class="img_titulos_metodologia" alt="">[C] Control</h4>
     <h6><b>Asignación de actores a las distintas acciones y seguimiento del cumplimiento previsto.</b></h6>
     <li>a) Control de Representaciones territoriales según el avance de inclusión de miembros; En Nicaragua serán los 153 municipios con 5 miembros por cada municipio, 15 departamentos con 7 miembros y 2 regiones autónomas con 7 miembros. En el exterior 5 miembros por país y 3 por cada ciudad o estado.</li>
     <li>b) Control de afiliación registrada desde las distintas representaciones tanto en Nicaragua como en el exterior.</li>
@@ -81,7 +102,7 @@
 
 
 
-<ul><h4 class="centrado"><img src="public/img/logos/auditoriaPicar.png" width="10%" alt="">[A] auditoría</h4>
+<ul><h4 class="centrado"><img src="public/img/logos/auditoriaPicar.png" class="img_titulos_metodologia" alt="">[A] auditoría</h4>
     <h6><b>De certificación por organismos externos sobre la veracidad de la existencia de la organización como de nuestra presencia con representación territorial.</b></h6>
     <li><b>a)</b> Preparación de listas de representaciones territoriales para la comprobación aleatoria de la veracidad de existencia.</li>
     <li><b>b)</b> Evaluación continúa de las tareas de validación por entidades y organismos externos que realizaron verificación.</li>
@@ -93,7 +114,7 @@
 <br>
 
 
-<ul><h4 class="centrado"><img src="public/img/logos/resultadosPicar.png" width="10%" alt="">[R] resultados</h4>
+<ul><h4 class="centrado"><img src="public/img/logos/resultadosPicar.png" class="img_titulos_metodologia" alt="">[R] resultados</h4>
     <h6><b>Lograr tener representantes territoriales en esta etapa de forma clandestina en todos los municipios en Nicaragua, en los países y ciudades donde residen nicaragüenses como; Estados Unidos, Costa Rica, Canadá, España y resto de países de CA, Latinoamérica como en Europa.</b></h6>
     <li>a) Contar con procesos de consulta con nuestras bases totalmente transparentes, utilizando herramientas tecnológicas para la elección de miembros de la junta directiva del partido, comisiones y resto de posiciones relevantes.</li>
     <li>b) Con el proyecto del EMPADRONAMIENTO lograr la participación de esos más de 1.5 millones de la diáspora como de los recientes exilios.</li>
@@ -107,6 +128,6 @@
 
 
 
-<h3 class="centrado"><img src="public/img/logos/conclusionPicar.png" width="10%" alt="">En conclusión:</h3>
+<h3 class="centrado"><img src="public/img/logos/conclusionPicar.png" class="img_titulos_metodologia" alt="">En conclusión:</h3>
 <h6><b>Lograr nuestros objetivos en base al trabajo arduo que conlleva la creación de una alternativa de poder, empezando en esta etapa desde la oposición para en el futuro constituirnos en una opción de nación, basados en que el pueblo ha demostrado ser de la ideología que defendemos y respetamos como lo es la liberal.</b></h6>
 

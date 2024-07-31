@@ -6,9 +6,11 @@ use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
 
 use App\Models\SolicitudesModel;
+use App\Models\AfiliadosModel;
 use App\Models\EstadosModel;
 use App\Models\DepartamentosModel;
 use App\Models\MunicipiosModel;
+use DateTime;
 
 class Solicitudes extends BaseController
 {
@@ -16,6 +18,7 @@ class Solicitudes extends BaseController
 
     private $db;
     private $solicitudesModel;
+    private $afiliadosModel;
     private $estadosModel;
     private $departamentosModel;
     private $municipiosModel;
@@ -25,6 +28,7 @@ class Solicitudes extends BaseController
     {
         $this->db = \Config\Database::connect(); 
         $this->solicitudesModel = new SolicitudesModel();
+        $this->afiliadosModel = new AfiliadosModel();
         $this->estadosModel = new EstadosModel();
         $this->departamentosModel = new DepartamentosModel();
         $this->municipiosModel = new MunicipiosModel();
@@ -63,6 +67,7 @@ class Solicitudes extends BaseController
             solicitudes.afiliado_id, 
             solicitudes.nombre, 
             solicitudes.apellidos, 
+            (YEAR(NOW()) - YEAR(solicitudes.fecha_nacimiento)) AS edad,
             solicitudes.cedula, 
             solicitudes.ciudad,
             solicitudes.pais,
@@ -131,6 +136,7 @@ class Solicitudes extends BaseController
             //'afiliado_id'           => 'required|is_unique[solicitudes.afiliado_id]',
             'nombre'                => 'required', 
             'apellidos'             => 'required', 
+             
             /*'cedula'                => 'is_unique[solicitudes.cedula]', 
             'pasaporte'             => 'required|is_unique[solicitudes.pasaporte]', 
             'licencia'              => 'required|is_unique[solicitudes.licencia]', 
@@ -139,7 +145,7 @@ class Solicitudes extends BaseController
             /* 'departamento_id'       => 'required',
             'municipio_id'          => 'required', */
             'ciudad'                => 'required', 
-             /* 'pais'                  => 'required', */
+            'pais'                  => 'required',
             'whatsapp'              => 'required', 
             'email'                 => 'required', 
             'afiliado'              => 'required', 
@@ -153,6 +159,7 @@ class Solicitudes extends BaseController
             $post = $this->request->getPost([
                 'nombre', 
                 'apellidos', 
+                'fecha_nacimiento',
                 'cedula', 
                 'cedula_img', 
                 'pasaporte', 
@@ -185,6 +192,7 @@ class Solicitudes extends BaseController
             $data = [
                 'nombre'                => $post['nombre'],
                 'apellidos'             => $post['apellidos'],
+                'fecha_nacimiento'      => $post['fecha_nacimiento'],
                 'cedula'                => $post['cedula'],
                 'cedula_img'            => $url,
                 'pasaporte'             => $post['pasaporte'],
@@ -211,6 +219,59 @@ class Solicitudes extends BaseController
 
 
 
+    public function create_afiliado($solicitud_id) 
+    {
+        
+        $session = session();
+        $solicitud = $this->solicitudesModel->find($solicitud_id);
+        $data = [
+            'solicitud_id'          => $solicitud['id'],
+            'afiliado_id'           => $solicitud['afiliado_id'],  
+            'nombre'                => $solicitud['nombre'],
+            'apellidos'             => $solicitud['apellidos'], 
+            'fecha_nacimiento'      => $solicitud['fecha_nacimiento'],
+            'cedula'                => $solicitud['cedula'], 
+            'cedula_img'            => $solicitud['cedula_img'], 
+            'pasaporte'             => $solicitud['pasaporte'], 
+            'licencia'              => $solicitud['licencia'], 
+            'residencia'            => $solicitud['residencia'], 
+            /*'estado_id'         => $solicitud['estado_id'], 
+            'departamento_id'     => $solicitud['departamento_id'], 
+            'municipio_id'        => $solicitud['municipio_id'],*/ 
+            'ciudad'                => $solicitud['ciudad'], 
+            'pais'                  => $solicitud['pais'], 
+            'whatsapp'              => $solicitud['whatsapp'], 
+            'email'                 => $solicitud['email'], 
+            'afiliado'              => $solicitud['afiliado'], 
+            'cargo'                 => $solicitud['cargo'], 
+            'posicion'              => $solicitud['posicion']
+        ];
+
+
+        $builder = $this->db->table('afiliados');
+        $builder->select
+        ('
+            afiliados.solicitud_id
+        ')
+        ->where(['afiliados.solicitud_id' => $solicitud['id']]);
+        $builder = $builder->get();
+        $resultado = $builder->getResultArray();
+
+        if ($resultado) {
+            $session->setFlashdata('mensaje', 'La afilición ya existe');
+            return redirect()->back()->withInput();
+        } else {
+            $this->afiliadosModel->insert($data, false);
+            $session->setFlashdata('mensaje', 'Afiliación creada');
+            return redirect()->back()->withInput();
+        }
+        
+        
+
+
+    }
+
+
 
 
 
@@ -232,11 +293,14 @@ class Solicitudes extends BaseController
 
         $estados = $this->estadosModel->findAll();
         $solicitud = $this->solicitudesModel->find($id);
+
+        $edad = strtotime(date('Y-m-d')) - strtotime($solicitud['fecha_nacimiento']);
         $data = [
-            'titulo' => 'Solicitud',
-            'id' => $id,
-            'solicitud' => $solicitud,
-            'estados' => $estados
+            'titulo'        => 'Solicitud',
+            'id'            => $id,
+            'solicitud'     => $solicitud,
+            'edad'          => $edad,
+            'estados'       => $estados
         ];
         return view('solicitudes/edit', $data);
 
@@ -265,9 +329,10 @@ class Solicitudes extends BaseController
         
         $session = session();
         $reglas = [                     
-            'afiliado_id'           => 'required', 
+            //'afiliado_id'           => 'required', 
             'nombre'                => 'required', 
-            'apellidos'             => 'required', 
+            'apellidos'             => 'required',
+            'fecha_nacimiento'      => 'required', 
             /*'cedula'                => 'required', 
             'pasaporte'             => 'required', 
             'licencia'              => 'required', 
@@ -292,6 +357,7 @@ class Solicitudes extends BaseController
                 'afiliado_id'           => $post['afiliado_id'],
                 'nombre'                => $post['nombre'],
                 'apellidos'             => $post['apellidos'],
+                //'fecha_nacimiento'      => $post['fecha_nacimiento'],
                 'cedula'                => $post['cedula'],
                 'pasaporte'             => $post['pasaporte'],
                 'licencia'              => $post['licencia'],
@@ -332,6 +398,24 @@ class Solicitudes extends BaseController
         $this->solicitudesModel->update($id, $data, false);
         return redirect()->back()->withInput();
         $session->setFlashdata('mensaje', 'Imagen actualizada');
+
+
+    }
+
+
+
+    public function update_fecha_nacimiento($id)
+    {
+        $session = session();
+        $post = $this->request->getPost(['fecha_nacimiento']);
+        $data = ['fecha_nacimiento' => $post['fecha_nacimiento']];
+        $this->solicitudesModel->update($id, $data, false);
+        return redirect()->back()->withInput();
+        $session->setFlashdata('mensaje', 'Imagen actualizada');
+
+
+
+
 
 
     }

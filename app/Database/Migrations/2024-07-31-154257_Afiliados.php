@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Solicitudes extends Migration
+class Afiliados extends Migration
 {
     public function up()
     {
@@ -29,6 +29,9 @@ class Solicitudes extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 150,
                 'null' => false
+            ],
+            'fecha_nacimiento' => [
+                'type' => 'DATETIME',
             ],
             'cedula' => [
                 'type' => 'VARCHAR',
@@ -100,11 +103,20 @@ class Solicitudes extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 20,
                 'null' => true
+            ],
+            'created_at' => [
+                'type' => 'DATETIME'
+            ],
+            'updated_at' => [
+                'type' => 'DATETIME'
+            ],
+            'deleted_at' => [
+                'type' => 'DATETIME'
             ]
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->createTable('solicitudes');
+        $this->forge->createTable('afiliados');
     }
 
 
@@ -112,6 +124,7 @@ class Solicitudes extends Migration
 
     public function down()
     {
-        $this->forge->dropTable('solicitudes');
+        $this->forge->dropTable('afiliados');
     }
 }
+

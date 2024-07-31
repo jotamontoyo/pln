@@ -5,14 +5,15 @@
 
 
 
+<div style="background-color: #E0ECF8;">
 
-<div class="container">
+  <div class="container">
 
     <br><br>
     <h4 class="mb-4 centrado">Editar solicitud #<?= $solicitud['id'];  ?></h4>
 
 
-    <form action="<?= base_url('/solicitudes/' . $id); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
+    <form action="<?= base_url('solicitudes/' . $id); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
 
         <input type="hidden" name="_method" value="PUT">
         <?= csrf_field(); ?>
@@ -22,9 +23,9 @@
 
             <h5>Datos personales</h5>
 
-            <div class="col-sm-6">
-              <label for="afiliado_id" class="form-label">Nº Afiliado</label>
-              <input type="text" class="form-control" id="afiliado_id" name="afiliado_id" placeholder="" value="<?= $solicitud['afiliado_id']; ?>">
+            <div class="col-sm-6 form-floating">
+              <input type="text" class="form-control" id="afiliado_id" name="afiliado_id" value="<?= $solicitud['afiliado_id']; ?>" placeholder="Nº Afiliado">
+              <label for="afiliado_id">Nº Afiliado*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('afiliado_id'); ?>
               </p>
@@ -32,33 +33,49 @@
 
             <br>
 
-            <div class="col-sm-6">
-              <label for="nombre" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $solicitud['nombre']; ?>">
+            <div class="col-sm-6 form-floating">
+              <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $solicitud['nombre']; ?>" placeholder="Nombre">
+              <label for="nombre">Nombre*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('nombre'); ?>
               </p>
             </div>
 
-            <div class="col-sm-6">
-              <label for="apellidos" class="form-label">Apellidos:</label>
-              <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?= $solicitud['apellidos']; ?>">
+            <div class="col-sm-6 form-floating">
+              <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?= $solicitud['apellidos']; ?>" placeholder="Apellidos">
+              <label for="apellidos">Apellidos*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('apellidos'); ?>
               </p>
             </div>
 
 
+            <div class="col-sm-2 form-floating">
+              <a data-bs-toggle="modal" data-bs-target="#cambiarFechaNacimiento">
+              <label for="fecha_nacimiento">Fecha de nacimiento*</label>
+                <input type="text" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= $solicitud['fecha_nacimiento']; ?>" placeholder="Fecha de nacimiento*">
+              </a>
+              
+              <p class="small" style="color:red">
+                <?= validation_show_error('fecha_nacimiento'); ?>
+              </p>              
+            </div>
+
+            <div class="col-sm-2 form-floating">
+                <input readonly type="text" class="form-control" name="edad" id="edad" value="" placeholder="Edad">
+                <label for="edad">Edad</label>
+                <p class="small" style="color:red">
+                  <?= validation_show_error('edad'); ?>
+                </p>              
+            </div>
 
 
-            <div class="col-sm-2">
-                <label for="estado_id" class="col-sm-2 col-form-label">
-                    <!-- <?= lang('App.productos.grupo_productos') ?> -->
-                     País de residencia:
-                </label>
 
-                    <select class="form-select" id="estado_id" name="estado_id">
-                        <option value="">Seleccionar</option>
+
+
+
+            <div class="col-sm-2 form-floating">
+                    <select class="form-select" id="estado_id" name="estado_id" placeholder="Residencia">
                         <?php foreach($estados as $estado): ?>
                           <option value="<?= $estado['id'] ?>" 
                               <?= ($estado['id'] == $solicitud['estado_id']) ? 'selected' : '';?>>
@@ -66,6 +83,7 @@
                           </option>
                         <?php endforeach; ?>
                     </select>
+                    <label for="estado_id">Residencia*</label>
                     <p class="small" style="color:red">
                         <?= validation_show_error('estado_id'); ?>
                     </p>
@@ -78,17 +96,18 @@
 
 
 
-            <div class="col-sm-6">
-              <label for="ciudad" class="form-label">Ciudad:</label>
-              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $solicitud['ciudad']; ?>">
+            <div class="col-sm-3 form-floating">
+              
+              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $solicitud['ciudad']; ?>" placeholder="Ciudad">
+              <label for="ciudad">Ciudad*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('ciudad'); ?>
               </p>
             </div>
 
-            <div class="col-sm-6">
-              <label for="pais" class="form-label">País:</label>
-              <input type="text" class="form-control" id="pais" name="pais" value="<?= $solicitud['pais']; ?>">
+            <div class="col-sm-3 form-floating">
+              <input type="text" class="form-control" id="pais" name="pais" value="<?= $solicitud['pais']; ?>" placeholder="País">
+              <label for="pais">País*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('pais'); ?>
               </p>
@@ -97,9 +116,9 @@
             <hr class="my-4">
             <h5>Identificación</h5>
 
-            <div class="col-sm-2">
-              <label for="cedula" class="form-label">Cédula Nº:</label>
-              <input type="text" class="form-control" id="cedula" name="cedula" value="<?= $solicitud['cedula']; ?>">
+            <div class="col-sm-2 form-floating">
+              <input type="text" class="form-control" id="cedula" name="cedula" value="<?= $solicitud['cedula']; ?>" placeholder="Cédula">
+              <label for="cedula">Cédula Nº</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('cedula'); ?>
               </p>
@@ -130,38 +149,33 @@
 
             <div class="col-sm-4">
               <label for="cedula_img" class="form-label">Cédula imagen:</label><br>
-
-              <div class="col">
-                
                   <button type="button" class="btn" id="bCambiarImg" data-bs-toggle="modal" data-bs-target="#cambiarImg">
                     <div class="card shadow-sm">
                       <img src="<?= $solicitud['cedula_img']; ?>" id="cedula_img_form" name="cedula_img_form" alt="">
                     </div>
                   </button>
                 <p style="display: inline-block; font-size: 10px"><?= $solicitud['cedula_img']; ?></p> 
-              </div>
-              
             </div>
 
-            <div class="col-sm-2">
-              <label for="pasaporte" class="form-label">Pasaporte Nº:</label>
-              <input type="text" class="form-control" id="pasaporte" name="pasaporte" value="<?= $solicitud['pasaporte']; ?>">
+            <div class="col-sm-2 form-floating">
+              <input type="text" class="form-control" id="pasaporte" name="pasaporte" value="<?= $solicitud['pasaporte']; ?>" placeholder="Pasaporte">
+              <label for="pasaporte">Pasaporte*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('pasaporte'); ?>
               </p>
             </div>
 
-            <div class="col-sm-2">
-              <label for="licencia" class="form-label">Licencia Nº:</label>
-              <input type="text" class="form-control" id="licencia" name="licencia" value="<?= $solicitud['licencia']; ?>">
+            <div class="col-sm-2 form-floating">
+              <input type="text" class="form-control" id="licencia" name="licencia" value="<?= $solicitud['licencia']; ?>" placeholder="Licencia">
+              <label for="licencia">Licencia*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('licencia'); ?>
               </p>
             </div>
 
-            <div class="col-sm-2">
-              <label for="residencia" class="form-label">Residencia Nº:</label>
-              <input type="text" class="form-control" id="residencia" name="residencia" value="<?= $solicitud['residencia']; ?>">
+            <div class="col-sm-2 form-floating">
+              <input type="text" class="form-control" id="residencia" name="residencia" value="<?= $solicitud['residencia']; ?>" placeholder="Residencia">
+              <label for="residencia">Residencia*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('residencia'); ?>
               </p>
@@ -171,17 +185,17 @@
             <hr class="my-4">
             <h5>Datos de contacto</h5>
 
-            <div class="col-sm-2">
-              <label for="whatsapp" class="form-label">Whatsapp Nº:</label>
-              <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= $solicitud['whatsapp']; ?>">
+            <div class="col-sm-2 form-floating">
+              <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= $solicitud['whatsapp']; ?>" placeholder="Whatsapp">
+              <label for="whatsapp">Whatsapp</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('whatsapp'); ?>
               </p>
             </div>
 
-            <div class="col-sm-4">
-              <label for="email" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email" name="email" value="<?= $solicitud['email']; ?>">
+            <div class="col-sm-4 form-floating">
+              <input type="email" class="form-control" id="email" name="email" value="<?= $solicitud['email']; ?>" placeholder="Email">
+              <label for="email">Email</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('email'); ?>
               </p>
@@ -199,11 +213,6 @@
                 Afiliado
               </label>
             </div>
-
-
-
-
-
             <div class="form-check">
               <input class="form-check-input checkbox" type="checkbox"id="cargo" name="cargo" value="<?= $solicitud['cargo']; ?>">
               <label class="form-check-label" for="flexCheckChecked">
@@ -216,9 +225,9 @@
 
 
 
-            <div class="col-sm-4">
-              <label for="posicion" class="form-label">Posición:</label>
-              <input type="text" class="form-control" id="posicion" name="posicion" value="<?= $solicitud['posicion']; ?>">
+            <div class="col-sm-4 form-floating">
+              <input type="text" class="form-control" id="posicion" name="posicion" value="<?= $solicitud['posicion']; ?>" placeholder="Posición">
+              <label for="posicion">Posición:</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('posicion'); ?>
               </p>
@@ -232,11 +241,16 @@
             <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
             
             <a href="<?= base_url(); ?>solicitudes"><button type="button" class="btn btn-sm btn-outline-danger"><i class="bi bi-x-lg"></i> <?= lang('App.boton.cancelar') ?></button></a>
+            <a href="<?= base_url('solicitudes/' . $id . '/afiliar') ?>">
+              <button type="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> Afiliar</button>
+            </a>
         </div>
 
         <br>
 
     </form>
+
+</div>
 
 </div>
 
@@ -254,15 +268,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
-        <form action="<?= base_url('/solicitudes/' . $id . '/img'); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
-
+        <form action="<?= base_url('solicitudes/' . $id . '/img'); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
           <input type="hidden" name="_method" value="PUT">
           <?= csrf_field(); ?>
-
           <div class="row g-3">
-
-
             <label for="cedula_img" class="form-label">Seleccionar imagen:</label>
             <input type="file" class="form-control" accept="image/jpeg, image/jpg, image/png" id="cedula_img" name="cedula_img" value="<?= $solicitud['cedula_img']; ?>">
             <!-- <h6>Actual:</h6>
@@ -271,30 +280,54 @@
             <p class="small" style="color:red">
               <?= validation_show_error('cedula_img'); ?>
             </p>
-
-
-
           </div>
-
           <div style="text-align: center">
             <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
             <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal">Close</button>
-
           </div>
-
-
         </form>
-
-
-
-       
       </div>
-
     </div>
-
   </div>
-
 </div>
+
+
+
+<!-- Modal formulario cambiar fecha nacimiento -->
+<div class="modal fade" id="cambiarFechaNacimiento" tabindex="-1" aria-labelledby="cambiarFechaNacimientoImglLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="cambiarFechaNacimientoImglLabel">Cambiar Fecha de Nacimiento</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="<?= base_url('solicitudes/' . $id . '/fecha_nacimiento'); ?>" method="POST" name="edit_form" autocomplete="off">
+          <input type="hidden" name="_method" value="PUT">
+          <?= csrf_field(); ?>
+          <div class="row g-3">
+            <div class="col-sm-6 centrar_div">
+              <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= set_value('fecha_nacimiento'); ?>" placeholder="Fecha de nacimiento*">
+              <p class="small" style="color:red">
+                <?= validation_show_error('fecha_nacimiento'); ?>
+              </p>
+            </div>
+          </div>
+          <div style="text-align: center">
+            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 
 
 
@@ -306,11 +339,9 @@
     if ($(this).is(':checked')) {
       $(this).attr('value', 'true');
       var check = $(this).val();
-      //console.log(check);
     } else {
       $(this).attr('value', 'false');
       var check = $(this).val();
-      //console.log(check);
     }
   });
 
@@ -327,19 +358,28 @@
     };
   });
 
+
+
   // para cuando se carga la pagina activar el check si procede
   $(document).ready(function () {
     var cargo = document.getElementById("cargo").value;
     if(cargo == 1) {
-      //console.log('true');
       $("#cargo").prop('checked', true);
     } else {
-      //console.log('false');
       $("#cargo").prop('checked', false);
     };
   });
 
 
+  // calculo de la edad segun su fecha de nacimiento
+  $(document).ready(function () {
+    const fecha_actual = new Date();
+    const fecha_nacimiento = new Date($("#fecha_nacimiento").val()); 
+    const año_actual = fecha_actual.getFullYear();
+    const año_nacimiento = fecha_nacimiento.getFullYear();
+    var edad = año_actual - año_nacimiento;
+    document.getElementById("edad").value = edad;
+  });
 
   
 

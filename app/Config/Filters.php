@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Filters\CheckCreatePermission;
 use App\Filters\CheckEditPermission;
 use App\Filters\CheckReadPermission;
 use App\Filters\CheckUpdatePermission;
@@ -39,7 +40,8 @@ class Filters extends BaseFilters
         'performance'           => PerformanceMetrics::class,
         'CheckReadPermission'   => CheckReadPermission::class,
         'CheckEditPermission'   => CheckEditPermission::class,
-        'CheckUpdatePermission' => CheckUpdatePermission::class
+        'CheckUpdatePermission' => CheckUpdatePermission::class,
+        'CheckCreatePermission' => CheckCreatePermission::class
     ];
 
     /**

@@ -4,15 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class SolicitudesModel extends Model
+class AfiliadosModel extends Model
 {
-    protected $table            = 'solicitudes';
+    protected $table            = 'afiliados';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
+        'solicitud_id',
         'afiliado_id', 
         'nombre', 
         'apellidos', 

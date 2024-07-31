@@ -9,7 +9,7 @@
 
     <h4 class="centrado">Usuarios</h4>
 
-    <table id="table" class="display">
+    <table id="table" class="table table-striped table-hover">
         <thead>
             <tr>
                 <th>id</th>

@@ -14,12 +14,14 @@ $routes->get('users/(:num)/edit',                   'Users::edit/$1',           
 $routes->put('users/(:num)',                        'Users::update/$1',         ['filter' => 'CheckUpdatePermission']);
 
 
-$routes->get('solicitudes',                         'Solicitudes::index',               ['filter' => 'CheckReadPermission']);
-$routes->get('solicitudes/listar_solicitudes',      'Solicitudes::listar_solicitudes',  ['filter' => 'CheckReadPermission']);
-$routes->get('solicitudes/(:num)/edit',             'Solicitudes::edit/$1',             ['filter' => 'CheckEditPermission']);
-$routes->put('solicitudes/(:num)',                  'Solicitudes::update/$1',           ['filter' => 'CheckUpdatePermission']);
-$routes->put('solicitudes/(:num)/img',              'Solicitudes::update_img/$1',       ['filter' => 'CheckUpdatePermission']);
-$routes->post('solicitudes/crear',                  'Solicitudes::create');
+$routes->get('solicitudes',                             'Solicitudes::index',                           ['filter' => 'CheckReadPermission']);
+$routes->get('solicitudes/listar_solicitudes',          'Solicitudes::listar_solicitudes',              ['filter' => 'CheckReadPermission']);
+$routes->get('solicitudes/(:num)/edit',                 'Solicitudes::edit/$1',                         ['filter' => 'CheckEditPermission']);
+$routes->put('solicitudes/(:num)',                      'Solicitudes::update/$1',                       ['filter' => 'CheckUpdatePermission']);
+$routes->put('solicitudes/(:num)/img',                  'Solicitudes::update_img/$1',                   ['filter' => 'CheckUpdatePermission']);
+$routes->post('solicitudes/crear',                      'Solicitudes::create');
+$routes->put('solicitudes/(:num)/fecha_nacimiento',     'Solicitudes::update_fecha_nacimiento/$1',      ['filter' => 'CheckUpdatePermission']);
+$routes->get('solicitudes/(:num)/afiliar',             'Solicitudes::create_afiliado/$1',              ['filter' => 'CheckCreatePermission']);
 
 
 $routes->get('estados/',                            'Estados::index',                   ['filter' => 'CheckReadPermission']);

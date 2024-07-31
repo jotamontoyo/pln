@@ -55,26 +55,25 @@
           <div class="row row-cols-1 row-cols-sm-2 g-4">
             
             <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reglamentoModal"><i class="bi bi-table"></i> Dirección, Misión y Visión</button>
-
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reglamentoModal"><i class="bi bi-collection"></i> Dirección, Misión y Visión</button>
               <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
               <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
             </div>
 
             <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#declaracionModal"><i class="bi bi-table"></i> Reglamento</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#declaracionModal"><i class="bi bi-card-list"></i> Reglamento</button>
               <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
               <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
             </div>
 
             <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metodologiaModal"><i class="bi bi-table"></i> Metodología</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metodologiaModal"><i class="bi bi-card-checklist"></i> Metodología</button>
               <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
               <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
             </div>
 
             <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#empadronamientoModal"><i class="bi bi-table"></i> Empadronamiento</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#empadronamientoModal"><i class="bi bi-clipboard2-plus"></i> Empadronamiento</button>
               <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
               <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
             </div>
@@ -601,14 +600,27 @@
                 <?= validation_show_error('apellidos'); ?>
               </p>
             </div>
+            
+
+
+            <div class="col-sm-3 form-floating">
+                <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= set_value('fecha_nacimiento'); ?>" placeholder="Fecha de nacimiento*">
+                <label for="fecha_nacimiento">Fecha de nacimiento*</label>
+                <p class="small" style="color:red">
+                  <?= validation_show_error('fecha_nacimiento'); ?>
+                </p>              
+            </div>
 
 
 
 
 
-            <div class="col-sm-4 form-floating">
+
+
+
+            <div class="col-sm-2 form-floating">
                 
-                <div class="">
+
                     <select class="form-select" id="estado_id" name="estado_id">
                         <option value=""><label for="estado_id" id="estado_id_label">Seleccione País de residencia*</option>
                         <?php foreach($estados as $estado): ?>
@@ -619,41 +631,11 @@
                     <p class="small" style="color:red">
                         <?= validation_show_error('estado_id'); ?>
                     </p>
-                </div>
+
             </div>
 
-
-            <!-- <div class="col-sm-2" hidden id="tiene_cedula">
-              <label for="estado_id" class="col-sm-2 col-form-label">
-                    <?= lang('App.productos.grupo_productos') ?>
-                    ¿Tiene cédula?
-                </label>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="tiene_cedula_check" checked>
-                <label class="form-check-label" for="tiene_cedula_check">Sí</label>
-              </div>
-            </div> -->
-
-
             
-            
-            <div class="col-sm-2" id="tiene_cedula" hidden>
-                <label for="estado_id" class="col-form-label">
-                  ¿Tiene cédula?
-                </label>
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula">
-                <label class="form-check-label" for="radio_tiene_cedula">
-                  No
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula" checked>
-                <label class="form-check-label" for="radio_tiene_cedula">
-                  Si
-                </label>
-              </div>
-            </div>
+
 
 
           
@@ -710,17 +692,26 @@
 
 
 
-
-
-
-
-            
-
-
-
-
             <hr class="my-4">
             <h5>Identificación</h5>
+
+            <div class="col-sm-1" id="tiene_cedula" hidden>
+                <label for="estado_id" class="col-form-label">
+                  ¿Tiene cédula?
+                </label>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula">
+                <label class="form-check-label" for="radio_tiene_cedula">
+                  No
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula" checked>
+                <label class="form-check-label" for="radio_tiene_cedula">
+                  Si
+                </label>
+              </div>
+            </div>
 
             <div class="col-sm-2 form-floating">
               <input type="text" class="form-control" id="cedula" name="cedula" value="<?= set_value('cedula'); ?>" placeholder="Cedula Nº:" hidden>
@@ -730,7 +721,7 @@
               </p>
             </div>
             
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <label for="cedula_img" class="form-label" id="cedula_img_label" hidden>Imagen del documento:</label>
               <input type="file" class="form-control" accept="image/jpeg, image/png" id="cedula_img" name="cedula_img" value="<?= set_value('cedula_img'); ?>" hidden>
               <p class="small" style="color:red">
@@ -817,29 +808,15 @@
                 <?= validation_show_error('posicion'); ?>
               </p>
             </div>
-
-            <br>
-            <hr class="my-4">
-
-
             
-            
-
-            
-
-            
-
-            
-
-            
-
-          
-
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar solicitud</button>
-
-
-            <br>
           </div>
+          <div class="centrar_div">
+            <br>              
+            <button class="btn btn-primary btn-lg" type="submit"><i class="bi bi-send"></i> Enviar solicitud</button>
+          </div>
+          <br>
+
+          <br>
         </form>
       </div>
     </div>
@@ -847,6 +824,10 @@
   
   
   </div>
+
+
+
+
 
 </section>
 

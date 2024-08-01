@@ -21,32 +21,49 @@
         <hr class="my-4">
         <div class="row g-3">
 
+            
+            <div class="row">
+
+              <div class="col-sm-2">
+                <label for="afiliado_id">Nº de Afiliado</label>
+
+                <a href="<?= base_url('afiliados/' . $afiliado[0]['id'] . '/edit') ?>">
+                  <input readonly type="text" class="form-control" id="afiliado_id" name="afiliado_id" value="<?= $afiliado[0]['afiliado_id'] ?>">
+                </a>
+
+              </div>
+
+              <div class="col-sm-2">
+                <label for="afiliado_doc">Documento de afiliación</label>
+                <a href="<?= base_url('afiliados/' . $afiliado[0]['id'] . '/edit') ?>">
+                  <input readonly type="text" class="form-control" id="afiliado_doc" name="afiliado_doc" value="<?= $afiliado[0]['id'] ?>">
+                </a>
+              </div>
+
+            </div>
+
+            <hr>
+
             <h5>Datos personales</h5>
 
-            <div class="col-sm-6 form-floating">
-              <input type="text" class="form-control" id="afiliado_id" name="afiliado_id" value="<?= $solicitud['afiliado_id']; ?>" placeholder="Nº Afiliado">
-              <label for="afiliado_id">Nº Afiliado*</label>
-              <p class="small" style="color:red">
-                <?= validation_show_error('afiliado_id'); ?>
-              </p>
-            </div>
+            <div class="row">
 
-            <br>
+              <div class="col-sm-6 form-floating">
+                <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $solicitud['nombre']; ?>" placeholder="Nombre">
+                <label for="nombre">Nombre*</label>
+                <p class="small" style="color:red">
+                  <?= validation_show_error('nombre'); ?>
+                </p>
+              </div>
 
-            <div class="col-sm-6 form-floating">
-              <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $solicitud['nombre']; ?>" placeholder="Nombre">
-              <label for="nombre">Nombre*</label>
-              <p class="small" style="color:red">
-                <?= validation_show_error('nombre'); ?>
-              </p>
-            </div>
+              <div class="col-sm-6 form-floating">
+                <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?= $solicitud['apellidos']; ?>" placeholder="Apellidos">
+                <label for="apellidos">Apellidos*</label>
+                <p class="small" style="color:red">
+                  <?= validation_show_error('apellidos'); ?>
+                </p>
+              </div>
 
-            <div class="col-sm-6 form-floating">
-              <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?= $solicitud['apellidos']; ?>" placeholder="Apellidos">
-              <label for="apellidos">Apellidos*</label>
-              <p class="small" style="color:red">
-                <?= validation_show_error('apellidos'); ?>
-              </p>
             </div>
 
 

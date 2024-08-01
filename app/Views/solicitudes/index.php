@@ -13,7 +13,6 @@
         <thead>
             <tr>
                 <th>id</th>
-                <th>afiliado_id</th>
                 <th>nombre</th>
                 <th>apellidos</th>
                 <th>Edad</th>
@@ -30,7 +29,6 @@
                 <th></th>
             </tr>
             <tr>
-                <th class="filterhead"></th>
                 <th class="filterhead"></th>
                 <th class="filterhead"></th>
                 <th class="filterhead"></th>
@@ -85,7 +83,6 @@
             },
             columns: [
                 {data: 'id'},
-                {data: 'afiliado_id'},
                 {data: 'nombre'},
                 {data: 'apellidos'},
                 {data: 'edad', name:'edad'},

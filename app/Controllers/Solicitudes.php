@@ -64,7 +64,6 @@ class Solicitudes extends BaseController
         $builder = $this->db->table('solicitudes')
         ->select('
             solicitudes.id, 
-            solicitudes.afiliado_id, 
             solicitudes.nombre, 
             solicitudes.apellidos, 
             (YEAR(NOW()) - YEAR(solicitudes.fecha_nacimiento)) AS edad,
@@ -226,7 +225,6 @@ class Solicitudes extends BaseController
         $solicitud = $this->solicitudesModel->find($solicitud_id);
         $data = [
             'solicitud_id'          => $solicitud['id'],
-            'afiliado_id'           => $solicitud['afiliado_id'],  
             'nombre'                => $solicitud['nombre'],
             'apellidos'             => $solicitud['apellidos'], 
             'fecha_nacimiento'      => $solicitud['fecha_nacimiento'],
@@ -249,10 +247,8 @@ class Solicitudes extends BaseController
 
 
         $builder = $this->db->table('afiliados');
-        $builder->select
-        ('
-            afiliados.solicitud_id
-        ')
+        $builder
+        ->select('afiliados.solicitud_id')
         ->where(['afiliados.solicitud_id' => $solicitud['id']]);
         $builder = $builder->get();
         $resultado = $builder->getResultArray();
@@ -294,13 +290,27 @@ class Solicitudes extends BaseController
         $estados = $this->estadosModel->findAll();
         $solicitud = $this->solicitudesModel->find($id);
 
+        $builder = $this->db->table('afiliados'); //trae el afiliado_id de afiliados
+        $builder
+        ->select(' afiliados.id, afiliados.afiliado_id')
+        ->where(['afiliados.solicitud_id' => $solicitud['id']]);
+        $builder = $builder->get();
+        $afiliado = $builder->getResultArray();
+        if (!$afiliado) {
+            $afiliado[0]['afiliado_id'] = 'Pendiente'; //numero de afiliado
+            $afiliado[0]['id'] = 'Sin afiliar';        //numero de documento de afiliacion
+        };
+
+
+
         $edad = strtotime(date('Y-m-d')) - strtotime($solicitud['fecha_nacimiento']);
         $data = [
             'titulo'        => 'Solicitud',
             'id'            => $id,
             'solicitud'     => $solicitud,
             'edad'          => $edad,
-            'estados'       => $estados
+            'estados'       => $estados,
+            'afiliado'      => $afiliado
         ];
         return view('solicitudes/edit', $data);
 
@@ -354,7 +364,6 @@ class Solicitudes extends BaseController
             if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
             if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
             $data = [
-                'afiliado_id'           => $post['afiliado_id'],
                 'nombre'                => $post['nombre'],
                 'apellidos'             => $post['apellidos'],
                 //'fecha_nacimiento'      => $post['fecha_nacimiento'],

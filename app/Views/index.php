@@ -39,15 +39,95 @@
 
     <div class="container">
 
-      <div class="centrado">
-        <img src="public/img/logos/logoPLN.jpg" style="max-width: 30%;" alt="">
+      <div class="row centrado">
+        <div class="col-sm-6">
+          <img src="public/img/logos/logoPLN.jpg" style="max-width: 50%;" alt="">
+        </div>
+        <div class="col-sm-4">
+          <div class="col d-flex flex-column gap-2">
+              
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Instructivos
+            </button>
+
+
+            <li class="nav-item" id="dropdown">
+
+              <ul class="dropdown-menu">
+
+
+                
+                  
+
+                <li> <a class="dropdown-item" href=<?= base_url()?>> Con cédula &raquo; </a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href=<?= base_url()?>>Ver video</a></li>
+                    <li><a class="dropdown-item" href=<?= base_url()?>>Descargar pdf</a></li>
+
+                      <!-- <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                      </ul> -->
+                    </li>
+                    <!-- <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li> -->
+                  </ul>
+                </li>
+                <!-- <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
+                <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+                <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> -->
+
+
+                <li> <a class="dropdown-item" href=<?= base_url()?>> Sin cédula &raquo; </a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href=<?= base_url()?>>Ver video</a></li>
+                    <li><a class="dropdown-item" href=<?= base_url()?>>Descargar pdf</a></li>
+
+                      <!-- <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                      </ul> -->
+                    </li>
+                    <!-- <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li> -->
+                  </ul>
+                </li>
+
+
+
+
+
+
+
+        
+              </ul>
+
+            </li>
+
+
+
+            
+
+
+            
+
+          
+
+
+
+
+
+
+        </div>
       </div>
+    </div>
 
       <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
         <div class="col d-flex flex-column align-items-start gap-2">
           <h2 class="fw-bold text-body-emphasis">Tu participación es importante para el país.</h2>
           <p class="text-body-secondary">Afíliate. Rellena el formulario con tus datos y serás un miembro del cambio.</p>
-          <a href="#formulario_solicitud" class="btn btn-primary btn-lg"><i class="bi bi-table"></i> Regístrate</a>
+          <a href="#formulario_solicitud" class="btn btn-success btn-lg"><i class="bi bi-table"></i> Afíliate</a>
         </div>
 
         <div class="col">
@@ -409,9 +489,9 @@
 
         <div class="col">
           <div class="card shadow-sm animate__animated animate__backInLeft">
-            <img src="public/img/fondos/nicaragua1.jpeg" height="225" alt="" >
+            <video src="public/videos/jorge_esgtrada.mp4" width="" height="400" controls></video>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">El contenido del video se basa en las acciones de apoyo realizadas por Don Jorge Estrada, miembro del comité ejecutivo provisional del Partido Liberar de Nicaragua</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>

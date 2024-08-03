@@ -72,20 +72,38 @@
               <label for="fecha_nacimiento">Fecha de nacimiento*</label>
                 <input type="text" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= $solicitud['fecha_nacimiento']; ?>" placeholder="Fecha de nacimiento*">
               </a>
-              
               <p class="small" style="color:red">
                 <?= validation_show_error('fecha_nacimiento'); ?>
               </p>              
             </div>
 
-            <div class="col-sm-2 form-floating">
-                <input readonly type="text" class="form-control" name="edad" id="edad" value="" placeholder="Edad">
-                <label for="edad">Edad</label>
-                <p class="small" style="color:red">
-                  <?= validation_show_error('edad'); ?>
-                </p>              
+
+
+            <div class="col-sm-1 form-floating">
+              <input readonly type="text" class="form-control" name="edad" id="edad" value="" placeholder="Edad">
+              <label for="edad">Edad</label>
+              <p class="small" style="color:red">
+                <?= validation_show_error('edad'); ?>
+              </p>              
             </div>
 
+
+
+            <div class="col-sm-2 form-floating">
+              <select class="form-select" id="genero" name="genero" placeholder="Género*">
+                <option value=""></option>
+                <option value="Masculino" <?= ($solicitud['genero'] == 'Masculino') ? 'selected' : '';?>>Masculino</option>
+                <option value="Femenino" <?= ($solicitud['genero'] == 'Femenino') ? 'selected' : '';?>>Femenino</option>
+              </select>
+              <label for="genero">Género*</label>
+              <p class="small" style="color:red">
+                <?= validation_show_error('genero'); ?>
+              </p>
+            </div>
+
+            
+
+            
 
 
 
@@ -113,7 +131,7 @@
 
 
 
-            <div class="col-sm-3 form-floating">
+            <div class="col-sm-2 form-floating">
               
               <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $solicitud['ciudad']; ?>" placeholder="Ciudad">
               <label for="ciudad">Ciudad*</label>

@@ -3,9 +3,9 @@
 <?php echo $this->section('contenido'); ?>
 
 
-<div class="container">
+<div class="container-fluid">
 
-    <br>
+    <br><br>
 
     <h4 class="centrado">Solicitudes</h4>
 
@@ -13,23 +13,21 @@
         <thead>
             <tr>
                 <th>id</th>
-                <th>nombre</th>
-                <th>apellidos</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
                 <th>Edad</th>
-                <th>cedula</th>
-                <th>ciudad</th>
-                <th>pais</th>
-                <th>afiliado</th>
-                <th>cargo</th>
-                <th>posicion</th>
-                <th>created_at</th>
-                <th>updated_at</th>
-                <th>deleted_at</th>
-                <th>Options</th>
+                <th>Género</th>
+                <th>Cédula</th>
+                <th>País de Residencia</th>
+                <th>Ciudad/Municipio</th>
+                <th>Estado/Región/Comunidad/Dpto.</th>
+                <th>Creado</th>
+                <th>Modificado</th>
+                <th>Eliminado</th>
+                <th>Opciones</th>
                 <th></th>
             </tr>
             <tr>
-                <th class="filterhead"></th>
                 <th class="filterhead"></th>
                 <th class="filterhead"></th>
                 <th class="filterhead"></th>
@@ -86,12 +84,11 @@
                 {data: 'nombre'},
                 {data: 'apellidos'},
                 {data: 'edad', name:'edad'},
+                {data: 'genero'},
                 {data: 'cedula'},
+                {data: 'residencia', name:'estados.nombre'},
                 {data: 'ciudad'},
                 {data: 'pais'},
-                {data: 'afiliado'},
-                {data: 'cargo'},
-                {data: 'posicion'},
                 {data: 'created_at'},
                 {data: 'updated_at'},
                 {data: 'deleted_at'},

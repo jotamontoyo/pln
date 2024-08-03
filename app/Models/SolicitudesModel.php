@@ -17,6 +17,7 @@ class SolicitudesModel extends Model
         'nombre', 
         'apellidos', 
         'fecha_nacimiento',
+        'genero',
         'cedula', 
         'cedula_img', 
         'pasaporte', 

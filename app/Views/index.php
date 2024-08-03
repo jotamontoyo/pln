@@ -7,36 +7,14 @@
 
 
 
-  <!-- <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Album example</h1>
-        <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-        <p>
-          <a href="#formulario_solicitud" class="btn btn-primary my-2 animate__animated animate__zoomIn">Formulario de afiliación</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p>
-      </div>
-    </div>
-  </section> 
-
-  <br>
-
-  <div class="container fluid centrado">
-    <img src="public/img/logos/logoPLN.jpg" style="max-width: 40%" alt="">
-  </div> -->
-
-
-  
 
 
 
 
 
+  <div class="" style="background-size: cover ; margin-top: 30px; background-image: url(public/img/fondos/paisaje-nubes.jpg); background-attachment: fixed; background-repeat: no-repeat;">
 
-
-  <div class="px-4 py-5">
-
+    <br><br>
     <div class="container">
 
       <div class="row centrado">
@@ -46,82 +24,31 @@
         <div class="col-sm-4">
           <div class="col d-flex flex-column gap-2">
               
-          <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Instructivos
-            </button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Instructivos
+              </button>
+              <li class="nav-item" id="dropdown">
+                <ul class="dropdown-menu">
+                  <li> <a class="dropdown-item" href=<?= base_url()?>> Con cédula &raquo; </a>
+                    <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href=<?= base_url()?>>Ver video</a></li>
+                      <li><a class="dropdown-item" href=<?= base_url()?>>Descargar pdf</a></li>
 
-
-            <li class="nav-item" id="dropdown">
-
-              <ul class="dropdown-menu">
-
-
-                
-                  
-
-                <li> <a class="dropdown-item" href=<?= base_url()?>> Con cédula &raquo; </a>
-                  <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href=<?= base_url()?>>Ver video</a></li>
-                    <li><a class="dropdown-item" href=<?= base_url()?>>Descargar pdf</a></li>
-
-                      <!-- <ul class="submenu dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                      </ul> -->
-                    </li>
-                    <!-- <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li> -->
-                  </ul>
-                </li>
-                <!-- <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
-                <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-                <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> -->
-
-
-                <li> <a class="dropdown-item" href=<?= base_url()?>> Sin cédula &raquo; </a>
-                  <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href=<?= base_url()?>>Ver video</a></li>
-                    <li><a class="dropdown-item" href=<?= base_url()?>>Descargar pdf</a></li>
-
-                      <!-- <ul class="submenu dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                      </ul> -->
-                    </li>
-                    <!-- <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li> -->
-                  </ul>
-                </li>
-
-
-
-
-
-
-
-        
-              </ul>
-
-            </li>
-
-
-
-            
-
-
-            
-
-          
-
-
-
-
-
-
+                    </ul>
+                  </li>
+                  <li> <a class="dropdown-item" href=<?= base_url()?>> Sin cédula &raquo; </a>
+                    <ul class="submenu dropdown-menu">
+                      <li><a class="dropdown-item" href=<?= base_url()?>>Ver video</a></li>
+                      <li><a class="dropdown-item" href=<?= base_url()?>>Descargar pdf</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
       <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
         <div class="col d-flex flex-column align-items-start gap-2">
@@ -135,27 +62,28 @@
           <div class="row row-cols-1 row-cols-sm-2 g-4">
             
             <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reglamentoModal"><i class="bi bi-collection"></i> Dirección, Misión y Visión</button>
-              <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
-              <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#direccionModal"><i class="bi bi-collection"></i> Dirección, Misión y Visión</button>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">Dirección, Misión y Vision</h4>
+              <p class="text-body-secondary"> Comité Ejecutivo fundador  y comisiones.  Que vamos hacer y objetivo general.
+              </p>
             </div>
 
             <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#declaracionModal"><i class="bi bi-card-list"></i> Reglamento</button>
-              <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
-              <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reglamentoModal"><i class="bi bi-card-list"></i> Reglamento</button>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">Reglamento</h4>
+              <p class="text-body-secondary">Normas a las que nos debemos y código de ética.</p>
             </div>
 
             <div class="col d-flex flex-column gap-2">
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metodologiaModal"><i class="bi bi-card-checklist"></i> Metodología</button>
-              <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
-              <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">Metodología</h4>
+              <p class="text-body-secondary">Afiliación, procesos y administración de la organización.</p>
             </div>
 
             <div class="col d-flex flex-column gap-2">
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#empadronamientoModal"><i class="bi bi-clipboard2-plus"></i> Empadronamiento</button>
-              <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
-              <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">Empadronamiento</h4>
+              <p class="text-body-secondary">Proyecto para hacer cumplir artículo 122 que permita votar a los Nicaragüenses del exterior residentes o en tránsito.</p>
             </div>
           
           </div>
@@ -170,118 +98,17 @@
 
 
   <!-- direccion mision y vision modal -->
-  <div class="modal fade" id="reglamentoModal" tabindex="-1" aria-labelledby="reglamentoModalLabel" aria-hidden="true">
+  <div class="modal fade" id="direccionModal" tabindex="-1" aria-labelledby="direccionModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="reglamentoModalLabel">Reglamento</h1>
+          <h1 class="modal-title fs-5" id="direccionModalLabel">Dirección, misión y visión</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-
-
-
-        <div class="container px-4 py-5">
-          <h2 class="pb-2 border-bottom centrado"><img src="public/img/logos/logoPLN.jpg" style="max-width: 40px;" alt=""> Reglamento del Partido Liberal de Nicaragua como organización de oposición</h2>
-          <p class="centrado text-emphasis fw-semibold">APROBADOS POR EL COMITÉ EJECUTIVO REUNIDA EN SESIONES 
-            EXTRAORDINARIAS EN LA CIUDAD DE MIAMI, FLORIDA DURANTE LOS DIAS 4 Y 5
-          DE MARZO DEL 2023</p>
-          <hr>
-          <h5 class="centrado">COMITE EJECUTIVO FUNDACIONAL</h5>
-          <p class="centrado">Lic. Alvaro Somoza Urcuyo</p>
-          <p class="centrado">Don Eli Cabezas Boza</p>
-          <p class="centrado">Dr. Enrique Zelaya Cruz</p>
-          <p class="centrado">Lic. Luis Barreto Novoa</p>
-          <p class="centrado">Don Jorge Estrada Vélez</p>
-          <p class="centrado">Ing. Arlington Orozco</p>
-          <p class="centrado">Ing. Henry Alvarez</p>
-          <p class="centrado">Secretario: Dr. Cesar Napoleón Grijalva Hinojo</p>
-          
-          <p class="centrado small">COMISIONES Planificación: Acciones/ Monitoreo, seguimiento del plan de acción. Relaciones Exteriores: Enlace con organismos y personalidades. Comunicación: divulgación y relación con los medios. Afiliación y coordinación: Registro de estructuras y comunicación. Seguimiento y Control: de tareas según estructura funcional. Auditoria: Supervisión de ingresos y ejecución del gasto.</p>
-          <p class="centrado small">Inscripción como organización
-                    Realizada en el Estado de la Florida, USA el 15 de Agosto del 2023 con el numero N23000009852, Estatutos de la Florida 15.16
-                    Casa Provisional del Partido Liberal de Nicaragua
-                    Dirección: 625 Biltmore Way, apt 1207 Coral Gables Florida 33134,
-                    Miami, Florida, USA – Teléfono 01 (786) 564 1604</p>
-
-          <br>
-          <h4 class="centrado">Nuestros valores:</h4>
-          <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-
-            
-
-            <div class="feature col">
-              <h3 class="fs-2 text-body-emphasis">Misión</h3>
-              <p>Crear un núcleo de unidad.</p>
-              <a href="#flush-collapseOne">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Contenido</button>
-              </a>
-            </div>
-
-            <div class="feature col">
-              <h3 class="fs-2 text-body-emphasis">Visión</h3>
-              <p>Ser la principal fuerza de oposición.</p>
-              <a href="#flush-collapseTwo">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Contenido</button>
-              </a>
-            </div>
-
-            <div class="feature col">
-              <h3 class="fs-2 text-body-emphasis">Justificación</h3>
-              <p>Contrarestar la amenaza sandinista.</p>
-              <a href="#flush-collapseThree">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Contenido</button>
-              </a>
-            </div>
-
+          <div class="container px-4 py-5">
+            <?= $this->include('docs/direccion_mision'); ?>
           </div>
-        </div>
-
-
-
-
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  Misión: contenido
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <p>Consiste en crear un núcleo de unidad de todos los opositores al sandinismo y cualquiera de sus expresiones, iniciando en esta etapa como una organización de oposición de orden liberal con estructuras de coordinación como de representaciones territoriales y la afiliación de participantes dentro y fuera de Nicaragua.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Visión: contenido
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <p>Lograr ser la principal fuerza de oposición, incorporar a la diáspora para que ejerzan sus derechos con sus representantes vía acciones reales como de promover el voto en el exterior en las primeras elecciones con condiciones, lograr representación clandestina en cada municipio y departamento a lo interno de Nicaragua preparándonos para en su momento inscribirnos como partido, participar y ganar las primeras elecciones cuando se existan condiciones.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Jusitifcación: contenido
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <p>Ante la amenaza de organizaciones de oposición que cohabitan con grupo o personas que creen en el rescate del sandinismo y haciendo honor a las mayorías demostradas en procesos electorales, hemos fundado el Partido Liberal de Nicaragua que inicia como una organización política encargada de proveer a los Nicaragüenses de un espacio bajo los principios liberales para que con la ayuda de Dios y de todos lograr evitar un retorno al pasado criminal de los 80´s así como rechazar a cómplices que ahora se encuentran infiltrados y liderando grupos opositores.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -294,11 +121,11 @@
 
 
   <!-- reglamento modal -->
-  <div class="modal fade" id="declaracionModal" tabindex="-1" aria-labelledby="declaracionModalLabel" aria-hidden="true">
+  <div class="modal fade" id="reglamentoModal" tabindex="-1" aria-labelledby="reglamentoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="declaracionModalLabel">Reglamento</h1>
+          <h1 class="modal-title fs-5" id="reglamentoModalLabel">Reglamento</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -312,126 +139,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-<!-- direccion mision y vision modal -->
-<div class="modal fade" id="reglamentoModal" tabindex="-1" aria-labelledby="reglamentoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="reglamentoModalLabel">Reglamento</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-
-        <div class="container px-4">
-          <h2 class="pb-2 border-bottom centrado"><img src="public/img/logos/logoPLN.jpg" style="max-width: 40px;" alt=""> Reglamento del Partido Liberal de Nicaragua como organización de oposición</h2>
-          <p class="centrado text-emphasis fw-semibold">APROBADOS POR EL COMITÉ EJECUTIVO REUNIDA EN SESIONES 
-            EXTRAORDINARIAS EN LA CIUDAD DE MIAMI, FLORIDA DURANTE LOS DIAS 4 Y 5
-          DE MARZO DEL 2023</p>
-          <hr>
-          <h5 class="centrado">COMITE EJECUTIVO FUNDACIONAL</h5>
-          <p class="centrado">Lic. Alvaro Somoza Urcuyo</p>
-          <p class="centrado">Don Eli Cabezas Boza</p>
-          <p class="centrado">Dr. Enrique Zelaya Cruz</p>
-          <p class="centrado">Lic. Luis Barreto Novoa</p>
-          <p class="centrado">Don Jorge Estrada Vélez</p>
-          <p class="centrado">Ing. Arlington Orozco</p>
-          <p class="centrado">Ing. Henry Alvarez</p>
-          <p class="centrado">Secretario: Dr. Cesar Napoleón Grijalva Hinojo</p>
-          
-          <p class="centrado small">COMISIONES Planificación: Acciones/ Monitoreo, seguimiento del plan de acción. Relaciones Exteriores: Enlace con organismos y personalidades. Comunicación: divulgación y relación con los medios. Afiliación y coordinación: Registro de estructuras y comunicación. Seguimiento y Control: de tareas según estructura funcional. Auditoria: Supervisión de ingresos y ejecución del gasto.</p>
-          <p class="centrado small">Inscripción como organización
-                    Realizada en el Estado de la Florida, USA el 15 de Agosto del 2023 con el numero N23000009852, Estatutos de la Florida 15.16
-                    Casa Provisional del Partido Liberal de Nicaragua
-                    Dirección: 625 Biltmore Way, apt 1207 Coral Gables Florida 33134,
-                    Miami, Florida, USA – Teléfono 01 (786) 564 1604</p>
-
-          <br>
-          <h4 class="centrado">Nuestros valores:</h4>
-          <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-
-            <div class="feature col">
-              <h3 class="fs-2 text-body-emphasis">Misión</h3>
-              <p>Crear un núcleo de unidad.</p>
-              <a href="#flush-collapseOne">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Contenido</button>
-              </a>
-            </div>
-
-            <div class="feature col">
-              <h3 class="fs-2 text-body-emphasis">Visión</h3>
-              <p>Ser la principal fuerza de oposición.</p>
-              <a href="#flush-collapseTwo">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Contenido</button>
-              </a>
-            </div>
-
-            <div class="feature col">
-              <h3 class="fs-2 text-body-emphasis">Justificación</h3>
-              <p>Contrarestar la amenaza sandinista.</p>
-              <a href="#flush-collapseThree">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Contenido</button>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-
-
-
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  Misión: contenido
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <p>Consiste en crear un núcleo de unidad de todos los opositores al sandinismo y cualquiera de sus expresiones, iniciando en esta etapa como una organización de oposición de orden liberal con estructuras de coordinación como de representaciones territoriales y la afiliación de participantes dentro y fuera de Nicaragua.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Visión: contenido
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" dat-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <p>Lograr ser la principal fuerza de oposición, incorporar a la diáspora para que ejerzan sus derechos con sus representantes vía acciones reales como de promover el voto en el exterior en las primeras elecciones con condiciones, lograr representación clandestina en cada municipio y departamento a lo interno de Nicaragua preparándonos para en su momento inscribirnos como partido, participar y ganar las primeras elecciones cuando se existan condiciones.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Jusitifcación: contenido
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <p>Ante la amenaza de organizaciones de oposición que cohabitan con grupo o personas que creen en el rescate del sandinismo y haciendo honor a las mayorías demostradas en procesos electorales, hemos fundado el Partido Liberal de Nicaragua que inicia como una organización política encargada de proveer a los Nicaragüenses de un espacio bajo los principios liberales para que con la ayuda de Dios y de todos lograr evitar un retorno al pasado criminal de los 80´s así como rechazar a cómplices que ahora se encuentran infiltrados y liderando grupos opositores.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -481,7 +188,7 @@
 
 
 
-  <!-- <div class="album py-5 bg-body-tertiary" style="background-image: url(img/fondos/P5040009.JPG);"> -->
+  <!-- <div class="album py-5 bg-body-tertiary" style="background-image: url(public/img/fondos/P5040009.JPG);"> -->
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
 
@@ -489,7 +196,7 @@
 
         <div class="col">
           <div class="card shadow-sm animate__animated animate__backInLeft">
-            <video src="public/videos/jorge_esgtrada.mp4" width="" height="400" controls></video>
+            <video src="public/videos/jorge_esgtrada.mp4" max-width="" height="250" controls></video>
             <div class="card-body">
               <p class="card-text">El contenido del video se basa en las acciones de apoyo realizadas por Don Jorge Estrada, miembro del comité ejecutivo provisional del Partido Liberar de Nicaragua</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -505,9 +212,11 @@
         
         <div class="col">
           <div class="card shadow-sm animate__animated animate__backInUp">
-          <img src="public/img/fondos/nicaragua2.jpeg" height="225" alt="" >
+            <div class="centrado">
+              <img src="public/img/comite/comandante_henry.jpg" max-width="400" height="250" alt="" >
+            </div>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">El presidente Reagan recibió la  Dr. y Comandante Henry (Enrique Zelaya) miembro del estado mayor de la contra.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -518,11 +227,14 @@
             </div>
           </div>
         </div>
+
         <div class="col">
           <div class="card shadow-sm animate__animated animate__backInRight">
-          <img src="public/img/fondos/nicaragua3.jpeg" height="225" alt="" >
+            <div class="centrado">
+              <iframe max-width="400" height="300" src="https://www.youtube.com/embed/tHTVkORVWdg?si=gwWDCaCmaXX4Jshd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Álvaro Somoza Urcuyo, hijo del presidente Luis Somoza y director de la la alianza por la Libertad con miles de afiliados y conductor del programa semanal "una hora con Álvaro Somoza".</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -536,39 +248,11 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
-              </div>
+            <div class="centrado">
+              <img src="public/img/comite/cesar_grijalba.jpg" max-width="300" height="250" alt="" >
             </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Dr. Cesar Grijalva, Abogado, Economista con grado de Doctor . Experto en temas de gobierno de transición y representante de organizaciones.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -582,9 +266,61 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="centrado">
+              <img src="public/img/comite/eli_cabezas.jpg" max-width="200" height="250" alt="" >
+            </div>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Don Eli Cabezas desde los años 80's principal líder liberal de la diáspora y del nuevo exilio del canada.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card shadow-sm">
+          <iframe max-width="400" height="250" src="https://www.youtube.com/embed/MidbScmkpw8?si=7zllNsgoUSxgHMLz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+              <p class="card-text">Politólogo, Informático y Experto electoral con amplia trayectoria en  documentacion de fraudes, tendidos electorales y administración de procesos electorales.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="centrado">
+              <img src="public/img/comite/harlinton_orozco.jpg" width="100%" height="250" alt="" >
+            </div>
+            <div class="card-body">
+              <p class="card-text">Harlinton Orozco y Henry Álvarez de Unión de Exiliados, formado por líderes de tranques durante la rebelion.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+          <iframe max-width="400" height="250" src="https://www.youtube.com/embed/f03tKMgzPl0?si=mwvaziFid7C1-Tx3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+              <p class="card-text">Podcast de Don Álvaro Somoza. El Robo del Siglo: Cómo Maduro se Burló de la Democracia en Venezuela.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -597,22 +333,7 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <svg class="bd-placeholder-img card-img-top" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -630,33 +351,30 @@
   </div>
 
 
-
-
+  
 
 
 
 
 
 <!-- formulario solicitud afilicacion  fondo azul-> style="background-color: #E0ECF8;" -->
-<br>
-<section id="formulario_solicitud" style="background-color: #E0ECF8;">
 
-  <div class="container">
+  <div id="formulario_solicitud" name="formulario_solicitud"  style="background-color: #E0ECF8;">
 
-    <div class="row g-5">
+    <div class="container">
 
 
 
       
-      <div class="col-md-12">
+
         <br>
         <h4 class="mb-3 text-center">Solicitud de afiliación</h4>
 
-        <hr class="my-4">
+        <hr>
         <h5>Datos personales</h5>
         <br>
 
-        <form action="<?= base_url('solicitudes/crear') ?>" method="POST" id="formulario_solicitud" name="formulario_solicitud" enctype="multipart/form-data" class="needs-validation" novalidate>
+        <form action="<?= base_url('solicitudes/crear') ?>" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="_method" value="POST">
           <?php echo csrf_field(); ?>
 
@@ -680,15 +398,36 @@
                 <?= validation_show_error('apellidos'); ?>
               </p>
             </div>
+
+
+
+
             
 
 
-            <div class="col-sm-3 form-floating">
+
+
+            
+
+
+            <div class="col-sm-2 form-floating">
                 <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= set_value('fecha_nacimiento'); ?>" placeholder="Fecha de nacimiento*">
                 <label for="fecha_nacimiento">Fecha de nacimiento*</label>
                 <p class="small" style="color:red">
                   <?= validation_show_error('fecha_nacimiento'); ?>
                 </p>              
+            </div>
+
+            <div class="col-sm-2 form-floating">
+              <select class="form-select" id="genero" name="genero">
+                <option value=""></option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+              </select>
+              <label for="genero">Género*</label>
+              <p class="small" style="color:red">
+                <?= validation_show_error('genero'); ?>
+              </p>
             </div>
 
 
@@ -702,12 +441,12 @@
                 
 
                     <select class="form-select" id="estado_id" name="estado_id">
-                        <option value=""><label for="estado_id" id="estado_id_label">Seleccione País de residencia*</option>
+                        <option value=""></option>
                         <?php foreach($estados as $estado): ?>
                             <option value="<?= $estado['id'] ?>"><?= $estado['nombre'] ?></option>
                         <?php endforeach; ?>
                     </select>
-                    
+                    <label for="estado_id">País de residencia*</label>
                     <p class="small" style="color:red">
                         <?= validation_show_error('estado_id'); ?>
                     </p>
@@ -840,17 +579,17 @@
             <hr class="my-4">
             <h5>Datos de contacto</h5>
 
-            <div class="col-sm-2">
-              <label for="whatsapp" class="form-label">Whatsapp Nº:</label>
-              <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= set_value('whatsapp'); ?>">
+            <div class="col-sm-2 form-floating">
+              <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= set_value('whatsapp'); ?>" placeholder="WhatsApp nº">
+              <label for="whatsapp" class="form-label">WhatsApp Nº:</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('whatsapp'); ?>
               </p>
             </div>
 
-            <div class="col-sm-4">
-              <label for="email" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email" name="email" value="<?= set_value('email'); ?>">
+            <div class="col-sm-4 form-floating">
+              <input type="email" class="form-control" id="email" name="email" value="<?= set_value('email'); ?>" placeholder="Email">
+              <label for="email" class="form-label">Email</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('email'); ?>
               </p>
@@ -881,9 +620,10 @@
                 <?= validation_show_error('cargo'); ?>
               </p>
             </div>
-            <div class="col-sm-4">
+
+            <div class="col-sm-4 form-floating">
+              <input type="text" class="form-control" id="posicion" name="posicion" value="<?= set_value('posicion'); ?>" placeholder="Posición">
               <label for="posicion" class="form-label">Posición:</label>
-              <input type="text" class="form-control" id="posicion" name="posicion" value="<?= set_value('posicion'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('posicion'); ?>
               </p>
@@ -898,7 +638,7 @@
 
           <br>
         </form>
-      </div>
+
     </div>
 
   
@@ -909,7 +649,7 @@
 
 
 
-</section>
+
 
 
 
@@ -922,13 +662,13 @@
     if ($(this).is(':checked')) {
       $(this).attr('value', 'true');
       var check = $(this).val();
-      console.log(check);
+      //console.log(check);
       //$('#afiliado value').val(check);
       //console.log($('#afiliado').val(check));
     } else {
       $(this).attr('value', 'false');
       var check = $(this).val();
-      console.log(check);
+      //console.log(check);
       //$('#afiliado').val(check);
       //console.log($('#afiliado').val(check));
     }
@@ -996,7 +736,6 @@
       };
     });
   });
-
 
 
 

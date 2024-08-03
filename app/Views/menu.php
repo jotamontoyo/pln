@@ -38,13 +38,13 @@
 
 
 
-
+<span class="ir-arriba"><i class="bi bi-arrow-up-square"></i></span>
 
 
 
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <div class="container-fluid">
+
     <a class="navbar-brand" href="#">Fixed navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -219,12 +219,12 @@
       </ul>
 
     </div>
-  </div>
+
 </nav>
 
 
 
-<br><br>
+
 
 
 
@@ -615,6 +615,27 @@
   }); 
   // DOMContentLoaded  end
 
+  $(document).ready(function(){
+    $('.ir-arriba').click(function(){
+      $('body, html').animate({
+        scrollTop: '0px'
+      }, 300);
+  });
+
+  $(window).scroll(function(){
+    if( $(this).scrollTop() > 0 ){
+      $('.ir-arriba').slideDown(300);
+    } else {
+      $('.ir-arriba').slideUp(300);
+    }
+  });
+
+});
+
+
+
+  
+
 </script>
 
 
@@ -684,3 +705,9 @@
 <!-- </div> -->
 <!-- container-fluid.// -->
 <!-- </nav> -->
+
+
+
+
+  
+

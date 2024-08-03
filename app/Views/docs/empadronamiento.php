@@ -1,26 +1,3 @@
-<style>
-
-
-    @media only screen and (min-width : 901px) {
-
-        .img_titulos_empadronamiento {
-            width: 40%;
-        }
-
-    }
-
-    @media only screen and (max-width : 900px) {
-        .img_titulos_empadronamiento {
-            width: 50%;
-        }
-
-    }
-
-</style>
-
-
-
-
 <h2 class="pb-2 centrado"><img src="public/img/logos/logoPLN.jpg" style="max-width: 40px;" alt=""> Información general proyecto Voto en el Exterior según Articulo 122- Ley 331 electoral</h2>
 <hr>
 <br>

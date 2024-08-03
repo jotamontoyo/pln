@@ -67,16 +67,16 @@ class Solicitudes extends BaseController
             solicitudes.nombre, 
             solicitudes.apellidos, 
             (YEAR(NOW()) - YEAR(solicitudes.fecha_nacimiento)) AS edad,
+            solicitudes.genero, 
+            estados.nombre AS residencia,
             solicitudes.cedula, 
             solicitudes.ciudad,
             solicitudes.pais,
-            solicitudes.afiliado,
-            solicitudes.cargo,
-            solicitudes.posicion,
             solicitudes.created_at,
             solicitudes.updated_at,
             solicitudes.deleted_at
-        ');
+        ')
+        ->join('estados', 'estados.id = solicitudes.estado_id');
         return DataTable::of($builder)->toJson(true);
     }
 
@@ -136,8 +136,9 @@ class Solicitudes extends BaseController
             'nombre'                => 'required', 
             'apellidos'             => 'required', 
              
-            /*'cedula'                => 'is_unique[solicitudes.cedula]', 
-            'pasaporte'             => 'required|is_unique[solicitudes.pasaporte]', 
+            /*'cedula'                => 'is_unique[solicitudes.cedula]', */
+            'genero'                => 'required',
+            /*'pasaporte'             => 'required|is_unique[solicitudes.pasaporte]', 
             'licencia'              => 'required|is_unique[solicitudes.licencia]', 
             'residencia'            => 'required|is_unique[solicitudes.residencia]', */
             'estado_id'             => 'required',
@@ -159,6 +160,7 @@ class Solicitudes extends BaseController
                 'nombre', 
                 'apellidos', 
                 'fecha_nacimiento',
+                'genero', 
                 'cedula', 
                 'cedula_img', 
                 'pasaporte', 
@@ -192,6 +194,7 @@ class Solicitudes extends BaseController
                 'nombre'                => $post['nombre'],
                 'apellidos'             => $post['apellidos'],
                 'fecha_nacimiento'      => $post['fecha_nacimiento'],
+                'genero'                => $post['genero'],
                 'cedula'                => $post['cedula'],
                 'cedula_img'            => $url,
                 'pasaporte'             => $post['pasaporte'],
@@ -343,8 +346,9 @@ class Solicitudes extends BaseController
             'nombre'                => 'required', 
             'apellidos'             => 'required',
             'fecha_nacimiento'      => 'required', 
-            /*'cedula'                => 'required', 
-            'pasaporte'             => 'required', 
+            /*'cedula'                => 'required',*/
+            'genero'                => 'required', 
+            /*'pasaporte'             => 'required', 
             'licencia'              => 'required', 
             'residencia'            => 'required',
             'ciudad'                => 'required', 
@@ -360,13 +364,14 @@ class Solicitudes extends BaseController
             $session->setFlashdata('mensaje', 'Error(s) en formulario');
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
         } else {
-            $post = $this->request->getPost(['afiliado_id', 'nombre', 'apellidos', 'cedula', 'pasaporte', 'licencia', 'residencia', 'estado_id', 'ciudad', 'pais', 'whatsapp', 'email', 'afiliado', 'cargo', 'posicion']);
+            $post = $this->request->getPost(['afiliado_id', 'nombre', 'apellidos', 'genero', 'cedula', 'pasaporte', 'licencia', 'residencia', 'estado_id', 'ciudad', 'pais', 'whatsapp', 'email', 'afiliado', 'cargo', 'posicion']);
             if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
             if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
             $data = [
                 'nombre'                => $post['nombre'],
                 'apellidos'             => $post['apellidos'],
                 //'fecha_nacimiento'      => $post['fecha_nacimiento'],
+                'genero'                => $post['genero'],
                 'cedula'                => $post['cedula'],
                 'pasaporte'             => $post['pasaporte'],
                 'licencia'              => $post['licencia'],
@@ -420,7 +425,7 @@ class Solicitudes extends BaseController
         $data = ['fecha_nacimiento' => $post['fecha_nacimiento']];
         $this->solicitudesModel->update($id, $data, false);
         return redirect()->back()->withInput();
-        $session->setFlashdata('mensaje', 'Imagen actualizada');
+        $session->setFlashdata('mensaje', 'Fecha actualizada');
 
 
 

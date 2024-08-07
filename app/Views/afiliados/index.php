@@ -7,13 +7,15 @@
 
     <br><br>
 
-    <h4 class="centrado">Solicitudes</h4>
+    <h4 class="centrado">Afiliados</h4>
 
     <table id="table" class="table table-striped table-hover">
         <thead>
             <tr>
                 <th>id</th>
-                <th>Afiliación nº</th>
+                <th>Creado por</th>
+                <th>Solicitud nº</th>
+                <th>Afiliado nº</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Edad</th>
@@ -28,6 +30,8 @@
                 <th>Opciones</th>
             </tr>
             <tr>
+                <th class="filterhead"></th>
+                <th class="filterhead"></th>
                 <th class="filterhead"></th>
                 <th class="filterhead"></th>
                 <th class="filterhead"></th>
@@ -70,7 +74,7 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: 'solicitudes/listar_solicitudes',
+                url: 'afiliados/listar_afiliados',
                 type: 'get'
             },
             responsive: 'true',
@@ -81,7 +85,9 @@
             },
             columns: [
                 {data: 'id'},
-                {data: 'afiliacion_id'},
+                {data: 'user', name:'users.username'},
+                {data: 'solicitud_id'},
+                {data: 'afiliado_id'},
                 {data: 'nombre'},
                 {data: 'apellidos'},
                 {data: 'edad', name:'edad'},
@@ -94,7 +100,6 @@
                 {data: 'updated_at'},
                 {data: 'deleted_at'},
                 {"defaultContent": "<button type='button' name='button' id='button' class='editar btn btn-primary btn-sm'><i class='bi bi-pencil'></i></button>"}
-                //{"defaultContent": "<button type='button' name='button' id='button' class='afiliar btn btn-success btn-sm'><i class='bi bi-bookmark'></i></button>"}
             ],
             initComplete: function( settings, json ) 
             {
@@ -125,14 +130,8 @@
     var obtener_data_editar = function(tbody, table) {
         $(tbody).on("click", "button.editar", function(){
             var data = table.row($(this).parents("tr")).data();
-            window.location.href = "<?= base_url() ?>solicitudes/"+data['id']+"/edit";
+            window.location.href = "<?= base_url() ?>afiliados/"+data['id']+"/edit";
         });
-        $(tbody).on("click", "button.afiliar", function(){
-            var data = table.row($(this).parents("tr")).data();
-            window.location.href = "<?= base_url() ?>solicitudes/"+data['id']+"/afiliar";
-        });
-
-
     };
     
 

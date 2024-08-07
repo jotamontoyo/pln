@@ -10,33 +10,31 @@
   <div class="container">
 
     <br><br>
-    <h4 class="mb-4 centrado">Solicitud de afiliación #<?= $solicitud['id'];  ?></h4>
+    <h4 class="mb-4 centrado">Documento de afiliación #<?= $afiliado['id'];  ?></h4>
 
 
     <div class="row">
 
       <div class="col-sm-2 col-md-2 col-lg-1 col-xl-1 col-xxl-1">
-        <a href="<?= base_url('afiliados/' . $solicitud['afiliacion_id'] . '/edit') ?>">
+        <a href="<?= base_url('solicitudes/' . $afiliado['solicitud_id'] . '/edit') ?>">
           <button type="button" class="btn btn-sm btn-primary boton-badge">
-            Documento de afiliación <span class="badge text-bg-secondary"><?= $solicitud['afiliacion_id'] ?></span>
+            Solicitud de afiliación <span class="badge text-bg-secondary"><?= $afiliado['solicitud_id'] ?></span>
           </button>
         </a>
       </div>
 
       <div class="col-sm-2 col-md-2 col-lg-1 col-xl-1 col-xxl-1">
-        <a href="<?= base_url('afiliados/' . $solicitud['afiliacion_id'] . '/edit') ?>">
+        <a href="<?= base_url('users/' . $user->id . '/edit') ?>">
           <button type="button" class="btn btn-sm btn-primary boton-badge">
-            Nº de afiliado <br><span class="badge text-bg-secondary"><?= $afiliado[0]['afiliado_id'] ?></span>
+            Creado por <span class="badge text-bg-secondary"><?= $user->username ?></span>
           </button>
         </a>
       </div>
 
     </div>
 
-       
 
-
-    <form action="<?= base_url('solicitudes/' . $id); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
+    <form action="<?= base_url('afiliados/' . $id); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
 
         <input type="hidden" name="_method" value="PUT">
         <?= csrf_field(); ?>
@@ -44,14 +42,17 @@
         <hr class="my-4">
         <div class="row g-3">
 
- 
-
             <h5>Datos personales</h5>
 
             <div class="row">
 
-              <div class="col-sm-6 form-floating">
-                <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $solicitud['nombre']; ?>" placeholder="Nombre">
+              <div class="col-sm-2 form-floating">
+                <input type="text" class="form-control" id="solicitud_doc" name="solicitud_doc" value="<?= $afiliado['afiliado_id'] ?>" placeholder="Nº de afiliado">
+                <label for="solicitud_doc">Nº de afiliado</label>
+              </div>
+
+              <div class="col-sm-4 form-floating">
+                <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $afiliado['nombre']; ?>" placeholder="Nombre">
                 <label for="nombre">Nombre*</label>
                 <p class="small" style="color:red">
                   <?= validation_show_error('nombre'); ?>
@@ -59,7 +60,7 @@
               </div>
 
               <div class="col-sm-6 form-floating">
-                <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?= $solicitud['apellidos']; ?>" placeholder="Apellidos">
+                <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?= $afiliado['apellidos']; ?>" placeholder="Apellidos">
                 <label for="apellidos">Apellidos*</label>
                 <p class="small" style="color:red">
                   <?= validation_show_error('apellidos'); ?>
@@ -72,7 +73,7 @@
             <div class="col-sm-2 form-floating">
               <a data-bs-toggle="modal" data-bs-target="#cambiarFechaNacimiento">
               <label for="fecha_nacimiento">Fecha de nacimiento*</label>
-                <input type="text" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= $solicitud['fecha_nacimiento']; ?>" placeholder="Fecha de nacimiento*">
+                <input type="text" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= $afiliado['fecha_nacimiento']; ?>" placeholder="Fecha de nacimiento*">
               </a>
               <p class="small" style="color:red">
                 <?= validation_show_error('fecha_nacimiento'); ?>
@@ -94,8 +95,8 @@
             <div class="col-sm-2 form-floating">
               <select class="form-select" id="genero" name="genero" placeholder="Género*">
                 <option value=""></option>
-                <option value="Masculino" <?= ($solicitud['genero'] == 'Masculino') ? 'selected' : '';?>>Masculino</option>
-                <option value="Femenino" <?= ($solicitud['genero'] == 'Femenino') ? 'selected' : '';?>>Femenino</option>
+                <option value="Masculino" <?= ($afiliado['genero'] == 'Masculino') ? 'selected' : '';?>>Masculino</option>
+                <option value="Femenino" <?= ($afiliado['genero'] == 'Femenino') ? 'selected' : '';?>>Femenino</option>
               </select>
               <label for="genero">Género*</label>
               <p class="small" style="color:red">
@@ -115,7 +116,7 @@
                     <select class="form-select" id="estado_id" name="estado_id" placeholder="Residencia">
                         <?php foreach($estados as $estado): ?>
                           <option value="<?= $estado['id'] ?>" 
-                              <?= ($estado['id'] == $solicitud['estado_id']) ? 'selected' : '';?>>
+                              <?= ($estado['id'] == $afiliado['estado_id']) ? 'selected' : '';?>>
                               <?= $estado['nombre'] ?>
                           </option>
                         <?php endforeach; ?>
@@ -135,7 +136,7 @@
 
             <div class="col-sm-2 form-floating">
               
-              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $solicitud['ciudad']; ?>" placeholder="Ciudad">
+              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $afiliado['ciudad']; ?>" placeholder="Ciudad">
               <label for="ciudad">Ciudad*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('ciudad'); ?>
@@ -143,91 +144,70 @@
             </div>
 
             <div class="col-sm-3 form-floating">
-              <input type="text" class="form-control" id="pais" name="pais" value="<?= $solicitud['pais']; ?>" placeholder="País">
+              <input type="text" class="form-control" id="pais" name="pais" value="<?= $afiliado['pais']; ?>" placeholder="País">
               <label for="pais">País*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('pais'); ?>
               </p>
             </div>
 
-
-
-
-
             <hr class="my-4">
             <h5>Identificación</h5>
 
-
-
-
-            <!-- campos solo para la cedula -->
             <div class="col-sm-2 form-floating">
-              <input type="text" class="form-control" id="cedula" name="cedula" value="<?= $solicitud['cedula']; ?>" placeholder="Cédula">
+              <input type="text" class="form-control" id="cedula" name="cedula" value="<?= $afiliado['cedula']; ?>" placeholder="Cédula">
               <label for="cedula">Cédula Nº</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('cedula'); ?>
               </p>
             </div>
 
-            <div class="col-sm-2 form-floating" id="departamento_id_panel" name="departamento_id_panel">
-                    <select class="form-select" id="departamento_id" name="departamento_id">
-                      <option value=""></option>
-                      <?php foreach($departamentos as $departamento): ?>
-                        <option value="<?= $departamento['id'] ?>" 
-                          <?= ($departamento['id'] == $solicitud['departamento_id']) ? 'selected' : '';?>>
-                            <?= $departamento['nombre'] ?>
-                        </option>
-                      <?php endforeach; ?>
-                    </select>
-                    <label for="estado_id">Departamento de expedición*</label>
-                    <p class="small" style="color:red">
-                        <?= validation_show_error('departamento_id'); ?>
-                    </p>
-            </div>
+            <!-- estilos para la img tipo thumbnail de la cedula -->
+            <!-- <style>
+              #cedula_img_form {
+                border: 1px solid #ddd; /* Gray border */
+                border-radius: 4px;  /* Rounded border */
+                /* padding: 5px; /* Some padding */
+                width: 120px; /* Set a small width */
+                height: 100px;
+                background-image: url('public/img/logos/subir_img.png');
+                background-repeat: no-repeat;
+              }
 
-            <div class="col-sm-2 form-floating" id="municipio_id_panel" name="municipio_id_panel">
-                    <select class="form-select" id="municipio_id" name="municipio_id">
-                      <option value=""></option>
-                      <?php foreach($municipios as $municipio): ?>
-                        <option value="<?= $municipio['id'] ?>" 
-                          <?= ($municipio['id'] == $solicitud['municipio_id']) ? 'selected' : '';?>>
-                            <?= $municipio['nombre'] ?>
-                        </option>
-                      <?php endforeach; ?>
-                    </select>
-                    <label for="estado_id">Municipio de expedición*</label>
-                    <p class="small" style="color:red">
-                        <?= validation_show_error('municipio_id'); ?>
-                    </p>
-            </div>
-            <!-- FIN campos solo para la cedula -->
+              #bCambiarImg {
+                padding: 0;
+              }
 
-
-
+              /* Add a hover effect (blue shadow) */
+              img:hover {
+                box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+              }
+            </style> -->
             
 
             <div class="col-sm-4">
               <label for="cedula_img" class="form-label">Cédula imagen:</label><br>
                   <button type="button" class="btn" id="bCambiarImg" data-bs-toggle="modal" data-bs-target="#cambiarImg">
                     <div class="card shadow-sm">
-                      <img src="<?= $solicitud['cedula_img']; ?>" id="cedula_img_form" name="cedula_img_form" alt="">
+                      <img src="<?= $afiliado['cedula_img']; ?>" id="cedula_img_form" name="cedula_img_form" alt="">
                     </div>
                   </button>
-                <p style="display: inline-block; font-size: 10px"><?= $solicitud['cedula_img']; ?></p> 
+                <p style="display: inline-block; font-size: 10px"><?= $afiliado['cedula_img']; ?></p> 
             </div>
 
 
-            
-            
+
+
+
 
 
             <!-- campos para cuando no hay cedula -->
             <div class="col-sm-2 form-floating">
               <select class="form-select" id="tipo_doc" name="tipo_doc" placeholder="Tipo documento*">
                 <option value=""></option>
-                <option value="Pasaporte" <?= ($solicitud['tipo_doc'] == 'Pasaporte') ? 'selected' : '';?>>Pasaporte</option>
-                <option value="Licencia" <?= ($solicitud['tipo_doc'] == 'Licencia') ? 'selected' : '';?>>Licencia</option>
-                <option value="Residencia" <?= ($solicitud['tipo_doc'] == 'Residencia') ? 'selected' : '';?>>Residencia</option>
+                <option value="Pasaporte" <?= ($afiliado['tipo_doc'] == 'Pasaporte') ? 'selected' : '';?>>Pasaporte</option>
+                <option value="Licencia" <?= ($afiliado['tipo_doc'] == 'Licencia') ? 'selected' : '';?>>Licencia</option>
+                <option value="Residencia" <?= ($afiliado['tipo_doc'] == 'Residencia') ? 'selected' : '';?>>Residencia</option>
               </select>
               <label for="genero">Tipo documento*</label>
               <p class="small" style="color:red">
@@ -236,7 +216,7 @@
             </div>
 
             <div class="col-sm-2 form-floating" id="numero_doc_panel" name="numero_doc_panel">
-              <input type="text" class="form-control" id="numero_doc" name="numero_doc" value="<?= $solicitud['numero_doc']; ?>" placeholder="Nº documento">
+              <input type="text" class="form-control" id="numero_doc" name="numero_doc" value="<?= $afiliado['numero_doc']; ?>" placeholder="Nº documento">
               <label for="numero_doc" class="form-label">Nº documento</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('numero_doc'); ?>
@@ -244,16 +224,13 @@
             </div>
 
             <div class="col-sm-2 form-floating" id="expedicion_doc_panel" name="expedicion_doc_panel">
-              <input type="text" class="form-control" id="expedicion_doc" name="expedicion_doc" value="<?= $solicitud['expedicion_doc']; ?>" placeholder="Lugar de expedición">
+              <input type="text" class="form-control" id="expedicion_doc" name="expedicion_doc" value="<?= $afiliado['expedicion_doc']; ?>" placeholder="Lugar de expedición">
               <label for="expedicion_doc" class="form-label">Lugar de expedición</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('expedicion_doc'); ?>
               </p>
             </div>
             <!-- FIN campos para cuando no hay cedula -->
-
-            
-
 
 
 
@@ -266,7 +243,7 @@
             <h5>Datos de contacto</h5>
 
             <div class="col-sm-2 form-floating">
-              <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= $solicitud['whatsapp']; ?>" placeholder="Whatsapp">
+              <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= $afiliado['whatsapp']; ?>" placeholder="Whatsapp">
               <label for="whatsapp">Whatsapp</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('whatsapp'); ?>
@@ -274,7 +251,7 @@
             </div>
 
             <div class="col-sm-4 form-floating">
-              <input type="email" class="form-control" id="email" name="email" value="<?= $solicitud['email']; ?>" placeholder="Email">
+              <input type="email" class="form-control" id="email" name="email" value="<?= $afiliado['email']; ?>" placeholder="Email">
               <label for="email">Email</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('email'); ?>
@@ -288,13 +265,13 @@
 
 
             <div class="form-check">
-              <input class="form-check-input checkbox" type="checkbox" id="afiliado" name="afiliado" value="<?= $solicitud['afiliado']; ?>">
+              <input class="form-check-input checkbox" type="checkbox" id="afiliado" name="afiliado" value="<?= $afiliado['afiliado']; ?>">
               <label class="form-check-label" for="flexCheckDefault">
                 Afiliado
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input checkbox" type="checkbox"id="cargo" name="cargo" value="<?= $solicitud['cargo']; ?>">
+              <input class="form-check-input checkbox" type="checkbox"id="cargo" name="cargo" value="<?= $afiliado['cargo']; ?>">
               <label class="form-check-label" for="flexCheckChecked">
                 Cargo
               </label>
@@ -306,7 +283,7 @@
 
 
             <div class="col-sm-4 form-floating">
-              <input type="text" class="form-control" id="posicion" name="posicion" value="<?= $solicitud['posicion']; ?>" placeholder="Posición">
+              <input type="text" class="form-control" id="posicion" name="posicion" value="<?= $afiliado['posicion']; ?>" placeholder="Posición">
               <label for="posicion">Posición:</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('posicion'); ?>
@@ -319,11 +296,7 @@
 
         <div style="text-align: center">
             <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
-            
-            <a href="<?= base_url(); ?>solicitudes"><button type="button" class="btn btn-sm btn-outline-danger"><i class="bi bi-x-lg"></i> <?= lang('App.boton.cancelar') ?></button></a>
-            <a href="<?= base_url('solicitudes/' . $id . '/afiliar') ?>">
-              <button type="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> Afiliar</button>
-            </a>
+            <a href="<?= base_url(); ?>afiliados"><button type="button" class="btn btn-sm btn-outline-danger"><i class="bi bi-x-lg"></i> <?= lang('App.boton.cancelar') ?></button></a>
         </div>
 
         <br>
@@ -353,10 +326,7 @@
           <?= csrf_field(); ?>
           <div class="row g-3">
             <label for="cedula_img" class="form-label">Seleccionar imagen:</label>
-            <input type="file" class="form-control" accept="image/jpeg, image/jpg, image/png" id="cedula_img" name="cedula_img" value="<?= $solicitud['cedula_img']; ?>">
-            <!-- <h6>Actual:</h6>
-            <img src="<?= $solicitud['cedula_img']; ?>" id="cedula_img" name="cedula_img" alt="" style="max-width: 120px;">
-            <p class="small" style="display: inline-block;"><?= $solicitud['cedula_img']; ?></p> -->
+            <input type="file" class="form-control" accept="image/jpeg, image/jpg, image/png" id="cedula_img" name="cedula_img" value="<?= $afiliado['cedula_img']; ?>">
             <p class="small" style="color:red">
               <?= validation_show_error('cedula_img'); ?>
             </p>
@@ -382,7 +352,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="<?= base_url('solicitudes/' . $id . '/fecha_nacimiento'); ?>" method="POST" name="edit_form" autocomplete="off">
+        <form action="<?= base_url('afiliados/' . $id . '/fecha_nacimiento'); ?>" method="POST" name="edit_form" autocomplete="off">
           <input type="hidden" name="_method" value="PUT">
           <?= csrf_field(); ?>
           <div class="row g-3">

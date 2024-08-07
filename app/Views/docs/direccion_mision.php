@@ -7,7 +7,6 @@ DE MARZO DEL 2023</p>
 <p class="centrado">Lic. Alvaro Somoza Urcuyo</p>
 <p class="centrado">Don Eli Cabezas Boza</p>
 <p class="centrado">Dr. Enrique Zelaya Cruz</p>
-<p class="centrado">Lic. Luis Barreto Novoa</p>
 <p class="centrado">Don Jorge Estrada Vélez</p>
 <p class="centrado">Ing. Arlington Orozco</p>
 <p class="centrado">Ing. Henry Alvarez</p>

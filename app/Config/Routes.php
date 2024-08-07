@@ -21,10 +21,15 @@ $routes->put('solicitudes/(:num)',                      'Solicitudes::update/$1'
 $routes->put('solicitudes/(:num)/img',                  'Solicitudes::update_img/$1',                   ['filter' => 'CheckUpdatePermission']);
 $routes->post('solicitudes/crear',                      'Solicitudes::create');
 $routes->put('solicitudes/(:num)/fecha_nacimiento',     'Solicitudes::update_fecha_nacimiento/$1',      ['filter' => 'CheckUpdatePermission']);
-$routes->get('solicitudes/(:num)/afiliar',             'Solicitudes::create_afiliado/$1',               ['filter' => 'CheckCreatePermission']);
+$routes->get('solicitudes/(:num)/afiliar',              'Solicitudes::create_afiliado/$1',              ['filter' => 'CheckCreatePermission']);
 
 
-$routes->get('afiliados/(:num)/edit',                 'Afiliados::edit/$1',                         ['filter' => 'CheckEditPermission']);
+
+$routes->get('afiliados',                               'Afiliados::index',                           ['filter' => 'CheckReadPermission']);
+$routes->get('afiliados/listar_afiliados',              'Afiliados::listar_afiliados',                ['filter' => 'CheckReadPermission']);
+$routes->get('afiliados/(:num)/edit',                   'Afiliados::edit/$1',                         ['filter' => 'CheckEditPermission']);
+$routes->put('afiliados/(:num)',                        'Afiliados::update/$1',                       ['filter' => 'CheckUpdatePermission']);
+$routes->put('afiliados/(:num)/fecha_nacimiento',       'Afiliados::update_fecha_nacimiento/$1',      ['filter' => 'CheckUpdatePermission']);
 
 
 

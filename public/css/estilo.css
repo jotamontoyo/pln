@@ -6,9 +6,7 @@
 /* Cuando la pantalla es mayor a 900px */
 @media only screen and (min-width : 901px) {
 
-    main>.container {
-        padding: 20px 30px 0;
-    }
+
 
     .centrado {
         text-align:center;
@@ -39,9 +37,6 @@
         text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
     }
 
-    div.dt-layout-cell { 
-        display: none;
-    }
 
 
     .img_titulos_empadronamiento {
@@ -60,6 +55,41 @@
         right:20px;
         border-radius: 5px;
     }
+
+    .sombra {
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+
+
+    /* estilos para la img tipo thumbnail de la cedula */
+
+    #cedula_img_form {
+      border: 1px solid #ddd; /* Gray border */
+      border-radius: 4px;  /* Rounded border */
+      /* padding: 5px; /* Some padding */
+      width: 120px; /* Set a small width */
+      height: 100px;
+      background-image: url('public/img/logos/subir_img.png');
+      background-repeat: no-repeat;
+    }
+    
+    #bCambiarImg {
+      padding: 0;
+
+    }
+    
+    
+
+    /* botones badged de formularios solicitudes y afiliaciones */
+
+    .boton-badge {
+        height: 100%;
+    }
+    
+
     
 
 }
@@ -74,7 +104,26 @@
         padding:8px;
     }
 
-    .centrar_div {
+    .sombra {
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    .ir-arriba { 
+        display:none;
+        padding:20px;
+        background:#4d4e4e;
+        font-size:20px;
+        color:#fff;
+        cursor:pointer;
+        position: fixed;
+        bottom:20px;
+        right:20px;
+        border-radius: 5px;
+    }
+
+    /*.centrar_div {
         width: 420px;
         margin-left: auto;
         margin-right: auto;
@@ -84,10 +133,10 @@
         width: 20%;
     }
 
-    /*.swal-modal {
+    .swal-modal {
         background-color: rgba(63,255,106,0.69);
         border: 3px solid white;
-    }*/
+    }
 
     .swal-button {
         padding: 7px 19px;
@@ -100,6 +149,6 @@
 
     .img_titulos_empadronamiento {
         width: 50%;
-    }
+    } */
 }
 

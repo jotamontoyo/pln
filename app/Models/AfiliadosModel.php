@@ -13,13 +13,18 @@ class AfiliadosModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
+        'user_id',
         'solicitud_id',
         'afiliado_id', 
         'nombre', 
         'apellidos', 
         'fecha_nacimiento',
+        'genero',
         'cedula', 
         'cedula_img', 
+        'tipo_doc', 
+        'numero_doc', 
+        'expedicion_doc', 
         'pasaporte', 
         'licencia', 
         'residencia', 

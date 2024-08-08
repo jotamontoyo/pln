@@ -8,6 +8,8 @@ use \Hermawan\DataTables\DataTable;
 use App\Models\AfiliadosModel;
 use App\Models\SolicitudesModel;
 use App\Models\EstadosModel;
+use App\Models\DepartamentosModel;
+use App\Models\MunicipiosModel;
 use CodeIgniter\Shield\Models\UserModel;
 
 
@@ -19,6 +21,8 @@ class Afiliados extends ResourceController
     private $solicitudesModel;
     private $afiliadosModel;
     private $estadosModel;
+    private $departamentosModel;
+    private $municipiosModel;
     private $userModel;
 
 
@@ -29,6 +33,8 @@ class Afiliados extends ResourceController
         $this->solicitudesModel = new SolicitudesModel();
         $this->afiliadosModel = new AfiliadosModel();
         $this->estadosModel = new EstadosModel();
+        $this->departamentosModel = new DepartamentosModel();
+        $this->municipiosModel = new MunicipiosModel();
         $this->userModel = new UserModel();
         
     }
@@ -161,16 +167,20 @@ class Afiliados extends ResourceController
     public function edit($id = null)
     {
         $estados = $this->estadosModel->findAll();
+        $departamentos = $this->departamentosModel->findAll();
+        $municipios = $this->municipiosModel->findAll();
         $afiliado = $this->afiliadosModel->find($id);
         $user = $this->userModel->find($afiliado['user_id']);
         $edad = strtotime(date('Y-m-d')) - strtotime($afiliado['fecha_nacimiento']);
         $data = [
-            'titulo'        => 'Solicitud',
-            'id'            => $id,
-            'afiliado'      => $afiliado,
-            'edad'          => $edad,
-            'estados'       => $estados,
-            'user'          => $user
+            'titulo'            => 'Solicitud',
+            'id'                => $id,
+            'afiliado'          => $afiliado,
+            'edad'              => $edad,
+            'estados'           => $estados,
+            'departamentos'     => $departamentos,
+            'municipios'        => $municipios,
+            'user'              => $user
         ];
         return view('afiliados/edit', $data);
     }

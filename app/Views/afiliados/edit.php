@@ -136,16 +136,16 @@
 
             <div class="col-sm-2 form-floating">
               
-              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $afiliado['ciudad']; ?>" placeholder="Ciudad">
-              <label for="ciudad">Ciudad*</label>
+              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $afiliado['ciudad']; ?>" placeholder="Ciudad/Municipio*">
+              <label for="ciudad">Ciudad/Municipio*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('ciudad'); ?>
               </p>
             </div>
 
             <div class="col-sm-3 form-floating">
-              <input type="text" class="form-control" id="pais" name="pais" value="<?= $afiliado['pais']; ?>" placeholder="País">
-              <label for="pais">País*</label>
+              <input type="text" class="form-control" id="pais" name="pais" value="<?= $afiliado['pais']; ?>" placeholder="Estado, Región, Comunidad, Dpto*">
+              <label for="pais">Estado, Región, Comunidad, Dpto*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('pais'); ?>
               </p>
@@ -154,6 +154,7 @@
             <hr class="my-4">
             <h5>Identificación</h5>
 
+            <!-- campos solo para la cedula -->
             <div class="col-sm-2 form-floating">
               <input type="text" class="form-control" id="cedula" name="cedula" value="<?= $afiliado['cedula']; ?>" placeholder="Cédula">
               <label for="cedula">Cédula Nº</label>
@@ -162,38 +163,40 @@
               </p>
             </div>
 
-            <!-- estilos para la img tipo thumbnail de la cedula -->
-            <!-- <style>
-              #cedula_img_form {
-                border: 1px solid #ddd; /* Gray border */
-                border-radius: 4px;  /* Rounded border */
-                /* padding: 5px; /* Some padding */
-                width: 120px; /* Set a small width */
-                height: 100px;
-                background-image: url('public/img/logos/subir_img.png');
-                background-repeat: no-repeat;
-              }
-
-              #bCambiarImg {
-                padding: 0;
-              }
-
-              /* Add a hover effect (blue shadow) */
-              img:hover {
-                box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-              }
-            </style> -->
-            
-
-            <div class="col-sm-4">
-              <label for="cedula_img" class="form-label">Cédula imagen:</label><br>
-                  <button type="button" class="btn" id="bCambiarImg" data-bs-toggle="modal" data-bs-target="#cambiarImg">
-                    <div class="card shadow-sm">
-                      <img src="<?= $afiliado['cedula_img']; ?>" id="cedula_img_form" name="cedula_img_form" alt="">
-                    </div>
-                  </button>
-                <p style="display: inline-block; font-size: 10px"><?= $afiliado['cedula_img']; ?></p> 
+            <div class="col-sm-2 form-floating" id="departamento_id_panel" name="departamento_id_panel">
+              <select class="form-select" id="departamento_id" name="departamento_id">
+                <option value=""></option>
+                <?php foreach($departamentos as $departamento): ?>
+                  <option value="<?= $departamento['id'] ?>" 
+                    <?= ($departamento['id'] == $afiliado['departamento_id']) ? 'selected' : '';?>>
+                      <?= $departamento['nombre'] ?>
+                  </option>
+                <?php endforeach; ?>
+              </select>
+              <label for="estado_id">Departamento de expedición*</label>
+              <p class="small" style="color:red">
+                <?= validation_show_error('departamento_id'); ?>
+              </p>
             </div>
+
+            <div class="col-sm-2 form-floating" id="municipio_id_panel" name="municipio_id_panel">
+              <select class="form-select" id="municipio_id" name="municipio_id">
+                <option value=""></option>
+                <?php foreach($municipios as $municipio): ?>
+                  <option value="<?= $municipio['id'] ?>" 
+                    <?= ($municipio['id'] == $afiliado['municipio_id']) ? 'selected' : '';?>>
+                      <?= $municipio['nombre'] ?>
+                  </option>
+                <?php endforeach; ?>
+              </select>
+              <label for="estado_id">Municipio de expedición*</label>
+              <p class="small" style="color:red">
+                <?= validation_show_error('municipio_id'); ?>
+              </p>
+            </div>
+            <!-- FIN campos solo para la cedula -->
+
+            
 
 
 
@@ -233,7 +236,15 @@
             <!-- FIN campos para cuando no hay cedula -->
 
 
-
+            <div class="col-sm-4">
+              <label for="cedula_img" class="form-label">Cédula imagen:</label><br>
+                  <button type="button" class="btn" id="bCambiarImg" data-bs-toggle="modal" data-bs-target="#cambiarImg">
+                    <div class="card shadow-sm">
+                      <img src="<?= $afiliado['cedula_img']; ?>" id="cedula_img_form" name="cedula_img_form" alt="">
+                    </div>
+                  </button>
+                <p style="display: inline-block; font-size: 10px"><?= $afiliado['cedula_img']; ?></p> 
+            </div>
 
 
 

@@ -135,16 +135,16 @@
 
             <div class="col-sm-2 form-floating">
               
-              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $solicitud['ciudad']; ?>" placeholder="Ciudad">
-              <label for="ciudad">Ciudad*</label>
+              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= $solicitud['ciudad']; ?>" placeholder="Ciudad/Municipio*">
+              <label for="ciudad">Ciudad/Municipio*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('ciudad'); ?>
               </p>
             </div>
 
             <div class="col-sm-3 form-floating">
-              <input type="text" class="form-control" id="pais" name="pais" value="<?= $solicitud['pais']; ?>" placeholder="País">
-              <label for="pais">País*</label>
+              <input type="text" class="form-control" id="pais" name="pais" value="<?= $solicitud['pais']; ?>" placeholder="Estado, Región, Comunidad, Dpto*">
+              <label for="pais">Estado, Región, Comunidad, Dpto*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('pais'); ?>
               </p>
@@ -170,35 +170,35 @@
             </div>
 
             <div class="col-sm-2 form-floating" id="departamento_id_panel" name="departamento_id_panel">
-                    <select class="form-select" id="departamento_id" name="departamento_id">
-                      <option value=""></option>
-                      <?php foreach($departamentos as $departamento): ?>
-                        <option value="<?= $departamento['id'] ?>" 
-                          <?= ($departamento['id'] == $solicitud['departamento_id']) ? 'selected' : '';?>>
-                            <?= $departamento['nombre'] ?>
-                        </option>
-                      <?php endforeach; ?>
-                    </select>
-                    <label for="estado_id">Departamento de expedición*</label>
-                    <p class="small" style="color:red">
-                        <?= validation_show_error('departamento_id'); ?>
-                    </p>
+              <select class="form-select" id="departamento_id" name="departamento_id">
+                <option value=""></option>
+                <?php foreach($departamentos as $departamento): ?>
+                  <option value="<?= $departamento['id'] ?>" 
+                    <?= ($departamento['id'] == $solicitud['departamento_id']) ? 'selected' : '';?>>
+                      <?= $departamento['nombre'] ?>
+                  </option>
+                <?php endforeach; ?>
+              </select>
+              <label for="estado_id">Departamento de expedición*</label>
+              <p class="small" style="color:red">
+                <?= validation_show_error('departamento_id'); ?>
+              </p>
             </div>
 
             <div class="col-sm-2 form-floating" id="municipio_id_panel" name="municipio_id_panel">
-                    <select class="form-select" id="municipio_id" name="municipio_id">
-                      <option value=""></option>
-                      <?php foreach($municipios as $municipio): ?>
-                        <option value="<?= $municipio['id'] ?>" 
-                          <?= ($municipio['id'] == $solicitud['municipio_id']) ? 'selected' : '';?>>
-                            <?= $municipio['nombre'] ?>
-                        </option>
-                      <?php endforeach; ?>
-                    </select>
-                    <label for="estado_id">Municipio de expedición*</label>
-                    <p class="small" style="color:red">
-                        <?= validation_show_error('municipio_id'); ?>
-                    </p>
+              <select class="form-select" id="municipio_id" name="municipio_id">
+                <option value=""></option>
+                <?php foreach($municipios as $municipio): ?>
+                  <option value="<?= $municipio['id'] ?>" 
+                    <?= ($municipio['id'] == $solicitud['municipio_id']) ? 'selected' : '';?>>
+                      <?= $municipio['nombre'] ?>
+                  </option>
+                <?php endforeach; ?>
+              </select>
+              <label for="estado_id">Municipio de expedición*</label>
+              <p class="small" style="color:red">
+                <?= validation_show_error('municipio_id'); ?>
+              </p>
             </div>
             <!-- FIN campos solo para la cedula -->
 
@@ -206,15 +206,7 @@
 
             
 
-            <div class="col-sm-4">
-              <label for="cedula_img" class="form-label">Cédula imagen:</label><br>
-                  <button type="button" class="btn" id="bCambiarImg" data-bs-toggle="modal" data-bs-target="#cambiarImg">
-                    <div class="card shadow-sm">
-                      <img src="<?= $solicitud['cedula_img']; ?>" id="cedula_img_form" name="cedula_img_form" alt="">
-                    </div>
-                  </button>
-                <p style="display: inline-block; font-size: 10px"><?= $solicitud['cedula_img']; ?></p> 
-            </div>
+            
 
 
             
@@ -229,9 +221,9 @@
                 <option value="Licencia" <?= ($solicitud['tipo_doc'] == 'Licencia') ? 'selected' : '';?>>Licencia</option>
                 <option value="Residencia" <?= ($solicitud['tipo_doc'] == 'Residencia') ? 'selected' : '';?>>Residencia</option>
               </select>
-              <label for="genero">Tipo documento*</label>
+              <label for="tipo_doc">Tipo documento*</label>
               <p class="small" style="color:red">
-                <?= validation_show_error('genero'); ?>
+                <?= validation_show_error('tipo_doc'); ?>
               </p>
             </div>
 
@@ -255,7 +247,15 @@
             
 
 
-
+            <div class="col-sm-4">
+              <label for="cedula_img" class="form-label">Cédula imagen:</label><br>
+                  <button type="button" class="btn" id="bCambiarImg" data-bs-toggle="modal" data-bs-target="#cambiarImg">
+                    <div class="card shadow-sm">
+                      <img src="<?= $solicitud['cedula_img']; ?>" id="cedula_img_form" name="cedula_img_form" alt="">
+                    </div>
+                  </button>
+                <p style="display: inline-block; font-size: 10px"><?= $solicitud['cedula_img']; ?></p> 
+            </div>
 
 
 

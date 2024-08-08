@@ -8,7 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/',                                   'Home::index');
 
 
-$routes->get('users',                               'Users::index',             ['filter' => 'CheckReadPermission']);
+$routes->get('users',                               'Users::index',             ['filter' => 'CheckReadPermission', 'filter' => 'CheckIsAdmin']);
 $routes->get('users/listar_usuarios',               'Users::listar_usuarios',   ['filter' => 'CheckReadPermission']);
 $routes->get('users/(:num)/edit',                   'Users::edit/$1',           ['filter' => 'CheckEditPermission']);
 $routes->put('users/(:num)',                        'Users::update/$1',         ['filter' => 'CheckUpdatePermission']);

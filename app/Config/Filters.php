@@ -4,6 +4,7 @@ namespace Config;
 
 use App\Filters\CheckCreatePermission;
 use App\Filters\CheckEditPermission;
+use App\Filters\CheckIsAdmin;
 use App\Filters\CheckReadPermission;
 use App\Filters\CheckUpdatePermission;
 use CodeIgniter\Config\Filters as BaseFilters;
@@ -41,7 +42,8 @@ class Filters extends BaseFilters
         'CheckReadPermission'   => CheckReadPermission::class,
         'CheckEditPermission'   => CheckEditPermission::class,
         'CheckUpdatePermission' => CheckUpdatePermission::class,
-        'CheckCreatePermission' => CheckCreatePermission::class
+        'CheckCreatePermission' => CheckCreatePermission::class,
+        'CheckIsAdmin'          => CheckIsAdmin::class
     ];
 
     /**

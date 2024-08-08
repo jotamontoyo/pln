@@ -148,7 +148,7 @@
 
         
 
-        <div class="" >
+        <div>
             <?= $this->include('menu'); ?>
             <?= $this->renderSection('contenido') ?>
         </div> 

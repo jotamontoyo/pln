@@ -369,7 +369,7 @@ class Solicitudes extends BaseController
 
         if(!$this->validate($reglas)){
             $session->setFlashdata('mensaje', 'Error(s) en formulario');
-            return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
         } else {
             $post = $this->request->getPost(['afiliado_id', 'nombre', 'apellidos', 'genero', 'cedula', 'estado_id', 'municipio_id', 'departamento_id', 'tipo_doc', 'numero_doc', 'expedicion_doc', 'ciudad', 'pais', 'whatsapp', 'email', 'afiliado', 'cargo', 'posicion']);
             if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};

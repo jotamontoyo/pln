@@ -12,14 +12,35 @@
 	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
 	.dropdown-menu > li:hover > .submenu{ display: block; }
 
+	.nav-link { 
+		min-width: 120px; 
+		margin-left: 4px;
+	}
+
+	.ico_pais { 
+		max-width: 15%;
+		margin-left: 4px;
+	}
+
 }	
 /* ============ desktop view .end// ============ */
 
 /* ============ small devices ============ */
 @media (max-width: 991px) {
-  .dropdown-menu .dropdown-menu{
-      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
-  }
+
+	.dropdown-menu .dropdown-menu{
+		margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+	}
+
+	.nav-link { 
+		min-width: 180px; 
+		margin-left: 4px;
+	}
+
+	.ico_pais { 
+		max-width: 15%;
+		margin-left: 4px;
+	}
 }	
 /* ============ small devices .end// ============ */
 

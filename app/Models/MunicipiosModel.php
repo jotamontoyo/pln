@@ -14,6 +14,7 @@ class MunicipiosModel extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         'codigo', 
+        'departamento_codigo',
         'nombre'
     ];
 

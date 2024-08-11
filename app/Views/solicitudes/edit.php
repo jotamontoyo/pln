@@ -318,11 +318,11 @@
         <br><br>
 
         <div style="text-align: center">
-            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
+            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> Guardar</button>
             
-            <a href="<?= base_url(); ?>solicitudes"><button type="button" class="btn btn-sm btn-outline-danger"><i class="bi bi-x-lg"></i> <?= lang('App.boton.cancelar') ?></button></a>
+            <a href="<?= base_url(); ?>solicitudes"><button type="button" class="btn btn-sm btn-outline-danger"><i class="bi bi-x-lg"></i> Cancelar</button></a>
             <a href="<?= base_url('solicitudes/' . $id . '/afiliar') ?>">
-              <button type="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> Afiliar</button>
+              <button type="button" class="btn btn-sm btn-outline-success"><i class="bi bi-bookmark-check"></i> Afiliar</button>
             </a>
         </div>
 
@@ -362,8 +362,8 @@
             </p>
           </div>
           <div style="text-align: center">
-            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
-            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> Guardar</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"> Close</button>
           </div>
         </form>
       </div>
@@ -394,8 +394,8 @@
             </div>
           </div>
           <div style="text-align: center">
-            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
-            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> Guardar</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"> Close</button>
           </div>
         </form>
       </div>

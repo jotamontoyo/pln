@@ -116,14 +116,12 @@
           <li class="nav-item dropdown" id="myDropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt"></i> Localizaciones  </a>
             <ul class="dropdown-menu">
-
-
-              <li> <a class="dropdown-item" href="<?= base_url()?>estados"><i class="bi bi-globe-americas"></i> Paises &raquo; </a>
+              <li> <a class="dropdown-item" href="<?= base_url()?>estados"><img src="public/img/logos/ico_earth.png" class="ico_pais" alt=""> Paises &raquo; </a>
                 <ul class="submenu dropdown-menu">
                   <li><a class="dropdown-item"><img src="public/img/logos/ico_nic.png" class="ico_pais" alt=""> Nicaragua &raquo; </a>
                     <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="<?= base_url()?>municipios">Municipios &raquo; </a></li>
                       <li><a class="dropdown-item" href="<?= base_url()?>departamentos">Departamentos &raquo; </a></li>
+                      <li><a class="dropdown-item" href="<?= base_url()?>municipios">Municipios &raquo; </a></li>
                     </ul>
                   </li>
                   <li> <a class="dropdown-item"><img src="public/img/logos/ico_eeuu.png" class="ico_pais" alt=""> EE.UU &raquo; </a>
@@ -134,11 +132,7 @@
                   </li>
                 </ul>
               </li>
-                
-
-      
             </ul>
-
           </li>
 
 

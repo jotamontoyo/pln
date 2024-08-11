@@ -3,54 +3,60 @@
 <?php echo $this->section('contenido'); ?>
 
 
-<div class="container-fluid">
+
 
     <br><br>
 
     <h4 class="centrado">Solicitudes</h4>
 
-    <table id="table" class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>Afiliación nº</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Edad</th>
-                <th>Género</th>
-                <th>Cédula</th>
-                <th>País de Residencia</th>
-                <th>Ciudad/Municipio</th>
-                <th>Estado/Región/Comunidad/Dpto.</th>
-                <th>Creado</th>
-                <th>Modificado</th>
-                <th>Eliminado</th>
-                <th>Opciones</th>
-            </tr>
-            <tr>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th></th>
-            </tr>
-        </thead>
 
-        
-    </table>
+
+    <div class="table-container">
+
+        <table id="table" class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Afiliación nº</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Género</th>
+                    <th>Cédula</th>
+                    <th>País de Residencia</th>
+                    <th>Ciudad/Municipio</th>
+                    <th>Estado/Región/Comunidad/Dpto.</th>
+                    <th>Creado</th>
+                    <th>Modificado</th>
+                    <th>Eliminado</th>
+                    <th>Opciones</th>
+                </tr>
+                <tr>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            
+        </table>
+
+    </div>
 
     <br>
 
-</div>
+
 
 
 

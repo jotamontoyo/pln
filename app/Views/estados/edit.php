@@ -2,11 +2,11 @@
 
 <?= $this->section('contenido'); ?>
 
-<br>
+<br><br>
 
 <div class="container">
 
-    <h4 class="centrado">Editar Estado</h4>
+    <h4 class="centrado">Editar País</h4>
 
     <br>
     

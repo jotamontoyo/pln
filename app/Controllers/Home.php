@@ -38,11 +38,15 @@ class Home extends BaseController
         $municipios = $this->municipiosModel->findAll();
 
         $data = [
-            'titulo'        => 'Inicio',
+            'titulo'        => 'Partido Liberal de Nicaragua',
             'estados'       => $estados,
             'departamentos' => $departamentos,
             'municipios'    => $municipios
         ];
         return view('index', $data);
     }
+
+
+
+
 }

@@ -3,11 +3,11 @@
 <?= $this->section('contenido'); ?>
 
 
-<br>
+<br><br><br>
 
 <div class="container">
 
-<form action="<?= base_url('/users/' . $id) ?>" method="POST" name="edit_form" autocomplete="off">
+<form action="<?= base_url('users/' . $id) ?>" method="POST" name="edit_form" autocomplete="off">
 
         <input type="hidden" name="_method" value="PUT">
         <?= csrf_field(); ?>

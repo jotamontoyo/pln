@@ -5,13 +5,13 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/',                                   'Home::index');
+$routes->get('/',                                           'Home::index');
 
 
-$routes->get('users',                               'Users::index',             ['filter' => 'CheckReadPermission', 'filter' => 'CheckIsAdmin']);
-$routes->get('users/listar_usuarios',               'Users::listar_usuarios',   ['filter' => 'CheckReadPermission']);
-$routes->get('users/(:num)/edit',                   'Users::edit/$1',           ['filter' => 'CheckEditPermission']);
-$routes->put('users/(:num)',                        'Users::update/$1',         ['filter' => 'CheckUpdatePermission']);
+$routes->get('users',                               'Users::index',                     ['filter' => 'CheckReadPermission', 'filter' => 'CheckIsAdmin']);
+$routes->get('users/listar_usuarios',               'Users::listar_usuarios',           ['filter' => 'CheckReadPermission', 'filter' => 'CheckIsAdmin']);
+$routes->get('users/(:num)/edit',                   'Users::edit/$1',                   ['filter' => 'CheckEditPermission', 'filter' => 'CheckIsAdmin']);
+$routes->put('users/(:num)',                        'Users::update/$1',                 ['filter' => 'CheckUpdatePermission', 'filter' => 'CheckIsAdmin']);
 
 
 $routes->get('solicitudes',                             'Solicitudes::index',                           ['filter' => 'CheckReadPermission']);
@@ -36,24 +36,24 @@ $routes->put('afiliados/(:num)/fecha_nacimiento',       'Afiliados::update_fecha
 
 $routes->get('estados/',                            'Estados::index',                   ['filter' => 'CheckReadPermission']);
 $routes->get('estados/listar_estados',              'Estados::listar_estados',          ['filter' => 'CheckReadPermission']);
-$routes->get('estados/new',                         'Estados::new');
-$routes->post('estados/',                           'Estados::create');
+$routes->get('estados/new',                         'Estados::new',                     ['filter' => 'CheckCreatePermission']);
+$routes->post('estados/',                           'Estados::create',                  ['filter' => 'CheckCreatePermission']);
 $routes->get('estados/(:num)/edit',                 'Estados::edit/$1',                 ['filter' => 'CheckEditPermission']);
 $routes->put('estados/(:num)',                      'Estados::update/$1',               ['filter' => 'CheckUpdatePermission']);
 
 
-$routes->get('municipios/',                            'Municipios::index',                   ['filter' => 'CheckReadPermission']);
-$routes->get('municipios/listar_municipios',           'Municipios::listar_municipios',       ['filter' => 'CheckReadPermission']);
-$routes->get('municipios/new',                         'Municipios::new');
-$routes->post('municipios/',                           'Municipios::create');
-$routes->get('municipios/(:num)/edit',                 'Municipios::edit/$1',                 ['filter' => 'CheckEditPermission']);
-$routes->put('municipios/(:num)',                      'Municipios::update/$1',               ['filter' => 'CheckUpdatePermission']);
+$routes->get('municipios/',                            'Municipios::index',                     ['filter' => 'CheckReadPermission']);
+$routes->get('municipios/listar_municipios',           'Municipios::listar_municipios',         ['filter' => 'CheckReadPermission']);
+$routes->get('municipios/new',                         'Municipios::new',                       ['filter' => 'CheckCreatePermission']);
+$routes->post('municipios/',                           'Municipios::create',                    ['filter' => 'CheckCreatePermission']);
+$routes->get('municipios/(:num)/edit',                 'Municipios::edit/$1',                   ['filter' => 'CheckEditPermission']);
+$routes->put('municipios/(:num)',                      'Municipios::update/$1',                 ['filter' => 'CheckUpdatePermission']);
 
 
 $routes->get('departamentos/',                            'Departamentos::index',                       ['filter' => 'CheckReadPermission']);
 $routes->get('departamentos/listar_departamentos',        'Departamentos::listar_departamentos',        ['filter' => 'CheckReadPermission']);
-$routes->get('departamentos/new',                         'Departamentos::new');
-$routes->post('departamentos/',                           'Departamentos::create');
+$routes->get('departamentos/new',                         'Departamentos::new',                         ['filter' => 'CheckCreatePermission']);
+$routes->post('departamentos/',                           'Departamentos::create',                      ['filter' => 'CheckCreatePermission']);
 $routes->get('departamentos/(:num)/edit',                 'Departamentos::edit/$1',                     ['filter' => 'CheckEditPermission']);
 $routes->put('departamentos/(:num)',                      'Departamentos::update/$1',                   ['filter' => 'CheckUpdatePermission']);
 

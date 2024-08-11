@@ -29,6 +29,17 @@
         <input type="hidden" name="_method" value="POST">
         <?= csrf_field(); ?>
 
+
+            <div class="col-md-6">
+                <label for="departamento" class="form-label">Departamento</label>
+                <select class="form-select" id="departamento" name="departamento" required>
+                    <option value="">Seleccionar</option>
+                    <?php foreach($departamentos as $departamento): ?>
+                        <option value="<?= $departamento['codigo'] ?>"><?= $departamento['nombre'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
             <div class="col-sm-2">
                 <label for="codigo" class="col-sm-2 col-form-label" style="text-align: right">
                     <!-- <?= lang('App.productos.codigo') ?> -->
@@ -60,8 +71,8 @@
             <br>
 
             <div style="text-align: center">
-                <button type="submit" class="btn btn-sm btn-outline-primary" name="guardar" id="guardar"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
-                <a href="<?= base_url() ?>municipios"><button type="button" class="btn btn-sm btn-outline-danger" name="cancelar" id="cancelar"><i class="bi bi-x-lg"></i> <?= lang('App.boton.cancelar') ?></button></a>
+                <button type="submit" class="btn btn-sm btn-outline-primary" name="guardar" id="guardar"><i class="bi bi-floppy"></i> Guardar</button>
+                <a href="<?= base_url() ?>municipios"><button type="button" class="btn btn-sm btn-outline-danger" name="cancelar" id="cancelar"><i class="bi bi-x-lg"></i> Cancelar</button></a>
             </div>
 
         

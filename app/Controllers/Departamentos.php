@@ -189,7 +189,7 @@ class Departamentos extends BaseController
             'id' => $id,
             'departamento' => $departamento
         ];
-        return view('estados/edit', $data);
+        return view('departamentos/edit', $data);
     }
 
 

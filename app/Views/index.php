@@ -38,16 +38,11 @@
 
               <li class="nav-item" id="dropdown">
                 <ul class="dropdown-menu">
-                  <li> <a class="dropdown-item" href=<?= base_url('public/docs/instruccionesCC.pdf')?>> Con cédula &raquo; </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href=<?= base_url('public/docs/instruccionesCC.pdf')?>><i class="bi bi-file-earmark-pdf"></i> Descargar pdf</a></li>
-
-                    </ul>
+                  <li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#conCedulaModal"> Con cédula &raquo; </a>
+                    
                   </li>
-                  <li> <a class="dropdown-item" href=<?= base_url('public/docs/instrucciones SIN CEDULA.pdf')?>> Sin cédula &raquo; </a>
-                    <ul class="submenu dropdown-menu">
-                       <li><a class="dropdown-item" href=<?= base_url('public/docs/instrucciones SIN CEDULA.pdf')?>><i class="bi bi-file-earmark-pdf"></i> Descargar pdf</a></li>
-                    </ul>
+                  <li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#sinCedulaModal"> Sin cédula &raquo; </a>
+                    
                   </li>
                 </ul>
               </li>
@@ -395,7 +390,7 @@
 
             <div class="col-sm-3 form-floating">
               <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= set_value('ciudad'); ?>" placeholder="Ciudad*" hidden>
-              <label for="ciudad" class="form-label" id="ciudad_label" hidden>Ciudad/Municipio*</label>
+              <label for="ciudad" class="form-label" id="ciudad_label" hidden></label>
               <p class="small" style="color:red">
                 <?= validation_show_error('ciudad'); ?>
               </p>
@@ -404,7 +399,7 @@
 
             <div class="col-sm-3 form-floating">
               <input type="text" class="form-control" id="pais" name="pais" value="<?= set_value('pais'); ?>" placeholder="Pais*" hidden>
-              <label for="pais" class="form-label" id="pais_label" hidden>Estado, Región, Comunidad, Dpto*</label>
+              <label for="pais" class="form-label" id="pais_label" hidden></label>
               <p class="small" style="color:red">
                 <?= validation_show_error('pais'); ?>
               </p>
@@ -463,31 +458,62 @@
               </p>
             </div>
 
-            <div class="col-sm-2 form-floating" id="departamento_id_panel" name="departamento_id_panel" hidden>
-                    <select class="form-select" id="departamento_id" name="departamento_id">
-                        <option value=""></option>
-                        <?php foreach($departamentos as $departamento): ?>
-                            <option value="<?= $departamento['id'] ?>"><?= $departamento['nombre'] ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                    <label for="estado_id">Departamento de expedición*</label>
-                    <p class="small" style="color:red">
-                        <?= validation_show_error('departamento_id'); ?>
-                    </p>
+            <!-- <div class="col-sm-2 form-floating" id="departamento_id_panel" name="departamento_id_panel" hidden>
+              <select class="form-select" id="departamento_id" name="departamento_id">
+                  <option value=""></option>
+                  <?php foreach($departamentos as $departamento): ?>
+                      <option value="<?= $departamento['codigo'] ?>"><?= $departamento['nombre'] ?></option>
+                  <?php endforeach; ?>
+              </select>
+              <label for="estado_id">Departamento de expedición*</label>
+              <p class="small" style="color:red">
+                  <?= validation_show_error('departamento_id'); ?>
+              </p>
             </div>
 
             <div class="col-sm-2 form-floating" id="municipio_id_panel" name="municipio_id_panel" hidden>
-                    <select class="form-select" id="municipio_id" name="municipio_id">
-                        <option value=""></option>
-                        <?php foreach($municipios as $municipio): ?>
-                            <option value="<?= $municipio['id'] ?>"><?= $municipio['nombre'] ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                    <label for="estado_id">Municipio de expedición*</label>
-                    <p class="small" style="color:red">
-                        <?= validation_show_error('municipio_id'); ?>
-                    </p>
+              <select class="form-select" id="municipio_id" name="municipio_id">
+                  <option value=""></option>
+                  <?php foreach($municipios as $municipio):; ?>
+                      <option value="<?= $municipio['codigo'] ?>"><?= $municipio['nombre'] ?></option>
+                  <?php endforeach; ?>
+              </select>
+              <label for="estado_id">Municipio de expedición*</label>
+              <p class="small" style="color:red">
+                  <?= validation_show_error('municipio_id'); ?>
+              </p>
+            </div> -->
+
+
+
+
+
+            <div class="col-sm-2 form-floating" id="departamento_id_panel" name="departamento_id_panel" hidden>
+              <select class="form-select" id="departamento_id" name="departamento_id">
+                  <option value=""></option>
+                  <?php foreach($departamentos as $departamento): ?>
+                      <option value="<?= $departamento['codigo'] ?>"><?= $departamento['nombre'] ?></option>
+                  <?php endforeach; ?>
+              </select>
+              <label for="estado_id">Departamento de expedición*</label>
+              <p class="small" style="color:red">
+                  <?= validation_show_error('departamento_id'); ?>
+              </p>
             </div>
+
+            <div class="col-sm-2 form-floating" id="municipio_id_panel" name="municipio_id_panel" hidden>
+              <select class="form-select" id="municipio_id" name="municipio_id">
+                  <option value=""></option>
+                  <?php foreach($municipios as $municipio): ?>
+                      <option value="<?= $municipio['codigo'] ?>" data-departamento="<?= $municipio['departamento_codigo'] ?>"><?= $municipio['nombre'] ?></option>
+                  <?php endforeach; ?>
+              </select>
+              <label for="estado_id">Municipio de expedición*</label>
+              <p class="small" style="color:red">
+                  <?= validation_show_error('municipio_id'); ?>
+              </p>
+            </div>
+
             <!-- FIN campos solo para la cedula -->
 
 
@@ -619,6 +645,77 @@
   </div>
 
 
+  
+
+  <!-- instrucciones con cedula modal -->
+  <div class="modal fade" id="conCedulaModal" tabindex="-1" aria-labelledby="conCedulaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="conCedulaModalLabel">Instrucciones con cédula</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container px-4 py-5">
+
+            <div class="row centrado">
+              <div class="col-sm-6">
+                <a href="public/docs/instrucciones Computadora CON CEDULA.pdf"><img src="public/img/logos/pc_escritorio.png" alt=""> &nbsp;Para computadora</a>
+              </div>
+
+              <div class="col-sm-6">
+                <a href="public/docs/instrucciones Movil CON CEDULA-0.pdf"><img src="public/img/logos/smart_phone.png" alt="">Para móvil</a>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- instrucciones sin cedula modal -->
+  <div class="modal fade" id="sinCedulaModal" tabindex="-1" aria-labelledby="sinCedulaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="sinCedulaModalLabel">Instrucciones sin cédula</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container px-4 py-5">
+
+            <div class="row centrado">
+              <div class="col-sm-6">
+                <a href="public/docs/instrucciones Computadora SIN CEDULA.pdf"><img src="public/img/logos/pc_escritorio.png" alt=""> &nbsp;Para computadora</a>
+              </div>
+
+              <div class="col-sm-6">
+                <a href="public/docs/instrucciones Movil SIN CEDULA-0.pdf"><img src="public/img/logos/smart_phone.png" alt="">Para móvil</a>
+              </div>
+            </div>
+           
+          </div>
+            
+          </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 
   <!-- direccion mision y vision modal -->
   <div class="modal fade" id="direccionModal" tabindex="-1" aria-labelledby="direccionModalLabel" aria-hidden="true">
@@ -747,20 +844,20 @@
     $(document).on('change','#estado_id',function() {
 
       var pais = document.getElementById("estado_id").value;
-      /*if(pais == 1 | pais == 5) { // para paises con cedula
-        $("#cedula").prop('hidden', false);
-        $("#cedula_label").prop('hidden', false);
-        $("#tiene_cedula").prop('hidden', false);
-      } else {
-        $("#cedula").prop('hidden', true);
-        $("#cedula_label").prop('hidden', true);
-        $("#tiene_cedula").prop('hidden', true);
-      };*/
-
-      //$("#cedula_img_label").prop('hidden', false);
+      if(pais == 1 | pais == 5) { 
+        $('#ciudad_label').html("Departamento*"); 
+        $('#pais_label').html("Municipio*");  
+      };
+      if(pais == 2 | pais == 4) { 
+        $('#ciudad_label').html("Ciudad*"); 
+        $('#pais_label').html("Estado*");  
+      };
+      if(pais == 3) { 
+        $('#ciudad_label').html("Provincia*"); 
+        $('#pais_label').html("Comunidad*");  
+      };
       $("#cedula_img").prop('hidden', false);
       $("#cedula_panel").prop('hidden', false);
-      //$("#cedula_label").prop('hidden', false);
       $("#tiene_cedula").prop('hidden', false);
       $("#departamento_id_panel").prop('hidden', false);
       $("#municipio_id_panel").prop('hidden', false);
@@ -768,60 +865,59 @@
       $("#ciudad_label").prop('hidden', false);
       $("#pais").prop('hidden', false);
       $("#pais_label").prop('hidden', false);
-
- 
     });
   });
 
 
   
 
-  // activa el campo nº de cedula o los campos alternativos pasaporte, licencia...
+  // activa el campo nº de cedula
   $(document).ready(function () {
     $(document).on('click','#tiene_cedula',function() {
       var cedula = document.getElementById("radio_tiene_cedula").checked;
       if(cedula == true) {
         $("#cedula_panel").prop('hidden', true);
-        //$("#cedula_label").prop('hidden', true);
-        //$("#pasaporte").prop('hidden', false);
-        //$("#pasaporte_label").prop('hidden', false);
-        //$("#licencia").prop('hidden', false);
-        //$("#licencia_label").prop('hidden', false);
-        //$("#residencia").prop('hidden', false);
-        //$("#residencia_label").prop('hidden', false);
-
-
         $("#departamento_id_panel").prop('hidden', true);
         $("#municipio_id_panel").prop('hidden', true);
-
         $("#tipo_doc_panel").prop('hidden', false);
         $("#numero_doc_panel").prop('hidden', false);
         $("#expedicion_doc_panel").prop('hidden', false);
-
-
-
-
-
-
       } else {
         $("#cedula_panel").prop('hidden', false);
-        //$("#cedula_label").prop('hidden', false);
-        //$("#pasaporte").prop('hidden', true);
-        //$("#pasaporte_label").prop('hidden', true);
-        //$("#licencia").prop('hidden', true);
-        //$("#licencia_label").prop('hidden', true);
-        //$("#residencia").prop('hidden', true);
-        //$("#residencia_label").prop('hidden', true);
-
-
         $("#departamento_id_panel").prop('hidden', false);
         $("#municipio_id_panel").prop('hidden', false);
-
         $("#tipo_doc_panel").prop('hidden', true);
         $("#numero_doc_panel").prop('hidden', true);
         $("#expedicion_doc_panel").prop('hidden', true);
       };
     });
+
+
+
+
+
+
+
+
+
+    // funcion para rellenar un select en funcion del valor elejido en otro select
+    $(function() {
+      $(document).on('change', '#departamento_id', function() {
+          var departamento_codigo = $(this).val();
+          $('#municipio_id option').each(function() {
+              var municipioDepartamento = $(this).data('departamento');
+              if (municipioDepartamento == departamento_codigo || $(this).val() == "") {
+                  $(this).show();
+              } else {
+                  $(this).hide();
+              }
+          });
+          $('#municipio_id').val('');
+      });
+    });
+
+
+
   });
 
 

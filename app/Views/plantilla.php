@@ -26,9 +26,11 @@
     <link href="<?= base_url() ?>public/css/estilo.css" rel="stylesheet">
     <link href="<?= base_url() ?>public/css/navbar.css" rel="stylesheet">
 
+    <link href="<?= base_url() ?>public/img/logos/logoPLN.jpg" rel="icon" type="image/x-icon">
 
 
 
+ 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -68,14 +70,6 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
-
-
-
-
-
-    
-
-
 
 
 
@@ -148,7 +142,7 @@
 
         
 
-        <div>
+        <div class="main-container">
             <?= $this->include('menu'); ?>
             <?= $this->renderSection('contenido') ?>
         </div> 

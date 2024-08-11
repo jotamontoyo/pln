@@ -4,45 +4,52 @@
 
 
 
-<div class="container">
+
 
 
     <br>
+    <br>
 
-    <h4 class="centrado">Estados</h4>
+    <h4 class="centrado">Países</h4>
 
-    <a href="<?= base_url('/estados/new'); ?>" class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> <?= lang('App.boton.nuevo') ?> </a>
+    
 
     <br><br>
 
-    <table id="table" class="display">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>Código</th>
-                <th>Nombre</th>
-                <th>created_at</th>
-                <th>updated_at</th>
-                <th>deleted_at</th>
-                <th>Options</th>
-            </tr>
-            <tr>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-            </tr>
-        </thead>
+    <div class="table-container">
 
-        
-    </table>
+        <a href="<?= base_url('/estados/new'); ?>" class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> Crear</a>
+
+        <table id="table" class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>created_at</th>
+                    <th>updated_at</th>
+                    <th>deleted_at</th>
+                    <th>Options</th>
+                </tr>
+                <tr>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                </tr>
+            </thead>
+
+            
+        </table>
+
+    </div>
 
     <br>
 
-</div>
+
 
 
 

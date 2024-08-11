@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\MunicipiosModel;
+use App\Models\DepartamentosModel;
 use \Hermawan\DataTables\DataTable;
 
 
@@ -14,12 +15,14 @@ class Municipios extends BaseController
 
     private $db;
     private $municipiosModel;
+    private $departamentosModel;
 
 
     public function __construct()
     {
         $this->db = \Config\Database::connect(); 
         $this->municipiosModel = new MunicipiosModel();
+        $this->departamentosModel = new DepartamentosModel();
     }
 
 
@@ -58,10 +61,12 @@ class Municipios extends BaseController
             municipios.id, 
             municipios.codigo, 
             municipios.nombre, 
+            departamentos.nombre as departamento, 
             municipios.created_at,
             municipios.updated_at,
             municipios.deleted_at
-        ');
+        ')
+        ->join('departamentos', 'departamentos.codigo = municipios.departamento_codigo');
         return DataTable::of($builder)->toJson(true);
     }
 
@@ -103,8 +108,11 @@ class Municipios extends BaseController
      */
     public function new()
     {
+
+        $departamentos = $this->departamentosModel->findAll();
         $data = [
-            'titulo' => 'Municipios'
+            'titulo'            => 'Municipios',
+            'departamentos'     => $departamentos
         ];
         return view('municipios/new', $data);
     }
@@ -134,8 +142,9 @@ class Municipios extends BaseController
     {
         $session = session();
         $reglas = [                     // de validacion
+            'departamento'          => 'required', 
             'codigo'                => 'required|is_unique[estados.codigo]',
-            'nombre'                => 'required', 
+            'nombre'                => 'required'
         ];
         if(!$this->validate($reglas)){ //si no se cumplen las reglas
             $session->setFlashdata('mensaje', 'Error(s) en formulario'); //se imprimirá en el index
@@ -143,12 +152,14 @@ class Municipios extends BaseController
             return redirect()->back()->withInput(); //muestra lista de errores
         } else {
             $post = $this->request->getPost([
+                'departamento',
                 'codigo', 
                 'nombre', 
               ]);
             $data = [
-                'codigo'           => $post['codigo'],
-                'nombre'           => $post['nombre']
+                'departamento_codigo'       => $post['departamento'],
+                'codigo'                    => $post['codigo'],
+                'nombre'                    => $post['nombre']
             ];
             $this->municipiosModel->insert($data, false);
             $session->setFlashdata('mensaje', 'Municipio creado');
@@ -182,10 +193,12 @@ class Municipios extends BaseController
     public function edit($id = null)
     {
         $municipio = $this->municipiosModel->find($id);
+        $departamentos = $this->departamentosModel->findAll();
         $data = [
             'titulo' => 'Municipios',
             'id' => $id,
-            'municipio' => $municipio
+            'municipio' => $municipio,
+            'departamentos' => $departamentos
         ];
         return view('municipios/edit', $data);
     }
@@ -227,6 +240,7 @@ class Municipios extends BaseController
     {
         $session = session();
         $reglas = [                     
+            'departamento'     => 'required', 
             'codigo'           => 'required', 
             'nombre'           => 'required'
         ];
@@ -235,9 +249,10 @@ class Municipios extends BaseController
             $session->setFlashdata('mensaje', 'Error(s) en formulario');
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
         } else {
-            $post = $this->request->getPost(['codigo', 'nombre']);
+            $post = $this->request->getPost(['departamento', 'codigo', 'nombre']);
             $data = [
-                'codigo'           => $post['codigo'],
+                'departamento_codigo'   => $post['departamento'],
+                'codigo'                => $post['codigo'],
                 'nombre'                => $post['nombre']
             ];
                 

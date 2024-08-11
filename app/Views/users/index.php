@@ -3,46 +3,54 @@
 <?php echo $this->section('contenido'); ?>
 
 
-<div class="container">
 
-    <br>
+
+
+
+
+    <br><br>
 
     <h4 class="centrado">Usuarios</h4>
 
-    <table id="table" class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>username</th>
-                <th>status</th>
-                <th>status_message</th>
-                <th>active</th>
-                <th>locale</th>
-                <th>last_active</th>
-                <th>created_at</th>
-                <th>updated_at</th>
-                <th>deleted_at</th>
-                <th>Options</th>
-            </tr>
-            <tr>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-                <th class="filterhead"></th>
-            </tr>
-        </thead>
 
-        
-    </table>
+    <div class="table-container">
 
-</div>
+        <table id="table" class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>username</th>
+                    <th>status</th>
+                    <th>status_message</th>
+                    <th>active</th>
+                    <th>locale</th>
+                    <th>last_active</th>
+                    <th>created_at</th>
+                    <th>updated_at</th>
+                    <th>deleted_at</th>
+                    <th>Options</th>
+                </tr>
+                <tr>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
+                </tr>
+            </thead>
+
+            
+        </table>
+
+    </div>
+
+
 
 
 

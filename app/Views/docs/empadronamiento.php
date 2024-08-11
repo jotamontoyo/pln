@@ -4,7 +4,7 @@
 <ul>
     <div class="centrado">
         <a href="mailto:voceriaenunidad@gmail.com" class="link-underline-primary">
-            <img src="public/img/logos/empadronate.png" class="img_titulos_empadronamiento" alt="">
+            <img src="public/img/logos/empadronate.png" style="max-width: 40%;" alt="">
         </a>
     </div>
     <h6 class="centrado">Para comunicaciones escribir a <a href="mailto:voceriaenunidad@gmail.com" class="link-underline-primary">voceriaenunidad@gmail.com</a></h6>

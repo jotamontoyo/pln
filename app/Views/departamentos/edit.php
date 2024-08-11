@@ -9,6 +9,7 @@
     <h4 class="centrado">Editar Departamento</h4>
 
     <br>
+    <br>
     
 
 
@@ -19,7 +20,7 @@
 
         <div class="col-sm-2">
             <label for="codigo" class="col-sm-2 col-form-label" style="text-align: right">Código</label>
-            <input readonly type="text" class="form-control" name="codigo" id="codigo" value="<?= $departamento['codigo']; ?>">
+            <input type="text" class="form-control" name="codigo" id="codigo" value="<?= $departamento['codigo']; ?>">
         </div>
         
         <div class="col-sm-2">

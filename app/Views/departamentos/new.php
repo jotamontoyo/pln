@@ -19,12 +19,11 @@
 
 <div class="container">
 
-    <!-- <h2 class="mb-4"><?= lang('App.productos.titulo') ?></h2> -->
     <h4 class="centrado">Crear Departamento nicaraguense</h4>
 
-    <br>
+    <br><br>
 
-    <form action="<?= base_url('/departamento') ?>" method="POST" autocomplete="off">
+    <form action="<?= base_url('departamentos') ?>" method="POST" autocomplete="off">
 
         <input type="hidden" name="_method" value="POST">
         <?= csrf_field(); ?>
@@ -60,8 +59,8 @@
             <br>
 
             <div style="text-align: center">
-                <button type="submit" class="btn btn-sm btn-outline-primary" name="guardar" id="guardar"><i class="bi bi-floppy"></i> <?= lang('App.boton.guardar') ?></button>
-                <a href="<?= base_url() ?>departamentos"><button type="button" class="btn btn-sm btn-outline-danger" name="cancelar" id="cancelar"><i class="bi bi-x-lg"></i> <?= lang('App.boton.cancelar') ?></button></a>
+                <button type="submit" class="btn btn-sm btn-outline-primary" name="guardar" id="guardar"><i class="bi bi-floppy"></i> Guardar</button>
+                <a href="<?= base_url() ?>departamentos"><button type="button" class="btn btn-sm btn-outline-danger" name="cancelar" id="cancelar"><i class="bi bi-x-lg"></i> Cancelar</button></a>
             </div>
 
         

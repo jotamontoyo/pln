@@ -10,7 +10,7 @@
   <div class="container">
 
     <br><br>
-    <h4 class="mb-4 centrado">Documento de Padrón #<?= $afiliado['id'];  ?></h4>
+    <h4 class="mb-4 centrado">Documento de Afiliación #<?= $afiliado['id'];  ?></h4>
 
 
     <div class="row">

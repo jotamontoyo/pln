@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class AfiliadosModel extends Model
 {
-    protected $table            = 'afiliados_patron';
+    protected $table            = 'afiliados';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';

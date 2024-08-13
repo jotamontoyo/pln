@@ -7,7 +7,7 @@
 
     <br><br>
 
-    <h4 class="centrado">Padrón</h4>
+    <h4 class="centrado">Afiliaciones</h4>
 
     <div class="table-container">
 

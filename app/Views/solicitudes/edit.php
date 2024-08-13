@@ -10,7 +10,7 @@
   <div class="container">
 
     <br><br>
-    <h4 class="mb-4 centrado">Solicitud de Padrón #<?= $solicitud['id'];  ?></h4>
+    <h4 class="mb-4 centrado">Solicitud de Afiliación #<?= $solicitud['id'];  ?></h4>
 
 
     <div class="row">

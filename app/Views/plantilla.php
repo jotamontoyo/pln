@@ -27,7 +27,7 @@
     <link href="<?= base_url() ?>public/css/navbar.css" rel="stylesheet">
     <link href="<?= base_url() ?>public/css/botones_redes.css" rel="stylesheet">
 
-    <link href="<?= base_url() ?>public/img/fondos/bandera_nicaragua.png" rel="icon" type="image/x-icon">
+    <link href="<?= base_url() ?>public/img/logos/logoPLN.jpg" rel="icon" type="image/x-icon">
 
     
 

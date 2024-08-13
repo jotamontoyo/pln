@@ -12,76 +12,102 @@
 
 
 <!-- 1er baner. class="img_backg" para poner imagen de fondo --> 
-  <div class="img_backg">
+<div class="" style="background-size: cover; margin-top: 30px; background-image: url(public/img/fondos/paisaje-nubes.jpg); background-attachment: fixed; background-repeat: no-repeat;">
 
-    <br><br>
-    <div class="container">
+<br><br>
+<div class="container">
 
-      <div class="row centrado">
-        <div class="col-sm-6">
-          <img class="sombra animate__animated animate__zoomIn" src="public/img/logos/empadronate.png" style="max-width: 60%; margin-bottom: 15px" alt="">
-        </div>
-        <div class="col-sm-4">
-          <div class="col d-flex flex-column gap-2">
-            <div class="btn-group">
-              <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Instructivos
-              </button>
-              <li class="nav-item" id="dropdown">
-                <ul class="dropdown-menu">
-                  <li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#conCedulaModal"> Con cédula &raquo; </a></li>
-                  <li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#sinCedulaModal"> Sin cédula &raquo; </a></li>
-                </ul>
-              </li>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="row centrado">
+    <div class="col-sm-6">
+      <img class="sombra animate__animated animate__zoomIn" src="public/img/logos/logoPLN.jpg" style="max-width: 50%; margin-bottom: 15px" alt="">
+    </div>
 
-      <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+    <div class="col-sm-4">
+      <div class="col d-flex flex-column gap-2">
 
-        <div class="col d-flex flex-column align-items-start gap-2">
-          <h2 class="fw-bold text-body-emphasis">Tu empadronamiento es importante para el país.</h2>
-          <p class="text-body-secondary">Empadrónate. Rellena el formulario con tus datos y serás parte del cambio.</p>
-          <a href="#formulario_solicitud" class="btn btn-success btn-lg"><i class="bi bi-table"></i> Empadrónate</a>
-        </div>
 
-        <div class="col">
 
-          <div class="row row-cols-1 row-cols-sm-2 g-4">
-            
-            <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#misionModal"><i class="bi bi-collection"></i> Misión, visión y justificación</button>
-              <h4 class="fw-semibold mb-0 text-body-emphasis">Dirección, Misión y Vision</h4>
-              <p class="text-body-secondary"> Comité Ejecutivo fundador  y comisiones.  Qué vamos hacer y objetivo general.
-              </p>
-            </div>
+      
 
-            <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reglamentoModal"><i class="bi bi-card-list"></i> Reglamento</button>
-              <h4 class="fw-semibold mb-0 text-body-emphasis">Reglamento</h4>
-              <p class="text-body-secondary">Normas a las que nos debemos y código de ética.</p>
-            </div>
-
-            <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metodologiaModal"><i class="bi bi-card-checklist"></i> Metodología</button>
-              <h4 class="fw-semibold mb-0 text-body-emphasis">Metodología</h4>
-              <p class="text-body-secondary">Afiliación, procesos y administración de la organización.</p>
-            </div>
-
-            <div class="col d-flex flex-column gap-2">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#empadronamientoModal"><i class="bi bi-clipboard2-plus"></i> Empadronamiento</button>
-              <h4 class="fw-semibold mb-0 text-body-emphasis">Empadronamiento</h4>
-              <p class="text-body-secondary">Proyecto para hacer cumplir artículo 122 que permita votar a los Nicaragüenses del exterior residentes o en tránsito.</p>
-            </div>
           
-          </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Instructivos
+          </button>
+
+
+          <li class="nav-item" id="dropdown">
+            <ul class="dropdown-menu">
+              <li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#conCedulaModal"> Con cédula &raquo; </a>
+                
+              </li>
+              <li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#sinCedulaModal"> Sin cédula &raquo; </a>
+                
+              </li>
+            </ul>
+          </li>
 
         </div>
+
+
+
+
+
+        
+
+
+
+
+
 
       </div>
     </div>
   </div>
+
+  <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+    <div class="col d-flex flex-column align-items-start gap-2">
+      <h2 class="fw-bold text-body-emphasis">Tu participación es importante para el país.</h2>
+      <p class="text-body-secondary">Afíliate. Rellena el formulario con tus datos y serás un miembro del cambio.</p>
+      <a href="#formulario_solicitud" class="btn btn-success btn-lg"><i class="bi bi-table"></i> Afíliate</a>
+    </div>
+
+    <div class="col">
+
+      <div class="row row-cols-1 row-cols-sm-2 g-4">
+        
+        <div class="col d-flex flex-column gap-2">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#direccionModal"><i class="bi bi-collection"></i> Dirección, Misión y Visión</button>
+          <h4 class="fw-semibold mb-0 text-body-emphasis">Dirección, Misión y Vision</h4>
+          <p class="text-body-secondary"> Comité Ejecutivo fundador  y comisiones.  Qué vamos hacer y objetivo general.
+          </p>
+        </div>
+
+        <div class="col d-flex flex-column gap-2">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reglamentoModal"><i class="bi bi-card-list"></i> Reglamento</button>
+          <h4 class="fw-semibold mb-0 text-body-emphasis">Reglamento</h4>
+          <p class="text-body-secondary">Normas a las que nos debemos y código de ética.</p>
+        </div>
+
+        <div class="col d-flex flex-column gap-2">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metodologiaModal"><i class="bi bi-card-checklist"></i> Metodología</button>
+          <h4 class="fw-semibold mb-0 text-body-emphasis">Metodología</h4>
+          <p class="text-body-secondary">Afiliación, procesos y administración de la organización.</p>
+        </div>
+
+        <div class="col d-flex flex-column gap-2">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#empadronamientoModal"><i class="bi bi-clipboard2-plus"></i> Empadronamiento</button>
+          <h4 class="fw-semibold mb-0 text-body-emphasis">Empadronamiento</h4>
+          <p class="text-body-secondary">Proyecto para hacer cumplir artículo 122 que permita votar a los Nicaragüenses del exterior residentes o en tránsito.</p>
+        </div>
+      
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
 
 
 

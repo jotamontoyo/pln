@@ -173,8 +173,8 @@
               <select class="form-select" id="departamento_id" name="departamento_id">
                 <option value=""></option>
                 <?php foreach($departamentos as $departamento): ?>
-                  <option value="<?= $departamento['id'] ?>" 
-                    <?= ($departamento['id'] == $solicitud['departamento_id']) ? 'selected' : '';?>>
+                  <option value="<?= $departamento['codigo'] ?>" 
+                    <?= ($departamento['codigo'] == $solicitud['departamento_id']) ? 'selected' : '';?>>
                       <?= $departamento['nombre'] ?>
                   </option>
                 <?php endforeach; ?>
@@ -189,8 +189,8 @@
               <select class="form-select" id="municipio_id" name="municipio_id">
                 <option value=""></option>
                 <?php foreach($municipios as $municipio): ?>
-                  <option value="<?= $municipio['id'] ?>" 
-                    <?= ($municipio['id'] == $solicitud['municipio_id']) ? 'selected' : '';?>>
+                  <option value="<?= $municipio['codigo'] ?>" data-departamento="<?= $municipio['departamento_codigo'] ?>" 
+                    <?= ($municipio['codigo'] == $solicitud['municipio_id']) ? 'selected' : '';?>>
                       <?= $municipio['nombre'] ?>
                   </option>
                 <?php endforeach; ?>
@@ -460,6 +460,7 @@
     var edad = año_actual - año_nacimiento;
     document.getElementById("edad").value = edad;
   });
+
 
   
 

@@ -123,11 +123,32 @@
             <div class="card-body">
               <p class="card-text">El contenido del video se basa en las acciones de apoyo realizadas por Don Jorge Estrada, miembro del comité ejecutivo provisional del Partido Liberar de Nicaragua</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -141,11 +162,32 @@
             <div class="card-body">
               <p class="card-text">El presidente Reagan recibió la  Dr. y Comandante Henry (Enrique Zelaya) miembro del estado mayor de la contra.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+              <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -159,11 +201,34 @@
             <div class="card-body">
               <p class="card-text">Álvaro Somoza Urcuyo, hijo del presidente Luis Somoza y director de la la alianza por la Libertad con miles de afiliados y conductor del programa semanal "una hora con Álvaro Somoza".</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon youtube">
+                    <a href="https://www.youtube.com/@nicaraguanfreedomalliance4406" target="_blank">
+                      <span class="tooltip">Youtube</span>
+                      <span><i class="fab fa-youtube"></i></span>
+                    </a>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -177,11 +242,32 @@
             <div class="card-body">
               <p class="card-text">Dr. César N Grijalva. Abogado, Doctor en Jurisprudencia, Ciencias Políticas, Administración Pública, Desarrollo Internacional. Experto en temas de gobierno de transición, representante de organizaciones.Trabajo Social.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -195,11 +281,32 @@
             <div class="card-body">
               <p class="card-text">Don Eli Cabezas desde los años 80's principal líder liberal de la diáspora y del nuevo exilio del canada.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -211,11 +318,32 @@
             <div class="card-body">
               <p class="card-text">Texto</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -229,11 +357,32 @@
             <div class="card-body">
               <p class="card-text">Harlinton Orozco y Henry Álvarez de Unión de Exiliados, formado por líderes de tranques durante la rebelion.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -245,33 +394,79 @@
             <div class="card-body">
               <p class="card-text">Podcast de Don Álvaro Somoza. El Robo del Siglo: Cómo Maduro se Burló de la Democracia en Venezuela.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+
         <div class="col">
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
+
+
 
   
 
@@ -457,36 +652,6 @@
                 <?= validation_show_error('cedula'); ?>
               </p>
             </div>
-
-            <!-- <div class="col-sm-2 form-floating" id="departamento_id_panel" name="departamento_id_panel" hidden>
-              <select class="form-select" id="departamento_id" name="departamento_id">
-                  <option value=""></option>
-                  <?php foreach($departamentos as $departamento): ?>
-                      <option value="<?= $departamento['codigo'] ?>"><?= $departamento['nombre'] ?></option>
-                  <?php endforeach; ?>
-              </select>
-              <label for="estado_id">Departamento de expedición*</label>
-              <p class="small" style="color:red">
-                  <?= validation_show_error('departamento_id'); ?>
-              </p>
-            </div>
-
-            <div class="col-sm-2 form-floating" id="municipio_id_panel" name="municipio_id_panel" hidden>
-              <select class="form-select" id="municipio_id" name="municipio_id">
-                  <option value=""></option>
-                  <?php foreach($municipios as $municipio):; ?>
-                      <option value="<?= $municipio['codigo'] ?>"><?= $municipio['nombre'] ?></option>
-                  <?php endforeach; ?>
-              </select>
-              <label for="estado_id">Municipio de expedición*</label>
-              <p class="small" style="color:red">
-                  <?= validation_show_error('municipio_id'); ?>
-              </p>
-            </div> -->
-
-
-
-
 
             <div class="col-sm-2 form-floating" id="departamento_id_panel" name="departamento_id_panel" hidden>
               <select class="form-select" id="departamento_id" name="departamento_id">
@@ -894,27 +1059,8 @@
 
 
 
+    
 
-
-
-
-
-
-    // funcion para rellenar un select en funcion del valor elejido en otro select
-    $(function() {
-      $(document).on('change', '#departamento_id', function() {
-          var departamento_codigo = $(this).val();
-          $('#municipio_id option').each(function() {
-              var municipioDepartamento = $(this).data('departamento');
-              if (municipioDepartamento == departamento_codigo || $(this).val() == "") {
-                  $(this).show();
-              } else {
-                  $(this).hide();
-              }
-          });
-          $('#municipio_id').val('');
-      });
-    });
 
 
 
@@ -936,5 +1082,6 @@
 <?= $this->endSection(); ?>
 
 <?= $this->section('scripts') ?>
+
    
 <?= $this->endSection(); ?>

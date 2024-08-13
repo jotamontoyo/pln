@@ -25,14 +25,19 @@
 
     <link href="<?= base_url() ?>public/css/estilo.css" rel="stylesheet">
     <link href="<?= base_url() ?>public/css/navbar.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/botones_redes.css" rel="stylesheet">
 
     <link href="<?= base_url() ?>public/img/logos/logoPLN.jpg" rel="icon" type="image/x-icon">
 
+    
 
 
  
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script scr="<?= base_url() ?>public/js/anidaSelect.js"></script>
+    
 
     
 
@@ -69,6 +74,9 @@
 
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    
     
 
 
@@ -206,14 +214,33 @@
 
 
     
-    
-    
-
-
-    
 
 
 </body>
+
+
+    <script>
+        // funcion para rellenar un select en funcion del valor elejido en otro select. hay que poner en el segundo select un data-????????=valor_a_buscar
+        $(document).ready(function () {
+            $(function() {
+                $(document).on('change', '#departamento_id', function() {
+                    var departamento_codigo = $(this).val();
+                        $('#municipio_id option').each(function() {
+                            var municipioDepartamento = $(this).data('departamento');
+                            if (municipioDepartamento == departamento_codigo || $(this).val() == "") {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    $('#municipio_id').val('');
+                });
+            });
+        });
+    </script>
+
+
+
 
 
 

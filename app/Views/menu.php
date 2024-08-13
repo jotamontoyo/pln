@@ -58,7 +58,7 @@
           
           <li class="nav-item"><a class="nav-link" href=<?= base_url('users')?>><i class="bi bi-person-check"></i> Usuarios </a></li>
           <li class="nav-item"><a class="nav-link" href=<?= base_url('solicitudes')?>><i class="bi bi-clipboard"></i> Solicitudes </a></li>
-          <li class="nav-item"><a class="nav-link" href=<?= base_url('afiliados')?>><i class="bi bi-bookmark-check"></i> Afiliaciones </a></li>
+          <li class="nav-item"><a class="nav-link" href=<?= base_url('afiliados')?>><i class="bi bi-bookmark-check"></i> Padrón </a></li>
 
 
 

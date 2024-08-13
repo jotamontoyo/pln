@@ -62,26 +62,26 @@ class Afiliados extends ResourceController
 
     public function listar_afiliados()
     {
-        $builder = $this->db->table('afiliados')
+        $builder = $this->db->table('afiliados_patron')
         ->select('
-            afiliados.id, 
+            afiliados_patron.id, 
             users.username AS user, 
-            afiliados.solicitud_id, 
-            afiliados.afiliado_id, 
-            afiliados.nombre, 
-            afiliados.apellidos, 
-            (YEAR(NOW()) - YEAR(afiliados.fecha_nacimiento)) AS edad,
-            afiliados.genero, 
+            afiliados_patron.solicitud_id, 
+            afiliados_patron.afiliado_id, 
+            afiliados_patron.nombre, 
+            afiliados_patron.apellidos, 
+            (YEAR(NOW()) - YEAR(afiliados_patron.fecha_nacimiento)) AS edad,
+            afiliados_patron.genero, 
             estados.nombre AS residencia,
-            afiliados.cedula, 
-            afiliados.ciudad,
-            afiliados.pais,
-            afiliados.created_at,
-            afiliados.updated_at,
-            afiliados.deleted_at
+            afiliados_patron.cedula, 
+            afiliados_patron.ciudad,
+            afiliados_patron.pais,
+            afiliados_patron.created_at,
+            afiliados_patron.updated_at,
+            afiliados_patron.deleted_at
         ')
-        ->join('estados', 'estados.id = afiliados.estado_id')
-        ->join('users', 'users.id = afiliados.user_id');
+        ->join('estados', 'estados.id = afiliados_patron.estado_id')
+        ->join('users', 'users.id = afiliados_patron.user_id');
         return DataTable::of($builder)->toJson(true);
     }
 

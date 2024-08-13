@@ -11,6 +11,8 @@
         color: black;
     }
 
+    
+
 
 
 
@@ -46,9 +48,16 @@
 
 
 
+    
 
-
-
+    /* para background de entrada */
+    .img_backg {
+        background-size: cover; 
+        margin-top: 30px; 
+        background-image: url("../../public/img/fondos/paisaje-mar.jpg"); 
+        background-attachment: fixed; 
+        background-repeat: no-repeat;
+    }
 
 
 
@@ -116,7 +125,6 @@
 
 
     /* estilos para la img tipo thumbnail de la cedula */
-
     #cedula_img_form {
       border: 1px solid #ddd; /* Gray border */
       border-radius: 4px;  /* Rounded border */
@@ -141,6 +149,10 @@
 
 
 
+    
+
+
+
         
 
     
@@ -151,6 +163,10 @@
 
 /* Cuando la pantalla es menor a 900px  (tablets y teléfonos inteligentes)*/
 @media only screen and (max-width : 900px) {
+
+
+     
+
 
     .centrado {
         text-align:center;

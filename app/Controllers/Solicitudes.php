@@ -62,25 +62,25 @@ class Solicitudes extends BaseController
 
     public function listar_solicitudes()
     {
-        $builder = $this->db->table('solicitudes')
+        $builder = $this->db->table('solicitudes_patron')
         ->select('
-            solicitudes.id, 
-            solicitudes.afiliacion_id, 
-            solicitudes.nombre, 
-            solicitudes.apellidos, 
-            (YEAR(NOW()) - YEAR(solicitudes.fecha_nacimiento)) AS edad,
-            solicitudes.genero, 
+            solicitudes_patron.id, 
+            solicitudes_patron.afiliacion_id, 
+            solicitudes_patron.nombre, 
+            solicitudes_patron.apellidos, 
+            (YEAR(NOW()) - YEAR(solicitudes_patron.fecha_nacimiento)) AS edad,
+            solicitudes_patron.genero, 
             estados.nombre AS residencia,
-            solicitudes.cedula, 
-            solicitudes.ciudad,
-            solicitudes.pais,
-            solicitudes.created_at,
-            solicitudes.updated_at,
-            solicitudes.deleted_at
+            solicitudes_patron.cedula, 
+            solicitudes_patron.ciudad,
+            solicitudes_patron.pais,
+            solicitudes_patron.created_at,
+            solicitudes_patron.updated_at,
+            solicitudes_patron.deleted_at
         ')
-        //->where(['solicitudes.afiliacion_id' => 0])
+        //->where(['solicitudes_patron.afiliacion_id' => 0])
 
-        ->join('estados', 'estados.id = solicitudes.estado_id');
+        ->join('estados', 'estados.id = solicitudes_patron.estado_id');
         return DataTable::of($builder)->toJson(true);
     }
 

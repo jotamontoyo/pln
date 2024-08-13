@@ -7,7 +7,7 @@
 
     <br><br>
 
-    <h4 class="centrado">Solicitudes</h4>
+    <h4 class="centrado">Solicitudes de Padrón</h4>
 
 
 

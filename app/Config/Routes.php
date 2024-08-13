@@ -29,6 +29,7 @@ $routes->get('afiliados',                               'Afiliados::index',     
 $routes->get('afiliados/listar_afiliados',              'Afiliados::listar_afiliados',                ['filter' => 'CheckReadPermission']);
 $routes->get('afiliados/(:num)/edit',                   'Afiliados::edit/$1',                         ['filter' => 'CheckEditPermission']);
 $routes->put('afiliados/(:num)',                        'Afiliados::update/$1',                       ['filter' => 'CheckUpdatePermission']);
+$routes->put('afiliados/(:num)/img',                    'Afiliados::update_img/$1',                   ['filter' => 'CheckUpdatePermission']);
 $routes->put('afiliados/(:num)/fecha_nacimiento',       'Afiliados::update_fecha_nacimiento/$1',      ['filter' => 'CheckUpdatePermission']);
 
 

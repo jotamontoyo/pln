@@ -25,14 +25,19 @@
 
     <link href="<?= base_url() ?>public/css/estilo.css" rel="stylesheet">
     <link href="<?= base_url() ?>public/css/navbar.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/botones_redes.css" rel="stylesheet">
 
-    <link href="<?= base_url() ?>public/img/logos/logoPLN.jpg" rel="icon" type="image/x-icon">
+    <link href="<?= base_url() ?>public/img/fondos/bandera_nicaragua.png" rel="icon" type="image/x-icon">
 
+    
 
 
  
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script scr="<?= base_url() ?>public/js/anidaSelect.js"></script>
+    
 
     
 
@@ -69,6 +74,9 @@
 
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    
     
 
 
@@ -156,8 +164,7 @@
         <hr class="my-4">
         <div class="row">
             <div class="col-12 col-md">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-                <img src="<?= base_url(); ?>public/img/logos/logoPLN.jpg" style="max-width: 45px; display:inline-block;" alt="">
+                <img src="<?= base_url(); ?>public/img/fondos/bandera_nicaragua.png" style="max-width: 30px; display:inline-block;" alt="">
                 <small class="d-block mb-3">&copy; 2018–2024</small>
                 
             </div>
@@ -206,14 +213,33 @@
 
 
     
-    
-    
-
-
-    
 
 
 </body>
+
+
+    <script>
+        // funcion para rellenar un select en funcion del valor elejido en otro select. hay que poner en el segundo select un data-????????=valor_a_buscar
+        $(document).ready(function () {
+            $(function() {
+                $(document).on('change', '#departamento_id', function() {
+                    var departamento_codigo = $(this).val();
+                        $('#municipio_id option').each(function() {
+                            var municipioDepartamento = $(this).data('departamento');
+                            if (municipioDepartamento == departamento_codigo || $(this).val() == "") {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    $('#municipio_id').val('');
+                });
+            });
+        });
+    </script>
+
+
+
 
 
 

@@ -38,7 +38,7 @@ class Home extends BaseController
         $municipios = $this->municipiosModel->findAll();
 
         $data = [
-            'titulo'        => 'Partido Liberal de Nicaragua',
+            'titulo'        => 'Empadronamiento nicaraguense',
             'estados'       => $estados,
             'departamentos' => $departamentos,
             'municipios'    => $municipios

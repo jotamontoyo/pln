@@ -10,7 +10,7 @@
   <div class="container">
 
     <br><br>
-    <h4 class="mb-4 centrado">Documento de afiliación #<?= $afiliado['id'];  ?></h4>
+    <h4 class="mb-4 centrado">Documento de Padrón #<?= $afiliado['id'];  ?></h4>
 
 
     <div class="row">
@@ -18,7 +18,7 @@
       <div class="col-sm-2 col-md-2 col-lg-1 col-xl-1 col-xxl-1">
         <a href="<?= base_url('solicitudes/' . $afiliado['solicitud_id'] . '/edit') ?>">
           <button type="button" class="btn btn-sm btn-primary boton-badge">
-            Solicitud de afiliación <span class="badge text-bg-secondary"><?= $afiliado['solicitud_id'] ?></span>
+            Solicitud de Padrón <span class="badge text-bg-secondary"><?= $afiliado['solicitud_id'] ?></span>
           </button>
         </a>
       </div>
@@ -72,7 +72,7 @@
 
             <div class="col-sm-2 form-floating">
               <a data-bs-toggle="modal" data-bs-target="#cambiarFechaNacimiento">
-              <label for="fecha_nacimiento">Fecha de nacimiento*</label>
+                <label for="fecha_nacimiento">Fecha de nacimiento*</label>
                 <input type="text" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= $afiliado['fecha_nacimiento']; ?>" placeholder="Fecha de nacimiento*">
               </a>
               <p class="small" style="color:red">
@@ -167,8 +167,8 @@
               <select class="form-select" id="departamento_id" name="departamento_id">
                 <option value=""></option>
                 <?php foreach($departamentos as $departamento): ?>
-                  <option value="<?= $departamento['id'] ?>" 
-                    <?= ($departamento['id'] == $afiliado['departamento_id']) ? 'selected' : '';?>>
+                  <option value="<?= $departamento['codigo'] ?>" 
+                    <?= ($departamento['codigo'] == $afiliado['departamento_id']) ? 'selected' : '';?>>
                       <?= $departamento['nombre'] ?>
                   </option>
                 <?php endforeach; ?>
@@ -183,8 +183,8 @@
               <select class="form-select" id="municipio_id" name="municipio_id">
                 <option value=""></option>
                 <?php foreach($municipios as $municipio): ?>
-                  <option value="<?= $municipio['id'] ?>" 
-                    <?= ($municipio['id'] == $afiliado['municipio_id']) ? 'selected' : '';?>>
+                  <option value="<?= $municipio['codigo'] ?>" data-departamento="<?= $municipio['departamento_codigo'] ?>"
+                    <?= ($municipio['codigo'] == $afiliado['municipio_id']) ? 'selected' : '';?>>
                       <?= $municipio['nombre'] ?>
                   </option>
                 <?php endforeach; ?>
@@ -314,7 +314,7 @@
 
     </form>
 
-</div>
+  </div>
 
 </div>
 
@@ -332,7 +332,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="<?= base_url('solicitudes/' . $id . '/img'); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
+        <form action="<?= base_url('afiliados/' . $id . '/img'); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
           <input type="hidden" name="_method" value="PUT">
           <?= csrf_field(); ?>
           <div class="row g-3">
@@ -441,6 +441,7 @@
     var edad = año_actual - año_nacimiento;
     document.getElementById("edad").value = edad;
   });
+
 
   
 

@@ -18,7 +18,7 @@
       <div class="col-sm-2 col-md-2 col-lg-1 col-xl-1 col-xxl-1">
         <a href="<?= base_url('solicitudes/' . $afiliado['solicitud_id'] . '/edit') ?>">
           <button type="button" class="btn btn-sm btn-primary boton-badge">
-            Solicitud de Padrón <span class="badge text-bg-secondary"><?= $afiliado['solicitud_id'] ?></span>
+            Solicitud de afiliación <span class="badge text-bg-secondary"><?= $afiliado['solicitud_id'] ?></span>
           </button>
         </a>
       </div>

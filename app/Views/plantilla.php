@@ -159,54 +159,9 @@
 
 
 
-
-    <footer class="container mt-auto py-3">
-        <hr class="my-4">
-        <div class="row">
-            <div class="col-12 col-md">
-                <img src="<?= base_url(); ?>public/img/fondos/bandera_nicaragua.png" style="max-width: 30px; display:inline-block;" alt="">
-                <small class="d-block mb-3">&copy; 2018–2024</small>
-                
-            </div>
-            <div class="col-6 col-md">
-            <h5>Features</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-            </ul>
-            </div>
-            <div class="col-6 col-md">
-            <h5>Resources</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-            </ul>
-            </div>
-            <div class="col-6 col-md">
-            <h5>Resources</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
-            </ul>
-            </div>
-            <div class="col-6 col-md">
-            <h5>About</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-            </ul>
-            </div>
-        </div>
+    <footer class="py-3 my-4">
+        <p class="text-center text-body-secondary">&copy; 2024 Partido Liberal de Nicaragua <img src="<?= base_url(); ?>public/img/fondos/bandera_nicaragua.png" style="max-width: 30px; display:inline-block;" alt=""></p>
+        
     </footer>
 
 

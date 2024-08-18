@@ -10,9 +10,9 @@
 
 
 <!-- 1er baner. class="img_backg" para poner imagen de fondo --> 
-  <div class="" style="background-size: cover; margin-top: 30px; background-image: url(public/img/fondos/paisaje-nubes.jpg); background-attachment: fixed; background-repeat: no-repeat;">
+    <div class="img_backg">
 
-      <br><br>
+
       <div class="container">
 
         <div class="row centrado">
@@ -39,7 +39,7 @@
           
           <div class="col d-flex flex-column align-items-start gap-2">
             <h2 class="fw-bold text-body-emphasis">Tu participación es importante para el país.</h2>
-            <p class="text-body-secondary">Afíliate. Rellena el formulario con tus datos y serás un miembro del cambio.</p>
+            <p class="text-body-secondary">Afíliate. Rellena el formulario con tus datos y serás parte del cambio.</p>
             <a href="#formulario_solicitud" class="btn btn-success btn-lg"><i class="bi bi-table"></i> Afíliate</a>
           </div>
 
@@ -94,11 +94,32 @@
             <div class="card-body">
               <p class="card-text">El contenido del video se basa en las acciones de apoyo realizadas por Don Jorge Estrada, miembro del comité ejecutivo provisional del Partido Liberar de Nicaragua</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -112,11 +133,32 @@
             <div class="card-body">
               <p class="card-text">El presidente Reagan recibió la  Dr. y Comandante Henry (Enrique Zelaya) miembro del estado mayor de la contra.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+              <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -130,11 +172,34 @@
             <div class="card-body">
               <p class="card-text">Álvaro Somoza Urcuyo, hijo del presidente Luis Somoza y director de la la alianza por la Libertad con miles de afiliados y conductor del programa semanal "una hora con Álvaro Somoza".</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon youtube">
+                    <a href="https://www.youtube.com/@nicaraguanfreedomalliance4406" target="_blank">
+                      <span class="tooltip">Youtube</span>
+                      <span><i class="fab fa-youtube"></i></span>
+                    </a>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -148,12 +213,34 @@
             <div class="card-body">
               <p class="card-text">Dr. César N Grijalva. Abogado, Doctor en Jurisprudencia, Ciencias Políticas, Administración Pública, Desarrollo Internacional. Experto en temas de gobierno de transición, representante de organizaciones.Trabajo Social.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
+
             </div>
           </div>
         </div>
@@ -166,11 +253,32 @@
             <div class="card-body">
               <p class="card-text">Don Eli Cabezas desde los años 80's principal líder liberal de la diáspora y del nuevo exilio del canada.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -182,11 +290,32 @@
             <div class="card-body">
               <p class="card-text">Texto</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -200,11 +329,32 @@
             <div class="card-body">
               <p class="card-text">Harlinton Orozco y Henry Álvarez de Unión de Exiliados, formado por líderes de tranques durante la rebelion.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -216,26 +366,69 @@
             <div class="card-body">
               <p class="card-text">Podcast de Don Álvaro Somoza. El Robo del Siglo: Cómo Maduro se Burló de la Democracia en Venezuela.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+
         <div class="col">
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-body-secondary">9 mins</small>
+                <ul class="redes">
+                  <li class="icon facebook">
+                      <span class="tooltip">Facebook</span>
+                      <span><i class="fab fa-facebook-f"></i></span>
+                  </li>
+                  <li class="icon twitter">
+                      <span class="tooltip">Twitter</span>
+                      <span><i class="fa-brands fa-x-twitter"></i></span>
+                  </li>
+                  <li class="icon instagram">
+                      <span class="tooltip">Instagram</span>
+                      <span><i class="fab fa-instagram"></i></span>
+                  </li>
+                  <li class="icon linkedin">
+                      <span class="tooltip">Linkedin</span>
+                      <span><i class="fab fa-linkedin"></i></span>
+                  </li>
+                  <li class="icon pinterest">
+                      <span class="tooltip">Pinterest</span>
+                      <span><i class="fab fa-pinterest"></i></span>
+                  </li>
+                  <li class="icon telegram">
+                      <span class="tooltip">Telegram</span>
+                      <span><i class="fab fa-telegram"></i></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -504,14 +697,21 @@
 
 
 
+
+
+
             
             <div class="col-sm-3">
               <label for="cedula_img" class="form-label" id="cedula_img_label" hidden>Imagen del documento:</label>
               <input type="file" class="form-control" accept="image/jpeg, image/png" id="cedula_img" name="cedula_img" value="<?= set_value('cedula_img'); ?>" hidden>
+              <p class="small"> Máximo 2 Mb</p>
               <p class="small" style="color:red">
                 <?= validation_show_error('cedula_img'); ?>
               </p>
             </div>
+
+            
+
 
 
 
@@ -745,31 +945,32 @@
 
 <script>
 
-
-
-  $(".checkbox").on('change', function() {
-    if ($(this).is(':checked')) {
-      $(this).attr('value', 'true');
-      var check = $(this).val();
-      //console.log(check);
-      //$('#afiliado value').val(check);
-      //console.log($('#afiliado').val(check));
-    } else {
-      $(this).attr('value', 'false');
-      var check = $(this).val();
-      //console.log(check);
-      //$('#afiliado').val(check);
-      //console.log($('#afiliado').val(check));
-    }
-  });
-
-
-
-
-  //muestra campos segun el pais elejido en el campo estado_id
+      
   $(document).ready(function () {
-    $(document).on('change','#estado_id',function() {
 
+
+    $(".checkbox").on('change', function() {
+      if ($(this).is(':checked')) {
+        $(this).attr('value', 'true');
+        var check = $(this).val();
+        //console.log(check);
+        //$('#afiliado value').val(check);
+        //console.log($('#afiliado').val(check));
+      } else {
+        $(this).attr('value', 'false');
+        var check = $(this).val();
+        //console.log(check);
+        //$('#afiliado').val(check);
+        //console.log($('#afiliado').val(check));
+      }
+    });
+
+
+
+
+    //muestra campos segun el pais elejido en el campo estado_id
+  
+    $(document).on('change','#estado_id',function() {
       var pais = document.getElementById("estado_id").value;
       if(pais == 1 | pais == 5) { 
         $('#ciudad_label').html("Departamento*"); 
@@ -793,13 +994,12 @@
       $("#pais").prop('hidden', false);
       $("#pais_label").prop('hidden', false);
     });
-  });
+
 
 
   
 
-  // activa el campo nº de cedula
-  $(document).ready(function () {
+    // activa el campo nº de cedula
     $(document).on('click','#tiene_cedula',function() {
       var cedula = document.getElementById("radio_tiene_cedula").checked;
       if(cedula == true) {
@@ -818,17 +1018,30 @@
         $("#expedicion_doc_panel").prop('hidden', true);
       };
     });
-
-
-
     
 
 
 
 
+    $(document).on("change", '#cedula_img', function () {
+      // Tamaño maximo del archivo
+      const maxSize = 2000000; 
+      // si no hay archivos, regresamos
+      if (this.files.length <= 0) return;
+      // Validamos el primer archivo únicamente
+      const archivo = this.files[0];
+      if (archivo.size > maxSize) {
+          const tamanioEnMb = maxSize / 1000000;
+          swal('Excede el tamaño de la imagen', `Máximo ${tamanioEnMb} MB`, 'error');
+          // Limpiar
+          document.getElementById("cedula_img").value = "";
+      } else {
+          // Validación pasada. Envía el formulario o haz lo que tengas que hacer
+      }
+    });
+
+
   });
-
-
 
 
 

@@ -328,15 +328,19 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="cambiarImglLabel">Cédula</h1>
+        <h1 class="modal-title fs-5" id="cambiarImglLabel">Cambio de imagen</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="centrado">
+          <p>Imagen actual</p>
+          <img src="<?= $afiliado['cedula_img']; ?>" style="max-width: 400px;" alt="">
+        </div>
+        <br>
         <form action="<?= base_url('afiliados/' . $id . '/img'); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
           <input type="hidden" name="_method" value="PUT">
           <?= csrf_field(); ?>
           <div class="row g-3">
-            <label for="cedula_img" class="form-label">Seleccionar imagen:</label>
             <input type="file" class="form-control" accept="image/jpeg, image/jpg, image/png" id="cedula_img" name="cedula_img" value="<?= $afiliado['cedula_img']; ?>">
             <p class="small" style="color:red">
               <?= validation_show_error('cedula_img'); ?>

@@ -461,7 +461,7 @@
 
         <form action="<?= base_url('solicitudes/crear') ?>" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="_method" value="POST">
-          <?php echo csrf_field(); ?>
+          <?= csrf_field(); ?>
 
           <div class="row g-3">
 
@@ -1023,7 +1023,7 @@
 
 
 
-    $(document).on("change", '#cedula_img', function () {
+    /*$(document).on("change", '#cedula_img', function () {
       // Tamaño maximo del archivo
       const maxSize = 2000000; 
       // si no hay archivos, regresamos
@@ -1038,7 +1038,7 @@
       } else {
           // Validación pasada. Envía el formulario o haz lo que tengas que hacer
       }
-    });
+    }); */
 
 
   });

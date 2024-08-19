@@ -185,7 +185,7 @@ class Solicitudes extends BaseController
                 return redirect()->back()->withInput();
             };
             if(!$file->hasMoved()) { // si el archivo todavia no se ha movido, se fuerza a moverse a su ubicacion temporal writeable/uploads
-                $ruta = ROOTPATH . 'public\img\cedulas' . DIRECTORY_SEPARATOR; // fija la ruta para guardar/mover en disco a su ubicacion definitiva (public)
+                $ruta = ROOTPATH . 'public/img/cedulas' . DIRECTORY_SEPARATOR; // fija la ruta para guardar/mover en disco a su ubicacion definitiva (public)
                 $file->move($ruta, $post['cedula_img'], true); // mueve el fichero de la carpeta temporal a su ubicacion definitiva
                 $url = base_url() . 'public/img/cedulas/' . $file->getName(); // consigue la url para guardarla en el registro y verla en html
             };
@@ -413,7 +413,7 @@ class Solicitudes extends BaseController
             return redirect()->back()->withInput();
         };
         if(!$file->hasMoved()) { // si el archivo todavia no se ha movido, se fuerza a moverse a su ubicacion temporal writeable/uploads
-            $ruta = ROOTPATH . 'public\img\cedulas' . DIRECTORY_SEPARATOR; // fija la ruta para guardar/mover en disco a su ubicacion definitiva (public)
+            $ruta = ROOTPATH . 'public/img/cedulas' . DIRECTORY_SEPARATOR; // fija la ruta para guardar/mover en disco a su ubicacion definitiva (public)
             $file->move($ruta, $post['cedula_img'], true); // mueve el fichero de la carpeta temporal a su ubicacion definitiva
             $url = base_url() . 'public/img/cedulas/' . $file->getName(); // consigue la url para guardarla en el registro y verla en html
         };

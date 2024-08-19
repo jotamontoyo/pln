@@ -81,7 +81,7 @@ class Filters extends BaseFilters
         'before' => [
             // 'honeypot',
             'session' => ['except' => ['/', '/solicitudes/crear', 'login*', 'register', 'auth/a/*', 'logout']],
-            'csrf',
+            'csrf' => ['except' => ['solicitudes/crear']], // se exceptua la ruta porque en el host da problemas
             // 'invalidchars',
         ],
         'after' => [

@@ -262,10 +262,14 @@ class Afiliados extends ResourceController
     }
 
 
+
+
+
+
+
     public function update_img($id)
     {
         $session = session();
-        $post = $this->request->getPost(['cedula_img']);
         $file = $this->request->getFile('cedula_img');
         if(!$file->isValid()) {
             // echo $file->getErrorString();
@@ -273,17 +277,24 @@ class Afiliados extends ResourceController
             return redirect()->back()->withInput();
         };
         if(!$file->hasMoved()) { // si el archivo todavia no se ha movido, se fuerza a moverse a su ubicacion temporal writeable/uploads
+            $afiliado = $this->afiliadosModel->find($id);
+            $apellidosMasFoto = $afiliado['apellidos'] . ' - ' . $file->getName();
             $ruta = ROOTPATH . 'public/img/cedulas' . DIRECTORY_SEPARATOR; // fija la ruta para guardar/mover en disco a su ubicacion definitiva (public)
-            $file->move($ruta, $post['cedula_img'], true); // mueve el fichero de la carpeta temporal a su ubicacion definitiva
-            $url = base_url() . 'public/img/cedulas/' . $file->getName(); // consigue la url para guardarla en el registro y verla en html
+            $file->move($ruta, $apellidosMasFoto, true); // mueve el fichero de la carpeta temporal a su ubicacion definitiva
+            $url = base_url() . 'public/img/cedulas/' . $apellidosMasFoto; // consigue la url para guardarla en el registro y verla en html
         };
         $data = ['cedula_img' => $url];
         $this->afiliadosModel->update($id, $data, false);
         return redirect()->back()->withInput();
         $session->setFlashdata('mensaje', 'Imagen actualizada');
-
-
     }
+
+
+
+
+
+
+    
 
 
 

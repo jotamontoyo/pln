@@ -9,7 +9,10 @@
 
 
 
-<!-- 1er baner. class="img_backg" para poner imagen de fondo --> 
+
+
+
+<!-- 1a seccion. class="img_backg" para poner imagen de fondo --> 
     <div class="img_backg">
 
 
@@ -463,25 +466,31 @@
           <input type="hidden" name="_method" value="POST">
           <?= csrf_field(); ?>
 
-          <div class="row g-3">
+          <div class="row g-2">
 
 
             <br>
 
-            <div class="col-sm-5 form-floating">
-              <input type="text" class="form-control" id="nombre" name="nombre" value="<?= set_value('nombre'); ?>" placeholder="Nombre">
+           
+            <div class="col-sm-5">
+
               <label for="nombre">Nombre*</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" value="<?= set_value('nombre'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('nombre'); ?>
               </p>
-            </div>
 
-            <div class="col-sm-5 form-floating">
-              <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?= set_value('apellidos'); ?>" placeholder="Apellidos">
+            </div>
+            
+            
+
+            <div class="col-sm-5">
               <label for="apellidos">Apellidos*</label>
+              <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?= set_value('apellidos'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('apellidos'); ?>
               </p>
+
             </div>
 
 
@@ -495,24 +504,41 @@
             
 
 
-            <div class="col-sm-2 form-floating">
-                <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= set_value('fecha_nacimiento'); ?>" placeholder="Fecha de nacimiento*">
-                <label for="fecha_nacimiento">Fecha de nacimiento*</label>
-                <p class="small" style="color:red">
-                  <?= validation_show_error('fecha_nacimiento'); ?>
-                </p>              
+            <div class="col-sm-2">
+
+              <div class="clear-fix">
+                <label class="float-start" for="fecha_nacimiento">&nbsp; Fecha de nacimiento*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#fechaNacimientoModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" value="<?= set_value('fecha_nacimiento'); ?>">
+               <p class="small" style="color:red">
+                <?= validation_show_error('fecha_nacimiento'); ?>
+              </p>      
+
             </div>
 
-            <div class="col-sm-2 form-floating">
+
+            <div class="col-sm-2">
+              
+              <div class="clear-fix">
+                <label class="float-start" for="genero">&nbsp; Género*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#generoModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
               <select class="form-select" id="genero" name="genero">
                 <option value=""></option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
               </select>
-              <label for="genero">Género*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('genero'); ?>
               </p>
+
             </div>
 
 
@@ -522,14 +548,21 @@
 
 
 
-            <div class="col-sm-2 form-floating">
+            <div class="col-sm-2">
+
+              <div class="clear-fix">
+                <label class="float-start" for="estado_id">&nbsp; País de residencia*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#paisResidenciaModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
               <select class="form-select" id="estado_id" name="estado_id">
                 <option value=""></option>
                 <?php foreach($estados as $estado): ?>
                   <option value="<?= $estado['id'] ?>"><?= $estado['nombre'] ?></option>
                 <?php endforeach; ?>
               </select>
-              <label for="estado_id">País de residencia*</label>
               <p class="small" style="color:red">
                   <?= validation_show_error('estado_id'); ?>
               </p>
@@ -552,17 +585,33 @@
 
 
 
-            <div class="col-sm-3 form-floating">
-              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= set_value('ciudad'); ?>" placeholder="Ciudad*" hidden>
-              <label for="ciudad" class="form-label" id="ciudad_label" hidden></label>
+            <div class="col-sm-3" id="ciudad_panel" hidden>
+
+              <div class="clear-fix">
+                <label class="float-start" id="ciudad_label" for="ciudad" hidden></label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#ciudadModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= set_value('ciudad'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('ciudad'); ?>
               </p>
+
             </div>
 
 
-            <div class="col-sm-3 form-floating">
-              <input type="text" class="form-control" id="pais" name="pais" value="<?= set_value('pais'); ?>" placeholder="Pais*" hidden>
+            <div class="col-sm-3" id="pais_panel" hidden>
+
+              <div class="clear-fix">
+                <label class="float-start" id="pais_label" for="pais" hidden></label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#paisModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="text" class="form-control" id="pais" name="pais" value="<?= set_value('pais'); ?>">
               <label for="pais" class="form-label" id="pais_label" hidden></label>
               <p class="small" style="color:red">
                 <?= validation_show_error('pais'); ?>
@@ -614,35 +663,67 @@
 
             <!-- campos solo para la cedula -->
 
-            <div class="col-sm-2 form-floating" id="cedula_panel" name="cedula_panel" hidden>
-              <input type="text" class="form-control" id="cedula" name="cedula" value="<?= set_value('cedula'); ?>" placeholder="Cedula Nº:">
-              <label for="cedula" class="form-label" id="cedula_label">Cédula Nº:</label>
+            <div class="col-sm-2" id="cedula_panel" name="cedula_panel" hidden>
+
+              <div class="clear-fix">
+                <label class="float-start" for="cedula">&nbsp; Cédula*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#cedulaModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="text" class="form-control" id="cedula" name="cedula" value="<?= set_value('cedula'); ?>">
+              <!-- <label for="cedula" class="form-label" id="cedula_label">Cédula Nº:</label> -->
               <p class="small" style="color:red">
                 <?= validation_show_error('cedula'); ?>
               </p>
+
             </div>
 
-            <div class="col-sm-2 form-floating" id="departamento_id_panel" name="departamento_id_panel" hidden>
+
+
+
+
+            <div class="col-sm-2" id="departamento_id_panel" name="departamento_id_panel" hidden>
+
+              <div class="clear-fix">
+                <label class="float-start" for="departamento_id">&nbsp; Departamento*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#departamentoModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
               <select class="form-select" id="departamento_id" name="departamento_id">
                   <option value=""></option>
                   <?php foreach($departamentos as $departamento): ?>
                       <option value="<?= $departamento['codigo'] ?>"><?= $departamento['nombre'] ?></option>
                   <?php endforeach; ?>
               </select>
-              <label for="estado_id">Departamento de expedición*</label>
+              <!-- <label for="estado_id">Departamento de expedición*</label> -->
               <p class="small" style="color:red">
                   <?= validation_show_error('departamento_id'); ?>
               </p>
             </div>
 
-            <div class="col-sm-2 form-floating" id="municipio_id_panel" name="municipio_id_panel" hidden>
+
+
+
+            <div class="col-sm-2" id="municipio_id_panel" name="municipio_id_panel" hidden>
+
+              <div class="clear-fix">
+                <label class="float-start" for="municipio_id">&nbsp; Municipio*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#municipioModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
               <select class="form-select" id="municipio_id" name="municipio_id">
                   <option value=""></option>
                   <?php foreach($municipios as $municipio): ?>
                       <option value="<?= $municipio['codigo'] ?>" data-departamento="<?= $municipio['departamento_codigo'] ?>"><?= $municipio['nombre'] ?></option>
                   <?php endforeach; ?>
               </select>
-              <label for="estado_id">Municipio de expedición*</label>
+              <!-- <label for="estado_id">Municipio de expedición*</label> -->
               <p class="small" style="color:red">
                   <?= validation_show_error('municipio_id'); ?>
               </p>
@@ -658,33 +739,63 @@
 
 
             <!-- campos para cuando no hay cedula -->
-            <div class="col-sm-2 form-floating" id="tipo_doc_panel" name="tipo_doc_panel" hidden>
+            <div class="col-sm-2" id="tipo_doc_panel" name="tipo_doc_panel" hidden>
+
+              <div class="clear-fix">
+                <label class="float-start" for="tipo_doc">&nbsp; Tipo documento*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#tipo_docModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
               <select class="form-select" id="tipo_doc" name="tipo_doc">
                 <option value=""></option>
                 <option value="Pasaporte">Pasaporte</option>
                 <option value="Licencia">Licencia</option>
                 <option value="Residencia">Residencia</option>
               </select>
-              <label for="tipo_doc" class="form-label">Tipo documento*</label>
               <p class="small" style="color:red">
                 <?= validation_show_error('tipo_doc'); ?>
               </p>
+
             </div>
 
-            <div class="col-sm-2 form-floating" id="numero_doc_panel" name="numero_doc_panel" hidden>
-              <input type="text" class="form-control" id="numero_doc" name="numero_doc" value="<?= set_value('numero_doc'); ?>" placeholder="Nº documento">
-              <label for="numero_doc" class="form-label">Nº documento</label>
+
+
+
+            <div class="col-sm-2" id="numero_doc_panel" name="numero_doc_panel" hidden>
+
+              <div class="clear-fix">
+                <label class="float-start" for="numero_doc">&nbsp; Nº documento*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#numero_docModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="text" class="form-control" id="numero_doc" name="numero_doc" value="<?= set_value('numero_doc'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('numero_doc'); ?>
               </p>
+
             </div>
 
-            <div class="col-sm-2 form-floating" id="expedicion_doc_panel" name="expedicion_doc_panel" hidden>
-              <input type="text" class="form-control" id="expedicion_doc" name="expedicion_doc" value="<?= set_value('expedicion_doc'); ?>" placeholder="Lugar de expedición">
-              <label for="expedicion_doc" class="form-label">Lugar de expedición</label>
+
+
+
+            <div class="col-sm-2" id="expedicion_doc_panel" name="expedicion_doc_panel" hidden>
+
+              <div class="clear-fix">
+                <label class="float-start" for="expedicion_doc">&nbsp; Lugar de expedición*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#expedicion_docModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="text" class="form-control" id="expedicion_doc" name="expedicion_doc" value="<?= set_value('expedicion_doc'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('expedicion_doc'); ?>
               </p>
+
             </div>
             <!-- FIN campos para cuando no hay cedula -->
 
@@ -701,10 +812,16 @@
 
 
             
-            <div class="col-sm-3">
-              <label for="cedula_img" class="form-label" id="cedula_img_label" hidden>Imagen del documento:</label>
-              <input type="file" class="form-control" accept="image/jpeg, image/png" id="cedula_img" name="cedula_img" value="<?= set_value('cedula_img'); ?>" hidden>
-              <p class="small"> Máximo 2 Mb</p>
+            <div class="col-sm-3" id="cedula_img_panel" name="cedula_img_panel" hidden>
+
+              <div class="clear-fix">
+                <label class="float-start" for="cedula_img">&nbsp; Imagen*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#imagenModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="file" class="form-control" accept="image/jpeg, image/png" value="<?= set_value('cedula_img'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('cedula_img'); ?>
               </p>
@@ -719,21 +836,50 @@
             <hr class="my-4">
             <h5>Datos de contacto</h5>
 
-            <div class="col-sm-2 form-floating">
-              <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= set_value('whatsapp'); ?>" placeholder="WhatsApp nº">
-              <label for="whatsapp" class="form-label">WhatsApp Nº:</label>
+
+
+
+
+
+            <div class="col-sm-2">
+
+              <div class="clear-fix">
+                <label class="float-start" for="whatsapp">&nbsp; WhatsApp Nº*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#whatsappModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= set_value('whatsapp'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('whatsapp'); ?>
               </p>
+
             </div>
 
-            <div class="col-sm-4 form-floating">
-              <input type="email" class="form-control" id="email" name="email" value="<?= set_value('email'); ?>" placeholder="Email">
-              <label for="email" class="form-label">Email</label>
+
+
+
+
+            <div class="col-sm-4">
+
+              <div class="clear-fix">
+                <label class="float-start" for="email">&nbsp; Email*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#emailModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="email" class="form-control" id="email" name="email" value="<?= set_value('email'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('email'); ?>
               </p>
+
             </div>
+
+
+
+
 
 
             <hr class="my-4">
@@ -761,18 +907,26 @@
               </p>
             </div>
 
-            <div class="col-sm-4 form-floating">
-              <input type="text" class="form-control" id="posicion" name="posicion" value="<?= set_value('posicion'); ?>" placeholder="Posición">
-              <label for="posicion" class="form-label">Posición:</label>
+            <div class="col-sm-4">
+
+              <div class="clear-fix">
+                <label class="float-start" for="posicion">&nbsp; Posición*</label>
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#posicionModal">
+                  <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                </a>
+              </div>
+
+              <input type="text" class="form-control" id="posicion" name="posicion" value="<?= set_value('posicion'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('posicion'); ?>
               </p>
+
             </div>
             
           </div>
           <div class="centrar_div">
             <br>              
-            <button class="btn btn-primary btn-lg" type="submit"><i class="bi bi-send"></i> Enviar solicitud</button>
+            <button class="btn btn-primary btn-lg" type="submit" id="bSubmit" name="bSubmit"><i class="bi bi-send"></i> Enviar solicitud</button>
           </div>
           <br>
 
@@ -939,6 +1093,85 @@
 
 
 
+<!-- cedulaModal -->
+  <div class="modal fade" id="cedulaModal" tabindex="-1" aria-labelledby="cedulaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          
+            <div class="row centrado">
+              <p>Explicación para rellenar el campo nº de cédula.</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- departamentoModal -->
+  <div class="modal fade" id="departamentoModal" tabindex="-1" aria-labelledby="departamentoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+
+            <div class="row centrado">
+              <p>Explicación para rellenar el campo departamento.</p>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- municipioModal -->
+  <div class="modal fade" id="municipioModal" tabindex="-1" aria-labelledby="municipioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         <div class="modal-body">
+
+            <div class="row centrado">
+              <p>Explicación para rellenar el campo municipio.</p>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- imagenModal -->
+  <div class="modal fade" id="imagenModal" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+
+            <div class="row centrado">
+              <p>Explicación para rellenar el campo imgen.</p>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  
+
+
+
+
 
 
 
@@ -973,25 +1206,26 @@
     $(document).on('change','#estado_id',function() {
       var pais = document.getElementById("estado_id").value;
       if(pais == 1 | pais == 5) { 
-        $('#ciudad_label').html("Departamento*"); 
-        $('#pais_label').html("Municipio*");  
+        $('#ciudad_label').html("&nbsp; Departamento*"); 
+        $('#pais_label').html("&nbsp; Municipio*");  
       };
       if(pais == 2 | pais == 4) { 
-        $('#ciudad_label').html("Ciudad*"); 
-        $('#pais_label').html("Estado*");  
+        $('#ciudad_label').html("&nbsp; Ciudad*"); 
+        $('#pais_label').html("&nbsp; Estado*");  
       };
       if(pais == 3) { 
-        $('#ciudad_label').html("Provincia*"); 
-        $('#pais_label').html("Comunidad*");  
+        $('#ciudad_label').html("&nbsp; Provincia*"); 
+        $('#pais_label').html("&nbsp; Comunidad*");  
       };
       $("#cedula_img").prop('hidden', false);
+      $("#cedula_img_panel").prop('hidden', false);
       $("#cedula_panel").prop('hidden', false);
       $("#tiene_cedula").prop('hidden', false);
       $("#departamento_id_panel").prop('hidden', false);
       $("#municipio_id_panel").prop('hidden', false);
-      $("#ciudad").prop('hidden', false);
+      $("#ciudad_panel").prop('hidden', false);
       $("#ciudad_label").prop('hidden', false);
-      $("#pais").prop('hidden', false);
+      $("#pais_panel").prop('hidden', false);
       $("#pais_label").prop('hidden', false);
     });
 
@@ -1019,6 +1253,21 @@
       };
     });
     
+
+
+
+
+
+
+    // activa boton submit cuando hay un cambio
+    /* $(".form-control, .form-select").on('change', function() {
+      activarSubmit($(this));
+    });
+    function activarSubmit(obj){
+      $("#bSubmit").prop('disabled', false);
+    }; */
+  
+
 
 
 

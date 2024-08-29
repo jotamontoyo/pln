@@ -154,7 +154,7 @@ class Solicitudes extends BaseController
             'posicion'              => 'required'
         ];
         if(!$this->validate($reglas)){ //si no se cumplen las reglas
-            $session->setFlashdata('mensaje', 'Error(s) en formulario'); //se imprimirá en el index
+            $session->setFlashdata('mensaje', 'Error(s) en formulario');
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors()); //muestra lista de errores
         } else {
             $post = $this->request->getPost([

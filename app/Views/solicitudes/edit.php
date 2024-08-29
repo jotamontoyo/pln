@@ -36,7 +36,7 @@
        
 
 
-    <form action="<?= base_url('solicitudes/' . $id); ?>" method="POST" name="edit_form" enctype="multipart/form-data" autocomplete="off">
+    <form action="<?= base_url('solicitudes/' . $id); ?>" method="POST" id="edit_form" name="edit_form" enctype="multipart/form-data" autocomplete="off">
 
         <input type="hidden" name="_method" value="PUT">
         <?= csrf_field(); ?>
@@ -318,7 +318,7 @@
         <br><br>
 
         <div style="text-align: center">
-            <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-floppy"></i> Guardar</button>
+            <button type="submit" class="btn btn-sm btn-outline-primary" id="bSubmit" name="bSubmit" disabled><i class="bi bi-floppy"></i> Guardar</button>
             
             <a href="<?= base_url(); ?>solicitudes"><button type="button" class="btn btn-sm btn-outline-danger"><i class="bi bi-x-lg"></i> Cancelar</button></a>
             <a href="<?= base_url('solicitudes/' . $id . '/afiliar') ?>">
@@ -460,6 +460,18 @@
     const año_nacimiento = fecha_nacimiento.getFullYear();
     var edad = año_actual - año_nacimiento;
     document.getElementById("edad").value = edad;
+  });
+
+
+
+  // activa boton submit cuando hay un cambio
+  $(document).ready(function () {
+    $(".form-control, .form-select").on('change', function() {
+      activarSubmit($(this));
+    });
+    function activarSubmit(obj){
+      $("#bSubmit").prop('disabled', false);
+    }
   });
 
 

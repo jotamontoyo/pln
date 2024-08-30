@@ -20,16 +20,16 @@
 
         <div class="row centrado">
           <div class="col-sm-6">
-            <img class="sombra animate__animated animate__zoomIn" src="public/img/logos/logoPLN.jpg" style="max-width: 50%; margin-bottom: 15px" alt="">
+            <img class="sombra animate__animated animate__zoomIn" src="public/img/logos/logoPLN.jpg" style="max-width: 60%; margin-bottom: 15px" alt="">
           </div>
           <div class="col-sm-4">
             <div class="col d-flex flex-column gap-2">
               <div class="btn-group">
-                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" class="btn btn-danger dropdown-toggle sombra" data-bs-toggle="dropdown" aria-expanded="false">
                   Instructivos
                 </button>
                 <li class="nav-item" id="dropdown">
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu sombra">
                     <li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#conCedulaModal"> Con cédula &raquo; </a></li>
                     <li> <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#sinCedulaModal"> Sin cédula &raquo; </a></li>
                   </ul>
@@ -43,33 +43,33 @@
           <div class="col d-flex flex-column align-items-start gap-2">
             <h2 class="fw-bold text-body-emphasis">Tu participación es importante para el país.</h2>
             <p class="text-body-secondary">Afíliate. Rellena el formulario con tus datos y serás parte del cambio.</p>
-            <a href="#formulario_solicitud" class="btn btn-success btn-lg"><i class="bi bi-table"></i> Afíliate</a>
+            <a href="#formulario_solicitud" class="btn btn-success btn-lg sombra"><i class="bi bi-table"></i> Afíliate</a>
           </div>
 
           <div class="col">
             <div class="row row-cols-1 row-cols-sm-2 g-4">
               
               <div class="col d-flex flex-column gap-2">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#misionModal"><i class="bi bi-collection"></i> Dirección, Misión y Visión</button>
+                <button type="button" class="btn btn-primary sombra" data-bs-toggle="modal" data-bs-target="#misionModal"><i class="bi bi-collection"></i> Dirección, Misión y Visión</button>
                 <h4 class="fw-semibold mb-0 text-body-emphasis">Dirección, Misión y Vision</h4>
                 <p class="text-body-secondary"> Comité Ejecutivo fundador  y comisiones.  Qué vamos hacer y objetivo general.
                 </p>
               </div>
 
               <div class="col d-flex flex-column gap-2">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reglamentoModal"><i class="bi bi-card-list"></i> Reglamento</button>
-                <h4 class="fw-semibold mb-0 text-body-emphasis">Reglamento</h4>
+                <button type="button" class="btn btn-primary sombra" data-bs-toggle="modal" data-bs-target="#reglamentoModal"><i class="bi bi-card-list"></i> Reglamento</button>
+                <h4 class="fw-semibold mb-0 text-body-emphasisa">Reglamento</h4>
                 <p class="text-body-secondary">Normas a las que nos debemos y código de ética.</p>
               </div>
 
               <div class="col d-flex flex-column gap-2">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metodologiaModal"><i class="bi bi-card-checklist"></i> Metodología</button>
+                <button type="button" class="btn btn-primary sombra" data-bs-toggle="modal" data-bs-target="#metodologiaModal"><i class="bi bi-card-checklist"></i> Metodología</button>
                 <h4 class="fw-semibold mb-0 text-body-emphasis">Metodología</h4>
                 <p class="text-body-secondary">Afiliación, procesos y administración de la organización.</p>
               </div>
 
               <div class="col d-flex flex-column gap-2">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#empadronamientoModal"><i class="bi bi-clipboard2-plus"></i> Empadronamiento</button>
+                <button type="button" class="btn btn-primary sombra" data-bs-toggle="modal" data-bs-target="#empadronamientoModal"><i class="bi bi-clipboard2-plus"></i> Empadronamiento</button>
                 <h4 class="fw-semibold mb-0 text-body-emphasis">Empadronamiento</h4>
                 <p class="text-body-secondary">Proyecto para hacer cumplir artículo 122 que permita votar a los Nicaragüenses del exterior residentes o en tránsito.</p>
               </div>
@@ -451,12 +451,8 @@
 
     <div class="container">
 
-
-
-      
-
         <br>
-        <h4 class="mb-3 text-center">Solicitud de empadronamiento</h4>
+        <h4 class="mb-3 text-center">Solicitud de afiliación</h4>
 
         <hr>
         <h5>Datos personales</h5>
@@ -474,7 +470,7 @@
            
             <div class="col-sm-5">
 
-              <label for="nombre">Nombre*</label>
+              <label for="nombre">&nbsp; Nombre*</label>
               <input type="text" class="form-control" id="nombre" name="nombre" value="<?= set_value('nombre'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('nombre'); ?>
@@ -485,7 +481,7 @@
             
 
             <div class="col-sm-5">
-              <label for="apellidos">Apellidos*</label>
+              <label for="apellidos">&nbsp; Apellidos*</label>
               <input type="text" class="form-control" id="apellidos" name="apellidos" value="<?= set_value('apellidos'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('apellidos'); ?>
@@ -519,6 +515,8 @@
               </p>      
 
             </div>
+
+
 
 
             <div class="col-sm-2">
@@ -589,7 +587,7 @@
 
               <div class="clear-fix">
                 <label class="float-start" id="ciudad_label" for="ciudad" hidden></label>
-                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#ciudadModal">
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#ciudadResidenciaModal">
                   <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
                 </a>
               </div>
@@ -606,7 +604,7 @@
 
               <div class="clear-fix">
                 <label class="float-start" id="pais_label" for="pais" hidden></label>
-                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#paisModal">
+                <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#estadoResidenciaModal">
                   <img src="public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
                 </a>
               </div>
@@ -626,23 +624,40 @@
             <hr class="my-4">
             <h5>Identificación</h5>
 
-            <div class="col-sm-1" id="tiene_cedula" hidden>
+            
+
+            <div class="col-sm-2">
+
+              <div class="" id="tiene_cedula" hidden>
+
                 <label for="estado_id" class="col-form-label">
                   ¿Tiene cédula?
                 </label>
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula">
-                <label class="form-check-label" for="radio_tiene_cedula">
-                  No
-                </label>
+
+                <div class="clear-fix">
+
+                  <div class="form-check float-start">
+                    <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula" checked>
+                    <label class="form-check-label" for="radio_tiene_cedula">
+                      Sí &nbsp; &nbsp;
+                    </label>
+                  </div>
+
+                  <div class="form-check float-start">
+                    <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula" >
+                    <label class="form-check-label" for="radio_tiene_cedula">
+                      No
+                    </label>
+                  </div>
+
+                </div>
+
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula" checked>
-                <label class="form-check-label" for="radio_tiene_cedula">
-                  Si
-                </label>
-              </div>
+
             </div>
+
+
+            
 
             
 
@@ -821,7 +836,7 @@
                 </a>
               </div>
 
-              <input type="file" class="form-control" accept="image/jpeg, image/png" value="<?= set_value('cedula_img'); ?>">
+              <input type="file" class="form-control" id="cedula_img" name="cedula_img" accept="image/jpeg, image/jpg, image/png" value="<?= set_value('cedula_img'); ?>">
               <p class="small" style="color:red">
                 <?= validation_show_error('cedula_img'); ?>
               </p>
@@ -884,28 +899,42 @@
 
             <hr class="my-4">
             <h5>Tipo de participación</h5>
-            
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="afiliado" name="afiliado" checked>
-              <label class="form-check-label" for="flexCheckDefault">
-                Afiliado
-              </label>
-              <p class="small" style="color:red">
-                <?= validation_show_error('afiliado'); ?>
-              </p>
+
+
+            <div class="row">
+
+              <div class="col-sm-2 clear-fix">
+                    
+                <div class="form-check float-start">
+                  <input class="form-check-input" type="checkbox" id="afiliado" name="afiliado" checked>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Afiliado
+                  </label>
+                  <p class="small" style="color:red">
+                    <?= validation_show_error('afiliado'); ?>
+                  </p>
+                </div>
+                    
+                    
+                <div class="form-check float-end">
+                  <input class="form-check-input" type="checkbox" id="cargo" name="cargo">
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Cargo
+                  </label>
+                  <p class="small" style="color:red">
+                    <?= validation_show_error('cargo'); ?>
+                  </p>
+                </div>
+                    
+              </div>
+
             </div>
 
 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="cargo" name="cargo">
-              <label class="form-check-label" for="flexCheckChecked">
-                Cargo
-              </label>
-              <p class="small" style="color:red">
-                <?= validation_show_error('cargo'); ?>
-              </p>
-            </div>
+
+
+
 
             <div class="col-sm-4">
 
@@ -924,6 +953,10 @@
             </div>
             
           </div>
+
+
+
+
           <div class="centrar_div">
             <br>              
             <button class="btn btn-primary btn-lg" type="submit" id="bSubmit" name="bSubmit"><i class="bi bi-send"></i> Enviar solicitud</button>
@@ -1093,6 +1126,104 @@
 
 
 
+<!-- fechaNacimientoModal -->
+  <div class="modal fade" id="fechaNacimientoModal" tabindex="-1" aria-labelledby="fechaNacimientoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          
+            <div class="row centrado">
+              <p>Seleccione o escriba aquí su fecha de nacimiento.</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- generoModal -->
+  <div class="modal fade" id="generoModal" tabindex="-1" aria-labelledby="generoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          
+            <div class="row centrado">
+              <p>Seleccione la opción que corresponda.</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- paisResidenciaModal -->
+  <div class="modal fade" id="paisResidenciaModal" tabindex="-1" aria-labelledby="paisResidenciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          
+            <div class="row centrado">
+              <p>Seleccione el país donde reside habitualmente.</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- ciudadResidenciaModal (departmaneto, provincia....) -->
+  <div class="modal fade" id="ciudadResidenciaModal" tabindex="-1" aria-labelledby="ciudadResidenciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          
+            <div class="row centrado">
+              <p>Escriba la opción que corresponda.</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- estadoResidenciaModal (municipio, estado) -->
+  <div class="modal fade" id="estadoResidenciaModal" tabindex="-1" aria-labelledby="estadoResidenciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          
+            <div class="row centrado">
+              <p>Escriba la opción que corresponda.</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
 <!-- cedulaModal -->
   <div class="modal fade" id="cedulaModal" tabindex="-1" aria-labelledby="cedulaModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -1101,7 +1232,7 @@
         <div class="modal-body">
           
             <div class="row centrado">
-              <p>Explicación para rellenar el campo nº de cédula.</p>
+              <p>Introduzca aquí el número de cédula tal y como está en su documento.</p>
             </div>
           
         </div>
@@ -1119,7 +1250,7 @@
         <div class="modal-body">
 
             <div class="row centrado">
-              <p>Explicación para rellenar el campo departamento.</p>
+              <p>Seleccione de la lista el departamento donde se expidió la cédula.</p>
             </div>
 
         </div>
@@ -1129,7 +1260,7 @@
 
 
 
-  <!-- municipioModal -->
+ <!-- municipioModal -->
   <div class="modal fade" id="municipioModal" tabindex="-1" aria-labelledby="municipioModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content ayudaFormulario">
@@ -1137,7 +1268,7 @@
          <div class="modal-body">
 
             <div class="row centrado">
-              <p>Explicación para rellenar el campo municipio.</p>
+              <p>Seleccione de la lista el municipio donde se expidió la cédula.</p>
             </div>
 
         </div>
@@ -1147,7 +1278,7 @@
 
 
 
-  <!-- imagenModal -->
+<!-- imagenModal -->
   <div class="modal fade" id="imagenModal" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content ayudaFormulario">
@@ -1155,7 +1286,65 @@
         <div class="modal-body">
 
             <div class="row centrado">
-              <p>Explicación para rellenar el campo imgen.</p>
+              <p>Seleccione de sus archivos una imagen del documento. Formatos autorizados: jpg, jpeg y png.</p>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- tipo_docModal -->
+  <div class="modal fade" id="tipo_docModal" tabindex="-1" aria-labelledby="tipo_docModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+
+            <div class="row centrado">
+              <p>Seleccione el tipo de documento con el que quiere identificarse en caso de no tener cédula.</p>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- numero_docModal -->
+  <div class="modal fade" id="numero_docModal" tabindex="-1" aria-labelledby="numero_docModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+
+            <div class="row centrado">
+              <p>Escriba aquí el número del documento con el que se identifica.</p>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- expedicion_docModal -->
+  <div class="modal fade" id="expedicion_docModal" tabindex="-1" aria-labelledby="expedicion_docModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ayudaFormulario">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+
+            <div class="row centrado">
+              <p>Escriba aquí el país donde se expidió el documento con el que se identifica.</p>
             </div>
 
         </div>
@@ -1236,7 +1425,7 @@
     // activa el campo nº de cedula
     $(document).on('click','#tiene_cedula',function() {
       var cedula = document.getElementById("radio_tiene_cedula").checked;
-      if(cedula == true) {
+      if(cedula == false) {
         $("#cedula_panel").prop('hidden', true);
         $("#departamento_id_panel").prop('hidden', true);
         $("#municipio_id_panel").prop('hidden', true);

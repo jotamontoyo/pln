@@ -41,159 +41,161 @@
 <span class="ir-arriba"><i class="bi bi-arrow-up-square"></i></span>
 
 
+<?php if(auth()->user()) { ?>
 
-
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item active"><a class="nav-link" href=<?= base_url() ?>><i class="bi bi-house-door"></i> Inicio</a></li>
-        <li class="nav-item active"><a class="nav-link" href=<?= base_url('login') ?>><i class="bi bi-door-open"></i> Acceso</a></li>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       
-        <?php if(auth()->user()) { ?>
-          
-          <li class="nav-item"><a class="nav-link" href=<?= base_url('users')?>><i class="bi bi-person-check"></i> Usuarios </a></li>
-          <li class="nav-item"><a class="nav-link" href=<?= base_url('solicitudes')?>><i class="bi bi-clipboard"></i> Solicitudes </a></li>
-          <li class="nav-item"><a class="nav-link" href=<?= base_url('afiliados')?>><i class="bi bi-bookmark-check"></i> Afiliaciones </a></li>
-
-
-
-
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item active"><a class="nav-link" href=<?= base_url() ?>><i class="bi bi-house-door"></i> Inicio</a></li>
+          <li class="nav-item active"><a class="nav-link" href=<?= base_url('login') ?>><i class="bi bi-door-open"></i> Acceso</a></li>
         
-          <!-- <li class="nav-item dropdown" id="myDropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Compras  </a>
-            <ul class="dropdown-menu">
-
-              <li> <a class="dropdown-item" href=<?= base_url()?>> Almacenenes &raquo; </a>
-                <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href="#">SubAlmacenenes</a></li>
-                   <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li> 
-                </ul>
-              </li>
-                
-
-              <li> <a class="dropdown-item" href=<?= base_url()?>> Productos &raquo; </a>
-                <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href=<?= base_url()?>>Grupos</a></li>
-                  <li><a class="dropdown-item" href=<?= base_url()?>>Categorías</a></li>
-                  <li><a class="dropdown-item" href=<?= base_url()?>>SubCategorías</a>
-                     <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                </ul>
-              </li>
-              <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
-              <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
-      
-            </ul>
-
-          </li> -->
-
-
-
-
-
-
-
-
-          <li class="nav-item dropdown" id="myDropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt"></i> Localizaciones  </a>
-            <ul class="dropdown-menu">
-              <li> <a class="dropdown-item" href="<?= base_url()?>estados"><img src="public/img/logos/ico_earth.png" class="ico_pais" alt=""> Paises &raquo; </a>
-                <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item"><img src="public/img/logos/ico_nic.png" class="ico_pais" alt=""> Nicaragua &raquo; </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="<?= base_url()?>departamentos">Departamentos &raquo; </a></li>
-                      <li><a class="dropdown-item" href="<?= base_url()?>municipios">Municipios &raquo; </a></li>
-                    </ul>
-                  </li>
-                  <li> <a class="dropdown-item"><img src="public/img/logos/ico_eeuu.png" class="ico_pais" alt=""> EE.UU &raquo; </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item">Ciudades &raquo; </a></li>
-                      <li><a class="dropdown-item">Estados &raquo; </a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-
-
-
-
-
-
-
-
-
-
-
-          <!-- <li class="nav-item dropdown" id="myDropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  RR.HH </a>
-            <ul class="dropdown-menu">
-              <li> <a class="dropdown-item" href=""> Departamentos </a></li>
-              <li> <a class="dropdown-item" href=""> Empleados </a></li>
-               <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
-                <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> 
-            </ul>
-          </li> -->
-
           
-
-          <div class="container">
-
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPerfil" aria-controls="offcanvasPerfil">
-                <i class="bi bi-power"></i> Salir
-              </a>
-            </li>
-
-        <?php } ?>
-
-
-            <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#info" style="float: right;"><i class="bi bi-info-circle-fill"></i></button> -->
-
             
+            <li class="nav-item"><a class="nav-link" href=<?= base_url('users')?>><i class="bi bi-person-check"></i> Usuarios </a></li>
+            <li class="nav-item"><a class="nav-link" href=<?= base_url('solicitudes')?>><i class="bi bi-clipboard"></i> Solicitudes </a></li>
+            <li class="nav-item"><a class="nav-link" href=<?= base_url('afiliados')?>><i class="bi bi-bookmark-check"></i> Afiliaciones </a></li>
+  
+  
+  
+  
+          
+            <!-- <li class="nav-item dropdown" id="myDropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Compras  </a>
+              <ul class="dropdown-menu">
+  
+                <li> <a class="dropdown-item" href=<?= base_url()?>> Almacenenes &raquo; </a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="#">SubAlmacenenes</a></li>
+                     <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li> 
+                  </ul>
+                </li>
+                  
+  
+                <li> <a class="dropdown-item" href=<?= base_url()?>> Productos &raquo; </a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href=<?= base_url()?>>Grupos</a></li>
+                    <li><a class="dropdown-item" href=<?= base_url()?>>Categorías</a></li>
+                    <li><a class="dropdown-item" href=<?= base_url()?>>SubCategorías</a>
+                       <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                  </ul>
+                </li>
+                <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
+                <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+                <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
+        
+              </ul>
+  
+            </li> -->
+  
+  
+  
+  
+  
+  
+  
+  
+            <li class="nav-item dropdown" id="myDropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt"></i> Localizaciones  </a>
+              <ul class="dropdown-menu">
+                <li> <a class="dropdown-item" href="<?= base_url()?>estados"><img src="public/img/logos/ico_earth.png" class="ico_pais" alt=""> Paises &raquo; </a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item"><img src="public/img/logos/ico_nic.png" class="ico_pais" alt=""> Nicaragua &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="<?= base_url()?>departamentos">Departamentos &raquo; </a></li>
+                        <li><a class="dropdown-item" href="<?= base_url()?>municipios">Municipios &raquo; </a></li>
+                      </ul>
+                    </li>
+                    <li> <a class="dropdown-item"><img src="public/img/logos/ico_eeuu.png" class="ico_pais" alt=""> EE.UU &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item">Ciudades &raquo; </a></li>
+                        <li><a class="dropdown-item">Estados &raquo; </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            <!-- <li class="nav-item dropdown" id="myDropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  RR.HH </a>
+              <ul class="dropdown-menu">
+                <li> <a class="dropdown-item" href=""> Departamentos </a></li>
+                <li> <a class="dropdown-item" href=""> Empleados </a></li>
+                 <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+                  <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+                <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> 
+              </ul>
+            </li> -->
+  
+            
+  
+            <div class="container">
+  
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPerfil" aria-controls="offcanvasPerfil">
+                  <i class="bi bi-power"></i> Salir
+                </a>
+              </li>
+  
+          
+  
+  
+              <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#info" style="float: right;"><i class="bi bi-info-circle-fill"></i></button> -->
+  
+              
+  
+            </div> 
+             
+  
+        </ul>
+  
+      </div>
+  
+  </nav>
 
-          </div> 
-           
-
-      </ul>
-
-    </div>
-
-</nav>
+<?php } ?>
 
 
 

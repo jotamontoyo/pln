@@ -182,7 +182,7 @@ class Solicitudes extends BaseController
             if(!$file->isValid()) {
                 //echo $file->getErrorString();
                 $session->setFlashdata('mensaje', 'No se ha cargado ninguna imagen');
-                return redirect()->back()->withInput();
+                return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
             };
             if(!$file->hasMoved()) { // si el archivo todavia no se ha movido, se fuerza a moverse a su ubicacion temporal writeable/uploads
                 $apellidosMasFoto = $post['apellidos'] . ' - ' . $file->getName();

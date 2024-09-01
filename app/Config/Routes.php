@@ -6,6 +6,13 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/',                                           'Home::index');
+$routes->get('formularios/solicitud-afiliacion',            'Home::solicitud_afiliacion');
+$routes->get('instrucciones/direccion-mision-vision',       'Home::direccion_mision_vision');
+$routes->get('instrucciones/reglamento',                    'Home::reglamento');
+$routes->get('instrucciones/metodologia',                   'Home::metodologia');
+$routes->get('instrucciones/empadronamiento',               'Home::empadronamiento');
+
+
 
 
 $routes->get('users',                               'Users::index',                     ['filter' => 'CheckReadPermission', 'filter' => 'CheckIsAdmin']);
@@ -22,6 +29,8 @@ $routes->put('solicitudes/(:num)/img',                  'Solicitudes::update_img
 $routes->post('solicitudes/crear',                      'Solicitudes::create');
 $routes->put('solicitudes/(:num)/fecha_nacimiento',     'Solicitudes::update_fecha_nacimiento/$1',      ['filter' => 'CheckUpdatePermission']);
 $routes->get('solicitudes/(:num)/afiliar',              'Solicitudes::create_afiliado/$1',              ['filter' => 'CheckCreatePermission']);
+
+
 
 
 

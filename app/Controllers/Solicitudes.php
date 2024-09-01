@@ -60,6 +60,21 @@ class Solicitudes extends BaseController
 
 
 
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
     public function listar_solicitudes()
     {
         $builder = $this->db->table('solicitudes')
@@ -83,6 +98,11 @@ class Solicitudes extends BaseController
         ->join('estados', 'estados.id = solicitudes.estado_id');
         return DataTable::of($builder)->toJson(true);
     }
+
+
+
+
+
 
 
 

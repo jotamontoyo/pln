@@ -25,7 +25,7 @@ DE MARZO DEL 2023</p>
   <div class="feature col">
     <h3 class="fs-2 text-body-emphasis">Misión</h3>
     <p>Crear un núcleo de unidad.</p>
-    <a href="#flush-collapseOne">
+    <a href="#flush-collapseOn">
       <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Contenido</button>
     </a>
   </div>
@@ -82,6 +82,8 @@ DE MARZO DEL 2023</p>
     </div>
   </div>
 </div>
+
+<br><br>
 
 
 

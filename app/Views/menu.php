@@ -41,6 +41,10 @@
 <span class="ir-arriba"><i class="bi bi-arrow-up-square"></i></span>
 
 
+
+   
+
+
 <?php if(auth()->user()) { ?>
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">

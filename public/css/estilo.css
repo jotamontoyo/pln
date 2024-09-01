@@ -48,24 +48,156 @@
 
 
 
+
+
+
+
+    .breadcrumb-item a {
+        color: #DF0101;
+    }
+
+
+
+
+
+
     
 /*********** back-ground 1ª seccion **************************/
-    .img_backg {
-        margin-top: 0%;
-        padding-top: 5%;
+    .img_backg1 {
+        padding-top: 2%;
         height: 100vh;
         background-size: cover; 
-        background-image: url('../../public/img/fondos/paisaje-nubes.jpg'); 
-        background-attachment: fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-image: url('../../public/img/fondos/manifestacion.jpg');
         background-repeat: no-repeat;
+        color: red;
+        
+    }
+
+
+/************************************************************/
+
+
+
+
+
+/*********** back-ground 2ª seccion **************************/
+    .img_backg2 {
+
+        height: auto;
+        background-size: cover; 
+        background-image: url('../../public/img/fondos/fondo_2.jpg'); 
+        background-repeat: no-repeat;
+
+        
     }
 /************************************************************/
 
 
 
-    .modal-body {
-        text-align: justify;
+
+/******************** estilos de la cabecera de todas la páginas *****************/
+    .cabecera {
+        margin-top: 0%;
+        padding-top: 2%;
+        width: 100%;
+        height: 340px;
+        background-size: cover; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-image: url('../../public/img/fondos/fondo_2.jpg'); 
+        background-image: center;
+        background-repeat: no-repeat;
+        color: white;
     }
+/**********************************************************************************/
+
+
+
+
+
+
+/*************************** logo de la 1ª seccion ************/
+    .img_logo_seccion1 {
+        max-width: 40%; 
+        margin-bottom: 15px;
+        opacity: 0.8;
+    }
+/*****************************************************************/
+
+
+
+
+/*************************** img_logo_rotulos ************/
+    .img_logo_rotulos {
+        max-width: 4%;
+        min-width: 40px; 
+        margin-bottom: 15px;
+        opacity: 0.8;
+    }
+/*****************************************************************/
+
+
+
+    .breadcrumb-item {
+        font-size: 20px;
+    }
+
+
+
+
+
+
+
+/******************************* botones_menu *******************/
+    .botones_menu {
+        margin: 15px;
+        position: relative;
+        border-radius: 0%;
+        
+    }
+    .botones_menu a {
+        width: 200px;
+        border: none;
+        border-radius: 0%;
+        background-color: #DF0101;
+    }
+    .botones_menu a:hover {
+        background-color: #B40404;
+    }
+/******************************************************************/
+
+
+
+
+
+
+
+/********************* carousel ******************************/
+    .carousel {
+        background-color: black;
+    }
+    .carousel img {
+        max-width: 30%;
+    }
+/*************************************************************/
+
+
+    .jumbotron {
+        width: 100%;
+        height: 500px;
+        color: white;
+        background-color: #DF0101;
+        opacity: 0.8;
+    }
+
+
+
+
+    
 
 
 
@@ -96,7 +228,13 @@
 
 
     body {
-        margin-top: -25px;
+        margin-top: -24px;
+    }
+
+
+
+    .modal-body {
+        text-align: justify;
     }
 
 
@@ -150,6 +288,7 @@
         bottom:20px;
         right:20px;
         border-radius: 5px;
+        z-index: 1000;
     }
 
     .sombra {
@@ -197,15 +336,27 @@
 
 
 
+
+
+
+
+
 /* Cuando la pantalla es menor a 900px  (tablets y teléfonos inteligentes)*/
 @media only screen and (max-width : 900px) {
 
 
     /*********** back-ground 1er banner **************************/
-    .img_backg {
+    .img_backg1 {
         padding-top: 10%;
         height: auto;
+        min-height: 100vh;
+
+        
+
     }
+
+
+    
      
 
 
@@ -233,32 +384,8 @@
         border-radius: 5px;
     }
 
-    /*.centrar_div {
-        width: 420px;
-        margin-left: auto;
-        margin-right: auto;
+    .carousel img {
+        max-width: 50%;
     }
-    
-    .img_titulos_metodologia {
-        width: 20%;
-    }
-
-    .swal-modal {
-        background-color: rgba(63,255,106,0.69);
-        border: 3px solid white;
-    }
-
-    .swal-button {
-        padding: 7px 19px;
-        border-radius: 2px;
-        background-color: #4962B3;
-        font-size: 12px;
-        border: 1px solid #3e549a;
-        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-    }
-
-    .img_titulos_empadronamiento {
-        width: 50%;
-    } */
 }
 

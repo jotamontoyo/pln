@@ -33,6 +33,24 @@ class Home extends BaseController
 
     public function index()
     {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('index', $data);
+    }
+
+
+
+
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function solicitud_afiliacion()
+    {
         $estados = $this->estadosModel->findAll();
         $departamentos = $this->departamentosModel->findAll();
         $municipios = $this->municipiosModel->findAll();
@@ -43,8 +61,87 @@ class Home extends BaseController
             'departamentos' => $departamentos,
             'municipios'    => $municipios
         ];
-        return view('index', $data);
+        return view('formularios/solicitud-afiliacion', $data);
     }
+
+
+
+
+
+
+
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function direccion_mision_vision()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('instrucciones/direccion-mision-vision', $data);
+    }
+
+
+
+
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function reglamento()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('instrucciones/reglamento', $data);
+    }
+
+
+
+
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function metodologia()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('instrucciones/metodologia', $data);
+    }
+
+
+
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function empadronamiento()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('instrucciones/empadronamiento', $data);
+    }
+
+
+
+
+
 
 
 

@@ -80,7 +80,21 @@ class Filters extends BaseFilters
     public array $globals = [
         'before' => [
             // 'honeypot',
-            'session' => ['except' => ['/', '/solicitudes/crear', 'login*', 'register', 'auth/a/*', 'logout']],
+            'session' => [
+                'except' => [
+                    '/', 
+                    'solicitudes/crear',
+                    'formularios/solicitud-afiliacion',
+                    'instrucciones/direccion-mision-vision',
+                    'instrucciones/reglamento',
+                    'instrucciones/metodologia',
+                    'instrucciones/empadronamiento',
+                    'login*',
+                    'register', 
+                    'auth/a/*', 
+                    'logout',
+                ]
+            ],
             'csrf' => ['except' => ['solicitudes/crear']], // se exceptua la ruta porque en el host da problemas
             // 'invalidchars',
         ],

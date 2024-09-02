@@ -44,7 +44,7 @@
 
 
     <div class="row">
-      <h1 class="centrado display-4"><img class="img_logo_rotulos" src="public/img/logos/logoPLN.jpg" alt=""> <b>PARTIDO LIBERAL DE NICARAGUA</b></h1>
+      <h1 class="centrado display-4 titulo-index"><b>PARTIDO LIBERAL DE NICARAGUA <img class="img_logo_rotulos" src="public/img/logos/logoPLN.jpg" alt=""></b></h1>
     </div>
 
 
@@ -68,10 +68,24 @@
     <div class="row">
 
       <div class="col-sm-4 centrado">
+
+        <div class="botones_menu">
+          <a class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
+            Instructivos
+          </a>
+          <li class="nav-item" id="dropdown">
+            <ul class="dropdown-menu">
+              <li> <a class="dropdown-item" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#conCedulaModal"> Con cédula &raquo; </a></li>
+              <li> <a class="dropdown-item" style="background-color: white;"data-bs-toggle="modal" data-bs-target="#sinCedulaModal"> Sin cédula &raquo; </a></li>
+            </ul>
+          </li>
+        </div>
         <div class="botones_menu"><a href="instrucciones/direccion-mision-vision" class="btn btn-primary">Dirección, misión y visión</a></div>
         <div class="botones_menu"><a href="instrucciones/reglamento" class="btn btn-primary">Reglamento</a></div>
         <div class="botones_menu"><a href="instrucciones/metodologia" class="btn btn-primary">Metodología</a></div>
         <div class="botones_menu"><a href="instrucciones/empadronamiento" class="btn btn-primary">Empadronamiento</a></div>
+        <div class="botones_menu"><a href="comunicaciones/videos" class="btn btn-primary">Vídeos</a></div>
+        <div class="botones_menu"><a href="comunicaciones/articulos" class="btn btn-primary">Artículos</a></div>
         <div class="botones_menu"><a href="formularios/solicitud-afiliacion" class="btn btn-primary">Afiliación</a></div>
       </div>
 
@@ -95,7 +109,7 @@
 
         <div class="jumbotron p-5 centrado">
           
-            <h1>Custom jumbotron</h1>
+            <h1>Información corporativa</h1>
             <p class="fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
             <button class="btn btn-primary btn-lg" type="button">Example button</button>
           
@@ -163,6 +177,11 @@
     </button>
   </div>
 
+  
+
+<?= $this->include('instrucciones/con-sin-cedula')  ?>
+
+  
 
 
 

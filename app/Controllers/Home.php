@@ -143,6 +143,44 @@ class Home extends BaseController
 
 
 
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function videos()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('comunicaciones/videos', $data);
+    }
+
+
+
+
+
+
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function articulos()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('comunicaciones/articulos', $data);
+    }
+
+
+
+
+
+
 
 
 

@@ -89,6 +89,8 @@ class Filters extends BaseFilters
                     'instrucciones/reglamento',
                     'instrucciones/metodologia',
                     'instrucciones/empadronamiento',
+                    'comunicaciones/videos',
+                    'comunicaciones/articulos',
                     'login*',
                     'register', 
                     'auth/a/*', 

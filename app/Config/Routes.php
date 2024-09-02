@@ -6,11 +6,18 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/',                                           'Home::index');
+
 $routes->get('formularios/solicitud-afiliacion',            'Home::solicitud_afiliacion');
+
 $routes->get('instrucciones/direccion-mision-vision',       'Home::direccion_mision_vision');
 $routes->get('instrucciones/reglamento',                    'Home::reglamento');
 $routes->get('instrucciones/metodologia',                   'Home::metodologia');
 $routes->get('instrucciones/empadronamiento',               'Home::empadronamiento');
+
+
+$routes->get('comunicaciones/videos',                           'Home::videos');
+$routes->get('comunicaciones/articulos',                        'Home::articulos');
+
 
 
 

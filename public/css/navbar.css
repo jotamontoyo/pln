@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 	.dropdown-menu li{ position: relative; 	}
@@ -22,8 +31,16 @@
 		margin-left: 4px;
 	}
 
+
+	
+
 }	
 /* ============ desktop view .end// ============ */
+
+
+
+
+
 
 /* ============ small devices ============ */
 @media (max-width: 991px) {
@@ -41,7 +58,35 @@
 		max-width: 15%;
 		margin-left: 4px;
 	}
-}	
+
+
+	.navbar-expand-md .navbar-nav {
+		flex-direction: row;  
+	}
+
+	
+
+    .navbar-expand-md .navbar-collapse {
+    	margin-left: 0%;
+        margin-right: 0%;
+    }
+
+
 /* ============ small devices .end// ============ */
 
+}
 
+
+.navbar-expand-md .navbar-nav {
+	flex-direction: column;  
+}
+
+.navbar-expand-md .navbar-collapse {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.navbar-toggler, .navbar-toggler-icon {
+	background-color: #DF0101;
+	opacity: 0.8;
+}

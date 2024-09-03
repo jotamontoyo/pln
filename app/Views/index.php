@@ -63,34 +63,45 @@
     </div> -->
 
   
-
+    
     
     <div class="row">
 
-      <div class="col-sm-4 centrado">
-
-        <div class="botones_menu">
-          <a class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
-            Instructivos
-          </a>
-          <li class="nav-item" id="dropdown">
-            <ul class="dropdown-menu">
-              <li> <a class="dropdown-item" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#conCedulaModal"> Con cédula &raquo; </a></li>
-              <li> <a class="dropdown-item" style="background-color: white;"data-bs-toggle="modal" data-bs-target="#sinCedulaModal"> Sin cédula &raquo; </a></li>
+      <div class="col-sm-4">
+        <nav class="navbar navbar-expand-md navbar-dark centrado">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> Menú
+          </button>
+          <div class="collapse navbar-collapse navbar-menu" id="navbarCollapse">
+            <ul class="navbar-nav">
+                  <div class="botones_menu">
+                    <a class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
+                      Instructivos
+                    </a>
+                    <li class="nav-item" id="dropdown">
+                      <ul class="dropdown-menu">
+                        <li> <a class="dropdown-item" style="background-color: white;" data-bs-toggle="modal" data-bs-target="#conCedulaModal"> Con cédula &raquo; </a></li>
+                        <li> <a class="dropdown-item" style="background-color: white;"data-bs-toggle="modal" data-bs-target="#sinCedulaModal"> Sin cédula &raquo; </a></li>
+                      </ul>
+                    </li>
+                  </div>
+                  <div class="botones_menu"><a href="instrucciones/direccion-mision-vision" class="btn btn-primary">Dirección, misión y visión</a></div>
+                  <div class="botones_menu"><a href="instrucciones/reglamento" class="btn btn-primary">Reglamento</a></div>
+                  <div class="botones_menu"><a href="instrucciones/metodologia" class="btn btn-primary">Metodología</a></div>
+                  <div class="botones_menu"><a href="instrucciones/empadronamiento" class="btn btn-primary">Empadronamiento</a></div>
+                  <div class="botones_menu"><a href="comunicaciones/videos" class="btn btn-primary">Vídeos</a></div>
+                  <div class="botones_menu"><a href="comunicaciones/articulos" class="btn btn-primary">Artículos</a></div>
+                  <div class="botones_menu"><a href="formularios/solicitud-afiliacion" class="btn btn-primary">Afiliación</a></div>
             </ul>
-          </li>
-        </div>
-        <div class="botones_menu"><a href="instrucciones/direccion-mision-vision" class="btn btn-primary">Dirección, misión y visión</a></div>
-        <div class="botones_menu"><a href="instrucciones/reglamento" class="btn btn-primary">Reglamento</a></div>
-        <div class="botones_menu"><a href="instrucciones/metodologia" class="btn btn-primary">Metodología</a></div>
-        <div class="botones_menu"><a href="instrucciones/empadronamiento" class="btn btn-primary">Empadronamiento</a></div>
-        <div class="botones_menu"><a href="comunicaciones/videos" class="btn btn-primary">Vídeos</a></div>
-        <div class="botones_menu"><a href="comunicaciones/articulos" class="btn btn-primary">Artículos</a></div>
-        <div class="botones_menu"><a href="formularios/solicitud-afiliacion" class="btn btn-primary">Afiliación</a></div>
+          </div>
+        </nav>
       </div>
 
       <div class="col-sm-8 centrado">
         <div><img src="public/img/logos/logoPLN.jpg" class="img_logo_seccion1" alt=""></div>
+
+          <a href="formularios/solicitud-afiliacion" type="button" class="btn btn-success btn-lg boton-bajo-logo"><i class="bi bi-table"></i>  &nbsp;A f í l i a t e</a>
+
       </div>
 
 
@@ -105,15 +116,35 @@
 
 
   <div class="img_backg2">
-   
 
-        <div class="jumbotron p-5 centrado">
-          
-            <h1>Información corporativa</h1>
-            <p class="fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-            <button class="btn btn-primary btn-lg" type="button">Example button</button>
-          
+    <!-- por que afiliarse 2º baner -->
+    <div class="container px-4 py-5" id="hanging-icons">
+      <h2 class="pb-2 border-bottom">Por qué afiliarse...</h2>
+
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div class="">
+
+          </div>
+          <div>
+            <h3 class="fs-2 text-body-emphasis"><img src="public\img\logos\facil-de-usar.png" width="10%" alt=""> Fácil</h3>
+            <p>Registro Directamente desde un sitio web para uso de todos los residentes en el exterior.</p>
+          </div>
         </div>
+        <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fs-2 text-body-emphasis"><img src="public/img/logos/seguridad-activada.png" width="10%" alt=""> Seguro</h3>
+            <p> El sitio web Partido Liberal de Nicaragua está alojado en servidores de alto rendimiento con datos encriptados que garantizan la seguridad y confidencialidad de la información.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fs-2 text-body-emphasis"><img src="public/img/logos/requerido.png" width="10%" alt=""> Necesario</h3>
+            <p>Prepararse desde ya para poder votar en las próximas elecciones con condiciones, los residentes en el exterior somos mas del 25 % del padron.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -122,66 +153,15 @@
 
 
 
-  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
-    <div class="carousel-inner centrado">
-
-      <div class="carousel-item active">
-
-        <img src="public/img/fondos/paisaje-mar.jpg" alt="">
-        <div class="container">
-          <div class="carousel-caption text-start centrar_div">
-            <h1 class="centrado">Example headline.</h1>
-            <p class="opacity-75 centrado">Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary centrado" href="#">Sign up today</a></p>
-          </div>
-        </div>
-        
-      </div>
-
-      <div class="carousel-item">
-        <img src="public/img/fondos/paisaje-mar.jpg" alt="">
-        <div class="container">
-          <div class="carousel-caption text-start centrar_div">
-            <h1 class="centrado">Example headline.</h1>
-            <p class="opacity-75 centrado">Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary centrado" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="public/img/fondos/paisaje-mar.jpg" alt="">
-        <div class="container">
-          <div class="carousel-caption text-start centrar_div">
-            <h1 class="centrado">Example headline.</h1>
-            <p class="opacity-75 centrado">Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary centrado" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  
 
   
 
 <?= $this->include('instrucciones/con-sin-cedula')  ?>
 
   
+
+
 
 
 

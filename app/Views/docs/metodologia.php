@@ -52,7 +52,7 @@
     <li><b>h)</b> Proceso de inclusión de temas a tratar en comisiones y modalidad de reporte de avances.</li>
     <li><b>i)</b> Normas, contenidos, cronogramas de reuniones en los distintos niveles, de dirección como para las representaciones territoriales.</li>
     <li><b>j)</b> Modelos de actas, comunicados y notas de prensa</li>
-    <li><b>k)</b> Guías para la redacción y presentación de documentos a lo interno como hacía el exterior./li>
+    <li><b>k)</b> Guías para la redacción y presentación de documentos a lo interno como hacía el exterior.</li>
     <li><b>l)</b> Composición del modelo de informes internos a nivel de comité ejecutivo como de representaciones territoriales.</li>
     <li><b>m)</b> Procedimiento, valoración y toma de decisiones para lograr alianzas con sectores, organizaciones y otros.</li>
 </ul>

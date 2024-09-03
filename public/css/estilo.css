@@ -80,10 +80,13 @@
         -o-background-size: cover;
         background-image: url('../../public/img/fondos/manifestacion1.jpg');
         background-repeat: no-repeat;
+        background-attachment: fixed; 
         color: #DF0101;
 
         
+        
     }
+
 
     .img_backg1 b {
         background-color: white;
@@ -103,7 +106,7 @@
 
         height: auto;
         background-size: cover; 
-        background-image: url('../../public/img/fondos/fondo_2.jpg'); 
+        /* background-image: url('../../public/img/fondos/fondo_2.jpg'); */
         background-repeat: no-repeat;
 
         
@@ -123,7 +126,7 @@
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-image: url('../../public/img/fondos/fondo_2.jpg'); 
+        background-image: url('../../public/img/fondos/manifestacion5.jpg'); 
         background-image: center;
         background-repeat: no-repeat;
         color: #DF0101;
@@ -131,7 +134,9 @@
 
     .cabecera a {
         color: #DF0101;
+        background-color: white;
         font-weight: bold;
+        opacity: 0.8;
     }
 
 
@@ -142,21 +147,39 @@
 
 
 
-/*************************** logo de la 1ª seccion ************/
+/*************************** logo y boton afiliate de la 1ª seccion ************/
     .img_logo_seccion1 {
         max-width: 40%; 
         margin-bottom: 15px;
         opacity: 0.8;
     }
 
-    
+    .boton-bajo-logo {
+        min-width: 40%;
+        border-radius: 0px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        opacity: 0.8;
+    }
 /*****************************************************************/
+
+
+
+
+
+
+
 
 
     .titulo-index {
         color: #DF0101;
         font-weight: bold;
     }
+
+
+
+
 
 
 /***************************  ************/
@@ -180,7 +203,8 @@
 
 /******************************* botones_menu *******************/
     .botones_menu {
-        margin: 15px;
+        margin: 8px;
+        margin-left: 80px;
         position: relative;
         border-radius: 0%;
         
@@ -206,14 +230,6 @@
 
 
 
-/********************* carousel ******************************/
-    .carousel {
-        background-color: black;
-    }
-    .carousel img {
-        max-width: 30%;
-    }
-/*************************************************************/
 
 
 
@@ -222,15 +238,6 @@
 
 
 
-
-
-    .jumbotron {
-        width: 100%;
-        height: 500px;
-        color: white;
-        background-color: #DF0101;
-        opacity: 0.8;
-    }
 
 
 
@@ -294,8 +301,9 @@
 
     body {
 
-        margin-top: -27px;
+        margin-top: -28px;
         font-size: 18px;
+        text-align: justify;
 
     }
 
@@ -417,11 +425,31 @@
     .img_backg1 {
         padding-top: 10%;
         height: auto;
-        
-
-        
+        min-height: 100vh;
 
     }
+
+
+/*************************** logo de la 1ª seccion ************/
+    .img_logo_seccion1 {
+        max-width: 50%; 
+        margin-bottom: 15px;
+        margin: 30px;
+        opacity: 0.8;
+    }
+/*****************************************************************/
+
+
+
+
+/******************************* botones_menu *******************/
+    .botones_menu {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        margin-left: 8px;
+        margin-right: 4px;
+    }
+/***************************************************************/
 
 
     

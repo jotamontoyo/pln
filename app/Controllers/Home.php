@@ -143,6 +143,87 @@ class Home extends BaseController
 
 
 
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function con_cedula_movil()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('instrucciones/con-cedula-movil', $data);
+    }
+
+
+
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function con_cedula_computadora()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('instrucciones/con-cedula-computadora', $data);
+    }
+
+
+
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function sin_cedula_movil()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('instrucciones/sin-cedula-movil', $data);
+    }
+
+
+
+
+
+
+
+    /**
+     * Return an array of resource objects, themselves in array format.
+     *
+     * @return ResponseInterface
+     */
+    public function sin_cedula_computadora()
+    {
+        $data = [
+            'titulo'        => 'Partido Liberal de Nicaragua'
+        ];
+        return view('instrucciones/sin-cedula-computadora', $data);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /**
      * Return an array of resource objects, themselves in array format.
      *

@@ -219,28 +219,46 @@
 
 
 
+<ul>
+  <li><b>Arto.18.- </b> Código de Ética
+    <ul>
+      <li><b>1.</b> El presente Código Disciplinario le permite al Partido Liberal Nicaragüense en esta primera etapa como organización, dirigir y actuar sujeto a normas disciplinarias, con el fin de velar por la consolidación de la moral pública y la ética política de sus autoridades como de sus afiliados.</li>
+      <li><b>2.</b> TITULARIDAD DE LA ACCION DISCIPLINARIA. La organización del Partido Liberal de Nicaragua es el titular de la potestad disciplinaria y la ejercerá a través del Comité ejecutivo con la participación de las estructuras organizativas.</li>
+      <li><b>3.</b> DESTINATARIOS DEL CÓDIGO DE ETICA. El presente Código Disciplinario, se aplicará a las personas que tengan la condición de miembros afiliados a la organización Partido Liberal de Nicaragua, de acuerdo con lo previsto en su reglamento.</li>
+      <li><b>4.</b> LEGALIDAD. El afiliado sólo podrá ser investigado y sancionado disciplinariamente por aquellas conductas previstas como faltas disciplinarias en el presente Código y en las disposiciones legales.</li>
+      <li><b>5.</b> DEBIDO PROCESO. La garantía constitucional y del respeto del debido proceso se aplica en todas las actuaciones previstas en este Código.</li>
+      <li><b>6.</b> RESOLUCION DE LA DUDA. En las investigaciones que se adelanten a los afiliados, toda duda ha de resolverse a su favor cuando no haya modo de eliminarla.</li>
+      <li><b>7.</b> PRESUNCION DE INOCENCIA. El afiliado a quien se adelante investigación disciplinaria, se presume inocente mientras no se declare su responsabilidad mediante fallo ejecutoriado debidamente sustentado.</li>
+      <li><b>8.</b> COSA JUZGADA. El afiliado no podrá ser juzgado más de una vez por un mismo comportamiento resuelto con anterioridad, aun cuando a éste se le dé una denominación distinta.</li>
+      <li><b>9.</b> CULPABILIDAD. En el proceso disciplinario queda proscrita toda forma de responsabilidad objetiva y las faltas sólo serán sancionables a título de dolo o culpa.</li>
+      <li><b>10.</b> FAVORABILIDAD. En las investigaciones disciplinarias que se adelanten contra los afiliados, la ley permisiva o favorable se aplicará de preferencia a la restrictiva o desfavorable.</li>
+      <li><b>11.</b> IGUALDAD. Las garantías y el trato de las autoridades disciplinarias serán iguales para todos los destinatarios de presente Código de ética, sin discriminación alguna.</li>
+      <li><b>12.</b> RECONOCIMIENTO DE LA DIGNIDAD HUMANA. Todo miembro afiliado a la organización Partido Liberal de Nicaragua, en desarrollo del proceso disciplinario, será tratado con el respeto debido a la dignidad humana.</li>
+      <li><b>13.</b> PRINCIPIO DE INTERPRETACION. En la interpretación y aplicación del Código de ética de la organización Partido Liberal de Nicaragua, debe tenerse presente que su propósito es el logro de los fines contenidos en sus principios en el reglamento basados en los derechos y obligaciones como en la protección de los derechos y garantías consagrados a favor de sus destinatarios.</li>
+      <li><b>14.</b> CAUSALES DE EXCLUSION DE RESPONSABILIDAD. El afiliado quedará exento de responsabilidad disciplinaria, cuando actúe amparado por alguna de las causales de exclusión de responsabilidad o cuando esté en situación de inimputabilidad.</li>
+      <li><b>15.</b> CAUSALES DE EXTINCION. Son causales de extinción de la actuación disciplinaria, las siguientes: 1. La muerte del afiliado investigado. 2. La prescripción de la actuación disciplinaria.</li>
+      <li><b>16.</b> PRESCRIPCION. La actuación disciplinaria prescribe en el término de cinco (5) años contado a partir de la consumación de la falta, o desde la realización del último acto en las faltas de carácter permanente o continuado, o a partir del conocimiento que se tenga por parte de la autoridad competente. Cuando fueren varias las conductas investigadas en un solo proceso, la prescripción opera independientemente para cada una de ellas.</li>
+      <li><b>17.</b> PARAGRAFO. La prescripción de la actuación disciplinaria se interrumpe cuando se profiera decisión de suspensión temporal provisional o se inicia investigación disciplinaria.</li>
+      <li><b>18.</b> RENUNCIA A LA PRESCRIPCION. El afiliado podrá renunciar a la prescripción de la actuación disciplinaria, para que se inicie o continúe adelantando la investigación.</li>
+      <li><b>19.</b> REHABILITACION. Transcurrido el término previsto en la sanción de suspensión, el afiliado quedará rehabilitado automáticamente.</li>
+    </ul>
+  </li> 
+</ul>
 
-Arto.18.- Código de Ética
-ARTICULO 1. El presente Código Disciplinario le permite al Partido Liberal Nicaragüense en esta primera etapa como organización, dirigir y actuar sujeto a normas disciplinarias, con el fin de velar por la consolidación de la moral pública y la ética política de sus autoridades como de sus afiliados.
-ARTICULO 2. TITULARIDAD DE LA ACCION DISCIPLINARIA.
-La organización del Partido Liberal de Nicaragua es el titular de la potestad disciplinaria y la ejercerá a través del Comité ejecutivo con la participación de las estructuras organizativas.
-ARTICULO 3. DESTINATARIOS DEL CÓDIGO DE ETICA. El presente Código Disciplinario, se aplicará a las personas que tengan la condición de miembros afiliados a la organización Partido Liberal de Nicaragua, de acuerdo con lo previsto en su reglamento.
-ARTICULO 4. LEGALIDAD. El afiliado sólo podrá ser investigado y sancionado disciplinariamente por aquellas conductas previstas como faltas disciplinarias en el presente Código y en las disposiciones legales.
-ARTICULO 5. DEBIDO PROCESO. La garantía constitucional y del respeto del debido proceso se aplica en todas las actuaciones previstas en este Código.
-ARTICULO 6. RESOLUCION DE LA DUDA. En las investigaciones que se adelanten a los afiliados, toda duda ha de resolverse a su favor cuando no haya modo de eliminarla.
-ARTICULO 7. PRESUNCION DE INOCENCIA. El afiliado a quien se adelante investigación disciplinaria, se presume inocente mientras no se declare su responsabilidad mediante fallo ejecutoriado debidamente sustentado.
-ARTICULO 8. COSA JUZGADA. El afiliado no podrá ser juzgado más de una vez por un mismo comportamiento resuelto con anterioridad, aun cuando a éste se le dé una denominación distinta.
 
-ARTICULO 9. CULPABILIDAD. En el proceso disciplinario queda proscrita toda forma de responsabilidad objetiva y las faltas sólo serán sancionables a título de dolo o culpa.
-ARTICULO 10. FAVORABILIDAD. En las investigaciones disciplinarias que se adelanten contra los afiliados, la ley permisiva o favorable se aplicará de preferencia a la restrictiva o desfavorable.
-ARTICULO 11. IGUALDAD. Las garantías y el trato de las autoridades disciplinarias serán iguales para todos los destinatarios de presente Código de ética, sin discriminación alguna.
-ARTICULO 12. RECONOCIMIENTO DE LA DIGNIDAD HUMANA. Todo miembro afiliado a la organización Partido Liberal de Nicaragua, en desarrollo del proceso disciplinario, será tratado con el respeto debido a la dignidad humana.
-ARTICULO 13. PRINCIPIO DE INTERPRETACION. En la interpretación y aplicación del Código de ética de la organización Partido Liberal de Nicaragua, debe tenerse presente que su propósito es el logro de los fines contenidos en sus principios en el reglamento basados en los derechos y obligaciones como en la protección de los derechos y garantías consagrados a favor de sus destinatarios.
-ARTICULO 14. CAUSALES DE EXCLUSION DE RESPONSABILIDAD. El afiliado quedará exento de responsabilidad disciplinaria, cuando actúe amparado por alguna de las causales de exclusión de responsabilidad o cuando esté en situación de inimputabilidad.
-ARTICULO 15. CAUSALES DE EXTINCION. Son causales de extinción de la actuación disciplinaria, las siguientes: 1. La muerte del afiliado investigado. 2. La prescripción de la actuación disciplinaria.
-ARTICULO 16. PRESCRIPCION. La actuación disciplinaria prescribe en el término de cinco (5) años contado a partir de la consumación de la falta, o desde la realización del último acto en las faltas de carácter permanente o continuado, o a partir del conocimiento que se tenga por parte de la autoridad competente. Cuando fueren varias las conductas investigadas en un solo proceso, la prescripción opera independientemente para cada una de ellas.
-Reglamento del Partido Liberal de Nicaragua
-Pagina 19
-ARTICULO 17. PARAGRAFO. La prescripción de la actuación disciplinaria se interrumpe cuando se profiera decisión de suspensión temporal provisional o se inicia investigación disciplinaria.
-ARTICULO 18. RENUNCIA A LA PRESCRIPCION. El afiliado podrá renunciar a la prescripción de la actuación disciplinaria, para que se inicie o continúe adelantando la investigación.
-ARTICULO 19. REHABILITACION. Transcurrido el término previsto en la sanción de suspensión, el afiliado quedará rehabilitado automáticamente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

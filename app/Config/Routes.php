@@ -9,10 +9,14 @@ $routes->get('/',                                           'Home::index');
 
 $routes->get('formularios/solicitud-afiliacion',            'Home::solicitud_afiliacion');
 
-$routes->get('instrucciones/direccion-mision-vision',       'Home::direccion_mision_vision');
-$routes->get('instrucciones/reglamento',                    'Home::reglamento');
-$routes->get('instrucciones/metodologia',                   'Home::metodologia');
-$routes->get('instrucciones/empadronamiento',               'Home::empadronamiento');
+$routes->get('instrucciones/direccion-mision-vision',                           'Home::direccion_mision_vision');
+$routes->get('instrucciones/reglamento',                                        'Home::reglamento');
+$routes->get('instrucciones/metodologia',                                       'Home::metodologia');
+$routes->get('instrucciones/empadronamiento',                                   'Home::empadronamiento');
+$routes->get('instrucciones/con-cedula-movil',                                  'Home::con_cedula_movil');
+$routes->get('instrucciones/con-cedula-computadora',                            'Home::con_cedula_computadora');
+$routes->get('instrucciones/sin-cedula-movil',                                  'Home::sin_cedula_movil');
+$routes->get('instrucciones/sin-cedula-computadora',                            'Home::sin_cedula_computadora');
 
 
 $routes->get('comunicaciones/videos',                           'Home::videos');

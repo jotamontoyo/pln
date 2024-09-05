@@ -41,308 +41,20 @@
 <span class="ir-arriba"><i class="bi bi-arrow-up-square"></i></span>
 
 
+<a class="boton-arbol-mapa" data-bs-toggle="offcanvas" data-bs-target="#offcanvasArbol" aria-controls="offcanvasArbol" style="">
+  <img src="<?= base_url() ?>public/img/logos/menu-lateral.png" alt="">
+</a>
 
 
 
 
-<?php if(auth()->user()) { ?>
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+
+
+
+
       
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-
-          <div>
-
-            <a style="color:white" href=<?= base_url() ?>><i class="bi bi-house-door"></i> Inicio</a>
-            <a style="color:white" href=<?= base_url('login') ?>><i class="bi bi-door-open"></i> Acceso</a>
-        
-          
-            
-            <a style="color:white" href=<?= base_url('users')?>><i class="bi bi-person-check"></i> Usuarios </a>
-            <a style="color:white" href=<?= base_url('solicitudes')?>><i class="bi bi-clipboard"></i> Solicitudes </a>
-            <a style="color:white" href=<?= base_url('afiliados')?>><i class="bi bi-bookmark-check"></i> Afiliaciones </a>
-  
-          
-  
-  
-          
-            <!-- <li class="nav-item dropdown" id="myDropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Compras  </a>
-              <ul class="dropdown-menu">
-  
-                <li> <a class="dropdown-item" href=<?= base_url()?>> Almacenenes &raquo; </a>
-                  <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="#">SubAlmacenenes</a></li>
-                     <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                    <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                      <ul class="submenu dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                      </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li> 
-                  </ul>
-                </li>
-                  
-  
-                <li> <a class="dropdown-item" href=<?= base_url()?>> Productos &raquo; </a>
-                  <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href=<?= base_url()?>>Grupos</a></li>
-                    <li><a class="dropdown-item" href=<?= base_url()?>>Categorías</a></li>
-                    <li><a class="dropdown-item" href=<?= base_url()?>>SubCategorías</a>
-                       <ul class="submenu dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                      </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                  </ul>
-                </li>
-                <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
-                <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-                <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
-        
-              </ul>
-  
-            </li> -->
-  
-  
-  
-  
-  
-  
-  
-  
-
-                <a style="color:white" class="dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-geo-alt"></i> Localizaciones  </a>
-                <ul class="dropdown-menu">
-                  <li> <a class="dropdown-item" href="<?= base_url()?>estados"><img src="public/img/logos/ico_earth.png" class="ico_pais" alt=""> Paises &raquo; </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item"><img src="public/img/logos/ico_nic.png" class="ico_pais" alt=""> Nicaragua &raquo; </a>
-                        <ul class="submenu dropdown-menu">
-                          <li><a class="dropdown-item" href="<?= base_url()?>departamentos">Departamentos &raquo; </a></li>
-                          <li><a class="dropdown-item" href="<?= base_url()?>municipios">Municipios &raquo; </a></li>
-                        </ul>
-                      </li>
-                      <li> <a class="dropdown-item"><img src="public/img/logos/ico_eeuu.png" class="ico_pais" alt=""> EE.UU &raquo; </a>
-                        <ul class="submenu dropdown-menu">
-                          <li><a class="dropdown-item">Ciudades &raquo; </a></li>
-                          <li><a class="dropdown-item">Estados &raquo; </a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-            <!-- <li class="nav-item dropdown" id="myDropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  RR.HH </a>
-              <ul class="dropdown-menu">
-                <li> <a class="dropdown-item" href=""> Departamentos </a></li>
-                <li> <a class="dropdown-item" href=""> Empleados </a></li>
-                 <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
-                  <ul class="submenu dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                    <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                    <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                      <ul class="submenu dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                        <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                      </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                    <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                  </ul>
-                </li>
-                <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-                <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li> 
-              </ul>
-            </li> -->
-  
-            
-  
-  
-
-                <a style="color:white; cursor: pointer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPerfil" aria-controls="offcanvasPerfil">
-                  <i class="bi bi-power"></i> Salir
-                </a>
-
-  
-          
-  
-  
-              <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#info" style="float: right;"><i class="bi bi-info-circle-fill"></i></button> -->
-  
-              
-  
-            </div> 
-          </div>
-  
-        </ul>
-  
-      </div>
-  
-  </nav>
-
-<?php } ?>
-
-
-
-
-
-
-
-
-
-
-<!-- <nav class="navbar navbar-expand-lg bg-secondary">
-  <div class="container-fluid">
-
-    <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasArbol" aria-controls="offcanvasArbol" style="float: left;">
-    <i class="bi bi-three-dots"></i>
-    </button>
-    
-    <a class="navbar-brand" href="#">Empresa</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="main_nav">
-      <ul class="navbar-nav">
-
-
-        <li class="nav-item active"> <a class="nav-link" href=<?= base_url() ?>>Inicio </a> </li>
-        <li class="nav-item active"> <a class="nav-link" href=<?= base_url('login') ?>>Acceso </a> </li>
-        
-        <?php if(auth()->user()) { ?>
-          
-          <li class="nav-item"><a class="nav-link" href=<?= base_url('users')?>> Usuarios </a></li>
-          <li class="nav-item"><a class="nav-link" href=<?= base_url('solicitudes')?>> Solicitudes </a></li>
-        
-          <li class="nav-item dropdown" id="myDropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Compras  </a>
-            <ul class="dropdown-menu">
-
-              <li> <a class="dropdown-item" href=<?= base_url()?>> Almacenenes &raquo; </a>
-                <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href="#">SubAlmacenenes</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                </ul>
-              </li>
-                
-
-              <li> <a class="dropdown-item" href=<?= base_url()?>> Productos &raquo; </a>
-                <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href=<?= base_url()?>>Grupos</a></li>
-                  <li><a class="dropdown-item" href=<?= base_url()?>>Categorías</a></li>
-                  <li><a class="dropdown-item" href=<?= base_url()?>>SubCategorías</a>
-                     <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                    </ul> 
-                  </li>
-                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                </ul>
-              </li>
-              <li> <a class="dropdown-item" href=<?= base_url()?>> Pedidos </a></li>
-              <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
-      
-            </ul>
-
-          </li>
-
-
-
-          <li class="nav-item dropdown" id="myDropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  RR.HH </a>
-            <ul class="dropdown-menu">
-              <li> <a class="dropdown-item" href=""> Departamentos </a></li>
-              <li> <a class="dropdown-item" href=""> Empleados </a></li>
-               <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
-                <ul class="submenu dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
-                    <ul class="submenu dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Multi level 1</a></li>
-                      <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
-                  <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-              <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
-            </ul>
-          </li>
-
-      </ul>
-
-
-        
-      <div class="container">
-
-        <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPerfil" aria-controls="offcanvasPerfil" style="float: right;">
-          <i class="bi bi-person-fill"></i>
-        </button>
-
-        <?php } ?>
-
-
-        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#info" style="float: right;"><i class="bi bi-info-circle-fill"></i></button>
-
-        
-
-      </div> 
-        
-
-        <div class="container">
-        
-          <img src="<?= base_url(); ?>public/img/logos/logoPLN.jpg" style="max-width: 30px; float: right;" alt="">
-          
-        </div>
-
-
-    </div>
-  
-
-  </div>
-
-
-</nav> -->
-
-
-
-          
 
 
           
@@ -385,11 +97,6 @@
                 <!-- formulario para cambio de perPage -->
 
 
-                
-
-
-                
-
               </div>
 
               <br>
@@ -405,104 +112,112 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
           <!-- offcanvasArbol -->
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasArbol" aria-labelledby="offcanvasArbolLabel">
 
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasArbolLabel">Arbol</h5>
+              <h5 class="offcanvas-title" id="offcanvasArbolLabel">Partido Liberal de Nicaragua</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
 
             <div class="offcanvas-body">
 
-              <!-- <div>
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-              </div>
-
-              <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                  Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div> -->
-
               <div class="container-fluid">
-                <h5>empresa</h5>
+                <h5>Mapa del sitio</h5>
+                <br>
         
                 <div class="contenedor-arbol">
+                  
                   <ul>
-                    <li>Compras
-                      <ul>
+                    <li><a href="<?= base_url()?>"><i class="bi bi-house-door"></i> Inicio</a></li>
 
-                        <a href="http://localhost/empresa/public/productos"><li>Productos</a>
-                          <ul>
-                            <a href="http://localhost/empresa/public/grupo-productos"><li>Grupos de productos</li></a>
-                            <a href="http://localhost/empresa/public/categoria-productos"><li>Categorías de productos</li></a>
-                            <a href="http://localhost/empresa/public/subcategoria-productos"><li>Subcategorías de productos</li></a>
+                    <?php if(auth()->user()) { ?>
+
+                      <li><a href="<?= base_url(); ?>users"><i class="bi bi-person-check"></i> Usuarios</a></li>
+                      <li><a href=<?= base_url('solicitudes')?>><i class="bi bi-clipboard"></i> Solicitudes </a></li>
+                      <li><a href=<?= base_url('afiliados')?>><i class="bi bi-bookmark-check"></i> Afiliaciones </a></li>
+
+
+
+
+                      <div class="">
+                        <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-geo-alt"></i> Localizaciones</a>
+                        <li class="nav-item" id="dropdown">
+                          <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item nav-item" href="<?= base_url(); ?>estados">Paises &raquo; </a>
+                              <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item"><img src="<?= base_url(); ?>public/img/logos/ico_nic.png" class="ico_pais" alt=""> Nicaragua &raquo; </a>
+                                  <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?= base_url(); ?>departamentos">Departamentos</a></li>
+                                    <li><a class="dropdown-item" href="<?= base_url(); ?>municipios">Municipios</a></li>
+                                  </ul>
+                                </li>
+                                <li> <a class="dropdown-item"><img src="<?= base_url(); ?>public/img/logos/ico_eeuu.png" class="ico_pais" alt=""> EE.UU &raquo; </a>
+                                  <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item">Ciudades</a></li>
+                                    <li><a class="dropdown-item">Estados</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
                           </ul>
                         </li>
+                      </div>
 
-                        <li>Ubicaciones
-                          <ul>
-                            <li>Zonas</li>
-                            <li>Delegaciones</li>
-                            <li>Centros</li></a>
-                            <a href="http://localhost/empresa/public/almacen"><li>Almacenes</li></a>
-                            <li>Genericons.svg</li>
-                            <li>Genericons.ttf</li>
-                            <li>Genericons.woff</li>
-                            <li>LICENSE.txt</li>
-                            <li>README.md</li>
-                          </ul>
-                        </li>
+                      
 
-                        <li>Pedidos
-                          <ul>
-                            <li>creativecommons_public-domain_80x15.png</li>
-                            <li>gnu-head-mini.png</li>
-                            <li>questioncopyright-favicon.png</li>
-                          </ul>
-                        </li>
+                    <?php } ?>
 
-                        <li>Recepciones
-                          <ul>
-                            <li>functions.js</li>
-                            <li>jquery-3.1.1.js</li>
-                          </ul>
-                        </li>
 
-                      </ul>
-                    </li>
+                    <div class="">
+                      <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-info-circle"></i> Instructivos</a>
+                      <li class="nav-item" id="dropdown">
+                        <ul class="dropdown-menu">
+                          <li> <a class="dropdown-item" style="background-color: white;"> Con cédula &raquo; </a>
+                            <ul class="submenu dropdown-menu">
+                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/con-cedula-movil">Móvil</a></li>
+                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/con-cedula-computadora">Computadora</a></li>
+                            </ul>
+                          </li>
+                          <li> <a class="dropdown-item" style="background-color: white;"> Sin cédula &raquo; </a>
+                            <ul class="submenu dropdown-menu">
+                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/sin-cedula-movil">Móvil</a></li>
+                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/sin-cedula-computadora">Computadora</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </div>
 
-                    <li>RR.HH
-                      <ul>
-                        <a href="http://localhost/empresa/public/empleados"><li>Empleados</li></a>
-                        <a href="http://localhost/empresa/public/departamentos"><li>Departamentos</li></a>
-                      </ul>
-                    </li>
+                    <li><a href="<?= base_url()?>instrucciones/direccion-mision-vision"><i class="bi bi-collection"></i> Dirección, misión y visión</a></li>
+                    <li><a href="<?= base_url()?>instrucciones/reglamento"><i class="bi bi-card-list"></i> Reglamento</a></li>
+                    <li><a href="<?= base_url()?>instrucciones/metodologia"><i class="bi bi-card-checklist"></i> Metodología</a></li>
+                    <li><a href="<?= base_url()?>instrucciones/empadronamiento"><i class="bi bi-clipboard2-plus"></i> Empadronamiento</a></li>
+                    <li><a href="<?= base_url()?>comunicaciones/videos"><i class="bi bi-film"></i> Vídeos</a></li>
+                    <li><a href="<?= base_url()?>comunicaciones/articulos"><i class="bi bi-newspaper"></i> Artículos</a></li>
+                    <li><a href="<?= base_url()?>formularios/solicitud-afiliacion"><i class="bi bi-person-plus-fill"></i> Afiliación</a></li>
 
-                    <li>templates
-                      <ul>
-                        <li>archives.html</li>
-                        <li>article.html</li>
-                        <li>article_info.html</li>
-                        <li>author.html</li>
-                        <li>authors.html</li>
-                        <li>base.html</li>
-                        <li>category.html</li>
-                        <li>index.html</li>
-                        <li>page.html</li>
-                        <li>pagination.html</li>
-                        <li>period_archives.html</li>
-                        <li>tag.html</li>
-                        <li>taglist.html</li>
-                        <li>tags.html</li>
-                      </ul>
-                    </li>
+                    <?php if(auth()->user()) { ?>
+                      <li><a href="<?= base_url('logout')?>"><i class="bi bi-power"></i> Cerrar sesión</a></li>
+                    <?php } ?>
+
+
+
+
+                        
+
+                    
 
                   </ul>
 

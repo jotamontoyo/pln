@@ -41,7 +41,7 @@
 <span class="ir-arriba"><i class="bi bi-arrow-up-square"></i></span>
 
 
-<a class="boton-arbol-mapa" data-bs-toggle="offcanvas" data-bs-target="#offcanvasArbol" aria-controls="offcanvasArbol" style="">
+<a class="boton-arbol-mapa" data-bs-toggle="offcanvas" data-bs-target="#offcanvasArbol" aria-controls="offcanvasArbol">
   <img src="<?= base_url() ?>public/img/logos/menu-lateral.png" alt="">
 </a>
 
@@ -127,7 +127,7 @@
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasArbol" aria-labelledby="offcanvasArbolLabel">
 
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasArbolLabel">Partido Liberal de Nicaragua</h5>
+              <h4 class="offcanvas-title" id="offcanvasArbolLabel">Partido Liberal de Nicaragua <img class="img_logo_rotulos" src="<?= base_url(); ?>public/img/logos/logoPLN.jpg" alt=""></b></h4>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
 

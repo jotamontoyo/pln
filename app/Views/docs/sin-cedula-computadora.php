@@ -4,5 +4,5 @@
 
 <br>
 <div class="col-sm-8 centrado">
-  <img class="img-doc-instrucciones" src="" alt="">
+  <img class="img-doc-instrucciones" src="<?= base_url(); ?>public/docs/instruciones-sin-cedula-computadora.png" alt="">
 </div>

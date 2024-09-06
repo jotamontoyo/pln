@@ -58,7 +58,8 @@
     }
 
     .breadcrumb-item {
-        font-size: 20px;
+        margin: 0px;
+        font-size: 16px;
     }
 
     .breadcrumb-item a {
@@ -173,7 +174,7 @@
 
 
 
-/*************************** arbol-mapa *************************/
+/*************************** offcanvas arbol-mapa *************************/
     .boton-arbol-mapa {
         position: fixed;
         top: 45%;
@@ -183,9 +184,19 @@
     .boton-arbol-mapa:hover {
         cursor: pointer;
     }
-    .contenedor-arbol ul, li {
+    .offcanvas {
+        opacity: 0.8;
+    }
+    .contenedor-arbol a, ul, li {
+        margin-top: 10px;
+        margin-bottom: 10px;
         list-style:none;
-
+    }
+    .dropdown-toggle {
+        margin-top: 30px;
+    }
+    .dropdown-toggle:hover {
+        cursor: pointer;
     }
     .ico_pais { 
 		max-width: 15%;
@@ -230,8 +241,8 @@
 
 /******************************* botones_menu *******************/
     .botones_menu {
-        margin: 8px;
-        margin-left: 80px;
+        margin-bottom: 20px;
+        margin-left: 50%;
         position: relative;
         border-radius: 0%;
         
@@ -510,6 +521,14 @@
 
 
 
+/*************************** offcanvas arbol-mapa *************************/
+.boton-arbol-mapa {
+
+    top: 50%;
+    float: left;
+    z-index: 1000;
+}
+/*****************************************************************/
 
     
      

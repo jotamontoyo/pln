@@ -6,14 +6,14 @@
       <ul class="dropdown-menu">
         <li> <a class="dropdown-item" style="background-color: white;"> Con cédula &raquo; </a>
           <ul class="submenu dropdown-menu">
-            <li><a class="dropdown-item" href="<?= base_url()?>instrucciones/con-cedula-movil">Móvil</a></li>
-            <li><a class="dropdown-item" href="<?= base_url()?>instrucciones/con-cedula-computadora">Computadora</a></li>
+            <li><a class="dropdown-item" href="<?= base_url()?>instrucciones/con-cedula-movil"><i class="bi bi-phone"></i> Móvil</a></li>
+            <li><a class="dropdown-item" href="<?= base_url()?>instrucciones/con-cedula-computadora"><i class="bi bi-pc-display-horizontal"></i> Computadora</a></li>
           </ul>
         </li>
         <li> <a class="dropdown-item" style="background-color: white;"> Sin cédula &raquo; </a>
           <ul class="submenu dropdown-menu">
-            <li><a class="dropdown-item" href="<?= base_url()?>instrucciones/sin-cedula-movil">Móvil</a></li>
-            <li><a class="dropdown-item" href="<?= base_url()?>instrucciones/sin-cedula-computadora">Computadora</a></li>
+            <li><a class="dropdown-item" href="<?= base_url()?>instrucciones/sin-cedula-movil"><i class="bi bi-phone"></i> Móvil</a></li>
+            <li><a class="dropdown-item" href="<?= base_url()?>instrucciones/sin-cedula-computadora"><i class="bi bi-pc-display-horizontal"></i> Computadora</a></li>
           </ul>
         </li>
       </ul>

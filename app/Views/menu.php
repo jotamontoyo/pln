@@ -40,10 +40,16 @@
 
 <span class="ir-arriba"><i class="bi bi-arrow-up-square"></i></span>
 
-
-<a class="boton-arbol-mapa" data-bs-toggle="offcanvas" data-bs-target="#offcanvasArbol" aria-controls="offcanvasArbol">
-  <img src="<?= base_url() ?>public/img/logos/menu-lateral.png" alt="">
-</a>
+<?php if(!auth()->user()) { ?>
+  <a class="boton-arbol-mapa" data-bs-toggle="offcanvas" data-bs-target="#offcanvasArbol" aria-controls="offcanvasArbol">
+    <img src="<?= base_url() ?>public/img/logos/menu-lateral.png" alt="">
+  </a>
+<?php } ?>
+<?php if(auth()->user()) { ?>
+  <a class="boton-arbol-mapa" data-bs-toggle="offcanvas" data-bs-target="#offcanvasArbol" aria-controls="offcanvasArbol">
+    <img src="<?= base_url() ?>public/img/logos/menu-lateral-loged2.png" alt="">
+  </a>
+<?php } ?>
 
 
 
@@ -186,14 +192,14 @@
                         <ul class="dropdown-menu">
                           <li> <a class="dropdown-item" style="background-color: white;"> Con cédula &raquo; </a>
                             <ul class="submenu dropdown-menu">
-                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/con-cedula-movil">Móvil</a></li>
-                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/con-cedula-computadora">Computadora</a></li>
+                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/con-cedula-movil"><i class="bi bi-phone"></i> Móvil</a></li>
+                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/con-cedula-computadora"><i class="bi bi-pc-display-horizontal"></i> Computadora</a></li>
                             </ul>
                           </li>
                           <li> <a class="dropdown-item" style="background-color: white;"> Sin cédula &raquo; </a>
                             <ul class="submenu dropdown-menu">
-                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/sin-cedula-movil">Móvil</a></li>
-                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/sin-cedula-computadora">Computadora</a></li>
+                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/sin-cedula-movil"><i class="bi bi-phone"></i> Móvil</a></li>
+                              <li><a class="dropdown-item" href="<?= base_url(); ?>instrucciones/sin-cedula-computadora"><i class="bi bi-pc-display-horizontal"></i> Computadora</a></li>
                             </ul>
                           </li>
                         </ul>
@@ -206,17 +212,14 @@
                     <li><a href="<?= base_url()?>instrucciones/empadronamiento"><i class="bi bi-clipboard2-plus"></i> Empadronamiento</a></li>
                     <li><a href="<?= base_url()?>comunicaciones/videos"><i class="bi bi-film"></i> Vídeos</a></li>
                     <li><a href="<?= base_url()?>comunicaciones/articulos"><i class="bi bi-newspaper"></i> Artículos</a></li>
-                    <li><a href="<?= base_url()?>formularios/solicitud-afiliacion"><i class="bi bi-person-plus-fill"></i> Afiliación</a></li>
+                    <li><a href="<?= base_url()?>formularios/solicitud-afiliacion"><i class="bi bi-person-add"></i> Afiliación</a></li>
 
                     <?php if(auth()->user()) { ?>
                       <li><a href="<?= base_url('logout')?>"><i class="bi bi-power"></i> Cerrar sesión</a></li>
+                      <br>
+                      <hr>
+                      <li><i class="bi bi-person"></i> Usuario: <?= auth()->user()->username; ?></li>
                     <?php } ?>
-
-
-
-
-                        
-
                     
 
                   </ul>

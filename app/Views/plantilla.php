@@ -36,7 +36,8 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <script scr="<?= base_url() ?>public/js/anidaSelect.js"></script>
+    <!-- <script scr="<?= base_url() ?>public/js/anidaSelect.js"></script>
+    <script scr=<?= base_url('public/js/spinner.js') ?>></script> -->
     
 
     
@@ -144,8 +145,11 @@
             </script>
 
         <?php } ?> 
-        
-        
+
+
+
+
+     
 
 
         

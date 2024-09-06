@@ -565,9 +565,15 @@
 
 
 
-            <div class="centrar_div">
+            <div class="centrado">
               <br>              
-              <button class="btn btn-primary btn-lg" type="submit" id="bSubmit" name="bSubmit"><i class="bi bi-send"></i> Enviar solicitud</button>
+              <button onclick="activar_spinner()" class="btn btn-primary btn-lg sombra" type="submit" id="bSubmit" name="bSubmit">
+                <div class="clear-fix">
+                  <div class="float-start" id="spinner"></div>
+                  <i class="bi bi-send" id="ico-enviar"></i>
+                  <span id="texto-bSubmit"> Enviar solicitud</span>
+                </div>
+              </button>
             </div>
             <br>
 
@@ -582,8 +588,26 @@
 
   </div>
 
+  
+
 
 </div>
+
+
+
+<script>
+  function activar_spinner() {
+    $("#ico-enviar").prop('hidden', true);
+    $('#texto-bSubmit').html("Enviando solicitud..."); 
+    //Al hacer click en el botón se muestra el spinner
+    $("#spinner").show("slow");
+    //En cinco segundos se oculta el spinner y se muestra la tabla
+    setTimeout(() => {
+      $("#spinner").hide("slow");
+      //$("#tabla").html('<table border="1"><tr><td>1</td><td>2</td></tr></table>');
+    }, "5000");
+  };
+</script>
 
 
 

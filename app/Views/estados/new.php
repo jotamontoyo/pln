@@ -20,7 +20,7 @@
 <div class="container">
 
     <!-- <h2 class="mb-4"><?= lang('App.productos.titulo') ?></h2> -->
-    <h4 class="centrado">Crear Estado nicaraguense</h4>
+    <h4 class="centrado">Crear Estado</h4>
 
     <br>
 

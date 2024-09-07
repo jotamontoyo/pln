@@ -41,13 +41,13 @@
       <nav aria-label="breadcrumb">
         <ol class="container-breadcrumb breadcrumb breadcrumb-custom overflow-hidden text-center rounded-3">
           <li class="breadcrumb-item">
-            <a class="" href=<?= base_url(); ?> style="color: red;">
+            <a href=<?= base_url(); ?> style="color: red;">
               <i class="bi bi-house-fill"></i>
               Inicio
             </a>
           </li>
           <li class="breadcrumb-item">
-            <a class="" href=<?= base_url() . "formularios/solicitud-afiliacion" ?> style="color: red;">
+            <a href=<?= base_url('formularios/solicitud-afiliacion'); ?> style="color: red;">
               Solicitud de afiliación
             </a>
           </li>
@@ -193,21 +193,7 @@
 
 
 
-              <div class="col-sm-2" id="ciudad_panel" hidden>
-
-                <div class="clear-fix">
-                  <label class="float-start" id="ciudad_label" for="ciudad" hidden></label>
-                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#ciudadResidenciaModal">
-                    <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
-                  </a>
-                </div>
-
-                <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= set_value('ciudad'); ?>">
-                <p class="small" style="color:red">
-                  <?= validation_show_error('ciudad'); ?>
-                </p>
-
-              </div>
+              
 
 
               <div class="col-sm-2" id="pais_panel" hidden>
@@ -224,6 +210,95 @@
                 <p class="small" style="color:red">
                   <?= validation_show_error('pais'); ?>
                 </p>
+              </div>
+
+
+              <!-- solo se activa cuando el pais de residencia es eeuu -->
+              <div class="col-sm-2" id="pais_panel_eeuu" hidden>
+
+                <div class="clear-fix">
+                  <label class="float-start" id="pais_label_eeuu" for="pais" hidden></label>
+                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#estadoResidenciaModal">
+                    <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                  </a>
+                </div>
+
+                <select class="form-select" id="pais" name="pais">
+                  <option value=""></option>
+                  <option value="Alabama">Alabama</option>
+                  <option value="Alaska">Alaska</option>
+                  <option value="Arizona">Arizona</option>
+                  <option value="Arkansas">Arkansas</option>
+                  <option value="California">California</option>
+                  <option value="Carolina del Norte">Carolina del Norte</option>
+                  <option value="Carolina del Sur">Carolina del Sur</option>
+                  <option value="Colorado">Colorado</option>
+                  <option value="Connecticut">Connecticut</option>
+                  <option value="Dakota del Norte">Dakota del Norte</option>
+                  <option value="Dakota del Sur">Dakota del Sur</option>
+                  <option value="Delaware">Delaware</option>
+                  <option value="Florida">Florida</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Hawái">Hawái</option>
+                  <option value="Idaho">Idaho</option>
+                  <option value="Illinois">Illinois</option>
+                  <option value="Indiana">Indiana</option>
+                  <option value="Iowa">Iowa</option>
+                  <option value="Kansas">Kansas</option>
+                  <option value="Kentucky">Kentucky</option>
+                  <option value="Luisiana">Luisiana</option>
+                  <option value="Maine">Maine</option>
+                  <option value="Maryland">Maryland</option>
+                  <option value="Massachusetts">Massachusetts</option>
+                  <option value="Michigan">Michigan</option>
+                  <option value="Minnesota">Minnesota</option>
+                  <option value="Misisipi">Misisipi</option>
+                  <option value="Misuri">Misuri</option>
+                  <option value="Montana">Montana</option>
+                  <option value="Nebraska">Nebraska</option>
+                  <option value="Nevada">Nevada</option>
+                  <option value="Nueva Jersey">Nueva Jersey</option>
+                  <option value="Nueva York">Nueva York</option>
+                  <option value="Nuevo Hampshire">Nuevo Hampshire</option>
+                  <option value="Nuevo México">Nuevo México</option>
+                  <option value="Ohio">Ohio</option>
+                  <option value="Oklahoma">Oklahoma</option>
+                  <option value="Oregón">Oregón</option>
+                  <option value="Pensilvania">Pensilvania</option>
+                  <option value="Rhode Island">Rhode Island</option>
+                  <option value="Tennessee">Tennessee</option>
+                  <option value="Texas">Texas</option>
+                  <option value="Utah">Utah</option>
+                  <option value="Vermont">Vermont</option>
+                  <option value="Virginia">Virginia</option>
+                  <option value="Virginia Occidental">Virginia Occidental</option>
+                  <option value="Washington">Washington</option>
+                  <option value="Wisconsin">Wisconsin</option>
+                  <option value="Wyoming">Wyoming</option>
+                </select>
+                <p class="small" style="color:red">
+                  <?= validation_show_error('pais'); ?>
+                </p>
+              </div>
+
+
+
+
+
+              <div class="col-sm-2" id="ciudad_panel" hidden>
+
+                <div class="clear-fix">
+                  <label class="float-start" id="ciudad_label" for="ciudad" hidden></label>
+                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#ciudadResidenciaModal">
+                    <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                  </a>
+                </div>
+
+                <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= set_value('ciudad'); ?>">
+                <p class="small" style="color:red">
+                  <?= validation_show_error('ciudad'); ?>
+                </p>
+
               </div>
 
 
@@ -298,7 +373,6 @@
                 </div>
 
                 <input type="text" class="form-control" id="cedula" name="cedula" value="<?= set_value('cedula'); ?>">
-                <!-- <label for="cedula" class="form-label" id="cedula_label">Cédula Nº:</label> -->
                 <p class="small" style="color:red">
                   <?= validation_show_error('cedula'); ?>
                 </p>
@@ -324,7 +398,6 @@
                         <option value="<?= $departamento['codigo'] ?>"><?= $departamento['nombre'] ?></option>
                     <?php endforeach; ?>
                 </select>
-                <!-- <label for="estado_id">Departamento de expedición*</label> -->
                 <p class="small" style="color:red">
                     <?= validation_show_error('departamento_id'); ?>
                 </p>
@@ -348,7 +421,6 @@
                         <option value="<?= $municipio['codigo'] ?>" data-departamento="<?= $municipio['departamento_codigo'] ?>"><?= $municipio['nombre'] ?></option>
                     <?php endforeach; ?>
                 </select>
-                <!-- <label for="estado_id">Municipio de expedición*</label> -->
                 <p class="small" style="color:red">
                     <?= validation_show_error('municipio_id'); ?>
                 </p>
@@ -437,7 +509,7 @@
 
 
               
-              <div class="col-sm-3" id="cedula_img_panel" name="cedula_img_panel" hidden>
+              <!-- <div class="col-sm-3" id="cedula_img_panel" name="cedula_img_panel" hidden>
 
                 <div class="clear-fix">
                   <label class="float-start" for="cedula_img">&nbsp; Imagen*</label>
@@ -450,7 +522,7 @@
                 <p class="small" style="color:red">
                   <?= validation_show_error('cedula_img'); ?>
                 </p>
-              </div>
+              </div> -->
 
               
 
@@ -568,11 +640,11 @@
             <div class="centrado">
               <br>              
               <button onclick="activar_spinner()" class="btn btn-primary btn-lg sombra" type="submit" id="bSubmit" name="bSubmit">
-                <div class="clear-fix">
-                  <div class="float-start" id="spinner"></div>
-                  <i class="bi bi-send" id="ico-enviar"></i>
-                  <span id="texto-bSubmit"> Enviar solicitud</span>
+                <div>
+                  <div class="spinner-border spinner-border-sm centrado" id="spinner" role="status" hidden>
                 </div>
+                <i class="bi bi-send" id="ico-enviar"></i>
+                <span id="texto-bSubmit"> Enviar solicitud</span>
               </button>
             </div>
             <br>
@@ -600,7 +672,8 @@
     $("#ico-enviar").prop('hidden', true);
     $('#texto-bSubmit').html("Enviando solicitud..."); 
     //Al hacer click en el botón se muestra el spinner
-    $("#spinner").show("slow");
+    //$("#spinner").show("slow");
+    $('#spinner').prop('hidden', false)
     //En cinco segundos se oculta el spinner y se muestra la tabla
     setTimeout(() => {
       $("#spinner").hide("slow");
@@ -866,22 +939,27 @@
 
 
 
-    //muestra campos segun el pais elejido en el campo estado_id
+    //muestra campos segun el pais elejido en el campo estado_id = pais de residencia
   
     $(document).on('change','#estado_id',function() {
       var pais = document.getElementById("estado_id").value;
+
       if(pais == 1 | pais == 5) { 
         $('#ciudad_label').html("&nbsp; Departamento*"); 
         $('#pais_label').html("&nbsp; Municipio*");  
       };
+
       if(pais == 2 | pais == 4) { 
         $('#ciudad_label').html("&nbsp; Ciudad*"); 
         $('#pais_label').html("&nbsp; Estado*");  
+        $('#pais_label_eeuu').html("&nbsp; Estado*");  
       };
+
       if(pais == 3) { 
         $('#ciudad_label').html("&nbsp; Provincia*"); 
         $('#pais_label').html("&nbsp; Comunidad*");  
       };
+
       $("#cedula_img").prop('hidden', false);
       $("#cedula_img_panel").prop('hidden', false);
       $("#cedula_panel").prop('hidden', false);
@@ -892,6 +970,20 @@
       $("#ciudad_label").prop('hidden', false);
       $("#pais_panel").prop('hidden', false);
       $("#pais_label").prop('hidden', false);
+
+      if(pais == 2) { 
+        $("#pais_panel").prop('hidden', true);
+        $("#pais_label").prop('hidden', true);
+        $("#pais_panel_eeuu").prop('hidden', false);
+        $("#pais_label_eeuu").prop('hidden', false);
+      } else {
+        $("#pais_panel").prop('hidden', false);
+        $("#pais_label").prop('hidden', false);
+        $("#pais_panel_eeuu").prop('hidden', true);
+        $("#pais_label_eeuu").prop('hidden', true);
+      };
+
+
     });
 
 

@@ -19,7 +19,7 @@
 
 <div class="container">
 
-    <h4 class="centrado">Crear Departamento nicaraguense</h4>
+    <h4 class="centrado">Crear Departamento</h4>
 
     <br><br>
 

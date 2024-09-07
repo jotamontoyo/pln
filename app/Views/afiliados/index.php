@@ -5,9 +5,26 @@
 
 
 
-    <br><br>
+    <br>
 
-    <h4 class="centrado">Afiliaciones</h4>
+    <br><br>
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="container-breadcrumb breadcrumb breadcrumb-custom overflow-hidden text-center rounded-3">
+          <li class="breadcrumb-item">
+            <a href=<?= base_url(); ?> style="color: red;">
+              <i class="bi bi-house-fill"></i>
+              Inicio
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href=<?= base_url('afiliados'); ?> style="color: red;">
+              Afiliaciones
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
 
     <div class="table-container">
 

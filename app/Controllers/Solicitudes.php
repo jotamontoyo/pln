@@ -198,7 +198,7 @@ class Solicitudes extends BaseController
                 'cargo', 
                 'posicion'
             ]);
-            $file = $this->request->getFile('cedula_img');
+            /* $file = $this->request->getFile('cedula_img');
             if(!$file->isValid()) {
                 //echo $file->getErrorString();
                 $session->setFlashdata('mensaje', 'No se ha cargado ninguna imagen');
@@ -209,7 +209,7 @@ class Solicitudes extends BaseController
                 $ruta = ROOTPATH . 'public/img/cedulas' . DIRECTORY_SEPARATOR; // fija la ruta para guardar/mover en disco a su ubicacion definitiva (public)
                 $file->move($ruta, $apellidosMasFoto, true); // mueve el fichero de la carpeta temporal a su ubicacion definitiva
                 $url = base_url() . 'public/img/cedulas/' . $apellidosMasFoto; // consigue la url para guardarla en el registro y verla en html
-            };
+            }; */
             if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
             if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
             $data = [
@@ -218,7 +218,7 @@ class Solicitudes extends BaseController
                 'fecha_nacimiento'      => $post['fecha_nacimiento'],
                 'genero'                => $post['genero'],
                 'cedula'                => $post['cedula'],
-                'cedula_img'            => $url,
+                // 'cedula_img'            => $url,
                 'estado_id'             => $post['estado_id'],
                 'departamento_id'       => $post['departamento_id'],
                 'municipio_id'          => $post['municipio_id'],

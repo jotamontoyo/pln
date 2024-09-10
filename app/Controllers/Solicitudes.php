@@ -162,16 +162,17 @@ class Solicitudes extends BaseController
              
             /*'cedula'                => 'is_unique[solicitudes.cedula]', */
             'genero'                => 'required',
-            'estado_id'             => 'required',
+            // 'estado_id'             => 'required',
             /* 'departamento_id'       => 'required',
-            'municipio_id'          => 'required', */
+            'municipio_id'          => 'required',
             'ciudad'                => 'required', 
-            'pais'                  => 'required',
+            'pais'                  => 'required', */
             'whatsapp'              => 'required', 
             'email'                 => 'required', 
             'afiliado'              => 'required', 
             //'cargo'                 => 'required', 
-            'posicion'              => 'required'
+            // 'posicion'              => 'required',
+            'radio_tiene_cedula' => 'required'
         ];
         if(!$this->validate($reglas)){ //si no se cumplen las reglas
             $session->setFlashdata('mensaje', 'Error(s) en formulario');
@@ -182,16 +183,19 @@ class Solicitudes extends BaseController
                 'apellidos', 
                 'fecha_nacimiento',
                 'genero', 
+                'paisResidencia',
+                'geoNivel1',
+                'geoNivel2',
                 'cedula', 
-                'cedula_img', 
-                'estado_id', 
+                // 'cedula_img', 
+                // 'estado_id', 
                 'departamento_id', 
                 'tipo_doc',
                 'numero_doc',
                 'expedicion_doc',
                 'municipio_id', 
-                'ciudad', 
-                'pais', 
+                // 'ciudad', 
+                // 'pais', 
                 'whatsapp', 
                 'email', 
                 'afiliado', 
@@ -213,25 +217,28 @@ class Solicitudes extends BaseController
             if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
             if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
             $data = [
-                'nombre'                => $post['nombre'],
-                'apellidos'             => $post['apellidos'],
-                'fecha_nacimiento'      => $post['fecha_nacimiento'],
-                'genero'                => $post['genero'],
-                'cedula'                => $post['cedula'],
-                // 'cedula_img'            => $url,
-                'estado_id'             => $post['estado_id'],
-                'departamento_id'       => $post['departamento_id'],
-                'municipio_id'          => $post['municipio_id'],
-                'tipo_doc'              => $post['tipo_doc'],
-                'numero_doc'            => $post['numero_doc'],
-                'expedicion_doc'        => $post['expedicion_doc'],
-                'ciudad'                => $post['ciudad'],
-                'pais'                  => $post['pais'],
-                'whatsapp'              => $post['whatsapp'],
-                'email'                 => $post['email'],
-                'afiliado'              => $afiliado,
-                'cargo'                 => $cargo,
-                'posicion'              => $post['posicion']
+                'nombre'                                => $post['nombre'],
+                'apellidos'                             => $post['apellidos'],
+                'fecha_nacimiento'                      => $post['fecha_nacimiento'],
+                'genero'                                => $post['genero'],
+                'pais_residencia_codigo'                => $post['paisResidencia'],
+                'geo_nivel1_codigo'                     => $post['geoNivel1'],
+                'geo_nivel2_codigo'                     => $post['geoNivel2'],
+                'cedula'                                => $post['cedula'],
+                // 'cedula_img'                             => $url,
+                // 'estado_id'                              => $post['estado_id'],
+                'departamento_id'                       => $post['departamento_id'],
+                'municipio_id'                          => $post['municipio_id'],
+                'tipo_doc'                              => $post['tipo_doc'],
+                'numero_doc'                            => $post['numero_doc'],
+                'expedicion_doc'                        => $post['expedicion_doc'],
+                // 'ciudad'                                => $post['ciudad'],
+                // 'pais'                                  => $post['pais'],
+                'whatsapp'                              => $post['whatsapp'],
+                'email'                                 => $post['email'],
+                'afiliado'                              => $afiliado,
+                'cargo'                                 => $cargo,
+                'posicion'                              => $post['posicion']
             ];
             //print_r($data);
             $this->solicitudesModel->insert($data, false);
@@ -384,7 +391,7 @@ class Solicitudes extends BaseController
             'whatsapp'              => 'required', 
             'email'                 => 'required', 
             'afiliado'              => 'required', 
-            'posicion'              => 'required',
+            //'posicion'              => 'required',
             'estado_id'             => 'required'
         ];
 

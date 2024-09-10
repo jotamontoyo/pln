@@ -156,7 +156,7 @@
 
 
 
-              <div class="col-sm-2">
+              <!-- <div class="col-sm-2">
 
                 <div class="clear-fix">
                   <label class="float-start" for="estado_id">&nbsp; País de residencia*</label>
@@ -172,9 +172,9 @@
                   <?php endforeach; ?>
                 </select>
                 <p class="small" style="color:red">
-                    <?= validation_show_error('estado_id'); ?>
+
                 </p>
-              </div>
+              </div> -->
 
               
 
@@ -196,7 +196,7 @@
               
 
 
-              <div class="col-sm-2" id="pais_panel" hidden>
+              <!-- <div class="col-sm-2" id="pais_panel" hidden>
 
                 <div class="clear-fix">
                   <label class="float-start" id="pais_label" for="pais" hidden></label>
@@ -208,12 +208,12 @@
                 <input type="text" class="form-control" id="pais" name="pais" value="<?= set_value('pais'); ?>">
                 <label for="pais" class="form-label" id="pais_label" hidden></label>
                 <p class="small" style="color:red">
-                  <?= validation_show_error('pais'); ?>
+
                 </p>
-              </div>
+              </div> -->
 
 
-              <!-- solo se activa cuando el pais de residencia es eeuu -->
+              <!-- solo se activa cuando el pais de residencia es eeuu
               <div class="col-sm-2" id="pais_panel_eeuu" hidden>
 
                 <div class="clear-fix">
@@ -277,7 +277,7 @@
                   <option value="Wyoming">Wyoming</option>
                 </select>
                 <p class="small" style="color:red">
-                  <?= validation_show_error('pais'); ?>
+
                 </p>
               </div>
 
@@ -296,14 +296,176 @@
 
                 <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= set_value('ciudad'); ?>">
                 <p class="small" style="color:red">
-                  <?= validation_show_error('ciudad'); ?>
+
+                </p>
+
+              </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div class="col-sm-2">
+
+                <div class="clear-fix">
+                  <label class="float-start" for="paisResidencia">&nbsp; País de residencia*</label>
+                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#paisResidenciaModal">
+                    <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                  </a>
+                </div>
+
+                <select class="form-select" id="paisResidencia" name="paisResidencia">
+                  <option value=""></option>
+                  <?php foreach($paisesResidencia as $paisResidencia): ?>
+                    <option value="<?= $paisResidencia['codigo'] ?>"><?= $paisResidencia['nombre'] ?></option>
+                  <?php endforeach; ?>
+                </select>
+                <p class="small" style="color:red">
+                    <?= validation_show_error('paisResidencia'); ?>
                 </p>
 
               </div>
 
 
 
+              <div class="col-sm-2" id="geo-nivel1-panel" name="geo-nivel1-panel" hidden>
 
+                <div class="clear-fix">
+                  <label class="float-start" id="geoNivel1Label" for="geoNivel1">&nbsp;</label>
+                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#municipioModal">
+                    <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                  </a>
+                </div>
+
+                <select class="form-select" id="geoNivel1" name="geoNivel1">
+                    <option value=""></option>
+                    <?php foreach($geoNiveles1 as $geoNivel1): ?>
+                        <option value="<?= $geoNivel1['codigo'] ?>" data-paisnivel1="<?= $geoNivel1['pais_residencia_codigo'] ?>"><?= $geoNivel1['nombre'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <p class="small" style="color:red">
+                    <?= validation_show_error('geoNivel1'); ?>
+                </p>
+                
+              </div>
+
+
+
+              <div class="col-sm-2" id="geo-nivel2-panel" name="geo-nivel2-panel" hidden>
+
+                <div class="clear-fix">
+                  <label class="float-start" id="geoNivel2Label" for="geoNivel2">&nbsp;</label>
+                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#municipioModal">
+                    <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
+                  </a>
+                </div>
+
+                <select class="form-select" id="geoNivel2" name="geoNivel2">
+                    <option value=""></option>
+                    <?php foreach($geoNiveles2 as $geoNivel2): ?>
+                        <option value="<?= $geoNivel2['codigo'] ?>" data-geonivel2="<?= $geoNivel2['geo_nivel1_codigo'] ?>"><?= $geoNivel2['nombre'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <p class="small" style="color:red">
+                    <?= validation_show_error('geoNivel2'); ?>
+                </p>
+                
+              </div>
+
+
+
+
+              
+
+
+
+
+
+              <script>
+
+
+                $(document).ready(function () {
+                  $(function() {
+                      $(document).on('change', '#paisResidencia', function() {
+                        var pais_codigo = $(this).val();
+                        console.log(pais_codigo);
+                        $('#geoNivel1 option').each(function() {
+                            var paisNivel1 = $(this).data('paisnivel1');
+                            console.log(paisNivel1);
+                            if (paisNivel1 == pais_codigo || $(this).val() == "") {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                        $('#geoNivel1').val('');
+                        $('#geoNivel2').val('');
+                      });
+                  });
+                });
+
+
+
+                $(document).ready(function () {
+                  $(function() {
+                      $(document).on('change', '#geoNivel1', function() {
+                        var nivel1_codigo = $(this).val();
+                        console.log(nivel1_codigo);
+                        $('#geoNivel2 option').each(function() {
+                            var geonivel2 = $(this).data('geonivel2');
+                            console.log(geonivel2);
+                            if (geonivel2 == nivel1_codigo || $(this).val() == "") {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                        $('#geoNivel2').val('');
+                      });
+                  });
+                });
+
+
+
+              </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
 
 
               <hr class="my-4">
@@ -315,14 +477,14 @@
 
                 <div class="" id="tiene_cedula" hidden>
 
-                  <label for="estado_id" class="col-form-label">
-                    ¿Tiene cédula?
+                  <label for="radio_tiene_cedula" class="col-form-label">
+                    ¿Tiene cédula?*
                   </label>
 
                   <div class="clear-fix">
 
                     <div class="form-check float-start">
-                      <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula" checked>
+                      <input class="form-check-input" type="radio" name="radio_tiene_cedula" id="radio_tiene_cedula">
                       <label class="form-check-label" for="radio_tiene_cedula">
                         Sí &nbsp; &nbsp;
                       </label>
@@ -579,7 +741,7 @@
 
 
               <hr class="my-4">
-              <h5>Tipo de participación</h5>
+              <!-- <h5>Tipo de participación</h5>
 
 
               <div class="row">
@@ -609,14 +771,14 @@
                       
                 </div>
 
-              </div>
+              </div> -->
 
 
 
 
 
 
-              <div class="col-sm-4">
+              <!-- <div class="col-sm-4">
 
                 <div class="clear-fix">
                   <label class="float-start" for="posicion">&nbsp; Posición*</label>
@@ -630,7 +792,7 @@
                   <?= validation_show_error('posicion'); ?>
                 </p>
 
-              </div>
+              </div> -->
               
             </div>
 
@@ -938,40 +1100,36 @@
 
 
 
+    $(document).on('change','#paisResidencia',function() {
+      var pais = document.getElementById("paisResidencia").value;
 
-    //muestra campos segun el pais elejido en el campo estado_id = pais de residencia
-  
-    $(document).on('change','#estado_id',function() {
-      var pais = document.getElementById("estado_id").value;
-
-      if(pais == 1 | pais == 5) { 
-        $('#ciudad_label').html("&nbsp; Departamento*"); 
-        $('#pais_label').html("&nbsp; Municipio*");  
+      if(pais == 50 | pais == 54) { 
+        $('#geoNivel1Label').html("&nbsp; Departamento*"); 
+        $('#geoNivel2Label').html("&nbsp; Municipio*");  
       };
 
-      if(pais == 2 | pais == 4) { 
-        $('#ciudad_label').html("&nbsp; Ciudad*"); 
-        $('#pais_label').html("&nbsp; Estado*");  
-        $('#pais_label_eeuu').html("&nbsp; Estado*");  
+      if(pais == 51 | pais == 53) { 
+        $('#geoNivel1Label').html("&nbsp; Estado*"); 
+        $('#geoNivel2Label').html("&nbsp; Ciudad*");  
       };
 
-      if(pais == 3) { 
-        $('#ciudad_label').html("&nbsp; Provincia*"); 
-        $('#pais_label').html("&nbsp; Comunidad*");  
+      if(pais == 52) { 
+        $('#geoNivel1Label').html("&nbsp; Comunidad*"); 
+        $('#geoNivel2Label').html("&nbsp; Provincia*");  
       };
 
       $("#cedula_img").prop('hidden', false);
       $("#cedula_img_panel").prop('hidden', false);
-      $("#cedula_panel").prop('hidden', false);
+      //$("#cedula_panel").prop('hidden', false);
       $("#tiene_cedula").prop('hidden', false);
-      $("#departamento_id_panel").prop('hidden', false);
-      $("#municipio_id_panel").prop('hidden', false);
-      $("#ciudad_panel").prop('hidden', false);
-      $("#ciudad_label").prop('hidden', false);
-      $("#pais_panel").prop('hidden', false);
-      $("#pais_label").prop('hidden', false);
+      //$("#departamento_id_panel").prop('hidden', false);
+      //$("#municipio_id_panel").prop('hidden', false);
+      $("#geo-nivel1-panel").prop('hidden', false);
+      //$("#ciudad_label").prop('hidden', false);
+      $("#geo-nivel2-panel").prop('hidden', false);
+      //$("#pais_label").prop('hidden', false);
 
-      if(pais == 2) { 
+      /*if(pais == 2) { 
         $("#pais_panel").prop('hidden', true);
         $("#pais_label").prop('hidden', true);
         $("#pais_panel_eeuu").prop('hidden', false);
@@ -981,10 +1139,10 @@
         $("#pais_label").prop('hidden', false);
         $("#pais_panel_eeuu").prop('hidden', true);
         $("#pais_label_eeuu").prop('hidden', true);
-      };
+      }; */
 
 
-    });
+    }); 
 
 
 

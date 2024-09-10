@@ -85,7 +85,7 @@
 
       <div class="col-sm-8 centrado">
         <div><img src="public/img/logos/logoPLN.jpg" class="img_logo_seccion1" alt=""></div>
-        <a href="formularios/solicitud-afiliacion" type="button" class="btn btn-success btn-lg boton-bajo-logo"><i class="bi bi-person-plus-fill"></i>  &nbsp;A f í l i a t e</a>
+        <a href="formularios/solicitud-afiliacion" type="button" class="btn btn-lg boton-bajo-logo"><i class="bi bi-person-plus-fill"></i>  &nbsp;A f í l i a t e</a>
       </div>
 
 

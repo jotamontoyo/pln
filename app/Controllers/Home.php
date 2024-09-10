@@ -8,6 +8,12 @@ use App\Models\MunicipiosModel;
 
 
 
+use App\Models\PaisResidenciaModel;
+use App\Models\GeoNivel1Model;
+use App\Models\GeoNivel2Model;
+
+
+
 class Home extends BaseController
 {
 
@@ -16,12 +22,19 @@ class Home extends BaseController
     private $departamentosModel;
     private $municipiosModel;
 
+    private $paisResidenciaModel;
+    private $geoNivel1Model;
+    private $geoNivel2Model;
+
     public function __construct()
     {
         $this->db = \Config\Database::connect(); 
         $this->estadosModel = new EstadosModel();
         $this->departamentosModel = new DepartamentosModel();
         $this->municipiosModel = new MunicipiosModel();
+        $this->paisResidenciaModel = new PaisResidenciaModel();
+        $this->geoNivel1Model = new GeoNivel1Model();
+        $this->geoNivel2Model = new GeoNivel2Model();
          
     }
 
@@ -55,11 +68,19 @@ class Home extends BaseController
         $departamentos = $this->departamentosModel->findAll();
         $municipios = $this->municipiosModel->findAll();
 
+        $paisesResidencia = $this->paisResidenciaModel->findAll();
+        $geoNiveles1 = $this->geoNivel1Model->findAll();
+        $geoNiveles2 = $this->geoNivel2Model->findAll();
+
+
         $data = [
-            'titulo'        => 'Partido Liberal de Nicaragua',
-            'estados'       => $estados,
-            'departamentos' => $departamentos,
-            'municipios'    => $municipios
+            'titulo'                => 'Partido Liberal de Nicaragua',
+            'estados'               => $estados,
+            'departamentos'         => $departamentos,
+            'municipios'            => $municipios,
+            'paisesResidencia'      => $paisesResidencia,
+            'geoNiveles1'           => $geoNiveles1,
+            'geoNiveles2'           => $geoNiveles2
         ];
         return view('formularios/solicitud-afiliacion', $data);
     }

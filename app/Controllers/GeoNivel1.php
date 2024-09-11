@@ -8,6 +8,8 @@ use \Hermawan\DataTables\DataTable;
 use App\Models\PaisResidenciaModel;
 use App\Models\GeoNivel1Model;
 
+// use App\Models\DepartamentosModel;
+
 
 class GeoNivel1 extends ResourceController
 {
@@ -19,6 +21,7 @@ class GeoNivel1 extends ResourceController
     private $db;
     private $paisResidenciaModel;
     private $geoNivel1Model;
+    // private $departamentosModel;
 
 
     public function __construct()
@@ -26,10 +29,41 @@ class GeoNivel1 extends ResourceController
         $this->db = \Config\Database::connect(); 
         $this->paisResidenciaModel = new PaisResidenciaModel();
         $this->geoNivel1Model = new GeoNivel1Model();
+        // $this->departamentosModel = new DepartamentosModel();
     }
 
 
 
+
+
+    /* public function import()
+    {
+
+        $session = session();
+
+        $departamentos = $this->departamentosModel->findAll();
+
+        //print_r($departamentos);
+        foreach ($departamentos as $departamento) {
+
+            $data['pais_residencia_codigo'] = 50;
+            $data['codigo'] = $departamento['codigo'];
+            $data['nombre'] = $departamento['nombre'];
+
+            $this->geoNivel1Model->insert($data, false);
+        }
+
+
+        $session->setFlashdata('mensaje', 'Importación correcta');
+        return redirect('geonivel1');
+       
+        //$this->geoNivel1Model->insert($data, false);
+
+
+
+
+
+    }*/
 
 
 

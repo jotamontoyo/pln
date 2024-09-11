@@ -74,7 +74,6 @@ class Solicitudes extends BaseController
 
 
 
-
     public function listar_solicitudes()
     {
         $builder = $this->db->table('solicitudes')
@@ -85,17 +84,19 @@ class Solicitudes extends BaseController
             solicitudes.apellidos, 
             (YEAR(NOW()) - YEAR(solicitudes.fecha_nacimiento)) AS edad,
             solicitudes.genero, 
-            estados.nombre AS residencia,
-            solicitudes.cedula, 
-            solicitudes.ciudad,
-            solicitudes.pais,
+            solicitudes.cedula,
+            pais_residencia.nombre AS pais,
+            geo_nivel1.nombre AS nivel1,
+            geo_nivel2.nombre AS nivel2,
             solicitudes.created_at,
             solicitudes.updated_at,
             solicitudes.deleted_at
         ')
         //->where(['solicitudes.afiliacion_id' => 0])
 
-        ->join('estados', 'estados.id = solicitudes.estado_id');
+        ->join('pais_residencia', 'pais_residencia.codigo = solicitudes.pais_residencia_codigo')
+        ->join('geo_nivel1', 'geo_nivel1.codigo = solicitudes.geo_nivel1_codigo')
+        ->join('geo_nivel2', 'geo_nivel2.codigo = solicitudes.geo_nivel2_codigo');
         return DataTable::of($builder)->toJson(true);
     }
 
@@ -162,17 +163,19 @@ class Solicitudes extends BaseController
              
             /*'cedula'                => 'is_unique[solicitudes.cedula]', */
             'genero'                => 'required',
-            // 'estado_id'             => 'required',
+            'paisResidencia' => 'required',
+            'geoNivel1' => 'required' ,
+            'geoNivel2' => 'required',
+            //'estado_id'             => 'required',
             /* 'departamento_id'       => 'required',
             'municipio_id'          => 'required',
             'ciudad'                => 'required', 
             'pais'                  => 'required', */
             'whatsapp'              => 'required', 
             'email'                 => 'required', 
-            'afiliado'              => 'required', 
+            //'afiliado'              => 'required', 
             //'cargo'                 => 'required', 
-            // 'posicion'              => 'required',
-            'radio_tiene_cedula' => 'required'
+            //'posicion'              => 'required',
         ];
         if(!$this->validate($reglas)){ //si no se cumplen las reglas
             $session->setFlashdata('mensaje', 'Error(s) en formulario');
@@ -188,7 +191,7 @@ class Solicitudes extends BaseController
                 'geoNivel2',
                 'cedula', 
                 // 'cedula_img', 
-                // 'estado_id', 
+                'estado_id', 
                 'departamento_id', 
                 'tipo_doc',
                 'numero_doc',
@@ -198,9 +201,9 @@ class Solicitudes extends BaseController
                 // 'pais', 
                 'whatsapp', 
                 'email', 
-                'afiliado', 
-                'cargo', 
-                'posicion'
+                //'afiliado', 
+                //'cargo', 
+                //'posicion'
             ]);
             /* $file = $this->request->getFile('cedula_img');
             if(!$file->isValid()) {
@@ -214,8 +217,8 @@ class Solicitudes extends BaseController
                 $file->move($ruta, $apellidosMasFoto, true); // mueve el fichero de la carpeta temporal a su ubicacion definitiva
                 $url = base_url() . 'public/img/cedulas/' . $apellidosMasFoto; // consigue la url para guardarla en el registro y verla en html
             }; */
-            if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
-            if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
+            //if($post['afiliado']) {$afiliado = 1;} else {$afiliado = 0;};
+            //if($post['cargo']) {$cargo = 1;} else {$cargo = 0;};
             $data = [
                 'nombre'                                => $post['nombre'],
                 'apellidos'                             => $post['apellidos'],
@@ -226,7 +229,7 @@ class Solicitudes extends BaseController
                 'geo_nivel2_codigo'                     => $post['geoNivel2'],
                 'cedula'                                => $post['cedula'],
                 // 'cedula_img'                             => $url,
-                // 'estado_id'                              => $post['estado_id'],
+                'estado_id'                             => 1,
                 'departamento_id'                       => $post['departamento_id'],
                 'municipio_id'                          => $post['municipio_id'],
                 'tipo_doc'                              => $post['tipo_doc'],
@@ -236,9 +239,9 @@ class Solicitudes extends BaseController
                 // 'pais'                                  => $post['pais'],
                 'whatsapp'                              => $post['whatsapp'],
                 'email'                                 => $post['email'],
-                'afiliado'                              => $afiliado,
-                'cargo'                                 => $cargo,
-                'posicion'                              => $post['posicion']
+                //'afiliado'                              => $afiliado,
+                //'cargo'                                 => $cargo,
+                //'posicion'                              => $post['posicion']
             ];
             //print_r($data);
             $this->solicitudesModel->insert($data, false);

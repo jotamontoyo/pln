@@ -10,7 +10,8 @@
     <br>
     <br>
 
-    <h4 class="centrado">geoNivel 1</h4>
+    <h4 class="centrado">Nivel geopolítico 1</h4>
+    <p class="centrado small">Estados, Comunidades, Departamentos...</p>
 
     
 
@@ -19,6 +20,7 @@
     <div class="table-container">
 
         <a href="<?= base_url('geonivel1/new'); ?>" class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> Crear</a>
+        <a class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> Importar</a>
 
         <table id="table" class="table table-striped table-hover">
             <thead>

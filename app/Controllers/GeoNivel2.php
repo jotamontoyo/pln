@@ -9,6 +9,8 @@ use App\Models\PaisResidenciaModel;
 use App\Models\GeoNivel1Model;
 use App\Models\GeoNivel2Model;
 
+//use App\Controllers\Departamentos;
+//use App\Models\MunicipiosModel;
 
 class GeoNivel2 extends ResourceController
 {
@@ -21,6 +23,7 @@ class GeoNivel2 extends ResourceController
     private $paisResidenciaModel;
     private $geoNivel1Model;
     private $geoNivel2Model;
+    //private $municipiosModel;
 
 
     public function __construct()
@@ -29,7 +32,38 @@ class GeoNivel2 extends ResourceController
         $this->paisResidenciaModel = new PaisResidenciaModel();
         $this->geoNivel1Model = new GeoNivel1Model();
         $this->geoNivel2Model = new GeoNivel2Model();
+        // $this->municipiosModel = new MunicipiosModel();
     }
+
+
+
+
+
+    /* public function import()
+    {
+
+        $session = session();
+
+        $municipios = $this->municipiosModel->findAll();
+
+        $i = 7000;
+        foreach ($municipios as $municipio) {
+
+            $data['geo_nivel1_codigo'] = $municipio['departamento_codigo'];
+            $data['codigo'] = $i;
+            $data['nombre'] = $municipio['nombre'];
+            //print_r($data);
+            $this->geoNivel2Model->insert($data, false);
+            $i = $i + 1;
+        }
+
+        $session->setFlashdata('mensaje', 'Importación correcta');
+        return redirect('geonivel2');
+
+
+    } */
+
+
 
 
 
@@ -63,8 +97,10 @@ class GeoNivel2 extends ResourceController
         $builder = $this->db->table('geo_nivel2')
         ->select('
             geo_nivel2.id, 
-            geo_nivel2.codigo, 
+            geo_nivel2.codigo,
+            pais_residencia.label_nivel2 AS clase_nivel2, 
             geo_nivel2.nombre, 
+            pais_residencia.label_nivel1 AS clase_nivel1,
             geo_nivel1.nombre AS nivel1,
             pais_residencia.nombre AS pais
         ')
@@ -109,9 +145,11 @@ class GeoNivel2 extends ResourceController
      */
     public function new()
     {
+        $paisesResidencia = $this->paisResidenciaModel->findAll();
         $geoNivel1 = $this->geoNivel1Model->findAll();
         $data = [
             'titulo'                    => 'Nuevo nivel 2',
+            'paisesResidencia'          => $paisesResidencia,
             'geoNiveles1'               => $geoNivel1
         ];
         return view('geo-nivel2/new', $data);

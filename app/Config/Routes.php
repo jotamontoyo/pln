@@ -69,12 +69,13 @@ $routes->post('pais-residencia/',                           'PaisResidencia::cre
 $routes->get('pais-residencia/(:num)/edit',                 'PaisResidencia::edit/$1',                  ['filter' => 'CheckEditPermission']);
 $routes->put('pais-residencia/(:num)',                      'PaisResidencia::update/$1',                ['filter' => 'CheckUpdatePermission']);
 
-$routes->get('geonivel1/',                            'GeoNivel1::index',                    ['filter' => 'CheckReadPermission']);
-$routes->get('geonivel1/listar_nivel',                'GeoNivel1::listar_nivel',             ['filter' => 'CheckReadPermission']);
-$routes->get('geonivel1/new',                         'GeoNivel1::new',                      ['filter' => 'CheckCreatePermission']);
-$routes->post('geonivel1/',                           'GeoNivel1::create',                   ['filter' => 'CheckCreatePermission']);
-$routes->get('geonivel1/(:num)/edit',                 'GeoNivel1::edit/$1',                  ['filter' => 'CheckEditPermission']);
-$routes->put('geonivel1/(:num)',                      'GeoNivel1::update/$1',                ['filter' => 'CheckUpdatePermission']);
+$routes->get('geonivel1/',                            'GeoNivel1::index',                   ['filter' => 'CheckReadPermission']);
+$routes->get('geonivel1/listar_nivel',                'GeoNivel1::listar_nivel',            ['filter' => 'CheckReadPermission']);
+$routes->get('geonivel1/new',                         'GeoNivel1::new',                     ['filter' => 'CheckCreatePermission']);
+$routes->post('geonivel1/',                           'GeoNivel1::create',                  ['filter' => 'CheckCreatePermission']);
+$routes->get('geonivel1/(:num)/edit',                 'GeoNivel1::edit/$1',                 ['filter' => 'CheckEditPermission']);
+$routes->put('geonivel1/(:num)',                      'GeoNivel1::update/$1',               ['filter' => 'CheckUpdatePermission']);
+// $routes->get('geonivel1/import',                      'GeoNivel1::import',                  ['filter' => 'CheckUpdatePermission']);
 
 $routes->get('geonivel2/',                              'GeoNivel2::index',                     ['filter' => 'CheckReadPermission']);
 $routes->get('geonivel2/listar_nivel',                  'GeoNivel2::listar_nivel',              ['filter' => 'CheckReadPermission']);
@@ -82,6 +83,7 @@ $routes->get('geonivel2/new',                           'GeoNivel2::new',       
 $routes->post('geonivel2/',                             'GeoNivel2::create',                    ['filter' => 'CheckCreatePermission']);
 $routes->get('geonivel2/(:num)/edit',                   'GeoNivel2::edit/$1',                   ['filter' => 'CheckEditPermission']);
 $routes->put('geonivel2/(:num)',                        'GeoNivel2::update/$1',                 ['filter' => 'CheckUpdatePermission']);
+// $routes->get('geonivel2/import',                        'GeoNivel2::import',                    ['filter' => 'CheckUpdatePermission']);
 
 
 $routes->get('municipios/',                            'Municipios::index',                     ['filter' => 'CheckReadPermission']);

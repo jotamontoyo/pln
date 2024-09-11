@@ -42,8 +42,8 @@
                     <th>Género</th>
                     <th>Cédula</th>
                     <th>País de Residencia</th>
-                    <th>Ciudad/Municipio</th>
-                    <th>Estado/Región/Comunidad/Dpto.</th>
+                    <th>Nivel 1</th>
+                    <th>Nivel 2</th>
                     <th>Creado</th>
                     <th>Modificado</th>
                     <th>Eliminado</th>
@@ -111,9 +111,11 @@
                 {data: 'edad', name:'edad'},
                 {data: 'genero'},
                 {data: 'cedula'},
-                {data: 'residencia', name:'estados.nombre'},
-                {data: 'ciudad'},
-                {data: 'pais'},
+                {data: 'pais',      name: 'pais_residencia.nombre'},
+                {data: 'nivel1',    name: 'geo_nivel1.nombre'},
+                {data: 'nivel2',    name: 'geo_nivel2.nombre'},
+                //{data: 'ciudad'},
+                //{data: 'pais'},
                 {data: 'created_at'},
                 {data: 'updated_at'},
                 {data: 'deleted_at'},

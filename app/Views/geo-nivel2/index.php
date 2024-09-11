@@ -10,7 +10,8 @@
     <br>
     <br>
 
-    <h4 class="centrado">geoNivel 2</h4>
+    <h4 class="centrado">Nivel geopoítico 2</h4>
+    <p class="centrado small">Municipios, Ciudades, Provincias...</p>
 
     
 
@@ -19,18 +20,23 @@
     <div class="table-container">
 
         <a href="<?= base_url('geonivel2/new'); ?>" class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> Crear</a>
+        <a class="btn btn-success btn-sm"><i class="bi bi-plus-lg"></i> Importar</a>
 
         <table id="table" class="table table-striped table-hover">
             <thead>
                 <tr>
                     <th>id</th>
                     <th>Código</th>
-                    <th>Nombre</th>
-                    <th>Nivel 1</th>
+                    <th>Clase nivel 2</th>
+                    <th>Nombre nivel 2</th>
+                    <th>Clase nivel 1</th>
+                    <th>Nombre nivel 1</th>
                     <th>País</th>
                      <th>Options</th>
                 </tr>
                 <tr>
+                    <th class="filterhead"></th>
+                    <th class="filterhead"></th>
                     <th class="filterhead"></th>
                     <th class="filterhead"></th>
                     <th class="filterhead"></th>
@@ -67,7 +73,9 @@
             columns :[
                 {data: 'id'},
                 {data: 'codigo'},
+                {data: 'clase_nivel2', name: 'pais_residencia.label_nivel2'},
                 {data: 'nombre'},
+                {data: 'clase_nivel1', name: 'pais_residencia.label_nivel1'},
                 {data: 'nivel1', name: 'geo_nivel1.nombre'},
                 {data: 'pais', name: 'pais_residencia.nombre'},
                 {"defaultContent": "<button type='button' name='button' id='button' class='editar btn btn-primary'><i class='bi bi-pencil'></i></button>"}

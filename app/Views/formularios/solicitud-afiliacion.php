@@ -156,7 +156,7 @@
 
 
 
-              <!-- <div class="col-sm-2">
+              <div class="col-sm-2" hidden>
 
                 <div class="clear-fix">
                   <label class="float-start" for="estado_id">&nbsp; País de residencia*</label>
@@ -174,7 +174,7 @@
                 <p class="small" style="color:red">
 
                 </p>
-              </div> -->
+              </div>
 
               
 
@@ -340,7 +340,7 @@
 
                 <div class="clear-fix">
                   <label class="float-start" id="geoNivel1Label" for="geoNivel1">&nbsp;</label>
-                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#municipioModal">
+                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#">
                     <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
                   </a>
                 </div>
@@ -363,7 +363,7 @@
 
                 <div class="clear-fix">
                   <label class="float-start" id="geoNivel2Label" for="geoNivel2">&nbsp;</label>
-                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#municipioModal">
+                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#">
                     <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
                   </a>
                 </div>
@@ -771,14 +771,14 @@
                       
                 </div>
 
-              </div> -->
+              </div>
 
 
 
 
 
 
-              <!-- <div class="col-sm-4">
+              <div class="col-sm-4">
 
                 <div class="clear-fix">
                   <label class="float-start" for="posicion">&nbsp; Posición*</label>

@@ -20,7 +20,7 @@
 <div class="container">
 
     <!-- <h2 class="mb-4"><?= lang('App.productos.titulo') ?></h2> -->
-    <h4 class="centrado">Nuevo Nivel 2 de Residencia</h4>
+    <h4 class="centrado">Nueva división administrativa de nivel 2</h4>
 
     <br>
 
@@ -101,7 +101,7 @@
 
 
 
-            <div class="col-sm-2">
+            <!-- <div class="col-sm-2">
                 <div class="clear-fix">
                     <label class="float-start" for="codigo">&nbsp; Código*</label>
                     <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#">
@@ -114,7 +114,7 @@
                         <?= validation_show_error('codigo'); ?>
                     </p>
                 </div>
-            </div>
+            </div> -->
             
             <div class="col-sm-2">
                 <div class="clear-fix">

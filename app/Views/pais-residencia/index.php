@@ -10,7 +10,7 @@
     <br>
     <br>
 
-    <h4 class="centrado">Países de Residencia</h4>
+    <h4 class="centrado">Divisiones administrativas de nivel 0</h4>
 
     
 
@@ -26,8 +26,8 @@
                     <th>id</th>
                     <th>Código</th>
                     <th>Nombre</th>
-                    <th>Nivel 1</th>
-                    <th>Nivel 2</th>
+                    <th>Clase Nivel 1</th>
+                    <th>Clase Nivel 2</th>
                     <th>Options</th>
                 </tr>
                 <tr>

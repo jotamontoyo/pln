@@ -1108,14 +1108,24 @@
         $('#geoNivel2Label').html("&nbsp; Municipio*");  
       };
 
-      if(pais == 51 | pais == 53) { 
+      if(pais == 51) { 
         $('#geoNivel1Label').html("&nbsp; Estado*"); 
         $('#geoNivel2Label').html("&nbsp; Ciudad*");  
+      };
+
+      if(pais == 53) { 
+        $('#geoNivel1Label').html("&nbsp; Región*"); 
+        $('#geoNivel2Label').html("&nbsp; Entidad Federativa*");  
       };
 
       if(pais == 52) { 
         $('#geoNivel1Label').html("&nbsp; Comunidad*"); 
         $('#geoNivel2Label').html("&nbsp; Provincia*");  
+      };
+
+      if(pais == 55) { 
+        $('#geoNivel1Label').html("&nbsp; Provincia*"); 
+        $('#geoNivel2Label').html("&nbsp; Ciudad*");  
       };
 
       $("#cedula_img").prop('hidden', false);

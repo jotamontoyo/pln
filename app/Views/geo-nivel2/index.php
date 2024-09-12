@@ -10,7 +10,7 @@
     <br>
     <br>
 
-    <h4 class="centrado">Nivel geopoítico 2</h4>
+    <h4 class="centrado">Divisiones administrativas de nivel 2</h4>
     <p class="centrado small">Municipios, Ciudades, Provincias...</p>
 
     

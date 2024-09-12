@@ -33,6 +33,7 @@
     table {
         width: 100%; /* Ancho fijo mayor al de la pantalla para forzar el scroll */
         border-collapse: collapse;
+        font-size: 15px;
     }
 
     th, td {

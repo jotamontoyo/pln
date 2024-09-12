@@ -10,7 +10,7 @@
     <br>
     <br>
 
-    <h4 class="centrado">Nivel geopolítico 1</h4>
+    <h4 class="centrado">Divisiones administrativas de nivel 1</h4>
     <p class="centrado small">Estados, Comunidades, Departamentos...</p>
 
     
@@ -27,8 +27,8 @@
                 <tr>
                     <th>id</th>
                     <th>Código</th>
+                    <th>Clase Nivel 1</th>
                     <th>Nombre</th>
-                    <th>Nivel 1</th>
                     <th>País</th>
                     <th>Options</th>
                 </tr>
@@ -69,8 +69,8 @@
             columns :[
                 {data: 'id'},
                 {data: 'codigo'},
-                {data: 'nombre'},
                 {data: 'nivel', name:'pais_residencia.label_nivel1'},
+                {data: 'nombre'},
                 {data: 'pais', name:'pais_residencia.nombre'},
                 {"defaultContent": "<button type='button' name='button' id='button' class='editar btn btn-primary'><i class='bi bi-pencil'></i></button>"}
             ],

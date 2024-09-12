@@ -177,9 +177,18 @@ class GeoNivel2 extends ResourceController
      */
     public function create()
     {
+
+        $query = $this->db->table('geo_nivel2') // se obtiene el último codigo+1 para añadir el siguiente registro
+        ->select('*')
+        ->orderBy('codigo', 'desc')
+        ->limit(1);
+        $query = $query->get();
+        $query = $query->getResultArray();
+        $siguienteCodigo = 0;
+        $siguienteCodigo = $query[0]['codigo'] + 1;
         $session = session();
         $reglas = [                     // de validacion
-            'codigo'                => 'required',
+            //'codigo'                => 'required',
             'nombre'                => 'required', 
             'geoNivel1'             => 'required'
         ];
@@ -195,7 +204,7 @@ class GeoNivel2 extends ResourceController
             ]);
 
             $data = [
-                'codigo'                        => $post['codigo'],
+                'codigo'                        => $siguienteCodigo,
                 'nombre'                        => $post['nombre'],
                 'geo_nivel1_codigo'             => $post['geoNivel1']
             ];

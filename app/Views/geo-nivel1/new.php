@@ -20,7 +20,7 @@
 <div class="container">
 
     <!-- <h2 class="mb-4"><?= lang('App.productos.titulo') ?></h2> -->
-    <h4 class="centrado">Nuevo Nivel 1 de Residencia</h4>
+    <h4 class="centrado">Nueva división administrativa de nivel 1</h4>
 
     <br>
 
@@ -55,13 +55,13 @@
 
 
 
-            <div class="col-sm-2">
+            <div class="col-sm-2" hidden>
                 <label for="codigo" class="col-sm-2 col-form-label" style="text-align: right">
                     <!-- <?= lang('App.productos.codigo') ?> -->
                     Código
                 </label>
                 <div>
-                    <input type="text" class="form-control" name="codigo" id="codigo" value="<?= set_value('codigo'); ?>" autofocus>
+                    <input type="text" class="form-control" name="codigo" id="codigo" value="<?= set_value('codigo'); ?>">
                     <p class="small" style="color:red">
                         <?= validation_show_error('codigo'); ?>
                     </p>

@@ -183,10 +183,10 @@
 
 
                       <div class="">
-                      <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-geo-alt"></i> Lugares de Residencia</a>
+                      <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-geo"></i></i> Divisiones administrativas</a>
                       <li class="nav-item" id="dropdown">
                         <ul class="dropdown-menu">
-                          <li> <a class="dropdown-item" href="<?= base_url(); ?>pais-residencia" style="background-color: white;">Países &raquo; </a>
+                          <li> <a class="dropdown-item" href="<?= base_url(); ?>pais-residencia" style="background-color: white;">Nivel 0 &raquo; </a>
                             <ul class="submenu dropdown-menu">
                               <li><a class="dropdown-item" href="<?= base_url(); ?>geonivel1">Nivel 1</a></li>
                               <li><a class="dropdown-item" href="<?= base_url(); ?>geonivel2">Nivel 2</a></li>

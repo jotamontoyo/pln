@@ -156,7 +156,7 @@
 
 
 
-              <div class="col-sm-2" hidden>
+              <!-- <div class="col-sm-2" hidden>
 
                 <div class="clear-fix">
                   <label class="float-start" for="estado_id">&nbsp; País de residencia*</label>
@@ -174,7 +174,7 @@
                 <p class="small" style="color:red">
 
                 </p>
-              </div>
+              </div> -->
 
               
 
@@ -340,7 +340,7 @@
 
                 <div class="clear-fix">
                   <label class="float-start" id="geoNivel1Label" for="geoNivel1">&nbsp;</label>
-                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#">
+                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#nivel1Modal">
                     <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
                   </a>
                 </div>
@@ -348,7 +348,7 @@
                 <select class="form-select" id="geoNivel1" name="geoNivel1">
                     <option value=""></option>
                     <?php foreach($geoNiveles1 as $geoNivel1): ?>
-                        <option value="<?= $geoNivel1['codigo'] ?>" data-paisnivel1="<?= $geoNivel1['pais_residencia_codigo'] ?>"><?= $geoNivel1['nombre'] ?></option>
+                        <option value="<?= $geoNivel1['codigo'] ?>" data-pais="<?= $geoNivel1['pais_residencia_codigo'] ?>"><?= $geoNivel1['nombre'] ?></option>
                     <?php endforeach; ?>
                 </select>
                 <p class="small" style="color:red">
@@ -363,7 +363,7 @@
 
                 <div class="clear-fix">
                   <label class="float-start" id="geoNivel2Label" for="geoNivel2">&nbsp;</label>
-                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#">
+                  <a href="" class="float-end" data-bs-toggle="modal" data-bs-target="#nivel2Modal">
                     <img src="..\public\img\logos\pregunta.png" class="img_interrogacion_campos" alt="">
                   </a>
                 </div>
@@ -382,83 +382,9 @@
 
 
 
-
               
 
-
-
-
-
-              <script>
-
-
-                $(document).ready(function () {
-                  $(function() {
-                      $(document).on('change', '#paisResidencia', function() {
-                        var pais_codigo = $(this).val();
-                        console.log(pais_codigo);
-                        $('#geoNivel1 option').each(function() {
-                            var paisNivel1 = $(this).data('paisnivel1');
-                            console.log(paisNivel1);
-                            if (paisNivel1 == pais_codigo || $(this).val() == "") {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-                            }
-                        });
-                        $('#geoNivel1').val('');
-                        $('#geoNivel2').val('');
-                      });
-                  });
-                });
-
-
-
-                $(document).ready(function () {
-                  $(function() {
-                      $(document).on('change', '#geoNivel1', function() {
-                        var nivel1_codigo = $(this).val();
-                        console.log(nivel1_codigo);
-                        $('#geoNivel2 option').each(function() {
-                            var geonivel2 = $(this).data('geonivel2');
-                            console.log(geonivel2);
-                            if (geonivel2 == nivel1_codigo || $(this).val() == "") {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-                            }
-                        });
-                        $('#geoNivel2').val('');
-                      });
-                  });
-                });
-
-
-
-              </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              
 
 
 
@@ -904,15 +830,15 @@
 
 
 
-<!-- ciudadResidenciaModal (departmaneto, provincia....) -->
-  <div class="modal fade" id="ciudadResidenciaModal" tabindex="-1" aria-labelledby="ciudadResidenciaModalLabel" aria-hidden="true">
+<!-- nivel1Modal (departmaneto, provincia....) -->
+  <div class="modal fade" id="nivel1Modal" tabindex="-1" aria-labelledby="nivel1ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content ayudaFormulario">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
           
             <div class="row centrado">
-              <p>Escriba la opción que corresponda.</p>
+              <p>Seleccione la opción que corresponda.</p>
             </div>
           
         </div>
@@ -923,15 +849,15 @@
 
 
 
-  <!-- estadoResidenciaModal (municipio, estado) -->
-  <div class="modal fade" id="estadoResidenciaModal" tabindex="-1" aria-labelledby="estadoResidenciaModalLabel" aria-hidden="true">
+  <!-- nivel2Modal (municipio, estado) -->
+  <div class="modal fade" id="nivel2Modal" tabindex="-1" aria-labelledby="nivel2ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content ayudaFormulario">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body">
           
             <div class="row centrado">
-              <p>Escriba la opción que corresponda.</p>
+              <p>Seleccione la opción que corresponda.</p>
             </div>
           
         </div>
@@ -1103,7 +1029,7 @@
     $(document).on('change','#paisResidencia',function() {
       var pais = document.getElementById("paisResidencia").value;
 
-      if(pais == 50 | pais == 54) { 
+      if(pais == 50) { 
         $('#geoNivel1Label').html("&nbsp; Departamento*"); 
         $('#geoNivel2Label').html("&nbsp; Municipio*");  
       };
@@ -1116,6 +1042,11 @@
       if(pais == 53) { 
         $('#geoNivel1Label').html("&nbsp; Región*"); 
         $('#geoNivel2Label').html("&nbsp; Entidad Federativa*");  
+      };
+
+      if(pais == 54) { 
+        $('#geoNivel1Label').html("&nbsp; Provincia*"); 
+        $('#geoNivel2Label').html("&nbsp; Cantón*");  
       };
 
       if(pais == 52) { 

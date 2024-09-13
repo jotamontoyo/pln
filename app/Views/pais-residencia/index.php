@@ -64,6 +64,12 @@
                 url: 'pais-residencia/listar-paises',
                 type: 'get'
             },
+            responsive: 'true',
+            layout: {
+                topEnd: {
+                    buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+                }
+            },
             columns :[
                 {data: 'id'},
                 {data: 'codigo'},

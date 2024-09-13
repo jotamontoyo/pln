@@ -77,27 +77,7 @@
 
 
 
-        <script>
-            $(document).ready(function () {
-                $(function() {
-                    $(document).on('change', '#paisResidencia', function() {
-                        var pais_codigo = $(this).val();
-                        console.log(pais_codigo);
-                        $('#geoNivel1 option').each(function() {
-                            var paisNivel1 = $(this).data('pais');
-                            console.log(paisNivel1);
-                            if (paisNivel1 == pais_codigo || $(this).val() == "") {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-                            }
-                        });
-                        $('#geoNivel1').val('');
-                        $('#geoNivel2').val('');
-                    });
-                });
-            });
-        </script>
+
 
 
 

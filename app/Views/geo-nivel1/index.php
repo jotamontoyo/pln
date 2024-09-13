@@ -66,6 +66,12 @@
                 url: 'geonivel1/listar_nivel',
                 type: 'get'
             },
+            responsive: 'true',
+            layout: {
+                topEnd: {
+                    buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+                }
+            },
             columns :[
                 {data: 'id'},
                 {data: 'codigo'},

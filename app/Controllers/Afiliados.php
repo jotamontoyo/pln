@@ -12,6 +12,10 @@ use App\Models\DepartamentosModel;
 use App\Models\MunicipiosModel;
 use CodeIgniter\Shield\Models\UserModel;
 
+use App\Models\PaisResidenciaModel;
+use App\Models\GeoNivel1Model;
+use App\Models\GeoNivel2Model;
+
 
 class Afiliados extends ResourceController
 {
@@ -24,6 +28,9 @@ class Afiliados extends ResourceController
     private $departamentosModel;
     private $municipiosModel;
     private $userModel;
+    private $paisResidenciaModel;
+    private $geoNivel1Model;
+    private $geoNivel2Model;
 
 
 
@@ -36,7 +43,9 @@ class Afiliados extends ResourceController
         $this->departamentosModel = new DepartamentosModel();
         $this->municipiosModel = new MunicipiosModel();
         $this->userModel = new UserModel();
-        
+        $this->paisResidenciaModel = new PaisResidenciaModel();
+        $this->geoNivel1Model = new GeoNivel1Model();
+        $this->geoNivel2Model = new GeoNivel2Model();
     }
 
 
@@ -72,15 +81,17 @@ class Afiliados extends ResourceController
             afiliados.apellidos, 
             (YEAR(NOW()) - YEAR(afiliados.fecha_nacimiento)) AS edad,
             afiliados.genero, 
-            estados.nombre AS residencia,
             afiliados.cedula, 
-            afiliados.ciudad,
-            afiliados.pais,
+            pais_residencia.nombre AS pais,
+            geo_nivel1.nombre AS nivel1,
+            geo_nivel2.nombre AS nivel2,
             afiliados.created_at,
             afiliados.updated_at,
             afiliados.deleted_at
         ')
-        ->join('estados', 'estados.id = afiliados.estado_id')
+        ->join('pais_residencia', 'pais_residencia.codigo = afiliados.pais_residencia_codigo')
+        ->join('geo_nivel1', 'geo_nivel1.codigo = afiliados.geo_nivel1_codigo')
+        ->join('geo_nivel2', 'geo_nivel2.codigo = afiliados.geo_nivel2_codigo')
         ->join('users', 'users.id = afiliados.user_id');
         return DataTable::of($builder)->toJson(true);
     }
@@ -169,18 +180,26 @@ class Afiliados extends ResourceController
         $estados = $this->estadosModel->findAll();
         $departamentos = $this->departamentosModel->findAll();
         $municipios = $this->municipiosModel->findAll();
+
+        $paisesResidencia = $this->paisResidenciaModel->findAll();
+        $geoNivel1 = $this->geoNivel1Model->findAll();
+        $geoNivel2 = $this->geoNivel2Model->findAll();
+
         $afiliado = $this->afiliadosModel->find($id);
         $user = $this->userModel->find($afiliado['user_id']);
         $edad = strtotime(date('Y-m-d')) - strtotime($afiliado['fecha_nacimiento']);
         $data = [
-            'titulo'            => 'Solicitud',
-            'id'                => $id,
-            'afiliado'          => $afiliado,
-            'edad'              => $edad,
-            'estados'           => $estados,
-            'departamentos'     => $departamentos,
-            'municipios'        => $municipios,
-            'user'              => $user
+            'titulo'                => 'Solicitud',
+            'id'                    => $id,
+            'afiliado'              => $afiliado,
+            'paisesResidencia'      => $paisesResidencia,
+            'geoNiveles1'           => $geoNivel1,
+            'geoNiveles2'           => $geoNivel2,
+            'edad'                  => $edad,
+            'estados'               => $estados,
+            'departamentos'         => $departamentos,
+            'municipios'            => $municipios,
+            'user'                  => $user
         ];
         return view('afiliados/edit', $data);
     }
@@ -222,9 +241,9 @@ class Afiliados extends ResourceController
             'pais'                  => 'required',
             'whatsapp'              => 'required', 
             'email'                 => 'required', 
-            'afiliado'              => 'required', 
-            'posicion'              => 'required',
-            'estado_id'             => 'required'
+            //'afiliado'              => 'required', 
+            //'posicion'              => 'required',
+            //'estado_id'             => 'required'
         ];
 
         if(!$this->validate($reglas)){

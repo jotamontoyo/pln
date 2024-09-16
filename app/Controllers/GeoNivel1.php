@@ -11,7 +11,7 @@ use App\Models\GeoNivel1Model;
 // use App\Models\DepartamentosModel;
 
 
-class GeoNivel1 extends ResourceController
+class GeoNivel1 extends BaseController
 {
 
 
@@ -189,7 +189,6 @@ class GeoNivel1 extends ResourceController
             //return redirect()->back()->withInput()->with('error', $this->validator->listErrors()); //muestra lista de errores
             return redirect()->back()->withInput(); //muestra lista de errores
         } else {
-            $post = 0;
             $post = $this->request->getPost([
                 //'codigo', 
                 'nombre',
@@ -201,7 +200,7 @@ class GeoNivel1 extends ResourceController
                 'pais_residencia_codigo'        => $post['paisResidencia']
             ];
             $this->geoNivel1Model->insert($data, false);
-            $session->setFlashdata('mensaje', 'Nivel creado');
+            $session->setFlashdata('mensaje', 'Nivel 1 creado');
             return redirect('geonivel1');
         };
     }
@@ -227,8 +226,37 @@ class GeoNivel1 extends ResourceController
      */
     public function edit($id = null)
     {
-        //
+        $geoNivel1 = $this->geoNivel1Model->find($id);
+        $paisesResidencia = $this->paisResidenciaModel->findAll();
+        $data = [
+            'titulo'                => 'Edición Nivel 1',
+            'id'                    => $id,
+            'geoNivel1'             => $geoNivel1,
+            'paisesResidencia'      => $paisesResidencia
+        ];
+        return view('geo-nivel1/edit', $data);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Add or update a model resource, from "posted" properties.
@@ -239,8 +267,46 @@ class GeoNivel1 extends ResourceController
      */
     public function update($id = null)
     {
-        //
+        $session = session();
+        $reglas = [
+            'paisResidencia'            => 'required',
+            'nombre'                    => 'required'
+        ];
+        if(!$this->validate($reglas)){ //si no se cumplen las reglas
+            $session->setFlashdata('mensaje', 'Error(s) en formulario'); //se imprimirá en el index
+            //return redirect()->back()->withInput()->with('error', $this->validator->listErrors()); //muestra lista de errores
+            return redirect()->back()->withInput(); //muestra lista de errores
+        } else {
+            $post = $this->request->getPost([
+                //'codigo', 
+                'nombre',
+                'paisResidencia'  
+            ]);
+            $data = [
+                'nombre'                        => $post['nombre'],
+                'pais_residencia_codigo'        => $post['paisResidencia']
+            ];
+            $this->geoNivel1Model->update($id, $data, false);
+            $session->setFlashdata('mensaje', 'Nivel 1 modificado');
+            return redirect('geonivel1');
+        };
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Delete the designated resource object from the model.

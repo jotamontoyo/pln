@@ -235,8 +235,54 @@ class GeoNivel2 extends ResourceController
      */
     public function edit($id = null)
     {
-        //
+        $geoNivel2 = $this->geoNivel2Model->find($id);
+        $geoNiveles1 = $this->geoNivel1Model->findAll();
+        $paisesResidencia = $this->paisResidenciaModel->findAll();
+
+        $query = $this->db->table('geo_nivel1') // averigua nivel 1
+        ->select('*')
+        ->where(['geo_nivel1.codigo' => $geoNivel2['geo_nivel1_codigo']])
+        ->limit(1);
+        $query = $query->get();
+        $nivel1 = $query->getResultArray();
+
+        $query = $this->db->table('pais_residencia') // averigua pais
+        ->select('*')
+        ->where(['pais_residencia.codigo' => $nivel1[0]['pais_residencia_codigo']])
+        ->limit(1);
+        $query = $query->get();
+        $pais = $query->getResultArray();
+
+        $data = [
+            'titulo'                => 'Edición Nivel 2',
+            'id'                    => $id,
+            'geoNivel2'             => $geoNivel2,
+            'pais'                  => $pais,
+            'nivel1'                => $nivel1,
+            'geoNiveles1'           => $geoNiveles1,
+            'paisesResidencia'      => $paisesResidencia
+        ];
+        return view('geo-nivel2/edit', $data);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Add or update a model resource, from "posted" properties.
@@ -247,8 +293,53 @@ class GeoNivel2 extends ResourceController
      */
     public function update($id = null)
     {
-        //
+        $session = session();
+        $reglas = [
+            'paisResidencia'            => 'required',
+            'geoNivel1'                 => 'required',
+            'geoNivel2'                    => 'required'
+        ];
+        if(!$this->validate($reglas)){ //si no se cumplen las reglas
+            $session->setFlashdata('mensaje', 'Error(s) en formulario'); //se imprimirá en el index
+            return redirect()->back()->withInput(); //muestra lista de errores
+        } else {
+            $post = $this->request->getPost([
+                //'codigo', 
+                'geoNivel2',
+                'paisResidencia',
+                'geoNivel1'  
+            ]);
+            $data = [
+                'nombre'                        => $post['geoNivel2'],
+                'pais_residencia_codigo'        => $post['paisResidencia'],
+                'geo_nivel1_codigo'             => $post['geoNivel1']
+            ];
+            $this->geoNivel2Model->update($id, $data, false);
+            $session->setFlashdata('mensaje', 'Nivel 2 modificado');
+            return redirect('geonivel2');
+        };
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Delete the designated resource object from the model.

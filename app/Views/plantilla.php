@@ -210,41 +210,41 @@
 
 
         $(document).ready(function () {
-          $(function() {
-              $(document).on('change', '#paisResidencia', function() {
-                var pais_codigo = $(this).val();
-                console.log(pais_codigo);
-                $('#geoNivel1 option').each(function() {
-                    var paisNivel1 = $(this).data('pais');
-                    console.log(paisNivel1);
-                    if (paisNivel1 == pais_codigo || $(this).val() == "") {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
+            $(function() {
+                $(document).on('change', '#paisResidencia', function() {
+                  var pais_codigo = $(this).val();
+                  console.log(pais_codigo);
+                  $('#geoNivel1 option').each(function() {
+                        var paisNivel1 = $(this).data('pais');
+                        console.log(paisNivel1);
+                        if (paisNivel1 == pais_codigo || $(this).val() == "") {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                  });
+                  $('#geoNivel1').val('');
+                  $('#geoNivel2').val('');
                 });
-                $('#geoNivel1').val('');
-                $('#geoNivel2').val('');
-              });
-          });
+            });
         })
         $(document).ready(function () {
-          $(function() {
-              $(document).on('change', '#geoNivel1', function() {
-                var nivel1_codigo = $(this).val();
-                console.log(nivel1_codigo);
-                $('#geoNivel2 option').each(function() {
-                    var geonivel2 = $(this).data('geonivel2');
-                    console.log(geonivel2);
-                    if (geonivel2 == nivel1_codigo || $(this).val() == "") {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
+            $(function() {
+                $(document).on('change', '#geoNivel1', function() {
+                    var nivel1_codigo = $(this).val();
+                    console.log(nivel1_codigo);
+                    $('#geoNivel2 option').each(function() {
+                        var geonivel2 = $(this).data('geonivel2');
+                        console.log(geonivel2);
+                        if (geonivel2 == nivel1_codigo || $(this).val() == "") {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                    $('#geoNivel2').val('');
                 });
-                $('#geoNivel2').val('');
-              });
-          });
+            });
         });
 
 

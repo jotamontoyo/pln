@@ -105,9 +105,6 @@ class PaisResidencia extends BaseController
      */
     public function new()
     {
-
-
-
         $data = [
             'titulo' => 'Países de residencia'
         ];
@@ -139,10 +136,10 @@ class PaisResidencia extends BaseController
     {
         $session = session();
         $reglas = [                     // de validacion
-            'codigo'                => 'required',
-            'nombre'                => 'required', 
-            'label1'                => 'required', 
-            'label2'                => 'required', 
+            'codigo'                        => 'required',
+            'nombre'                        => 'required', 
+            'label_nivel1'                  => 'required', 
+            'label_nivel2'                  => 'required', 
         ];
         if(!$this->validate($reglas)){ //si no se cumplen las reglas
             $session->setFlashdata('mensaje', 'Error(s) en formulario'); //se imprimirá en el index
@@ -152,16 +149,14 @@ class PaisResidencia extends BaseController
             $post = $this->request->getPost([
                 'codigo', 
                 'nombre',
-                'label1',
-                'label2' 
-  
+                'label_nivel2',
+                'label_nivel2' 
             ]);
-
             $data = [
-                'codigo'           => $post['codigo'],
-                'nombre'                => $post['nombre'],
-                'label_nivel1'                => $post['label1'],
-                'label_nivel2'                => $post['label2'],
+                'codigo'                    => $post['codigo'],
+                'nombre'                    => $post['nombre'],
+                'label_nivel1'              => $post['label_nivel1'],
+                'label_nivel2'              => $post['label_nivel2'],
             ];
             $this->paisResidenciaModel->insert($data, false);
             $session->setFlashdata('mensaje', 'País creado');
@@ -194,13 +189,13 @@ class PaisResidencia extends BaseController
      */
     public function edit($id = null)
     {
-        $estado = $this->paisResidenciaModel->find($id);
+        $paisResidencia = $this->paisResidenciaModel->find($id);
         $data = [
-            'titulo' => 'Estado',
-            'id' => $id,
-            'estado' => $estado
+            'titulo'                => 'Países de Residencia',
+            'id'                    => $id,
+            'paisResidencia'        => $paisResidencia
         ];
-        return view('estados/edit', $data);
+        return view('pais-residencia/edit', $data);
     }
 
 
@@ -240,23 +235,27 @@ class PaisResidencia extends BaseController
     {
         $session = session();
         $reglas = [                     
-            'codigo'           => 'required', 
-            'nombre'           => 'required'
+            'codigo'                => 'required', 
+            'nombre'                => 'required',
+            'label_nivel1'          => 'required',
+            'label_nivel2'          => 'required',
         ];
 
         if(!$this->validate($reglas)){
             $session->setFlashdata('mensaje', 'Error(s) en formulario');
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
         } else {
-            $post = $this->request->getPost(['codigo', 'nombre']);
+            $post = $this->request->getPost(['codigo', 'nombre', 'label_nivel1', 'label_nivel2']);
             $data = [
-                'codigo'           => $post['codigo'],
-                'nombre'           => $post['nombre']
+                'codigo'            => $post['codigo'],
+                'nombre'            => $post['nombre'],
+                'label_nivel1'      => $post['label_nivel1'],
+                'label_nivel2'      => $post['label_nivel2']
             ];
                 
             $this->paisResidenciaModel->update($id, $data, false);
-            $session->setFlashdata('mensaje', 'Estado actualizado');
-            return redirect('estados');
+            $session->setFlashdata('mensaje', 'País actualizado');
+            return redirect('pais-residencia');
         }
     }
 

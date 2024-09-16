@@ -3,15 +3,7 @@
 <?= $this->section('contenido'); ?>
 
 
-<?php if(session()->getFlashdata('error') !== null) { ?>
 
-    <div class="alert alert-danger" role="alert">
-
-        <?= session()->getFlashdata('error'); ?>
-
-    </div>
-
-<?php } ?>
 
 
 
@@ -20,13 +12,13 @@
 <div class="container">
 
     <!-- <h2 class="mb-4"><?= lang('App.productos.titulo') ?></h2> -->
-    <h4 class="centrado">Nueva división administrativa de nivel 0</h4>
+    <h4 class="centrado">Edición de división administrativa de nivel 0</h4>
 
     <br>
 
-    <form action="<?= base_url('pais-residencia') ?>" method="POST" autocomplete="off">
+    <form action="<?= base_url('pais-residencia/') . $id ?>" method="POST" autocomplete="off">
 
-        <input type="hidden" name="_method" value="POST">
+        <input type="hidden" name="_method" value="PUT">
         <?= csrf_field(); ?>
 
             <div class="col-sm-2">
@@ -37,7 +29,7 @@
                     </label>
                 </div>
                 <div>
-                    <input type="text" class="form-control" name="codigo" id="codigo" value="<?= set_value('codigo'); ?>" autofocus>
+                    <input type="text" class="form-control" name="codigo" id="codigo" value="<?= $paisResidencia['codigo']; ?>" readonly>
                     <p class="small" style="color:red">
                         <?= validation_show_error('codigo'); ?>
                     </p>
@@ -52,7 +44,7 @@
                     </label>
                 </div>
                 <div>
-                    <input type="text" class="form-control" name="nombre" id="nombre" value="<?= set_value('nombre'); ?>">
+                    <input type="text" class="form-control" name="nombre" id="nombre" value="<?= $paisResidencia['nombre']; ?>" autofocus>
                     <p class="small" style="color:red">
                         <?= validation_show_error('nombre'); ?>
                     </p>
@@ -60,14 +52,14 @@
             </div>
 
             <div class="col-sm-2">
-                <div class="clear-fix"> 
-                    <label for="label1" class="float-start">
+                <div class="clear-fix">
+                    <label for="label_nivel1" class="float-start">
                         <!-- <?= lang('App.productos.nombre') ?> -->
                         Clase de nivel 1
                     </label>
                 </div>
                 <div>
-                    <input type="text" class="form-control" name="label1" id="label1" value="<?= set_value('label_nivel1'); ?>">
+                    <input type="text" class="form-control" name="label_nivel1" id="label_nivel1" value="<?= $paisResidencia['label_nivel1']; ?>">
                     <p class="small" style="color:red">
                         <?= validation_show_error('label_nivel1'); ?>
                     </p>
@@ -76,13 +68,13 @@
 
             <div class="col-sm-2">
                 <div class="clear-fix">
-                    <label for="label2" class="float-start">
+                    <label for="label_nivel2" class="float-start">
                         <!-- <?= lang('App.productos.nombre') ?> -->
                         Clase de nivel 2
                     </label>
                 </div>
                 <div>
-                    <input type="text" class="form-control" name="label2" id="label2" value="<?= set_value('label_nivel2'); ?>">
+                    <input type="text" class="form-control" name="label_nivel2" id="label_nivel2" value="<?= $paisResidencia['label_nivel2']; ?>">
                     <p class="small" style="color:red">
                         <?= validation_show_error('label_nivel2'); ?>
                     </p>

@@ -61,13 +61,13 @@
 
             <div class="col-sm-2">
                 <div class="clear-fix"> 
-                    <label for="label1" class="float-start">
+                    <label for="label_nivel1" class="float-start">
                         <!-- <?= lang('App.productos.nombre') ?> -->
                         Clase de nivel 1
                     </label>
                 </div>
                 <div>
-                    <input type="text" class="form-control" name="label1" id="label1" value="<?= set_value('label_nivel1'); ?>">
+                    <input type="text" class="form-control" name="label_nivel1" id="label_nivel1" value="<?= set_value('label_nivel1'); ?>">
                     <p class="small" style="color:red">
                         <?= validation_show_error('label_nivel1'); ?>
                     </p>
@@ -76,13 +76,13 @@
 
             <div class="col-sm-2">
                 <div class="clear-fix">
-                    <label for="label2" class="float-start">
+                    <label for="label_nivel2" class="float-start">
                         <!-- <?= lang('App.productos.nombre') ?> -->
                         Clase de nivel 2
                     </label>
                 </div>
                 <div>
-                    <input type="text" class="form-control" name="label2" id="label2" value="<?= set_value('label_nivel2'); ?>">
+                    <input type="text" class="form-control" name="label_nivel2" id="label_nivel2" value="<?= set_value('label_nivel2'); ?>">
                     <p class="small" style="color:red">
                         <?= validation_show_error('label_nivel2'); ?>
                     </p>

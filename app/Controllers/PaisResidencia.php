@@ -149,7 +149,7 @@ class PaisResidencia extends BaseController
             $post = $this->request->getPost([
                 'codigo', 
                 'nombre',
-                'label_nivel2',
+                'label_nivel1',
                 'label_nivel2' 
             ]);
             $data = [

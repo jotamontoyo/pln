@@ -1,12 +1,6 @@
 <h2 class="pb-2 centrado"><img src="public/img/logos/logoPLN.jpg" style="max-width: 40px;" alt=""> Información general proyecto Voto en el Exterior según Articulo 122- Ley 331 electoral</h2>
-<hr>
-<br>
 <ul>
-    <div class="centrado">
-        <a href="mailto:voceriaenunidad@gmail.com" class="link-underline-primary">
-            <img src="public/img/logos/empadronate.png" style="max-width: 40%;" alt="">
-        </a>
-    </div>
+    <hr>
     <h6 class="centrado">Para comunicaciones escribir a <a href="mailto:voceriaenunidad@gmail.com" class="link-underline-primary">voceriaenunidad@gmail.com</a></h6>
     <hr>
     <br>
